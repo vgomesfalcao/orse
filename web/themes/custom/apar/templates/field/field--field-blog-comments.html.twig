@@ -1,0 +1,11 @@
+{% set count_comments = comments|length - 3 %}
+{% if count_comments < 0 %}
+    {% set count_comments = 0 %}
+{% endif %}
+<h4>{% if count_comments == 1 %}{{ '(' ~ count_comments ~ ') Comment' }}{% else %}{{ '(' ~ count_comments ~ ') Comments' }}{% endif %}</h4>
+{{ comments }}
+<div class="clearfix"></div>
+<br/>
+<br/>
+<h4>{{ 'Post a Comment'|raw }}</h4>
+{% if comment_form %}{{ comment_form }}{% endif %}

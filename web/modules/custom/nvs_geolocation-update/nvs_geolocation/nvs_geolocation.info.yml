@@ -1,0 +1,4 @@
+name: '[NVS] Googlemaps Configuration'
+type: module
+core: '8.x'
+description: 'Configure your sites googlemaps'

@@ -1,0 +1,14 @@
+<section {{ attributes }}>
+    {{ title_suffix }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                {% if label %}<h4 class="text-white uppercase font-weight-3">{{ label }}</h4>
+                <div class="sp-feature-box-4">{% endif %}
+                    {% set a = content|render|replace({'class="btn button js-form-submit form-submit"':'class="submit-btn button js-form-submit form-submit"'}) %}
+                    {{ a ? a|t }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

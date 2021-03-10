@@ -1,0 +1,7 @@
+{% set class_menu = ['toplist', 'toppadding'] %}
+<div {{ attributes.addClass(class_menu) }}>
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

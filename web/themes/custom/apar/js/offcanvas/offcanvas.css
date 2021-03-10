@@ -1,0 +1,234 @@
+#main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.offcanvas-menu {
+	position: absolute;
+	width: auto;
+	z-index: 9999;
+	left: 6.5%;
+	top: 0.61%;
+}
+
+@media screen and (max-width: 1200px) {	
+.offcanvas-menu {
+	display: none;
+}
+
+}
+
+#title {
+  color: #f6f6f6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+
+#btn {
+  position: fixed;
+  z-index: 5;
+  top: 38px;
+  right: 155px;
+  cursor: pointer;
+  -webkit-transition: right 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+  transition: right 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+}
+
+#btn div {
+  width: 21px;
+  height: 2px;
+  margin-bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, box-shadow 250ms, background-color 500ms;
+  transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, box-shadow 250ms, background-color 500ms;
+}
+
+#btn.dark div {
+  width: 21px;
+  height: 2px;
+  margin-bottom: 4px;
+  background-color: #323335;
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, box-shadow none, background-color 500ms;
+  transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, box-shadow none, background-color 500ms;
+}
+
+#btn:hover > div { box-shadow: 0 0 1px #00DFFC; }
+
+#btn.active { right: 280px; }
+
+#btn.active div { background-color: #fff; }
+
+#btn.active:hover > div { box-shadow: 0 0 1px #fff; }
+
+#btn.active #top {
+  -webkit-transform: translateY(5px) rotate(-135deg);
+  -ms-transform: translateY(5px) rotate(-135deg);
+  transform: translateY(5px) rotate(-135deg);
+}
+
+#btn.active #middle {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+#btn.active #bottom {
+  -webkit-transform: translateY(-7px) rotate(-45deg);
+  -ms-transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+#box {
+  position: fixed;
+  z-index: 4;
+  overflow: auto;
+  top: 0px;
+  right: -325px;
+  width: 325px;
+  opacity: 0;
+  padding: 20px 0px;
+  height: 100%;
+  background-color: #323335;
+  color: #fff;
+  -webkit-transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+  transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+
+}
+
+#box.active {
+  right: 0px;
+  opacity: 1;
+}
+
+#items {
+  position: relative;
+  top: 7.5%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#items .item {
+	float: left;
+	width: 72%;
+	left: 14%;
+	right: 20%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 1px;
+	position: relative;
+	cursor: pointer;
+	padding: 10px 0px 12px 0px;
+	-webkit-transition: all 250ms;
+	transition: all 250ms;
+	border-bottom: 1px solid rgba(255,255,255,0.07);
+	  -webkit-transition: margin 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: margin 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s ease;
+}
+
+#items .item:hover {
+	padding-left: 5px;
+}
+#items .item a {
+	color: #fff;
+}
+#items .item:hover a {
+	color: #65d835;
+}
+#items .item a i {
+	color: rgba(255,255,255,0.3);
+	margin-right: 5px;
+}
+
+#box .contact-info {
+	float: left;
+	width: 72%;
+	margin-top: 65%;
+	margin-left: 18%;
+	margin-right: 20%;
+	bottom: 50px;
+}
+#box .contact-info .social {
+	float: left;
+	width: 100%;
+}
+#box .contact-info .social i {
+	color: #84868a;
+	font-size: 14px;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	background: #3f4247;
+	margin-right: 3px;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+}
+#box .contact-info .social i:hover {
+	color: #fff;
+	background: #65d835;
+	border-radius: 100%;
+}
+#box .contact-info .address {
+	float: left;
+	width: 100%;
+	margin-top: 14%;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 990px){
+.offcanvas-header {
+	left: 5%;
+	top: 0.18%;
+}
+#btn {
+  top: 45px;
+  right: 45px;
+}
+
+}
+
+@media only screen and (max-width: 640px){
+.offcanvas-header {
+	left: 3%;
+	top: 0.1%;
+}
+#btn {
+  top: 25px;
+  right: 20px;
+}
+#box {
+  right: -275px;
+  width: 275px;
+}
+#btn.active { right: 280px; }
+
+#items .item {
+	width: 80%;
+	left: 10%;
+	right: 10%;
+}
+#box .contact-info {
+	float: left;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+}

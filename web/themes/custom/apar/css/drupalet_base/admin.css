@@ -1,0 +1,127 @@
+.form-radios{
+	width:100%;
+	float:left;
+	margin-top:60px!important;
+	clear:both;
+}
+.form-radios input[type=radio]{
+	margin-right:15px;
+	cursor: pointer;
+	background: #e1e1e1;
+}
+.form-radios .form-item{
+	width: 70px;
+	margin: 0 30px 90px 0!important;
+	float: left;
+}
+.form-radios .form-item label{
+	margin-top: -70px!important;
+	/*border: 2px solid #fff!important;*/
+	border: 0;
+	/*border-radius: 50%;*/
+	/*outline: 1px solid #ddd!important;*/
+	outline: 0;
+	position: absolute!important;
+	display: block;
+	width: 70px;
+	height: 0px;
+	line-height: 30px;
+	padding-top: 70px!important;
+	cursor: pointer;
+	text-align: center;
+	color: #444;
+	border: 1px solid #fff;
+	/*outline: 2px solid #a3af7f;*/
+	font-weight: bold;
+	background:#333
+}
+.js-form-item-built-in-skins.form-item-built-in-skins{
+	text-align: center;
+}
+
+.form-item label[for="edit-built-in-skins-pr-default-pr"] { background-color:#3396d6; }
+.form-item label[for="edit-built-in-skins-pr-orange-pr"] { background-color:#ff8100;}
+.form-item label[for="edit-built-in-skins-pr-lightgreen-pr"] { background-color:#b3d222;}
+.form-item label[for="edit-built-in-skins-pr-blue-pr"] { background-color:#0a70e3;}
+
+.form-item label[for="edit-built-in-skins-pr-green-pr"] { background-color:#65d835; }
+.form-item label[for="edit-built-in-skins-pr-red-pr"] { background-color:#ff0000;}
+.form-item label[for="edit-built-in-skins-pr-cyan-pr"] { background-color:#00bdbd;}
+.form-item label[for="edit-built-in-skins-pr-purple-pr"] { background-color:#ee82ee;}
+
+.form-item label[for="edit-built-in-skins-pr-pink-pr"] { background-color:#ff00a9; }
+.form-item label[for="edit-built-in-skins-pr-brown-pr"] { background-color:#964b00;}
+.form-item label[for="edit-built-in-skins-pr-yellow-pr"] { background-color:#ecae3d;}
+.form-item label[for="edit-built-in-skins-pr-purple-2-pr"] { background-color:#800040;}
+
+/**/
+
+.form-item label[for="edit-built-in-skins-sc-default-sc"] { background-color:#3396d6; }
+.form-item label[for="edit-built-in-skins-sc-orange-sc"] { background-color:#ff8100;}
+.form-item label[for="edit-built-in-skins-sc-lightgreen-sc"] { background-color:#b3d222;}
+.form-item label[for="edit-built-in-skins-sc-blue-sc"] { background-color:#0a70e3;}
+
+.form-item label[for="edit-built-in-skins-sc-green-sc"] { background-color:#65d835; }
+.form-item label[for="edit-built-in-skins-sc-red-sc"] { background-color:#ff0000;}
+.form-item label[for="edit-built-in-skins-sc-cyan-sc"] { background-color:#00bdbd;}
+.form-item label[for="edit-built-in-skins-sc-purple-sc"] { background-color:#ee82ee;}
+
+.form-item label[for="edit-built-in-skins-sc-pink-sc"] { background-color:#ff00a9; }
+.form-item label[for="edit-built-in-skins-sc-brown-sc"] { background-color:#964b00;}
+.form-item label[for="edit-built-in-skins-sc-yellow-sc"] { background-color:#ecae3d;}
+.form-item label[for="edit-built-in-skins-sc-purple-2-sc"] { background-color:#800040;}
+
+
+/*.form-item label[for="edit-background-patterns-pattern-default"] { background-image: url('../../../images/elements/bg.png'); }
+.form-item label[for="edit-background-patterns-pattern-nine"] { background-image: url('../../../images/elements/pattern-nine.jpg'); }
+.form-item label[for="edit-background-patterns-pattern-eight"] { background-image: url('../../../images/elements/pattern-eight.jpg'); }
+.form-item label[for="edit-background-patterns-pattern-seven"] { background-image: url('../../../images/elements/pattern-seven.jpg'); }
+.form-item label[for="edit-background-patterns-pattern-six"] { background-image: url('../../../images/elements/pattern-six.jpg'); }
+.form-item label[for="edit-background-patterns-pattern-five"] { background-image: url('../../../images/elements/pattern-five.jpg'); }
+.form-item label[for="edit-background-patterns-pattern-four"] { background-image: url('../../../images/elements/pattern-four.jpg'); }
+.form-item label[for="edit-background-patterns-pattern-three"] { background-image: url('../../../images/elements/pattern-three.jpg'); }
+.form-item label[for="edit-background-patterns-pattern-two"] { background-image: url('../../../images/elements/pattern-two.jpg'); }
+.form-item label[for="edit-background-patterns-pattern-one"] { background-image: url('../../../images/elements/pattern-one.jpg'); }*/
+/*
+.form-item label[for="edit-background-patterns-pattern-theme11png"] { background-image: url('../../images/bg-theme/11.png'); }
+.form-item label[for="edit-background-patterns-pattern-themenonepng"] { background-image: url('../../images/bg-theme/none.jpg'); }
+.form-item label[for="edit-background-image-imagespatternspattern13jpg"] { background-image: url('../../images/patterns/pattern13.jpg'); }
+.form-item label[for="edit-background-image-imagespatternspattern14jpg"] { background-image: url('../../images/patterns/pattern14.jpg'); }
+.form-item label[for="edit-background-image-imagespatternspattern15jpg"] { background-image: url('../../images/patterns/pattern15.jpg'); }
+.form-item label[for="edit-background-image-imagespatternsdefaultjpg"] { background-image: url('../../images/patterns/none.jpg'); }
+
+
+
+.form-item label[for="edit-background-for-boxed-layout-none-background"] { background-color:#FFF!important }
+.form-item label[for="edit-layout-style-wide"] { background:url(../../images/fullwidth.jpg) no-repeat; }
+.form-item label[for="edit-layout-style-boxed"] { background:url(../../images/boxed.jpg) center center; }
+.form-item label[for="edit-layout-style-boxed-margin"] { background:url(../../images/boxed.jpg) center center; }
+.form-item label[for="edit-header-style-header1"] { background:none; }
+.form-item label[for="edit-background-for-boxed-layout-diagmonds"] { background:url(../bg/diagmonds.jpg) }
+
+.form-item label[for="edit-background-for-boxed-layout-triangles"] { background:url(../bg/triangles.jpg) }
+.form-item label[for="edit-background-for-boxed-layout-black-thread"] { background:url(../bg/black_thread.jpg) }
+.form-item label[for="edit-background-for-boxed-layout-checkered-pattern"] { background:url(../bg/checkered_pattern.jpg) }
+.form-item label[for="edit-background-for-boxed-layout-black-mamba"] { background:url(../bg/black_mamba.jpg) }
+
+.form-item label[for="edit-background-for-boxed-layout-back-pattern"] { background:url(../bg/back_pattern.jpg) }
+.form-item label[for="edit-background-for-boxed-layout-vichy"] { background:url(../bg/vichy.jpg) }
+.form-item label[for="edit-background-for-boxed-layout-diamond-upholstery"] { background:url(../bg/diamond_upholstery.jpg) }
+.form-item label[for="edit-background-for-boxed-layout-lyonnette"] { background:url(../bg/lyonnette.jpg) }
+.form-item label[for="edit-background-for-boxed-layout-graphy"] { background:url(../bg/graphy.jpg) }
+.form-item label[for="edit-background-for-boxed-layout-subtlenet2"] { background:url(../bg/subtlenet2.jpg) }
+*/
+
+.form-item-built-in-skins-pr .form-radio:checked ~ label,.form-item-background-patterns .form-radio:checked ~ label{
+	border: 3px solid #cccccc !important;
+	outline: 2px solid #888888!important;
+	font-weight: bold!important;
+}
+.form-item-built-in-skins-sc .form-radio:checked ~ label,.form-item-background-patterns .form-radio:checked ~ label{
+	border: 3px solid #cccccc !important;
+	outline: 2px solid #888888!important;
+	font-weight: bold!important;
+}
+.form-item .form-item{
+	padding:15px 0px!important;
+}

@@ -1,0 +1,192 @@
+apar-lib:
+  version: VERSION
+  css:
+    theme:
+      js/bootstrap/bootstrap.min.css: {}
+
+      https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i: {}
+      https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700: {}
+      https://fonts.googleapis.com/css?family=Yesteryear: {}
+      js/style-switcher/color-switcher.css: {}
+      js/megamenu/stylesheets/screen.css: {}
+      css/theme-default.css: {}
+      js/loaders/stylesheets/screen.css: {}
+      css/corporate.css: {}
+      css/blog2.css: {}
+      css/shop.css: {}
+      css/shortcodes.css: {}
+      fonts/font-awesome/css/font-awesome.min.css: {}
+      fonts/Simple-Line-Icons-Webfont/simple-line-icons.css: {}
+      fonts/et-line-font/et-line-font.css: {}
+      js/revolution-slider/css/settings.css: {}
+      js/revolution-slider/css/layers.css: {}
+      js/revolution-slider/css/navigation.css: {}
+      js/owl-carousel/owl.carousel.css: {}
+      js/owl-carousel/owl.theme.css: {}
+      js/cubeportfolio/cubeportfolio.min.css: {}
+      js/accordion/css/smk-accordion.css: {}
+      js/ytplayer/ytplayer.css: {}
+      js/tabs/css/responsive-tabs.css: {}
+      js/jFlickrFeed/style.css: {}
+      js/parallax/main.css: {}
+      js/smart-forms/smart-forms.css: {}
+      js/offcanvas/offcanvas.css: {}
+      js/tabs/one/opentabby.css: {}
+
+      js/product-preview/stylesheet.css: {}
+      js/product-preview/fancybox/jquery.fancybox.css: {}
+      js/style-customizer/css/spectrum.css: {}
+      js/style-customizer/css/style-customizer.css: {}
+      # less/skin.less: {}
+      css/update.css: {}
+  js:
+    js/jquery/jquery.js: {} 
+    js/bootstrap/bootstrap.min.js: {} 
+    js/style-customizer/js/spectrum.js: {} 
+    js/less/less.min.js: {} 
+    js/style-customizer/js/style-customizer.js: {} 
+
+    js/megamenu/js/main.js: {}
+    js/owl-carousel/owl.carousel.js: {} 
+    js/owl-carousel/custom.js: {} 
+    js/accordion/js/accordion.js: {}
+    js/apar-accordion.js: {}
+    js/ytplayer/jquery.mb.YTPlayer.js: {} 
+    js/ytplayer/elementvideo-custom.js: {} 
+    js/ytplayer/play-pause-btn.js: {} 
+    js/cubeportfolio/jquery.cubeportfolio.min.js: {}
+    js/cubeportfolio/slider-projects.js: {} 
+    js/cubeportfolio/main-mosaic3.js: {} 
+    js/accordion/js/smk-accordion.js: {} 
+    js/accordion/js/custom.js: {} 
+    js/tabs/js/responsive-tabs.min.js: {}
+    js/tabs/one/opentabby.js: {}
+    js/apar-tabs.js: {}
+    js/parallax/parallax-background.min.js: {}
+    js/apar-prallax-background.js: {}
+    js/gmaps/jquery.gmap.min.js: {}
+    js/gmaps/examples.js: {}
+    js/offcanvas/offcanvas.js: {}
+
+    js/jFlickrFeed/jflickrfeed.min.js: {}
+    js/product-preview/fancybox/jquery.fancybox.js: {}
+    js/apar-product-review.js: {}
+    js/loader.js: {}
+    js/functions/functions.js: {}
+    js/update.js: {}
+
+  dependencies:
+    - core/jquery
+apar-lib-basic:
+  version: VERSION
+  css:
+    theme:
+      js/bootstrap/bootstrap.min.css: {}
+
+      https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i: {}
+      https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700: {}
+      https://fonts.googleapis.com/css?family=Yesteryear: {}
+      js/style-switcher/color-switcher.css: {} 
+
+      js/megamenu/stylesheets/screen.css: {}
+      css/theme-default.css: {}
+      js/loaders/stylesheets/screen.css: {}
+      css/corporate.css: {}
+      css/blog2.css: {}
+      css/shortcodes.css: {}
+      fonts/font-awesome/css/font-awesome.min.css: {}
+      fonts/Simple-Line-Icons-Webfont/simple-line-icons.css: {}
+      fonts/et-line-font/et-line-font.css: {}
+      js/revolution-slider/css/settings.css: {}
+      js/revolution-slider/css/layers.css: {}
+      js/revolution-slider/css/navigation.css: {}
+      js/owl-carousel/owl.carousel.css: {}
+      js/owl-carousel/owl.theme.css: {}
+      js/cubeportfolio/cubeportfolio.min.css: {}
+      js/accordion/css/smk-accordion.css: {}
+      js/ytplayer/ytplayer.css: {}
+      js/accordion/js/demo.css: {}
+      js/tabs/css/responsive-tabs.css: {}
+      js/jFlickrFeed/style.css: {}
+      js/star-rating/css/star-rating.css: {}
+      js/star-rating/themes/krajee-fa/theme.css: {}
+      js/star-rating/themes/krajee-svg/theme.css: {}
+      js/star-rating/themes/krajee-uni/theme.css: {}
+      js/parallax/main.css: {}
+      js/switches/bootstrap-switch.css: {}
+      js/offcanvas/offcanvas.css: {}
+      js/datepicker/bootstrap-datetimepicker.css: {}
+      js/file-upload/fileinput.css: {}
+      js/popup/novicell.css: {}
+      js/popup/popup.css: {}
+      js/style-customizer/css/spectrum.css: {}
+      js/style-customizer/css/style-customizer.css: {}
+      # less/skin.less: {}
+      css/update.css: {}
+  js:
+    js/jquery/jquery.js: {} 
+    js/bootstrap/bootstrap.min.js: {} 
+    js/star-rating/js/star-rating.js: {}
+    js/apar-star-rating.js: {}
+    js/switches/bootstrap-switch.js: {}
+    js/apar-bootstrap-switch.js: {}
+    js/datepicker/moment.js: {}
+    js/datepicker/bootstrap-datetimepicker.js: {}
+    js/file-upload/fileinput.js: {}
+    js/file-upload/fr.js: {}
+    js/file-upload/es.js: {}
+    js/style-customizer/js/spectrum.js: {} 
+    js/less/less.min.js: {} 
+    js/style-customizer/js/style-customizer.js: {} 
+    
+    js/megamenu/js/main.js: {} 
+    js/accordion/js/accordion.js: {}
+    js/apar-accordion.js: {}
+    http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js: {}
+    js/counterup/jquery.counterup.min.js: {}
+    js/countdown-timers/countdown/jquery.countdown.js: {}
+    js/apar-couters.js: {}
+    js/owl-carousel/owl.carousel.js: {} 
+    js/owl-carousel/custom.js: {} 
+    js/ytplayer/jquery.mb.YTPlayer.js: {} 
+    js/ytplayer/elementvideo-custom.js: {} 
+    js/ytplayer/play-pause-btn.js: {} 
+    js/cubeportfolio/jquery.cubeportfolio.min.js: {} 
+    js/cubeportfolio/cols-2.js: {}
+    js/cubeportfolio/cols-3.js: {}
+    js/cubeportfolio/cols-4.js: {}
+    js/cubeportfolio/cols-5.js: {}
+    js/cubeportfolio/cols-6.js: {}
+    js/cubeportfolio/masonry.js: {}
+    js/cubeportfolio/masonry-projects.js: {}
+    js/cubeportfolio/mosaic.js: {}
+    js/cubeportfolio/mosaic-flat.js: {}
+    js/cubeportfolio/mosaic-projects.js: {}
+    js/cubeportfolio/slider-projects.js: {}
+    js/cubeportfolio/lightbox-gallery.js: {}
+    js/cubeportfolio/main-mosaic3.js: {} 
+    js/accordion/js/smk-accordion.js: {} 
+    js/accordion/js/custom.js: {} 
+    js/tabs/js/responsive-tabs.min.js: {} 
+    js/parallax/parallax-background.min.js: {}
+    js/apar-prallax-background.js: {}
+    js/gmaps/jquery.gmap.min.js: {}
+    js/gmaps/examples.js: {}
+    js/offcanvas/offcanvas.js: {}
+
+    js/jFlickrFeed/jflickrfeed.min.js: {}
+    js/loader.js: {}
+    js/popup/novicell.js: {}
+    js/functions/functions.js: {}
+    js/apar-time-pickers.js: {}
+    js/apar-date-pickers.js: {}
+    js/apar-file-upload.js: {}
+    js/apar-countdown-timers.js: {}
+    js/update.js: {}
+  dependencies:
+    - core/jquery
+admin-lib:
+  version: VERSION
+  css:
+    theme:
+      css/drupalet_base/admin.css: {}

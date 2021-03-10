@@ -1,0 +1,7 @@
+nvs_geolocation.configuration_form:
+  route_name: nvs_geolocation.configuration_form
+  title: NVS GeoLocation
+  description: 'Configure your sites googlemaps'
+  parent: system.admin_config_services
+
+  

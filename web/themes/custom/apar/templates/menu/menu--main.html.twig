@@ -1,0 +1,45 @@
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
+{% macro menu_links(items, attributes, menu_level) %}
+{% import _self as menus %}
+   {% if items %}
+      {% if menu_level == 0 %}<ul class="nav navbar-nav">{% endif %}
+      {% for item in items %}
+         {% set classes = [ item.in_active_trail ? 'active', item.in_active ? 'active'] %}
+            {% if item.is_expanded %}
+               {% if menu_level == 0 %}
+                  <li {{ item.attributes.addClass(classes) }}>
+                     <a href="{{ item.url }}" class="m-link">{{ item.title|raw }}</a><span class="arrow"></span>
+                     {% if item.below %}
+                        {% if item.attributes.hasClass('mega-menu') %}<ul>{% else %}<ul class="dm-align-2">{% endif %}
+                        {{ menus.menu_links(item.below, attributes, menu_level + 1) }}</ul>
+                     {% endif %}
+                  </li>
+               {% elseif menu_level == 1 %}
+                  <li {{ item.attributes.addClass(classes) }}>
+                     {% if item.attributes.hasClass('mega-menu-item') %}
+                        <a href="{{ item.url }}">{{ item.title|raw }}</a> <span class="arrow"></span>
+                     {% else %}
+                        <a href="{{ item.url }}" class="linkcaps">{{ item.title|raw }} <span class="sub-arrow dark pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> <span class="arrow"></span>
+                     {% endif %}
+                     {% if item.below %}
+                        <ul>{{ menus.menu_links(item.below, attributes, menu_level + 1) }}</ul>
+                     {% endif %}
+                  </li>
+               {% else %}
+                  <li {{ item.attributes.addClass(classes) }}>
+                     <a href="{{ item.url }}" class="linkcaps">{{ item.title|raw }} <span class="sub-arrow dark pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> <span class="arrow"></span>
+                     {% if item.below %}
+                        <ul>{{ menus.menu_links(item.below, attributes, menu_level + 1) }}</ul>
+                     {% endif %}
+                  </li>
+               {% endif %}
+            {% else %}
+               <li{{ item.attributes.addClass(classes) }}>
+                  <a href="{{ item.url }}">{{ item.title|raw }}</a>
+               </li>
+            {% endif %}
+      {% endfor %}
+      {% if menu_level == 0 %}</ul>{% endif %}
+   {% endif %}
+{% endmacro %}

@@ -1,0 +1,238 @@
+{% set image_bg_url = page_title_image_url %}
+{% if node.field_header_background_image and node.field_header_background_image.value %}
+      {% set image_bg_url = file_url(node.field_header_background_image.entity.uri.value) %}
+{% endif %}
+
+{% if header_style == 'style2' %}
+    {% include theme_path ~ "/templates/header/header-2.html.twig" %}
+{% elseif header_style == 'style3' %}
+    {% include theme_path ~ "/templates/header/header-3.html.twig" %}
+{% elseif header_style == 'style4' %}
+	{% include theme_path ~ "/templates/header/header-4.html.twig" %}
+{% else %}
+	{% include theme_path ~ "/templates/header/header-1.html.twig" %}
+{% endif %}
+
+<section class="page-title-4" style="background-image: url({{ image_bg_url }})">
+    <div class="container">
+        <div class="row">
+            <h1 class="font-weight-8 text-center">{{ title }}</h1>
+        </div>
+    </div>
+</section>
+<div class="clearfix"></div>
+
+{% if contact_layout == 'style1' %}
+	<section class="sec-padding section-light apar-page-contact">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-8 col-sm-12 col-xs-12">
+	                {% if title_form %}<h3 class="uppercase">{{ title_form|raw }}</h3>{% endif %}
+	                <br/>
+	                <br/>
+	                <div class="text-box white padding-4">
+	                    <div class="smartforms-modal-body">
+	                        <div class="smart-wrap">
+	                            <div class="smart-forms smart-container transparent wrap-full">
+	                                <div class="form-body no-padd">
+	                                    {{ page.content_full_bar }}
+	                                    {{ page.content }}
+	                                </div>
+	                            </div>
+	                        </div>           
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-md-4 col-sm-12 col-xs-12 text-left">
+	                {% if title_contact %}<h4>{{ title_contact|raw }}</h4>{% endif %}
+	                {% if contact_address %}<h6>{{'Address'}}</h6>{% endif %}
+	                <p>{% if contact_address %}{{ contact_address|raw }}{% endif %}
+	                   {% if contact_phone %}{{ 'Telephone:'|raw }} {{ contact_phone|raw }}{% endif %}
+	                   {% if contact_fax %}{{ 'FAX:'|raw }} {{ contact_fax|raw }}{% endif %}
+	                </p>
+	                <br/>
+	                {% if contact_email %}<p>{{ 'E-mail:'|raw }} {{ contact_email|raw }}</p>{% endif %}
+	                {% if contact_website %}<p>{{ 'Website:'|raw }} {{ contact_website|raw }}</p>{% endif %}
+	            </div>
+	            <!--end item--> 
+	        </div>
+	    </div>
+	</section>
+	<div class="clearfix"></div>
+{% elseif contact_layout == 'style2' %}	
+	<section class="sec-padding apar-page-contact">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-4 col-sm-12 col-xs-12 section-white">
+	                {% if page.sidebar %}{{ page.sidebar }}{% endif %}
+	            </div>
+	            <div class="col-md-8">
+	                <div class="col-md-12">
+					    <div id="map_extended" class="map">
+					        <p>{{'This will be replaced with the Google Map.'|raw}}</p>
+					    </div>
+					</div>
+	                <div class="clearfix"></div>
+	                <br/>
+	                {% if title_form %}<h3>{{ title_form|raw }}</h3>{% endif %}
+	                <br/>
+	                <br/>
+	                <div class="smartforms-modal-body">
+	                    <div class="smart-wrap">
+	                        <div class="smart-forms smart-container transparent wrap-full">
+	                            <div class="form-body no-padd">
+	                                {{ page.content_full_bar }}
+	                                {{ page.content }}
+	                            </div>
+	                        </div>
+	                    </div>         
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<div class="clearfix"></div>
+{% elseif contact_layout == 'style3' %}
+	<section class="sec-padding apar-page-contact">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-8">
+	                <div class="col-md-12">
+					    <div id="map_extended" class="map">
+					        <p>{{'This will be replaced with the Google Map.'|raw}}</p>
+					    </div>
+					</div>
+	                <div class="clearfix"></div>
+	                <br/>
+	                {% if title_form %}<h3>{{ title_form|raw }}</h3>{% endif %}
+	                <br/>
+	                <br/>
+	                <div class="smartforms-modal-body">
+	                    <div class="smart-wrap">
+	                        <div class="smart-forms smart-container transparent wrap-full">
+	                            <div class="form-body no-padd">
+	                                {{ page.content_full_bar }}
+	                                {{ page.content }}
+	                            </div>
+	                        </div>
+	                    </div>         
+	                </div>
+	            </div>
+	            <div class="col-md-4 col-sm-12 col-xs-12 section-white">
+	                {% if page.sidebar %}{{ page.sidebar }}{% endif %}
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<div class="clearfix"></div>
+{% elseif contact_layout == 'style4' %}
+	<section class="sec-padding apar-page-contact">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-8">
+	                <div class="smartforms-modal-body">
+	                    <div class="smart-wrap">
+	                        <div class="smart-forms smart-container transparent wrap-full">
+	                            <div class="form-body no-padd">
+	                                {{ page.content_full_bar }}
+	                                {{ page.content }}
+	                            </div>
+	                        </div>
+	                    </div>           
+	                </div>
+	            </div>
+	            <div class="col-md-4 text-left">
+	                <h2 class="uppercase"><strong>{{ 'Get in Touch'|raw }}</strong></h2>
+	                <br/>
+	                {% if title_contact %}<h4>{{ title_contact|raw }}</h4>{% endif %}
+					{% if contact_address %}<h6>{{'Address'}}</h6>{% endif %}
+					<p>{% if contact_address %}{{ contact_address|raw }}{% endif %}
+					   {% if contact_phone %}{{ 'Telephone:'|raw }} {{ contact_phone|raw }}{% endif %}
+					   {% if contact_fax %}{{ 'FAX:'|raw }} {{ contact_fax|raw }}{% endif %}
+					</p>
+					<br/>
+					{% if contact_email %}<p>{{ 'E-mail:'|raw }} {{ contact_email|raw }}</p>{% endif %}
+					{% if contact_website %}<p>{{ 'Website:'|raw }} {{ contact_website|raw }}</p>{% endif %}
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<div class="clearfix"></div>
+
+	<section>
+	    <div class="container-fluid">
+	        <div class="row">
+	            <div class="gmaps-holder-2">
+	                <div class="col-md-12 nopadding">
+	                    <br/>
+	                    <div id="map_extended_full" class="map">
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<div class="clearfix"></div>
+{% else %}
+	<section class="parallax apar-page-contact" data-parallax-bg-image="{{ contact_image_url }}" data-parallax-speed="0.9" data-parallax-direction="down">
+	    <div class="section-overlay opacity-9">
+	        <div class="container sec-tpadding-3 sec-bpadding-3">
+	            <div class="row">
+	                <div class="col-md-8">
+	                    <div class="smartforms-modal-body">
+	                        <div class="smart-wrap">
+	                            <div class="smart-forms smart-container transparent wrap-full">
+	                                <div class="form-body no-padd">
+	                                    {{ page.content_full_bar }}
+	                                	{{ page.content }}
+	                                </div>
+	                            </div>
+	                        </div>          
+	                    </div>
+	                </div>
+	                <div class="col-md-4 text-left text-white ">
+	                    <h2 class="uppercase text-white"><strong>{{ 'Get in Touch'|raw }}</strong></h2>
+	                    <br/>
+	                    {% if title_contact %}<h4 class="text-white">{{ title_contact|raw }}</h4>{% endif %}
+	                    {% if contact_address %}<h6 class="text-white">{{'Address'}}</h6>{% endif %}
+	                    <p>{% if contact_address %}{{ contact_address|raw }}{% endif %}
+						   {% if contact_phone %}{{ 'Telephone:'|raw }} {{ contact_phone|raw }}{% endif %}
+						   {% if contact_fax %}{{ 'FAX:'|raw }} {{ contact_fax|raw }}{% endif %}
+						</p>
+						<br/>
+						{% if contact_email %}<p>{{ 'E-mail:'|raw }} {{ contact_email|raw }}</p>{% endif %}
+						{% if contact_website %}<p>{{ 'Website:'|raw }} {{ contact_website|raw }}</p>{% endif %}
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<div class="clearfix"></div>
+	<section>
+	    <div class="container-fluid">
+	        <div class="row">
+	            <div class="gmaps-holder-2">
+	                <div class="col-md-12 nopadding">
+	                    <br/>
+	                    <div id="map_extended_full" class="map">
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<div class="clearfix"></div>	
+{% endif %}
+<div class="divider-line solid light"></div>
+{% if page.section %}{{ page.section }}{% endif %}
+<div class="clearfix"></div>
+
+{% if footer_style == 'style1' %}
+	{% include theme_path ~ "/templates/footer/footer-1.html.twig" %}
+{% elseif footer_style == 'style2' %}
+    {% include theme_path ~ "/templates/footer/footer-2.html.twig" %}
+{% elseif footer_style == 'style3' %}
+    {% include theme_path ~ "/templates/footer/footer-3.html.twig" %}
+{% else %}	
+	
+{% endif %}

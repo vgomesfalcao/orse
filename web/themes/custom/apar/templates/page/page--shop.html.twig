@@ -1,0 +1,123 @@
+{% set image_bg_url = page_title_image_url %}
+
+{% if header_style == 'style2' %}
+    {% include theme_path ~ "/templates/header/header-2.html.twig" %}
+{% elseif header_style == 'style3' %}
+    {% include theme_path ~ "/templates/header/header-3.html.twig" %}
+{% elseif header_style == 'style4' %}
+    {% include theme_path ~ "/templates/header/header-4.html.twig" %}
+{% else %}
+    {% include theme_path ~ "/templates/header/header-1.html.twig" %}
+{% endif %}
+
+<section class="page-title-4" style="background-image: url({{ image_bg_url }})">
+    <div class="container">
+        <div class="row">
+            <h1 class="font-weight-8 text-center">{{ title }}</h1>
+        </div>
+    </div>
+</section>
+<div class="clearfix"></div>
+
+{% if product_layout == '2column' %}
+    <section class="sec-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 nopadding">
+                    {{ page.content_full_bar }}
+                    {{ page.content }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% elseif product_layout == '3column' %}
+    <section class="sec-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 nopadding">
+                    {{ page.content_full_bar }}
+                    {{ page.content }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% elseif product_layout == '4column' %}
+    <section class="sec-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 nopadding">
+                    {{ page.content_full_bar }}
+                    {{ page.content }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% elseif product_layout == '5column' %}
+    <section class="sec-padding">
+        <div class="container">
+            <div class="row five-cols">
+                {{ page.content_full_bar }}
+                {{ page.content }}
+            </div>
+        </div>
+    </section>
+{% elseif product_layout == '6column' %}
+    <section class="sec-padding">
+        <div class="container-fluid">
+            <div class="row five-cols">
+                {{ page.content_full_bar }}
+                {{ page.content }}
+            </div>
+        </div>
+    </section>
+{% else %}
+    {% if product_sidebar == 'left' %}
+        {{ page.top_section_pd }}
+        <section class="sec-bpadding-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        {% if page.sidebar_shop %}{{ page.sidebar_shop }}{% endif %}  
+                    </div>
+                    <div class="col-md-9">
+                        {{ page.content_full_bar }}
+                        {{ page.content }}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% elseif product_sidebar == 'right' %}
+        {{ page.top_section_pd }}
+        <section class="sec-bpadding-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        {{ page.content_full_bar }}
+                        {{ page.content }}
+                    </div>
+                    <div class="col-md-3">
+                        {% if page.sidebar_shop %}{{ page.sidebar_shop }}{% endif %}    
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% else %}
+        {{ page.top_section_pd }}
+        <section class="sec-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 nopadding">
+                        {{ page.content_full_bar }}
+                        {{ page.content }}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endif %}
+
+<div class="clearfix"></div>
+
+{{ page.section_pd }}
+
+{% include theme_path ~ "/templates/footer/footer-product.html.twig" %}

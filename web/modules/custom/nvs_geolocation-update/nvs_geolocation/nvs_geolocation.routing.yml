@@ -1,0 +1,7 @@
+nvs_geolocation.configuration_form:
+  path: 'admin/config/services/nvs_geolocation'
+  defaults:
+    _form: '\Drupal\nvs_geolocation\Form\Nvs_geolocationConfigurationForm'
+    _title: 'GeoLocation'
+  requirements:
+    _permission: 'administer nvs_geolocation'

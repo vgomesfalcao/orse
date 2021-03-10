@@ -1,0 +1,1 @@
+$(document).on('ready', function(){$("#file-0b").fileinput();});

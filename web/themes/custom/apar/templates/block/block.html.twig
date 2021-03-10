@@ -1,0 +1,82 @@
+{% if region == 'top_left_menu' or region == 'top_menu_social'%}
+	<ul {{ attributes }}>
+		{{ title_prefix }}
+		{% if label %}
+	    <h3>{{ label }}</h3>
+	    {% endif %}
+	    {{ title_suffix }}
+		{% if content %}
+		  {{ content }}
+		{% endif %}
+	</ul>
+{% elseif region == 'footer_column_1' or region == 'footer_column_2' or region == 'footer_column_3' or region == 'footer_column_4' %}
+	<div {{ attributes }}>
+		{{ title_prefix }}
+		{% if label %}
+	    <h5 class="text-white uppercase less-mar3 font-weight-7">{{ label }}</h5>
+	    {% endif %}
+	    {{ title_suffix }}
+		{% if content %}
+		  {{ content }}
+		{% endif %}
+	</div>
+{% elseif region == 'footer_pd_column_1' or region == 'footer_pd_column_2' or region == 'footer_pd_column_3' or region == 'footer_pd_column_4' %}
+	<div {{ attributes }}>
+		{{ title_prefix }}
+		{% if label %}
+	    <h4 class="uppercase less-mar3 font-weight-5">{{ label }}</h4>
+	    {% endif %}
+	    {{ title_suffix }}
+		{% if content %}
+		  {{ content }}
+		{% endif %}
+	</div>
+{% elseif region == 'sidebar'%}
+	<div {{ attributes }}>
+		{{ title_prefix }}
+		{% if label %}
+		<h5 class="dosis uppercase bg2-right-col-item-title">{{ label }}</h5>
+	    {% endif %}
+	    {{ title_suffix }}
+		{% if content %}
+		  {{ content }}
+		{% endif %}
+	</div>
+{% elseif region == 'header_cart'%}
+	{% if content %}
+	  {{ content }}
+	{% endif %}
+{% elseif region == 'sidebar_shop' or region == 'sidebar_left' or region == 'sidebar_right' %}
+	<div {{ attributes }}>
+		{{ title_prefix }}
+		{% if label %}
+		 <h5 class="uppercase sp-sb-title">{{ label }}</h5>
+	    {% endif %}
+	    {{ title_suffix }}
+		{% if content %}
+		  {{ content }}
+		{% endif %}
+	</div>
+{% elseif region == 'section' or region == 'top_section_pd' %}
+	<section {{ attributes }}>
+		{{ title_prefix }}
+		{% if label %}
+		<h3>{{ label }}</h3>
+	    {% endif %}
+	    {{ title_suffix }}
+		{% if content %}
+		  {{ content }}
+		{% endif %}
+	</section>
+{% else %}
+	<div {{ attributes }}>
+		{{ title_prefix }}
+		{% if label %}
+	    <h3>{{ label }}</h3>
+	    {% endif %}
+	    {{ title_suffix }}
+		{% if content %}
+		  {{ content }}
+		{% endif %}
+	</div>
+{% endif %}

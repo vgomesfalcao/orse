@@ -1,0 +1,23 @@
+
+{#{% extends 'block.html.twig' %}
+/**
+ * @file
+ * Simpnews's theme implementation for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% block content %}
+<div class="col-sm-2">
+	{% set class_logo = ['logo', 'style-2', 'mar-4'] %}
+    {% if site_logo %}<a {{ attributes.addClass(class_logo) }} href="{{ title_suffix ? 'javascript:void(0);' : path('<front>') }}" > {{ title_suffix }} <img src="{{ site_logo }}" alt="logo"> </a>{% endif %}
+    {{ site_name }}
+    {{ site_slogan }}
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+<?php
+
+function nvs_geolocation_preprocess_html(&$variables){
+
+    $variables['#attached']['library'][] = 'nvs_geolocation/nvs_geolocation-lib';
+}
+
+function nvs_geolocation_library_info_alter(&$libraries, $extension) {
+    if(\Drupal::config('nvs_geolocation.settings')->get('nvs_geolocation_api_key')){
+      $api_key = \Drupal::config('nvs_geolocation.settings')->get('nvs_geolocation_api_key');
+    }else{
+      $api_key = '';
+    }
+    if(!empty($api_key)){
+    	$libraries['nvs_geolocation-lib']['js']['https://maps.googleapis.com/maps/api/js?key='.$api_key] = array();
+    }
+
+}
+
+function nvs_geolocation_preprocess(&$variables){
+
+    if(\Drupal::config('nvs_geolocation.settings')->get('nvs_geolocation_location_lat')){
+      $variables['nvs_geolocation_lat'] = (float)\Drupal::config('nvs_geolocation.settings')->get('nvs_geolocation_location_lat');
+    }else{
+      $variables['nvs_geolocation_lat'] = '';
+    }
+    if(\Drupal::config('nvs_geolocation.settings')->get('nvs_geolocation_location_lang')){
+      $variables['nvs_geolocation_lang'] = (float)\Drupal::config('nvs_geolocation.settings')->get('nvs_geolocation_location_lang');
+    }else{
+      $variables['nvs_geolocation_lang'] = '';
+    }
+   
+
+}

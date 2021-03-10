@@ -1,0 +1,16 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+    {% if label %}
+      {% if sub_title %}
+          <h6>{{ sub_title }}</h6>
+        {% endif %}
+      <h2>{{ label }}</h2>
+    </div>
+    {% endif %}
+    {% if content %}
+      {{content}}
+    {% endif %}
+</div>
+
+
