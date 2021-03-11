@@ -1,0 +1,48 @@
+uuid: be0c98b3-e9d5-43ed-9207-f0ee60b9fd5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_7
+    - views.view._apar_blog
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: sec-padding
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: enable
+    color: '#000000'
+    bg_image:
+      - 149
+    bg_image_type: default
+    bg_repeat: 'yes'
+    bg_image_position: 'center top'
+    bg_image_size: ''
+    background_overlay: ''
+id: block_section_content_lastest_blogs_1
+theme: apar
+region: section
+weight: -14
+provider: null
+plugin: 'views_block:_apar_blog-block_section_content_lastest_blogs'
+settings:
+  id: 'views_block:_apar_blog-block_section_content_lastest_blogs'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_7
+    context_mapping: {  }

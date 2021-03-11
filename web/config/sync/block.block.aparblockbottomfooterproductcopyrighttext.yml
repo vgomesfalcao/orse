@@ -1,0 +1,47 @@
+uuid: 33768cbd-afba-423b-afcc-49d8cf439c6f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f9cd48f8-96c8-41b2-bb3d-6c1ff9a9095a'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: 'col-md-3 col-sm-12 col-xs-12 bmargin'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: aparblockbottomfooterproductcopyrighttext
+theme: apar
+region: footer_pd_bottom
+weight: -26
+provider: null
+plugin: 'block_content:f9cd48f8-96c8-41b2-bb3d-6c1ff9a9095a'
+settings:
+  id: 'block_content:f9cd48f8-96c8-41b2-bb3d-6c1ff9a9095a'
+  label: '[Apar]Block Bottom Footer Product - Copyright text'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

@@ -1,0 +1,47 @@
+uuid: ee5dbb80-22f6-4c45-a142-c6cbaf69db87
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a451b94b-89c6-42f6-9610-ad64070fcd59'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: 'col-md-3 col-xs-12 clearfix margin-bottom'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: aparblockfootercolumn3usefullinks
+theme: apar
+region: footer_column_3
+weight: 0
+provider: null
+plugin: 'block_content:a451b94b-89c6-42f6-9610-ad64070fcd59'
+settings:
+  id: 'block_content:a451b94b-89c6-42f6-9610-ad64070fcd59'
+  label: 'Useful Links'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

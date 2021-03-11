@@ -1,0 +1,15 @@
+uuid: ae2c70f7-8d8c-4348-8722-f114a12fd5a9
+langcode: en
+status: true
+dependencies: {  }
+name: image_135x135
+label: 'image 135x135'
+effects:
+  c179fea1-0697-45dd-9699-2efdc2dadc26:
+    uuid: c179fea1-0697-45dd-9699-2efdc2dadc26
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 135
+      height: 135
+      anchor: center-center

@@ -1,0 +1,15 @@
+uuid: 038f0702-b408-48ab-9191-63c1db1a011c
+langcode: en
+status: true
+dependencies: {  }
+name: image_1349x720
+label: 'image 1349x720'
+effects:
+  520643ef-09d6-4565-b84c-1841920fcd28:
+    uuid: 520643ef-09d6-4565-b84c-1841920fcd28
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1349
+      height: 720
+      anchor: center-center

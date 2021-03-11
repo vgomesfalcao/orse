@@ -1,0 +1,44 @@
+uuid: a894cfd8-cbc5-4547-801e-29ff3d11d4bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - nvs_widget
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: 'col-md-3 col-xs-12 clearfix margin-bottom'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: nvsflickrwidget
+theme: apar
+region: footer_column_4
+weight: 0
+provider: null
+plugin: flickrwidget
+settings:
+  id: flickrwidget
+  label: 'Flickr Gallery'
+  provider: nvs_widget
+  label_display: visible
+  user_name: 78715597@N07
+  record: '6'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

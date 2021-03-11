@@ -1,0 +1,17 @@
+uuid: b0e27360-8aff-4050-8589-0db66dbcd75c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: portfolio_modern
+label: 'Portfolio Modern'
+logic: and
+conditions:
+  b22c6354-84d8-4a2b-8c44-8cf89244d11d:
+    id: request_path
+    pages: /node/77
+    negate: false
+    context_mapping: {  }
+    uuid: b22c6354-84d8-4a2b-8c44-8cf89244d11d
+allow_other_conditions: false

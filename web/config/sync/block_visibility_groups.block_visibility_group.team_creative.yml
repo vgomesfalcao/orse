@@ -1,0 +1,17 @@
+uuid: f07be473-36f1-4b67-8053-df08021cec96
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: team_creative
+label: 'Team Creative'
+logic: and
+conditions:
+  9b36352d-d5c2-4b14-98bf-9025d198fa65:
+    id: request_path
+    pages: /node/108
+    negate: false
+    context_mapping: {  }
+    uuid: 9b36352d-d5c2-4b14-98bf-9025d198fa65
+allow_other_conditions: false

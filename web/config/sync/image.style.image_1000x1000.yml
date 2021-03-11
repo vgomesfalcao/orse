@@ -1,0 +1,15 @@
+uuid: 2c13a51d-d014-472b-9dfd-e8a917561d91
+langcode: en
+status: true
+dependencies: {  }
+name: image_1000x1000
+label: 'image 1000x1000'
+effects:
+  368dfaae-72f1-4760-b210-9ae9312f27c9:
+    uuid: 368dfaae-72f1-4760-b210-9ae9312f27c9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 1000
+      anchor: center-center

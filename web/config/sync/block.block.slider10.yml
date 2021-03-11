@@ -1,0 +1,44 @@
+uuid: b692be3a-7a94-4197-a6d5-25bb7fda63c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - md_slider
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: slide-tmargin
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: slider10
+theme: apar
+region: slider
+weight: 0
+provider: null
+plugin: 'md_slider_block:slider_10'
+settings:
+  id: 'md_slider_block:slider_10'
+  label: 'Slider 10'
+  provider: md_slider
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home
+    context_mapping: {  }

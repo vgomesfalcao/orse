@@ -1,0 +1,8 @@
+uuid: 1ff1cd38-afcc-47ba-8b8c-92f92c814a98
+langcode: en
+status: true
+dependencies: {  }
+id: date_time_single
+label: 'Date time single'
+locked: false
+pattern: 'd F Y'

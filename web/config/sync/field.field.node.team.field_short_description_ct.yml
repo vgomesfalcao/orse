@@ -1,0 +1,19 @@
+uuid: d63efbeb-cc22-4332-88b8-0f1719a21698
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_description_ct
+    - node.type.team
+id: node.team.field_short_description_ct
+field_name: field_short_description_ct
+entity_type: node
+bundle: team
+label: 'Short description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

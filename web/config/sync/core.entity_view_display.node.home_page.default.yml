@@ -1,0 +1,28 @@
+uuid: efe12e46-f300-4bc2-91e9-1ede682c64e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home_page.body
+    - field.field.node.home_page.field_footer_style
+    - field.field.node.home_page.field_header_style
+    - node.type.home_page
+  module:
+    - text
+    - user
+id: node.home_page.default
+targetEntityType: node
+bundle: home_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_footer_style: true
+  field_header_style: true
+  links: true

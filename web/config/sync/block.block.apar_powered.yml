@@ -1,0 +1,22 @@
+uuid: 46c1c6d4-edd6-48bc-a9f5-5a0e5e70a4cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - apar
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: apar_powered
+theme: apar
+region: disable
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 6ba596c6-b837-4ed4-a41f-0edc2fea3e2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer_style
+    - node.type.services
+  module:
+    - options
+id: node.services.field_footer_style
+field_name: field_footer_style
+entity_type: node
+bundle: services
+label: 'Footer Style'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: style1
+default_value_callback: ''
+settings: {  }
+field_type: list_string

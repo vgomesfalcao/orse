@@ -1,0 +1,46 @@
+uuid: 93452fb3-93c3-4e44-8ca4-33f8559dd810
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - simplenews
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: 'bg2-right-col-item-holder apar-newsletter-sidebar'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: simplenewssubscription
+theme: apar
+region: sidebar
+weight: -9
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: Newsletter
+  provider: simplenews
+  label_display: visible
+  newsletters:
+    default: default
+  message: ''
+  unique_id: e140dfce-2073-476b-ae4c-7c1c65674ddb
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

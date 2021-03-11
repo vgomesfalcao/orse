@@ -1,0 +1,10 @@
+uuid: 807d5671-a915-42b2-be62-24bc24bcacaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.product_shop
+label: 'Product Shop'
+targetEntityType: commerce_product
+cache: true

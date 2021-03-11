@@ -1,0 +1,15 @@
+uuid: 92740d02-c848-4639-9631-79a4871799b0
+langcode: en
+status: true
+dependencies: {  }
+name: image_900x580
+label: 'image 900x580'
+effects:
+  c5bd0717-ecf9-4abe-aa4c-ba0931339ae4:
+    uuid: c5bd0717-ecf9-4abe-aa4c-ba0931339ae4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 900
+      height: 580
+      anchor: center-center

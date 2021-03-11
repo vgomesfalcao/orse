@@ -1,0 +1,40 @@
+uuid: 77993831-2dfa-459e-9968-a83276270d90
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.body
+    - field.field.node.page.field_footer_style
+    - field.field.node.page.field_header_background_image
+    - field.field.node.page.field_header_style
+    - field.field.node.page.field_short_description
+    - node.type.page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: cSv5lDnbIgDug475Hdz3woED2XMqYv3awI-J9u1JLbY
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 100
+    region: content
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_footer_style: true
+  field_header_background_image: true
+  field_header_style: true
+  field_short_description: true

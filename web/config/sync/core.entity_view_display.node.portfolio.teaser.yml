@@ -1,0 +1,52 @@
+uuid: cd9e5217-4fbb-4368-9aef-bcda37a3fdb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.portfolio.field_client
+    - field.field.node.portfolio.field_date_time
+    - field.field.node.portfolio.field_description
+    - field.field.node.portfolio.field_display_page_title
+    - field.field.node.portfolio.field_footer_style
+    - field.field.node.portfolio.field_header_background_image
+    - field.field.node.portfolio.field_header_style
+    - field.field.node.portfolio.field_portfolio_categories
+    - field.field.node.portfolio.field_portfolio_format
+    - field.field.node.portfolio.field_portfolio_image
+    - field.field.node.portfolio.field_portfolio_sidebar
+    - field.field.node.portfolio.field_project_by
+    - field.field.node.portfolio.field_short_description
+    - field.field.node.portfolio.field_skills
+    - field.field.node.portfolio.field_video_embed
+    - field.field.node.portfolio.field_website
+    - node.type.portfolio
+  module:
+    - user
+id: node.portfolio.teaser
+targetEntityType: node
+bundle: portfolio
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_client: true
+  field_date_time: true
+  field_description: true
+  field_display_page_title: true
+  field_footer_style: true
+  field_header_background_image: true
+  field_header_style: true
+  field_portfolio_categories: true
+  field_portfolio_format: true
+  field_portfolio_image: true
+  field_portfolio_sidebar: true
+  field_project_by: true
+  field_short_description: true
+  field_skills: true
+  field_video_embed: true
+  field_website: true

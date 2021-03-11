@@ -1,0 +1,23 @@
+uuid: f38a802e-b3a2-4bba-b48e-83c0fd955942
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about_page_style
+    - node.type.about_page
+  module:
+    - options
+id: node.about_page.field_about_page_style
+field_name: field_about_page_style
+entity_type: node
+bundle: about_page
+label: 'About Page Style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: style1
+default_value_callback: ''
+settings: {  }
+field_type: list_string

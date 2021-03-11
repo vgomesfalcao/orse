@@ -1,0 +1,37 @@
+uuid: ce94632a-9cdf-4330-b7c8-e8e872199bf0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content
+label: Content
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  1f0e580a-2a6b-4dbb-b85e-1b1dcfbea327:
+    id: node_type
+    bundles:
+      404: '404'
+      about_page: about_page
+      article: article
+      blog_post: blog_post
+      coming_soon: coming_soon
+      features: features
+      home_page: home_page
+      home_product: home_product
+      other_page: other_page
+      page: page
+      partners: partners
+      portfolio: portfolio
+      services: services
+      simplenews_issue: simplenews_issue
+      team: team
+      testimonials: testimonials
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 1f0e580a-2a6b-4dbb-b85e-1b1dcfbea327
+selection_logic: and
+weight: -5
+relationships: {  }

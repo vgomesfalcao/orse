@@ -1,0 +1,17 @@
+uuid: ff020dac-ffaf-46f8-8a4b-dfeca9dc22c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: portfolio_no_space
+label: 'Portfolio No Space'
+logic: and
+conditions:
+  a66b82de-ebf1-4bb1-b853-013bd34a75dd:
+    id: request_path
+    pages: /node/75
+    negate: false
+    context_mapping: {  }
+    uuid: a66b82de-ebf1-4bb1-b853-013bd34a75dd
+allow_other_conditions: false

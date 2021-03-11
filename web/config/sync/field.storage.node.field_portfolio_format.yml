@@ -1,0 +1,36 @@
+uuid: 8739bb36-39ee-4ceb-87cd-ceaacef1b7e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_portfolio_format
+field_name: field_portfolio_format
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: image
+      label: Image
+    -
+      value: parallax
+      label: Parallax
+    -
+      value: carousel
+      label: Carousel
+    -
+      value: fullwidth
+      label: 'Fullwidth Image'
+    -
+      value: video
+      label: Video
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

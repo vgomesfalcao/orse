@@ -1,0 +1,17 @@
+uuid: 933f4cef-a028-4c5f-b657-42fe1600cb8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: masonry
+label: Masonry
+logic: and
+conditions:
+  a352e80f-9164-473e-8538-7ca54ec8a47a:
+    id: request_path
+    pages: /node/67
+    negate: false
+    context_mapping: {  }
+    uuid: a352e80f-9164-473e-8538-7ca54ec8a47a
+allow_other_conditions: false

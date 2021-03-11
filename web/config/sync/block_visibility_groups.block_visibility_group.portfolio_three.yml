@@ -1,0 +1,17 @@
+uuid: c03d4415-1719-4ac4-a89d-631a2edb6587
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: portfolio_three
+label: 'Portfolio Three'
+logic: and
+conditions:
+  4afeeb50-9702-499c-b3f3-5ff32718ea81:
+    id: request_path
+    pages: /node/63
+    negate: false
+    context_mapping: {  }
+    uuid: 4afeeb50-9702-499c-b3f3-5ff32718ea81
+allow_other_conditions: false

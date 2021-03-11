@@ -1,0 +1,49 @@
+uuid: 80fc8a4f-9b00-4e90-a806-1187b5022532
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home
+  content:
+    - 'block_content:basic:bbde7f11-3df7-4713-a50c-31ca1c286519'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: sec-padding
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: aparblocksectioncontentbuildanamazingwebsite
+theme: apar
+region: section
+weight: -10
+provider: null
+plugin: 'block_content:bbde7f11-3df7-4713-a50c-31ca1c286519'
+settings:
+  id: 'block_content:bbde7f11-3df7-4713-a50c-31ca1c286519'
+  label: '[Apar]Block Section Content - Build an Amazing Website'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home
+    context_mapping: {  }

@@ -1,0 +1,15 @@
+uuid: 62db3980-80ac-4b6e-9b23-d19d435691a5
+name: 'Apare - Responsive Multi-Purpose Drupal 8 Theme'
+mail: drupalet022@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: /node/92
+  front: /node/133
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

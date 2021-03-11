@@ -1,0 +1,17 @@
+uuid: a459c769-b889-4387-a2c5-6f798d0246b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: mosaic_flat
+label: 'Mosaic Flat'
+logic: and
+conditions:
+  102e41c1-20ab-4be2-a745-4b8039bc4147:
+    id: request_path
+    pages: /node/70
+    negate: false
+    context_mapping: {  }
+    uuid: 102e41c1-20ab-4be2-a745-4b8039bc4147
+allow_other_conditions: false

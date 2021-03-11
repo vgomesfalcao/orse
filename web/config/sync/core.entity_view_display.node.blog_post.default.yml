@@ -1,0 +1,76 @@
+uuid: f1bd8663-502d-4bf6-9b25-37104eafa529
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.blog_post.body
+    - field.field.node.blog_post.field_blog_categories
+    - field.field.node.blog_post.field_blog_comments
+    - field.field.node.blog_post.field_blog_format
+    - field.field.node.blog_post.field_blog_image
+    - field.field.node.blog_post.field_blog_sidebar
+    - field.field.node.blog_post.field_blog_tags
+    - field.field.node.blog_post.field_footer_style
+    - field.field.node.blog_post.field_header_background_image
+    - field.field.node.blog_post.field_header_style
+    - field.field.node.blog_post.field_short_description
+    - field.field.node.blog_post.field_video_embed
+    - node.type.blog_post
+  module:
+    - comment
+    - text
+    - user
+    - video_embed_field
+_core:
+  default_config_hash: xUUiZcj-EuaC4bX5euuLbtjp8IJB13zhTdOsL61avmM
+id: node.blog_post.default
+targetEntityType: node
+bundle: blog_post
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+    region: content
+  field_blog_comments:
+    type: comment_default
+    weight: 1
+    settings:
+      pager_id: 0
+      view_mode: default
+    third_party_settings: {  }
+    label: hidden
+    region: content
+  field_blog_tags:
+    type: entity_reference_label
+    weight: 2
+    settings:
+      link: false
+    third_party_settings: {  }
+    label: hidden
+    region: content
+  field_video_embed:
+    weight: 3
+    label: hidden
+    settings:
+      responsive: true
+      width: '854'
+      height: '480'
+      autoplay: false
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+hidden:
+  field_blog_categories: true
+  field_blog_format: true
+  field_blog_image: true
+  field_blog_sidebar: true
+  field_footer_style: true
+  field_header_background_image: true
+  field_header_style: true
+  field_short_description: true
+  links: true

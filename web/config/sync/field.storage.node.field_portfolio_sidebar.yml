@@ -1,0 +1,30 @@
+uuid: faa19649-01fa-42af-8921-d3cfa8ff0c61
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_portfolio_sidebar
+field_name: field_portfolio_sidebar
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+    -
+      value: none
+      label: None
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

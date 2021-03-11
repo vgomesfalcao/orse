@@ -1,0 +1,17 @@
+uuid: ddbe1948-dc7a-447d-b532-a64e307169fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: portfolio_one
+label: 'Portfolio One'
+logic: and
+conditions:
+  3bba44a6-ee14-48b0-967e-0ffe2e2d5804:
+    id: request_path
+    pages: /node/61
+    negate: false
+    context_mapping: {  }
+    uuid: 3bba44a6-ee14-48b0-967e-0ffe2e2d5804
+allow_other_conditions: false

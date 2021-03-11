@@ -1,0 +1,17 @@
+uuid: c4f7840e-bb5d-468b-8710-9f251ca97f7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: page_fullwidth
+label: 'Page Fullwidth'
+logic: and
+conditions:
+  ef86130f-c172-4e3c-9559-6a8cb1a5fdb9:
+    id: request_path
+    pages: /node/93
+    negate: false
+    context_mapping: {  }
+    uuid: ef86130f-c172-4e3c-9559-6a8cb1a5fdb9
+allow_other_conditions: false

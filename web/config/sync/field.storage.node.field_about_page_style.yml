@@ -1,0 +1,33 @@
+uuid: 9d1ec683-1e9e-45a2-8a12-be3fc582dee4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_about_page_style
+field_name: field_about_page_style
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: style1
+      label: 'Style 1(Deafault)'
+    -
+      value: style2
+      label: 'Style 2'
+    -
+      value: style3
+      label: 'Style 3'
+    -
+      value: style4
+      label: 'Style 4'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

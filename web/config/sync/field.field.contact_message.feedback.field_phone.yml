@@ -1,0 +1,19 @@
+uuid: 106c7f7d-077a-4ab5-9f92-5e9f709e63a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.storage.contact_message.field_phone
+id: contact_message.feedback.field_phone
+field_name: field_phone
+entity_type: contact_message
+bundle: feedback
+label: Phone
+description: 'Example: "+1 1234-567-89000"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

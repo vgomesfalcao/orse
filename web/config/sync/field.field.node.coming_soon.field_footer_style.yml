@@ -1,0 +1,23 @@
+uuid: 224c4d3c-9783-4989-bea0-ae9c6391511f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer_style
+    - node.type.coming_soon
+  module:
+    - options
+id: node.coming_soon.field_footer_style
+field_name: field_footer_style
+entity_type: node
+bundle: coming_soon
+label: 'Footer Style'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: style1
+default_value_callback: ''
+settings: {  }
+field_type: list_string

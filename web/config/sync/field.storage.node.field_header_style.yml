@@ -1,0 +1,33 @@
+uuid: dfaa50b7-133e-455e-9a33-44a1100f67c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_header_style
+field_name: field_header_style
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: style1
+      label: 'Header Light'
+    -
+      value: style2
+      label: 'Header Dark'
+    -
+      value: style3
+      label: 'Header Transparent'
+    -
+      value: style4
+      label: 'Header White'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

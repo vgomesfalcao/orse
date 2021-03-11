@@ -1,0 +1,23 @@
+uuid: 1776d545-9989-4f86-a5af-3f7ae9401526
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_style
+    - node.type.portfolio
+  module:
+    - options
+id: node.portfolio.field_header_style
+field_name: field_header_style
+entity_type: node
+bundle: portfolio
+label: 'Header Style'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: style4
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,44 @@
+uuid: 38acfb85-c79f-4176-88fb-8c87e97a4a18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.services.field_footer_style
+    - field.field.node.services.field_header_background_image
+    - field.field.node.services.field_header_style
+    - field.field.node.services.field_icon_fontawesome
+    - field.field.node.services.field_image
+    - field.field.node.services.field_short_description
+    - field.field.node.services.field_short_description_ct
+    - node.type.services
+  module:
+    - image
+    - user
+id: node.services.default
+targetEntityType: node
+bundle: services
+mode: default
+content:
+  field_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_short_description_ct:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  field_footer_style: true
+  field_header_background_image: true
+  field_header_style: true
+  field_icon_fontawesome: true
+  field_short_description: true
+  links: true

@@ -1,0 +1,46 @@
+uuid: 00a3983f-a239-4d3d-b197-f92e7ec10cb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view._apar_taxanomy_term
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: bg2-right-col-item-holder
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: block_sidebar_categories
+theme: apar
+region: sidebar
+weight: -12
+provider: null
+plugin: 'views_block:_apar_taxanomy_term-block_sidebar_categories'
+settings:
+  id: 'views_block:_apar_taxanomy_term-block_sidebar_categories'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

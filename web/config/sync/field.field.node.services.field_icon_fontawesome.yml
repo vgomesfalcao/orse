@@ -1,0 +1,19 @@
+uuid: cd165c80-7d37-4e6e-8b32-b626d87b3b02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon_fontawesome
+    - node.type.services
+id: node.services.field_icon_fontawesome
+field_name: field_icon_fontawesome
+entity_type: node
+bundle: services
+label: 'Icon FontAwesome'
+description: 'Example: "fa fa-laptop"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

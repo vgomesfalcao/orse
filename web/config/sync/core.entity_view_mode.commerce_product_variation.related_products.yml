@@ -1,0 +1,10 @@
+uuid: 841cbcd5-c2bf-431c-bbe3-e53167954667
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.related_products
+label: 'Related products'
+targetEntityType: commerce_product_variation
+cache: true

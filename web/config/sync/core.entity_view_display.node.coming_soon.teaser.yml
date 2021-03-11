@@ -1,0 +1,40 @@
+uuid: cf528ad3-cc10-428c-9bfb-4f5815c6b10e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.coming_soon.body
+    - field.field.node.coming_soon.field_footer_style
+    - field.field.node.coming_soon.field_header_background_image
+    - field.field.node.coming_soon.field_header_style
+    - field.field.node.coming_soon.field_image
+    - field.field.node.coming_soon.field_short_description
+    - node.type.coming_soon
+  module:
+    - text
+    - user
+id: node.coming_soon.teaser
+targetEntityType: node
+bundle: coming_soon
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_footer_style: true
+  field_header_background_image: true
+  field_header_style: true
+  field_image: true
+  field_short_description: true

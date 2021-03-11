@@ -1,0 +1,23 @@
+uuid: 1a4bcab4-f94a-4342-aef0-db149a940dd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer_style
+    - node.type.portfolio
+  module:
+    - options
+id: node.portfolio.field_footer_style
+field_name: field_footer_style
+entity_type: node
+bundle: portfolio
+label: 'Footer Style'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: style1
+default_value_callback: ''
+settings: {  }
+field_type: list_string

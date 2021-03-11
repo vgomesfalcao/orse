@@ -1,0 +1,47 @@
+uuid: 9c38f1f6-6eaa-4392-86c8-030bca3cc0dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_shop
+    - views.view._apar_product
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: sec-padding
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: block_section_content_latest_products_style_2
+theme: apar
+region: top_section_pd
+weight: -24
+provider: null
+plugin: 'views_block:_apar_product-block_section_content_latest_products_style_2'
+settings:
+  id: 'views_block:_apar_product-block_section_content_latest_products_style_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_shop
+    context_mapping: {  }

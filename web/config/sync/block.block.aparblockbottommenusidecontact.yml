@@ -1,0 +1,47 @@
+uuid: 73430af0-df6f-41d1-b41b-55de9d340777
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c9760027-c53c-4637-9c81-b163f71c899f'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: address
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: aparblockbottommenusidecontact
+theme: apar
+region: menu_side_bottom
+weight: -8
+provider: null
+plugin: 'block_content:c9760027-c53c-4637-9c81-b163f71c899f'
+settings:
+  id: 'block_content:c9760027-c53c-4637-9c81-b163f71c899f'
+  label: '[Apar]Block Bottom Menu Side - Contact'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

@@ -1,0 +1,33 @@
+uuid: 19c58f41-ccd9-4bec-bdb9-947b81372bd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product.field_product_sidebar
+field_name: field_product_sidebar
+entity_type: commerce_product
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+    -
+      value: both
+      label: Both
+    -
+      value: none
+      label: None
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

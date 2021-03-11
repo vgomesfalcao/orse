@@ -1,0 +1,23 @@
+uuid: 8b671b43-f307-4314-8ebd-45b2fd5efca9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portfolio_sidebar
+    - node.type.portfolio
+  module:
+    - options
+id: node.portfolio.field_portfolio_sidebar
+field_name: field_portfolio_sidebar
+entity_type: node
+bundle: portfolio
+label: 'Portfolio Sidebar'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: none
+default_value_callback: ''
+settings: {  }
+field_type: list_string

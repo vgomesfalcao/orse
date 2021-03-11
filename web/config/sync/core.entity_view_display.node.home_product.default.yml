@@ -1,0 +1,26 @@
+uuid: 5045b061-b17f-4244-acdb-1b7be0e368f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home_product.body
+    - field.field.node.home_product.field_header_style
+    - node.type.home_product
+  module:
+    - text
+    - user
+id: node.home_product.default
+targetEntityType: node
+bundle: home_product
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_header_style: true
+  links: true

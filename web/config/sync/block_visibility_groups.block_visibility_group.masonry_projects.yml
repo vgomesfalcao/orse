@@ -1,0 +1,17 @@
+uuid: 01eb8db4-4b94-49a3-9cfd-106e5a5d6ac6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: masonry_projects
+label: 'Masonry Projects'
+logic: and
+conditions:
+  cec3d1c3-b924-4b8f-9f6c-6b914b3ca9fe:
+    id: request_path
+    pages: /node/68
+    negate: false
+    context_mapping: {  }
+    uuid: cec3d1c3-b924-4b8f-9f6c-6b914b3ca9fe
+allow_other_conditions: false

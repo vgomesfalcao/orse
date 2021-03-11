@@ -1,0 +1,23 @@
+uuid: 92eb9b0a-946d-464e-9c89-fa216b586a10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_style
+    - node.type.about_page
+  module:
+    - options
+id: node.about_page.field_header_style
+field_name: field_header_style
+entity_type: node
+bundle: about_page
+label: 'Header Style'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: style3
+default_value_callback: ''
+settings: {  }
+field_type: list_string

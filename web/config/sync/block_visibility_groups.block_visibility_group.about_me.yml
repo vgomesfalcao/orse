@@ -1,0 +1,17 @@
+uuid: f1b1beb5-0ea0-40a5-a00c-87da0f136287
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: about_me
+label: 'About me'
+logic: and
+conditions:
+  3ba06d41-87ae-486c-acec-b6301db9d079:
+    id: request_path
+    pages: /node/123
+    negate: false
+    context_mapping: {  }
+    uuid: 3ba06d41-87ae-486c-acec-b6301db9d079
+allow_other_conditions: false

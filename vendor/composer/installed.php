@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '83f374b147b85b42e9482d66b1ad529bf8761098',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -281,6 +281,15 @@
       array (
       ),
       'reference' => '8.x-1.3',
+    ),
+    'drupal/antibot' => 
+    array (
+      'pretty_version' => '1.4.0',
+      'version' => '1.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.4',
     ),
     'drupal/automated_cron' => 
     array (
@@ -844,6 +853,15 @@
         0 => '8.9.13',
       ),
     ),
+    'drupal/honeypot' => 
+    array (
+      'pretty_version' => '2.0.1',
+      'version' => '2.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2.0.1',
+    ),
     'drupal/image' => 
     array (
       'replaced' => 
@@ -1096,12 +1114,12 @@
     ),
     'drupal/recommended-project' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '83f374b147b85b42e9482d66b1ad529bf8761098',
     ),
     'drupal/responsive_image' => 
     array (
@@ -1311,12 +1329,12 @@
     ),
     'drupal/webform' => 
     array (
-      'pretty_version' => '6.0.1',
-      'version' => '6.0.1.0',
+      'pretty_version' => '6.0.2',
+      'version' => '6.0.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6.0.1',
+      'reference' => '6.0.2',
     ),
     'drupal/webform_mautic' => 
     array (

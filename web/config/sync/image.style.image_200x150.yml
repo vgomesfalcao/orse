@@ -1,0 +1,15 @@
+uuid: 0457f253-fa86-4682-923d-06f99c3dcb33
+langcode: en
+status: true
+dependencies: {  }
+name: image_200x150
+label: 'image 200x150'
+effects:
+  26bb8b77-4413-424d-b4db-caddea248995:
+    uuid: 26bb8b77-4413-424d-b4db-caddea248995
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 150
+      anchor: center-center

@@ -1,0 +1,15 @@
+uuid: 8f0be6e5-f2a2-48ac-954a-7a0b09908f06
+langcode: en
+status: true
+dependencies: {  }
+name: image_68x80
+label: 'image 68x80'
+effects:
+  f5803252-0cc7-4291-b442-e312dd017584:
+    uuid: f5803252-0cc7-4291-b442-e312dd017584
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 68
+      height: 80
+      anchor: center-center

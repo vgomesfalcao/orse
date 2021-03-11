@@ -1,0 +1,15 @@
+uuid: c101936b-3bec-4cd8-afd4-0388b8f9275b
+langcode: en
+status: true
+dependencies: {  }
+name: image_2000x900
+label: 'image 2000x900'
+effects:
+  9884879f-75d3-4c75-8bdc-aaae870b3d1a:
+    uuid: 9884879f-75d3-4c75-8bdc-aaae870b3d1a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2000
+      height: 900
+      anchor: center-center

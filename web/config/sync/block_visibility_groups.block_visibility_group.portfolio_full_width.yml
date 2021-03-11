@@ -1,0 +1,17 @@
+uuid: daa0c77e-2ac6-4ec6-8f25-f18cc3689d22
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: portfolio_full_width
+label: 'Portfolio Full Width'
+logic: and
+conditions:
+  0267c38d-e614-4646-8c9b-cc1bd6a60824:
+    id: request_path
+    pages: /node/73
+    negate: false
+    context_mapping: {  }
+    uuid: 0267c38d-e614-4646-8c9b-cc1bd6a60824
+allow_other_conditions: false

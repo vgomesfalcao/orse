@@ -1,0 +1,15 @@
+uuid: 2b206969-e1e4-4967-b832-881f41b0e25e
+langcode: en
+status: true
+dependencies: {  }
+name: image_512x512
+label: 'image 512x512'
+effects:
+  d160585d-dddf-47c3-8884-315208c17f5c:
+    uuid: d160585d-dddf-47c3-8884-315208c17f5c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 512
+      height: 512
+      anchor: center-center

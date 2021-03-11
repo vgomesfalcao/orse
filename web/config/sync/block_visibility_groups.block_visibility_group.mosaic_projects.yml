@@ -1,0 +1,17 @@
+uuid: aaef76b8-5b10-4078-bb5c-27f29599f3b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: mosaic_projects
+label: 'Mosaic Projects'
+logic: and
+conditions:
+  ed9a7032-bbd9-433a-b6d6-afaa2d159754:
+    id: request_path
+    pages: /node/71
+    negate: false
+    context_mapping: {  }
+    uuid: ed9a7032-bbd9-433a-b6d6-afaa2d159754
+allow_other_conditions: false

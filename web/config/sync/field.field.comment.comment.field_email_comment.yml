@@ -1,0 +1,19 @@
+uuid: 8ed10287-ee27-4e9d-b714-0d0c636b4256
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+    - field.storage.comment.field_email_comment
+id: comment.comment.field_email_comment
+field_name: field_email_comment
+entity_type: comment
+bundle: comment
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

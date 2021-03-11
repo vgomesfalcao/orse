@@ -1,0 +1,47 @@
+uuid: 96a0c894-ae1e-4084-8c01-6e5c58c230ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.team_classic
+    - views.view._apar_team
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: 'sec-padding section-dark'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: block_section_content_meet_our_team
+theme: apar
+region: section
+weight: -15
+provider: null
+plugin: 'views_block:_apar_team-block_section_content_meet_our_team'
+settings:
+  id: 'views_block:_apar_team-block_section_content_meet_our_team'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: team_classic
+    context_mapping: {  }

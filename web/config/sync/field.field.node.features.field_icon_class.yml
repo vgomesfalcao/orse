@@ -1,0 +1,19 @@
+uuid: 4d57c085-950d-4086-a529-97112ef14208
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon_class
+    - node.type.features
+id: node.features.field_icon_class
+field_name: field_icon_class
+entity_type: node
+bundle: features
+label: 'Icon Class'
+description: "Eg: Use for \"<b>Icons Et-Line </b>\",\"<b>Font Awesome Icons</b>\", \"<b>Simple Line Icons</b>\"<br> \r\nInput method: \"icon-laptop\" ,\" fa fa-laptop\""
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,241 @@
+uuid: 135da37c-c534-44cf-b538-eb47107eaabd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.portfolio.field_client
+    - field.field.node.portfolio.field_date_time
+    - field.field.node.portfolio.field_description
+    - field.field.node.portfolio.field_display_page_title
+    - field.field.node.portfolio.field_footer_style
+    - field.field.node.portfolio.field_header_background_image
+    - field.field.node.portfolio.field_header_style
+    - field.field.node.portfolio.field_portfolio_categories
+    - field.field.node.portfolio.field_portfolio_format
+    - field.field.node.portfolio.field_portfolio_image
+    - field.field.node.portfolio.field_portfolio_sidebar
+    - field.field.node.portfolio.field_project_by
+    - field.field.node.portfolio.field_short_description
+    - field.field.node.portfolio.field_skills
+    - field.field.node.portfolio.field_video_embed
+    - field.field.node.portfolio.field_website
+    - image.style.thumbnail
+    - node.type.portfolio
+  module:
+    - datetime
+    - field_group
+    - image
+    - imce
+    - link
+    - path
+    - text
+    - video_embed_field
+third_party_settings:
+  field_group:
+    group_page_title:
+      children:
+        - field_display_page_title
+        - field_header_background_image
+        - field_short_description
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Page Title'
+      region: content
+    group_content:
+      children:
+        - field_portfolio_image
+        - field_video_embed
+        - field_project_by
+        - field_client
+        - field_skills
+        - field_website
+        - field_date_time
+        - field_portfolio_categories
+        - field_description
+      parent_name: ''
+      weight: 5
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Content
+      region: content
+id: node.portfolio.default
+targetEntityType: node
+bundle: portfolio
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_client:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_date_time:
+    weight: 26
+    settings:
+      date_order: DMY
+      time_type: none
+      increment: 15
+    third_party_settings: {  }
+    type: datetime_datelist
+    region: content
+  field_description:
+    weight: 125
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_display_page_title:
+    weight: 124
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_footer_style:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_header_background_image:
+    weight: 125
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
+    type: image_image
+    region: content
+  field_header_style:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_portfolio_categories:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_portfolio_format:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_portfolio_image:
+    weight: 19
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
+    type: image_image
+    region: content
+  field_portfolio_sidebar:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_project_by:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_short_description:
+    weight: 126
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_skills:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_video_embed:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  field_website:
+    weight: 25
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  status: true

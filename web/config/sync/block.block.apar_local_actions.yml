@@ -1,0 +1,20 @@
+uuid: 987a565a-ed67-4d2a-a0a6-b109246e49e6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - apar
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: apar_local_actions
+theme: apar
+region: disable
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

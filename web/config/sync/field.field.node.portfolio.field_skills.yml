@@ -1,0 +1,19 @@
+uuid: bd6ceef7-290e-4cad-8ea9-9daf4fe371c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skills
+    - node.type.portfolio
+id: node.portfolio.field_skills
+field_name: field_skills
+entity_type: node
+bundle: portfolio
+label: Skills
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

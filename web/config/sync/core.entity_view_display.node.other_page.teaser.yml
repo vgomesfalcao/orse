@@ -1,0 +1,40 @@
+uuid: f4ac7d2f-6a52-4d37-9681-e289f1f86385
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.other_page.body
+    - field.field.node.other_page.field_footer_style
+    - field.field.node.other_page.field_header_background_image
+    - field.field.node.other_page.field_header_style
+    - field.field.node.other_page.field_short_description
+    - field.field.node.other_page.field_sidebar
+    - node.type.other_page
+  module:
+    - text
+    - user
+id: node.other_page.teaser
+targetEntityType: node
+bundle: other_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_footer_style: true
+  field_header_background_image: true
+  field_header_style: true
+  field_short_description: true
+  field_sidebar: true

@@ -1,0 +1,23 @@
+uuid: bdc56c11-c1bf-41d8-8a6b-a233dff26e9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.other_page
+  module:
+    - text
+id: node.other_page.body
+field_name: body
+entity_type: node
+bundle: other_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

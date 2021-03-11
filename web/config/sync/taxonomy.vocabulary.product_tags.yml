@@ -1,0 +1,8 @@
+uuid: 4f42b1b6-bf17-42fc-8020-824f7370e555
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product Tags'
+vid: product_tags
+description: ''
+weight: 0

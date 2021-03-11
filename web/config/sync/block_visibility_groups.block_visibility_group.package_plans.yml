@@ -1,0 +1,17 @@
+uuid: c461d9bc-d984-45a9-ba96-e92664a272fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: package_plans
+label: 'Package Plans'
+logic: and
+conditions:
+  cbe6e793-187b-4f66-ba2b-a80811567fe4:
+    id: request_path
+    pages: /node/96
+    negate: false
+    context_mapping: {  }
+    uuid: cbe6e793-187b-4f66-ba2b-a80811567fe4
+allow_other_conditions: false

@@ -1,0 +1,23 @@
+uuid: df4a9cc6-df35-4733-b217-73a62c2ba3b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_style
+    - node.type.home_product
+  module:
+    - options
+id: node.home_product.field_header_style
+field_name: field_header_style
+entity_type: node
+bundle: home_product
+label: 'Header Style'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: style4
+default_value_callback: ''
+settings: {  }
+field_type: list_string

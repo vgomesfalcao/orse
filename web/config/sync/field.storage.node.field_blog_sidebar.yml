@@ -1,0 +1,30 @@
+uuid: 85bb7e53-399e-4e23-a092-88b9414db3e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_blog_sidebar
+field_name: field_blog_sidebar
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+    -
+      value: none
+      label: None
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

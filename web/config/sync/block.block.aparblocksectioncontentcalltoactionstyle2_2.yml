@@ -1,0 +1,49 @@
+uuid: b268b1a6-025c-49f8-814d-7abd64b8b44f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about_me
+  content:
+    - 'block_content:basic:cf9b72db-0b0f-42ba-a422-08c071293a78'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: 'sec-less-padding section-secondary'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: aparblocksectioncontentcalltoactionstyle2_2
+theme: apar
+region: section
+weight: -13
+provider: null
+plugin: 'block_content:cf9b72db-0b0f-42ba-a422-08c071293a78'
+settings:
+  id: 'block_content:cf9b72db-0b0f-42ba-a422-08c071293a78'
+  label: '[Apar]Block Section Content - Call To Action Style 2'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about_me
+    context_mapping: {  }

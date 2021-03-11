@@ -1,0 +1,28 @@
+uuid: 6a78b967-b867-4d8a-8daf-d4f1380e78d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.features.body
+    - field.field.node.features.field_icon_class
+    - field.field.node.features.field_image
+    - node.type.features
+  module:
+    - text
+    - user
+id: node.features.default
+targetEntityType: node
+bundle: features
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_icon_class: true
+  field_image: true
+  links: true

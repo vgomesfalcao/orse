@@ -1,0 +1,23 @@
+uuid: 07929f51-355b-4740-8a8a-73479e40c36c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_style
+    - node.type.coming_soon
+  module:
+    - options
+id: node.coming_soon.field_header_style
+field_name: field_header_style
+entity_type: node
+bundle: coming_soon
+label: 'Header Style'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: style4
+default_value_callback: ''
+settings: {  }
+field_type: list_string

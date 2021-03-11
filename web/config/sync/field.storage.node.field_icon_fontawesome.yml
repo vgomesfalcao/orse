@@ -1,0 +1,21 @@
+uuid: a64f9791-840a-42a8-b645-76c72583772f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_icon_fontawesome
+field_name: field_icon_fontawesome
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

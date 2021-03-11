@@ -1,0 +1,47 @@
+uuid: c1565528-70ea-465b-8650-e085cdf79e68
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:474f0a86-1c93-4d46-a0cd-a0184aecd47c'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: 'col-md-3 col-xs-12 clearfix margin-bottom'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: aparblockfooterproductcolumn3quicklinks
+theme: apar
+region: footer_pd_column_3
+weight: 0
+provider: null
+plugin: 'block_content:474f0a86-1c93-4d46-a0cd-a0184aecd47c'
+settings:
+  id: 'block_content:474f0a86-1c93-4d46-a0cd-a0184aecd47c'
+  label: 'Quick Links'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

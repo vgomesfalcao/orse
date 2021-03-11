@@ -1,0 +1,88 @@
+uuid: 6713edbb-d5b4-45f6-a474-f9e890f3847a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.portfolio.field_client
+    - field.field.node.portfolio.field_date_time
+    - field.field.node.portfolio.field_description
+    - field.field.node.portfolio.field_display_page_title
+    - field.field.node.portfolio.field_footer_style
+    - field.field.node.portfolio.field_header_background_image
+    - field.field.node.portfolio.field_header_style
+    - field.field.node.portfolio.field_portfolio_categories
+    - field.field.node.portfolio.field_portfolio_format
+    - field.field.node.portfolio.field_portfolio_image
+    - field.field.node.portfolio.field_portfolio_sidebar
+    - field.field.node.portfolio.field_project_by
+    - field.field.node.portfolio.field_short_description
+    - field.field.node.portfolio.field_skills
+    - field.field.node.portfolio.field_video_embed
+    - field.field.node.portfolio.field_website
+    - node.type.portfolio
+  module:
+    - datetime
+    - options
+    - text
+    - user
+    - video_embed_field
+id: node.portfolio.default
+targetEntityType: node
+bundle: portfolio
+mode: default
+content:
+  field_date_time:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: date_time_single
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_description:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_portfolio_categories:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_portfolio_format:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_video_embed:
+    weight: 3
+    label: hidden
+    settings:
+      responsive: true
+      width: '854'
+      height: '480'
+      autoplay: false
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+hidden:
+  field_client: true
+  field_display_page_title: true
+  field_footer_style: true
+  field_header_background_image: true
+  field_header_style: true
+  field_portfolio_image: true
+  field_portfolio_sidebar: true
+  field_project_by: true
+  field_short_description: true
+  field_skills: true
+  field_website: true
+  links: true

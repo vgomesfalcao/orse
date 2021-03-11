@@ -1,0 +1,17 @@
+uuid: 2e7ecc0e-246a-4f25-9361-eca11bb1fb67
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: home_page_6
+label: 'Home Page 6'
+logic: and
+conditions:
+  a661f20a-2be2-4c18-bf46-370dd3cd6e0a:
+    id: request_path
+    pages: /node/129
+    negate: false
+    context_mapping: {  }
+    uuid: a661f20a-2be2-4c18-bf46-370dd3cd6e0a
+allow_other_conditions: false

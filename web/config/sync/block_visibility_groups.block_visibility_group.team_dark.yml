@@ -1,0 +1,17 @@
+uuid: e11572f6-1194-4c29-b0d1-99411c86317d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: team_dark
+label: 'Team Dark'
+logic: and
+conditions:
+  be2efde9-8e3e-4250-b8d3-1c832b5fe4f3:
+    id: request_path
+    pages: /node/107
+    negate: false
+    context_mapping: {  }
+    uuid: be2efde9-8e3e-4250-b8d3-1c832b5fe4f3
+allow_other_conditions: false

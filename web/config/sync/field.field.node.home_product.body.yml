@@ -1,0 +1,23 @@
+uuid: bbce4052-d24c-4701-ba18-cbb092eb85e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.home_product
+  module:
+    - text
+id: node.home_product.body
+field_name: body
+entity_type: node
+bundle: home_product
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

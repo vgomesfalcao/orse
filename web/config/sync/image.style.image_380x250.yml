@@ -1,0 +1,15 @@
+uuid: 0a898ded-af0f-4a5d-94fe-bf55a2ddcb7d
+langcode: en
+status: true
+dependencies: {  }
+name: image_380x250
+label: 'image 380x250'
+effects:
+  c8c101be-dac0-4081-a686-b97410e5da02:
+    uuid: c8c101be-dac0-4081-a686-b97410e5da02
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 380
+      height: 250
+      anchor: center-center

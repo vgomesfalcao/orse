@@ -1,0 +1,49 @@
+uuid: 0ffc5835-5cfc-491f-a046-e93ea6a19ded
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home
+  content:
+    - 'block_content:basic:4ad0644b-4d78-4dc6-a944-b5c206365651'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: 'sec-padding section-light'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: aparblocksectioncontentwelcometoapar
+theme: apar
+region: section
+weight: -20
+provider: null
+plugin: 'block_content:4ad0644b-4d78-4dc6-a944-b5c206365651'
+settings:
+  id: 'block_content:4ad0644b-4d78-4dc6-a944-b5c206365651'
+  label: '[Apar]Block Section Content - Welcome to Apar'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home
+    context_mapping: {  }

@@ -1,0 +1,17 @@
+uuid: 32dc74ff-9a46-45a0-8258-369916ca2154
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: portfolio_boxed_size
+label: 'Portfolio Boxed Size'
+logic: and
+conditions:
+  c27b74bd-b5e5-4ea3-b254-5b6df627091c:
+    id: request_path
+    pages: /node/76
+    negate: false
+    context_mapping: {  }
+    uuid: c27b74bd-b5e5-4ea3-b254-5b6df627091c
+allow_other_conditions: false

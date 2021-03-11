@@ -1,0 +1,47 @@
+uuid: 38719a4c-5318-43da-9b30-1b1c2af38d25
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ec372c4a-dfc3-465f-8993-bb0d790b2f27'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: 'col-md-3 col-sm-12 colmargin clearfix margin-bottom'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: aparblockfootercolumn1productlogoandcontact
+theme: apar
+region: footer_pd_column_1
+weight: 0
+provider: null
+plugin: 'block_content:ec372c4a-dfc3-465f-8993-bb0d790b2f27'
+settings:
+  id: 'block_content:ec372c4a-dfc3-465f-8993-bb0d790b2f27'
+  label: '[Apar]Block Footer Column 1 Product - Logo and Contact'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

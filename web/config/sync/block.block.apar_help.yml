@@ -1,0 +1,22 @@
+uuid: 8d4a1014-149d-40cc-afd7-7d18610e4c90
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - apar
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: apar_help
+theme: apar
+region: disable
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

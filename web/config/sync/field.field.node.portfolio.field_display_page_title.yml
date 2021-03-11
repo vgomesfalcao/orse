@@ -1,0 +1,23 @@
+uuid: 81488f85-3a2e-45c9-8819-e328359adc05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_page_title
+    - node.type.portfolio
+id: node.portfolio.field_display_page_title
+field_name: field_display_page_title
+entity_type: node
+bundle: portfolio
+label: 'Display Page Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

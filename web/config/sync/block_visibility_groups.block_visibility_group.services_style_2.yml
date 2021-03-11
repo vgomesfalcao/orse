@@ -1,0 +1,17 @@
+uuid: d1532586-7043-4965-b4d3-2b9cb686ec12
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: services_style_2
+label: 'Services Style 2'
+logic: and
+conditions:
+  de29b90b-9552-4b58-8d0e-e283e5ce7f91:
+    id: request_path
+    pages: /node/115
+    negate: false
+    context_mapping: {  }
+    uuid: de29b90b-9552-4b58-8d0e-e283e5ce7f91
+allow_other_conditions: false

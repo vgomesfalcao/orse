@@ -1,0 +1,25 @@
+uuid: 74ead154-d14a-4180-97c1-7ad823a1b980
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_embed
+    - node.type.portfolio
+  module:
+    - video_embed_field
+id: node.portfolio.field_video_embed
+field_name: field_video_embed
+entity_type: node
+bundle: portfolio
+label: 'Video Embed'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: youtube_playlist
+field_type: video_embed_field

@@ -1,0 +1,15 @@
+uuid: 5e674da6-94f1-4d7d-bfb7-ae659d564589
+langcode: en
+status: true
+dependencies: {  }
+name: image_80x80
+label: 'image 80x80'
+effects:
+  2e107b9e-f07e-46f9-95fe-2ec41177d44f:
+    uuid: 2e107b9e-f07e-46f9-95fe-2ec41177d44f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 80
+      height: 80
+      anchor: center-center

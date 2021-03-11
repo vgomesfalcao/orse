@@ -1,0 +1,23 @@
+uuid: aba22566-4611-4664-bae2-ccb187a6f5e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.features
+  module:
+    - text
+id: node.features.body
+field_name: body
+entity_type: node
+bundle: features
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,34 @@
+uuid: d1d9b369-6981-446b-baca-cef82525a4a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about_page.body
+    - field.field.node.about_page.field_about_page_style
+    - field.field.node.about_page.field_footer_style
+    - field.field.node.about_page.field_header_background_image
+    - field.field.node.about_page.field_header_style
+    - field.field.node.about_page.field_short_description
+    - node.type.about_page
+  module:
+    - text
+    - user
+id: node.about_page.default
+targetEntityType: node
+bundle: about_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_about_page_style: true
+  field_footer_style: true
+  field_header_background_image: true
+  field_header_style: true
+  field_short_description: true
+  links: true

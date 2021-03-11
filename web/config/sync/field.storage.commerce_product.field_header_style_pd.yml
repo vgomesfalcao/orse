@@ -1,0 +1,33 @@
+uuid: 354e7c9c-898e-4903-abc9-6795d94f492a
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product.field_header_style_pd
+field_name: field_header_style_pd
+entity_type: commerce_product
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: style1
+      label: 'Header Light'
+    -
+      value: style2
+      label: 'Header Dark'
+    -
+      value: style3
+      label: 'Header Transparent'
+    -
+      value: style4
+      label: 'Header White'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

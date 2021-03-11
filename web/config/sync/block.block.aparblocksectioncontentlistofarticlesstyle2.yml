@@ -1,0 +1,49 @@
+uuid: 41440c16-b425-4909-b167-016a2d7e09c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_1
+  content:
+    - 'block_content:basic:46e9cd41-c159-4d2e-b4d0-09da83ad0ef9'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: aparblocksectioncontentlistofarticlesstyle2
+theme: apar
+region: section
+weight: -15
+provider: null
+plugin: 'block_content:46e9cd41-c159-4d2e-b4d0-09da83ad0ef9'
+settings:
+  id: 'block_content:46e9cd41-c159-4d2e-b4d0-09da83ad0ef9'
+  label: '[Apar]Block Section Content - List of articles Style 2'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_1
+    context_mapping: {  }

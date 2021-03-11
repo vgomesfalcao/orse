@@ -1,0 +1,44 @@
+uuid: efb1398c-c52e-43b0-96bc-efb9551e9d62
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_4
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - md_slider
+    - ntv_block_background
+  theme:
+    - apar
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: slider4
+theme: apar
+region: slider
+weight: 0
+provider: null
+plugin: 'md_slider_block:slider'
+settings:
+  id: 'md_slider_block:slider'
+  label: 'Slider 4'
+  provider: md_slider
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_4
+    context_mapping: {  }

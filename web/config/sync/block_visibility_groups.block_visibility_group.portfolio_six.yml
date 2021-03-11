@@ -1,0 +1,17 @@
+uuid: e4fe0b58-b7f4-4a26-b1b6-4ee67faf0b06
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: portfolio_six
+label: 'Portfolio Six'
+logic: and
+conditions:
+  36758f2e-cbee-44e4-91f3-1a24e7e5df4e:
+    id: request_path
+    pages: /node/66
+    negate: false
+    context_mapping: {  }
+    uuid: 36758f2e-cbee-44e4-91f3-1a24e7e5df4e
+allow_other_conditions: false
