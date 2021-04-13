@@ -1,0 +1,23 @@
+uuid: 5afe48e8-37f6-48c0-9058-092bec8516ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.formulario_cliente
+  module:
+    - text
+id: node.formulario_cliente.body
+field_name: body
+entity_type: node
+bundle: formulario_cliente
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

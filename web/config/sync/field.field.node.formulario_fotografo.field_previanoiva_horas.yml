@@ -1,0 +1,23 @@
+uuid: 20c829da-64a5-4cd7-9823-44d95ddf9c76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_previanoiva_horas
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_previanoiva_horas
+field_name: field_previanoiva_horas
+entity_type: node
+bundle: formulario_fotografo
+label: 'PreviaNoiva Horas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

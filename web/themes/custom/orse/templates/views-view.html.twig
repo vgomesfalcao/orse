@@ -1,0 +1,1651 @@
+{% if id == '_apar_taxanomy_term' %}
+	{% if display_id == 'block_sidebar_tags' %}
+		<ul class="bg2-tags">
+		    {{ rows }}
+		</ul>
+	{% elseif display_id == 'block_sidebar_categories' %}
+		<ul class="bg2-rightcol-links">
+            {{ rows }}
+        </ul>
+    {% elseif display_id == 'block_portfolio_filters_style_1' %}
+    	<div id="js-filters-juicy-projects" class="cbp-l-filters-button">
+    		{{ header }}
+    		{{ rows }}
+    	</div>
+    {% elseif display_id == 'block_portfolio_filters_style_2' %}
+    	<div id="js-filters-juicy-projects" class="cbp-l-filters-buttonCenter">
+    		{{ header }}
+    		{{ rows }}
+    	</div>
+    {% elseif display_id == 'block_portfolio_filters_style_3' %}
+    	<div id="js-filters-juicy-projects" class="cbp-l-filters cbp-l-filters-alignCenter uppercase">
+		    {{ header }}
+		    {{ rows }}
+		</div>
+	{% elseif display_id == 'block_sidebar_categories_product' %}
+		<ul class="sp-sb-links">
+		    {{ rows }}
+		</ul>
+	{% elseif display_id == 'block_sidebar_tags_product' %}
+		<ul class="sp-tags">
+		    {{ rows }}
+		</ul>
+	{% else %}
+		<div {{ attributes }}>
+			{{ title_prefix }}
+			{{ title }}
+			{{ title_suffix }}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		</div>
+	{% endif %}
+{% elseif id == '_apar_sidebar_widget' %}
+	{% if display_id == 'block_sidebar_latest_posts' %}
+		{{ rows }}
+	{% elseif display_id == 'block_sidebar_popular_posts' %}
+		<ul class="sp-sb-links">
+		    {{ rows }}
+		</ul>
+	{% else %}
+		<div {{ attributes }}>
+			{{ title_prefix }}
+			{{ title }}
+			{{ title_suffix }}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		</div>
+	{% endif %}
+{% elseif id == '_apar_features' %}
+	{% if display_id == 'block_section_content_awesome_features' %}
+		<div class="feature-box-3 apar-bl-futures">
+		    <div class="container ">
+		        <div class="row no-gutter">
+		            <div class="col-md-12 nopadding">
+		                <div class="sec-title-container less-padding-3 text-center">
+		                    {{ header }}
+		                </div>
+		            </div>
+		            {% set temp = 1 %}
+					{% for i, row in rows.0['#rows'] %}
+						{% if temp % 2 == 0 %}
+							<div class="col-md-4 col-sm-4 apar-bg-white">
+								{{ row }}
+							</div>
+						{% else %}
+							<div class="col-md-4 col-md-4 apar-bg-color">
+								{{ row }}
+							</div>
+						{% endif %}
+
+						{% set temp = temp + 1 %}
+					{% endfor %} 
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_awesome_features_style_2' %}
+		<div class="img-holder col-md-12 col-sm-12">
+		    {{ header }}
+		</div>
+		<div class="container-fluid">
+		    <div class="row">
+		        <div class="col-md-6"></div>
+		        <div class="col-md-6 col-sm-12 text-inner-4  clearfix align-left">
+		            <div class="text-box section-white opacity-9 padding-8 ">
+		                <div class="col-xs-12 nopadding">
+		                    <div class="sec-title-container text-left">
+		                        {{ footer }}
+		                    </div>
+		                </div>
+		                <div class="clearfix"></div>
+		                {% set temp = 1 %}
+						{% for i, row in rows.0['#rows'] %}
+						{% if temp == 1 %}
+							<div class="feature-box-7">
+						    	{{ row }}
+							</div>
+							<div class="col-divider-margin-3"></div>
+						    {% set temp = temp + 1 %}
+						{% elseif temp == 2 %}
+							<div class="feature-box-7 active">
+						    	{{ row }}
+							</div>
+							<div class="col-divider-margin-3"></div>
+						    {% set temp = temp + 1 %}
+						{% elseif temp == 3 or i == (rows.0['#rows']|length - 1) %}
+							<div class="feature-box-7">
+						    	{{ row }}
+							</div>
+							{% set temp = 1 %}
+						{% endif %}
+						{% endfor %} 
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_features_dark' %}
+		<div class="container-fulid">
+		    <div class="row nopadding">
+		    	{% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+					<div class="col-md-3 col-sm-6 nopadding section-medium-dark two">
+				    	{{ row }}
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+					<div class="col-md-3 col-sm-6 nopadding section-dark">
+				    	{{ row }}
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+					<div class="col-md-3 col-sm-6 nopadding section-dark two">
+				    	{{ row }}
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 or i == (rows.0['#rows']|length - 1) %}
+					<div class="col-md-3 col-sm-6 nopadding section-fulldark">
+				    	{{ row }}
+					</div>
+					{% set temp = 1 %}
+				{% endif %}
+				{% endfor %}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% else %}
+		<div {{ attributes }}>
+			{{ title_prefix }}
+			{{ title }}
+			{{ title_suffix }}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		</div>
+	{% endif %}
+{% elseif id == '_apar_partners' %}
+	{% if display_id == 'block_section_content_partners' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12">
+		            <ul class="ce4-clients noborder grid-cols-6 hover-2">
+		                {{ rows }}
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_partners_style_2' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12">
+		            <ul class="ce4-clients grid-cols-6 hover-2">
+		                {{ rows }}
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% else %}
+		<div {{ attributes }}>
+			{{ title_prefix }}
+			{{ title }}
+			{{ title_suffix }}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		</div>
+	{% endif %}
+{% elseif id == '_apar_portfolio' %}
+	{% if display_id == 'block_section_content_portfolio_one_column' %}
+		<div class="container">
+		    <div class="row">
+		        {{ header }}
+		        <div id="js-grid-juicy-projects-2" class="cbp">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_two_column' %}
+		<div class="container">
+		    <div class="row">
+		        {{ header }}
+		        <div id="js-grid-juicy-projects-2" class="cbp">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_three_column' %}
+		<div class="container">
+		    <div class="row">
+		        {{ header }}
+		        <div id="js-grid-juicy-projects-3" class="cbp">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_four_column' %}
+		<div class="container">
+		    <div class="row">
+		        {{ header }}
+		        <div id="js-grid-juicy-projects-4" class="cbp">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_five_column' %}
+		<div class="container">
+		    <div class="row">
+		        {{ header }}
+		        <div id="js-grid-juicy-projects-5" class="cbp">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_six_column' %}
+		<div class="container-fulid apar-pf-6-cl">
+		    <div class="row nopadding">
+		        {{ header }}
+		        <div id="js-grid-juicy-projects-6" class="cbp">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_masonry' %}
+		<div class="container">
+		    <div class="row">
+		        {{ header }}
+		        <div id="js-grid-masonry" class="cbp">
+				    {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_masonry_project' %}
+		<div class="container">
+		    <div class="row">
+		        {{ header }}
+		        <div id="js-grid-masonry-projects" class="cbp cbp-l-grid-masonry-projects">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_mosaic' %}
+		<div class="container">
+		    <div class="row">
+		        {{ header }}
+		        <div id="js-grid-mosaic" class="cbp cbp-l-grid-mosaic">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_mosaic_flat' %}
+		<div class="container-fluid">
+		    <div class="row">
+		        {{ header }}
+		        <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_mosaic_project' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="clearfix">
+		            {{ header }}
+		        </div>
+		        <div id="js-grid-mosaic-projects" class="cbp cbp-l-grid-mosaic-projects">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_slider_project' %}
+		<div class="container">
+		    <div class="row">
+		        <div id="js-grid-slider-projects" class="cbp">
+		           {{ rows }}
+		        </div>
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_full_width' %}
+		<div class="container-fluid">
+		    <div class="row">
+		        <div>
+		            {{ header }}
+		            <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
+		                {{ rows }}
+		            </div>
+		            {{ pager }}
+		        </div>
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_classic' %}
+		<div class="container">
+		    <div class="row">
+		        <div>
+		            {{ header }}
+		            <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
+		                {{ rows }}
+		            </div>
+		            {{ pager }}
+		        </div>
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_boxed_size' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="clearfix">
+		            {{ header }}
+		        </div>
+		        <div id="js-grid-lightbox-gallery" class="cbp">
+		            {{ rows }}
+		        </div>
+		        {{ pager }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_portfolio_modern' %}
+		<div class="container">
+		    <div class="row">
+		        <div id="js-grid-mosaic" class="cbp cbp-l-grid-mosaic">
+		            {{ rows }}
+		        </div>
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_latest_projects' %}
+		<div class="container sec-padding ">
+		    <div class="col-xs-12 text-center">
+		        <div class="sec-title-container less-padding-3 text-center">
+		            {{ header }}
+		        </div>
+		        <div class="clearfix"></div>
+		        <div class="row ">
+		            <div id="owl-demo3" class="owl-carousel owl-theme">
+		            	{% set temp = 1 %}
+						{% for i, row in rows.0['#rows'] %}
+							{% if temp == 1 %}
+								<div class="item">
+									<div class="col-md-4 col-sm-6 col-xs-12" >
+		                        		<div class="feature-box-14">
+						    				{{ row }}
+						    			</div>
+						    		</div>
+						    	{% if i == (rows.0['#rows']|length - 1) %}
+						    	</div>
+						    	{% endif %}
+						        {% set temp = temp + 1 %}
+						    {% elseif temp == 2 %}
+									<div class="col-md-4 col-sm-6 col-xs-12" >
+		                        		<div class="feature-box-14 active">
+						    				{{ row }}
+						    			</div>
+						    		</div>
+						    	{% if i == (rows.0['#rows']|length - 1) %}
+						    	</div>
+						    	{% endif %}
+						        {% set temp = temp + 1 %}
+						    {% elseif temp == 3 or i == (rows.0['#rows']|length - 1) %}
+						    	 	<div class="col-md-4 col-sm-6 col-xs-12" >
+		                        		<div class="feature-box-14">
+						    				{{ row }}
+						    			</div>
+						    		</div>
+						    	</div>
+						    	{% set temp = 1 %}
+						    {% endif %}
+						{% endfor %}
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_latest_projects_style_2' %}
+		<div class="container">
+		    <div class="row no-gutter ">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container padding-top-7 less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        {{ rows }}
+		    </div>
+		    {{ pager }}
+		</div>
+		<div class="clearfix"></div>	
+	{% elseif display_id == 'block_section_content_portfolio' %}
+		<div class="container-fulid">
+		    <div class="row nopadding">
+		        <div class="less4">
+		            {{ header }}
+		            <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
+		                {{ rows }}
+		            </div>
+		            {{ pager }}
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_featured_projects' %}
+		<div class="container-fluid">
+		    <div class="row sec-tpadding-2">
+		        <div class="col-xs-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix"></div>
+		        <div>
+		            {{ footer }}
+		            <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
+		                {{ rows }}
+		            </div>
+		            {{ pager }}
+		        </div>
+		        <div class="clearfix"></div>
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_featured_projects_style_2' %}
+		<div class="container">
+		    <div class="row ">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix margin-bottom-2"></div>
+		        <div>
+		            {{ footer }}
+		            <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
+		                {{ rows }}
+		            </div>
+		            {{ pager }}
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% else %}
+		<div {{ attributes }}>
+			{{ title_prefix }}
+			{{ title }}
+			{{ title_suffix }}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		</div>
+	{% endif %}
+{% elseif id == '_apar_product' %}
+	{% if display_id == 'block_sidebar_latest_products' %}
+		{{ rows }}
+	{% elseif display_id == 'block_footer_product_column_2_lastest' %}
+		<div class="item-holder">
+		    <div class="footer-title-bottomstrip dark"></div>
+		    <div class="clearfix"></div>
+		   	{{ rows }}
+		</div>
+	{% elseif display_id == 'block_footer_product_column_4_on_sale_product' %}
+		<div class="item-holder">
+		    <div class="footer-title-bottomstrip dark"></div>
+		    <div class="clearfix"></div>
+		    {{ rows }}
+		</div>
+	{% elseif display_id == 'block_sidebar_product' %}
+		{{ rows }}
+	{% elseif display_id == 'apar_page_shop' %}
+		{% if product_layout == '2column' %}
+			<div {{ attributes }}>
+				{{ title_prefix }}
+				{{ title }}
+				{{ title_suffix }}
+				{{ header }}
+				{% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 or i == (rows.0['#rows']|length - 1) %}
+					{{ row }}
+					<div class="clearfix"></div>
+					<div class="col-divider-margin-4"></div>
+				    {% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+			  	{{ attachment_after }}
+			  	{{ empty }}
+			  	{{ footer }}
+			  	{{ pager }}
+			</div>
+		{% elseif product_layout == '3column' %}
+			<div {{ attributes }}>
+				{{ title_prefix }}
+				{{ title }}
+				{{ title_suffix }}
+				{{ header }}
+				{% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 or i == (rows.0['#rows']|length - 1) %}
+					{{ row }}
+					<div class="clearfix"></div>
+					<div class="col-divider-margin-4"></div>
+				    {% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+			  	{{ attachment_after }}
+			  	{{ empty }}
+			  	{{ footer }}
+			  	{{ pager }}
+			</div>
+		{% elseif product_layout == '4column' %}
+			<div {{ attributes }}>
+				{{ title_prefix }}
+				{{ title }}
+				{{ title_suffix }}
+				{{ header }}
+				{% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 or i == (rows.0['#rows']|length - 1) %}
+					{{ row }}
+					<div class="clearfix"></div>
+					<div class="col-divider-margin-4"></div>
+				    {% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+			  	{{ attachment_after }}
+			  	{{ empty }}
+			  	{{ footer }}
+			  	{{ pager }}
+			</div>
+		{% elseif product_layout == '5column' %}
+			<div {{ attributes }}>
+				{{ title_prefix }}
+				{{ title }}
+				{{ title_suffix }}
+				{{ header }}
+				{% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 5 or i == (rows.0['#rows']|length - 1) %}
+					{{ row }}
+					<div class="clearfix"></div>
+					<div class="col-divider-margin-6"></div>
+				    {% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+			  	{{ attachment_after }}
+			  	{{ empty }}
+			  	{{ footer }}
+			  	{{ pager }}
+			</div>
+		{% elseif product_layout == '6column' %}
+			<div {{ attributes }}>
+				{{ title_prefix }}
+				{{ title }}
+				{{ title_suffix }}
+				{{ header }}
+				{% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 5 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 6 or i == (rows.0['#rows']|length - 1) %}
+					{{ row }}
+					<div class="clearfix"></div>
+					<div class="col-divider-margin-6"></div>
+				    {% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+			  	{{ attachment_after }}
+			  	{{ empty }}
+			  	{{ footer }}
+			  	{{ pager }}
+			</div>
+		{% else %}
+			{% if product_sidebar == 'none' %}
+				<div {{ attributes }}>
+					{{ title_prefix }}
+					{{ title }}
+					{{ title_suffix }}
+					{{ header }}
+					{% set temp = 1 %}
+					{% for i, row in rows.0['#rows'] %}
+					{% if temp == 1 %}
+					    {{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 2 %}
+					    {{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 3 %}
+					    {{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 4 or i == (rows.0['#rows']|length - 1) %}
+						{{ row }}
+						<div class="clearfix"></div>
+						<div class="col-divider-margin-4"></div>
+					    {% set temp = 1 %}
+					{% endif %}
+					{% endfor %} 
+				  	{{ attachment_after }}
+				  	{{ empty }}
+				  	{{ footer }}
+				  	{{ pager }}
+				</div>
+			{% else %}
+				<div {{ attributes }}>
+					{{ title_prefix }}
+					{{ title }}
+					{{ title_suffix }}
+					{{ header }}
+					{% set temp = 1 %}
+					{% for i, row in rows.0['#rows'] %}
+					{% if temp == 1 %}
+					    {{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 2 %}
+					    {{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 3 or i == (rows.0['#rows']|length - 1) %}
+						{{ row }}
+						<div class="clearfix"></div>
+						<div class="col-divider-margin-4"></div>
+					    {% set temp = 1 %}
+					{% endif %}
+					{% endfor %} 
+				  	{{ attachment_after }}
+				  	{{ empty }}
+				  	{{ footer }}
+				  	{{ pager }}
+				</div>
+			{% endif %}
+		{% endif %}
+	{% elseif display_id == 'block_section_content_lastest_product' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-xs-12 nopadding">
+		            <div class="sec-title-container text-center">
+		                {{ header }}
+		                <div class="sp-title-line-1"></div>
+		            </div>
+		        </div>
+		        <div class="clearfix"></div>
+		        {% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+					<div class="col-md-3 col-sm-6 col-xs-12 pd-list-item">
+		            	<div class="sp-feature-box-3 margin-bottom">
+				    		{{ row }}
+				    	</div>
+				    </div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+				    <div class="col-md-3 col-sm-6 col-xs-12 pd-list-item">
+						<div class="sp-feature-box-3 margin-bottom">
+							{{ row }}
+						</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+				    <div class="col-md-3 col-sm-6 col-xs-12 pd-list-item">
+						<div class="sp-feature-box-3 active margin-bottom">
+							{{ row }}
+						</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 or i == (rows.0['#rows']|length - 1) %}
+					<div class="col-md-3 col-sm-6 col-xs-12 pd-list-item">
+						<div class="sp-feature-box-3 margin-bottom">
+							{{ row }}
+						</div>
+					</div>
+				    {% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_latest_products_style_2' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-xs-12 nopadding">
+		            <div class="sec-title-container text-center">
+		                {{ header }}
+		                <div class="sp-title-line-1"></div>
+		            </div>
+		        </div>
+		        <div class="clearfix"></div>
+		        {% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 or i == (rows.0['#rows']|length - 1) %}
+					{{ row }}
+					<div class="clearfix"></div>
+					<div class="col-divider-margin-6"></div>
+				    {% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% else %}
+		<div {{ attributes }}>
+			{{ title_prefix }}
+			{{ title }}
+			{{ title_suffix }}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		</div>
+	{% endif %}
+{% elseif id == '_apar_blog' %}
+	{% if display_id == 'block_footer_column_2_latest_post' %}
+		<div class="clearfix"></div>
+		{{ rows }}
+	{% elseif display_id == 'block_section_content_lastest_blogs' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            {{ header }}
+		        </div>
+		        <div class="col-md-12 slide-controls-5 nopadding">
+		            <div id="owl-demo5" class="owl-carousel">
+		                {{ rows }}
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_latest_news_blogs' %}
+		<div class="container-fluid ">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-xs-12 nopadding">
+		                <div class="sec-title-container less-padding-3 text-center">
+		                    {{ header }}
+		                </div>
+		            </div>
+		            {{ rows }}
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_our_blogs' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix "></div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% else %}
+		<div {{ attributes }}>
+			{{ title_prefix }}
+			{{ title }}
+			{{ title_suffix }}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		</div>
+	{% endif %}
+{% elseif id == '_apar_team' %}
+	{% if display_id == 'block_section_content_team_members' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		        	<div class="sec-title-container less-padding-3 text-center">
+		            	{{ header }}
+		            </div>
+		        </div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_meet_our_team' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		        	<div class="sec-title-container less-padding-3 text-center">
+		            	{{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix"></div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_team_members_style_2' %}
+		<div class="section-overlay bg-opacity-5">
+		    <div class="container sec-tpadding-3 sec-bpadding-3">
+		        <div class="row">
+		            <div class="col-md-12 nopadding">
+		                <div class="sec-title-container less-padding-3 text-center">
+		                    {{ header }}
+		                </div>
+		            </div>
+		            {{ rows }}
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_meet_our_team_style_2' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-xs-12 nopadding">
+		            <div class="sec-title-container text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        {{ rows }}
+		    </div>
+		</div>
+	{% elseif display_id == 'block_section_content_meet_our_team_style_3' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        
+		        <div class="clearfix"></div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_meet_our_team_style_4' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_meet_our_team_style_5' %}
+		<div class="container-fluid">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix margin-bottom-2"></div>
+		        {% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+					<div class="col-md-3 col-sm-6 nopadding">
+		            	<div class="feature-box-12">
+				    		{{ row }}
+				    	</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+					<div class="col-md-3 col-sm-6 nopadding">
+		            	<div class="feature-box-12 bg-light">
+				    		{{ row }}
+				    	</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+					<div class="col-md-3 col-sm-6 nopadding">
+		            	<div class="feature-box-12">
+				    		{{ row }}
+				    	</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 or i == (rows.0['#rows']|length - 1) %}
+					<div class="col-md-3 col-sm-6 nopadding">
+		            	<div class="feature-box-12">
+				    		{{ row }}
+				    	</div>
+					</div>
+					{% set temp = 1 %}
+				{% endif %}
+				{% endfor %}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_meet_our_team_style_6' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-xs-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix"></div>
+		        {% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+					<div class="col-md-4 col-sm-4 text-center">
+		            	<div class="feature-box-20 text-center">
+				    		{{ row }}
+				    	</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+					<div class="col-md-4 col-sm-4 text-center">
+		           	 	<div class="feature-box-20 text-center active">
+				    		{{ row }}
+				    	</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 or i == (rows.0['#rows']|length - 1) %}
+					<div class="col-md-4 col-sm-4 text-center">
+		            	<div class="feature-box-20 text-center">
+				    		{{ row }}
+				    	</div>
+					</div>
+					{% set temp = 1 %}
+				{% endif %}
+				{% endfor %}
+		    </div>
+		</div>	
+	{% elseif display_id == 'block_section_content_our_team' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix"></div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_our_team_style_2' %}
+		<div class="container">
+		    <div class="row no-gutter">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix"></div>
+		        {% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+					<div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="team-page1">
+				    		{{ row }}
+				    	</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+					<div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="team-page1 active">
+				    		{{ row }}
+				    	</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 or i == (rows.0['#rows']|length - 1) %}
+					<div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="team-page1">
+				    		{{ row }}
+				    	</div>
+					</div>
+					{% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_our_team_style_3' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="sec-title-container less-padding-3 text-center">
+		            {{ header }}
+		        </div>
+		        <div class="clearfix"></div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_team_members_style_3' %}
+		<div class="container  sec-bpadding-2">
+		    <div class="row nopadding">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		               {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix margin-bottom-7"></div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_our_experts' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix"></div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_our_experts_style_2' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-xs-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        {% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+					<div class="col-md-3 col-sm-6 col-xs-12">
+		            	<div class="feature-box-9 text-center">
+				    		{{ row }}
+				    	</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+					<div class="col-md-3 col-sm-6 col-xs-12">
+		            	<div class="feature-box-9 text-center">
+				    		{{ row }}
+				    	</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+					<div class="col-md-3 col-sm-6 col-xs-12">
+		            	<div class="feature-box-9 active text-center">
+				    		{{ row }}
+				    	</div>
+					</div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 or i == (rows.0['#rows']|length - 1) %}
+					<div class="col-md-3 col-sm-6 col-xs-12">
+		            	<div class="feature-box-9 text-center">
+				    		{{ row }}
+				    	</div>
+					</div>
+					{% set temp = 1 %}
+				{% endif %}
+				{% endfor %}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% else %}
+		<div {{ attributes }}>
+			{{ title_prefix }}
+			{{ title }}
+			{{ title_suffix }}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		</div>
+	{% endif %}
+{% elseif id == '_apar_testimonials' %}
+	{% if display_id == 'block_section_content_people_says' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="sec-title-container less-padding-3 text-center">
+		            {{ header }}
+		        </div>
+		        <div class="col-md-8 col-centered text-center slide-controls-2">
+		            <div id="owl-demo3" class="owl-carousel owl-theme">
+		                {{ rows }}
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_people_says_style_2' %}
+		<div class="section-overlay bg-opacity-7">
+		    <div class="container sec-tpadding-3 sec-bpadding-3">
+		        <div class="row">
+		            <div class="col-md-8 col-centered text-center">
+		                <div class="col-xs-12 text-center">
+		                    {{ header }}
+		                </div>
+		                <div class="clearfix"></div>
+		                <div id="owl-demo3" class="owl-carousel">
+		                    {{ rows }}
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_what_people_says' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="feature-box-13">
+		            {{ title }}
+		            <div id="owl-demo3" class="owl-carousel owl-theme">
+		                {{ rows }}
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	{% else %}
+		<div {{ attributes }}>
+			{{ title_prefix }}
+			{{ title }}
+			{{ title_suffix }}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		</div>
+	{% endif %}
+{% elseif id == '_apar_services' %}
+	{% if display_id == 'block_section_content_our_best_services' %}
+		<div class="container-fulid">
+		    <div class="row nopadding">
+		        {{ header }}
+		        <div class="col-md-6">
+		            <div class="col-md-12">
+		                {{ footer }}
+		            </div>
+		            {{ rows }}
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_services' %}
+		<div class="container">
+		    <div class="row">
+		    	{% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+					{{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+					{{ row }}
+					<div class="clearfix"></div>
+		        	<div class="col-divider-margin-4"></div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 %}
+					{{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 5 %}
+					{{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 6 or i == (rows.0['#rows']|length - 1) %}
+					{{ row }}
+					{% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_services_style_2' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            <div class="col-md-4">
+		                {{ header }}
+		            </div>
+
+		            <div class="col-md-8">
+		                {{ footer }}
+		            </div>
+		        </div>
+		        <div class="clearfix margin-bottom-3"></div>
+		        {{ rows }}
+		    </div>
+		    <div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_services_style_3' %}
+		<div class="container">
+		    <div class="row">
+		    	{% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+					{{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+					{{ row }}
+					<div class="clearfix"></div>
+		        	<div class="col-divider-margin-6"></div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 %}
+					{{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 5 %}
+					{{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 6 or i == (rows.0['#rows']|length - 1) %}
+					{{ row }}
+					{% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_services_style_4' %}
+		<div class="container-fluid">
+		    <div class="row no-gutter">
+		    	{% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+					{% if temp % 2 == 0 %}
+						<div class="col-md-4 col-sm-6 col-xs-12">
+		            		<div class="feature-box-4 active">
+								{{ row }}
+							</div>
+						</div>
+					{% else %}
+						<div class="col-md-4 col-sm-6 col-xs-12">
+		            		<div class="feature-box-4">
+								{{ row }}
+							</div>
+						</div>
+					{% endif %}
+					{% set temp = temp + 1 %}
+				{% endfor %}
+				<div class="clearfix"></div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_our_services' %}
+		<div class="section-overlay bg-opacity-5">
+		    <div class="container sec-tpadding-3 sec-bpadding-3">
+		        <div class="row">
+		            <div class="col-xs-12 nopadding">
+		                <div class="sec-title-container less-padding-3 text-center">
+		                    {{ header }}
+		                </div>
+		            </div>
+		            
+		            <div class="feature-box-10">
+		                {{ rows }}
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_our_services_style_2' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <!--end title-->
+		        <div class="clearfix"></div>
+		        {% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+					<div class="col-md-3 col-sm-6">
+		            	<div class="feature-box-19 text-center bmargin">
+				    		{{ row }}
+				    	</div>
+				    </div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+					<div class="col-md-6 col-sm-6">
+		            	<div class="feature-box-19 active text-center bmargin">
+				    		{{ row }}
+				    	</div>
+				    </div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+					<div class="col-md-3 col-sm-6">
+		            	<div class="feature-box-19 text-center bmargin">
+				    		{{ row }}
+				    	</div>
+				    </div>
+					<div class="clearfix margin-bottom-3"></div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 %}
+					<div class="col-md-6 col-sm-6">
+		            	<div class="feature-box-19 text-center bmargin">
+				    		{{ row }}
+				    	</div>
+				    </div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 5 %}
+					<div class="col-md-3 col-sm-6">
+		            	<div class="feature-box-19 text-center bmargin">
+				    		{{ row }}
+				    	</div>
+				    </div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 6 or i == (rows.0['#rows']|length - 1) %}
+					<div class="col-md-3 col-sm-6">
+		            	<div class="feature-box-19 text-center bmargin">
+				    		{{ row }}
+				    	</div>
+				    </div>
+					{% set temp = 1 %}
+				{% endif %}
+				{% endfor %}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_our_services_style_3' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix margin-bottom-2"></div>
+		        {% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+				{% if temp == 1 %}
+				    {{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 2 %}
+					{{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 3 %}
+					{{ row }}
+					<div class="clearfix margin-bottom-3"></div>
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 4 %}
+					{{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 5 %}
+					{{ row }}
+				    {% set temp = temp + 1 %}
+				{% elseif temp == 6 or i == (rows.0['#rows']|length - 1) %}
+					{{ row }}
+					{% set temp = 1 %}
+				{% endif %}
+				{% endfor %} 
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_what_we_offer' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 nopadding">
+		            <div class="sec-title-container less-padding-3 text-center">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix"></div>
+		        {{ footer }}
+		        {% set temp = 1 %}
+				{% for i, row in rows.0['#rows'] %}
+					{% if temp == 1 %}
+						<div class="col-md-4 col-sm-6 col-xs-12 apar-services-wh-bl">
+							<div class="text-box white padding-5">
+				    			{{ row }}
+				    		</div>
+				    	{% if i == (rows.0['#rows']|length - 1) %}
+				    	</div>
+				    	{% endif %}
+				        {% set temp = temp + 1 %}
+				    {% elseif temp == 2 or i == (rows.0['#rows']|length - 1) %}
+				    	 	<div class="col-divider-margin-3"></div>
+                           	<div class="text-box white padding-5">
+				    			{{ row }}
+				    		</div>
+				    	</div>
+				    	{% set temp = 1 %}
+				    {% endif %}
+				{% endfor %}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_what_we_offer_style_2' %}
+		<div class="container-fulid">
+		    <div class="row nopadding">
+		        {{ header }}
+		        <div class="col-md-6">
+		            <div class="col-md-12">
+		                {{ footer }}
+		            </div>
+		            {% set temp = 1 %}
+					{% for i, row in rows.0['#rows'] %}
+					{% if temp == 1 %}
+					    {{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 2 %}
+						{{ row }}
+					    {% set temp = temp + 1 %}
+					    <p class="clearfix margin-bottom-5"></p>
+					{% elseif temp == 3 %}
+						{{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 4 or i == (rows.0['#rows']|length - 1) %}
+						{{ row }}
+						{% set temp = 1 %}
+					{% endif %}
+					{% endfor %} 
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_what_we_offer_style_3' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-4 col-sm-12 col-xs-12 margin-bottom">
+		            <div class="col-xs-12 text-left">
+		                {{ header }}
+		            </div>
+		            <div class="clearfix"></div> 
+		        </div>
+		        <div class="col-md-8 col-sm-12 col-xs-12">
+		        	{% set temp = 1 %}
+					{% for i, row in rows.0['#rows'] %}
+					{% if temp == 1 %}
+					    {{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 2 %}
+						{{ row }}
+					    {% set temp = temp + 1 %}
+					    <div class="clearfix"></div>
+		            	<div class="col-divider-margin-6"></div>
+					{% elseif temp == 3 %}
+						{{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 4 or i == (rows.0['#rows']|length - 1) %}
+						{{ row }}
+						{% set temp = 1 %}
+					{% endif %}
+					{% endfor %}
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_what_we_offer_style_4' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="sec-title-container less-padding-3 text-center">
+		            {{ header }}
+		        </div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_what_we_offer_style_5' %}
+		<div class="container">
+		    <div class="row">
+		        <div class="col-xs-12 text-center">
+		            <div class="sec-title-container">
+		                {{ header }}
+		            </div>
+		        </div>
+		        <div class="clearfix"></div>
+		        {{ rows }}
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% elseif display_id == 'block_section_content_what_we_offer_style_6' %}
+		<div class="container-fulid">
+		    <div class="row nopadding">
+		        <div class="less5">
+		            <div class="sec-title-container text-center">
+		                {{ header }}
+		            </div>
+		            {% set temp = 1 %}
+					{% for i, row in rows.0['#rows'] %}
+					{% if temp == 1 %}
+					    {{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 2 %}
+						{{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 3 %}
+						{{ row }}
+						<div class="clearfix margin-bottom-3"></div>
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 4 %}
+						{{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 5 %}
+						{{ row }}
+					    {% set temp = temp + 1 %}
+					{% elseif temp == 6 or i == (rows.0['#rows']|length - 1) %}
+						{{ row }}
+						{% set temp = 1 %}
+					{% endif %}
+					{% endfor %} 
+		        </div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+	{% else %}
+		<div {{ attributes }}>
+			{{ title_prefix }}
+			{{ title }}
+			{{ title_suffix }}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		</div>
+	{% endif %}
+{% elseif id == 'blog' %}
+	<div {{ attributes }}>
+		{{ title_prefix }}
+		{{ title }}
+		{{ title_suffix }}
+		{{ header }}
+		<div>
+	  		{{ rows }}
+	  	</div>
+	  	{{ attachment_after }}
+	  	{{ empty }}
+	  	{{ footer }}
+	  	{{ pager }}
+	</div>
+{% elseif id == 'commerce_cart_block' %}
+	<ul>
+	    {{ rows }}
+	</ul>
+	<div class="row">
+	    {{ header }}
+	</div>
+{% else %}
+	<div {{ attributes }}>
+		{{ title_prefix }}
+		{{ title }}
+		{{ title_suffix }}
+		{{ header }}
+	  	{{ rows }}
+	  	{{ attachment_after }}
+	  	{{ empty }}
+	  	{{ footer }}
+	  	{{ pager }}
+	</div>
+{% endif %}

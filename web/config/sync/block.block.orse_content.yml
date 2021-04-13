@@ -1,0 +1,22 @@
+uuid: 73566abf-285f-451f-a05d-4b9bc2862d3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - orse
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: orse_content
+theme: orse
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -87,6 +87,7 @@ module:
   webform: 0
   webform_access: 0
   webform_attachment: 0
+  webform_content_creator: 0
   webform_devel: 0
   webform_image_select: 0
   webform_mautic: 0
@@ -105,6 +106,7 @@ theme:
   classy: 0
   seven: 0
   apar: 0
+  orse: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

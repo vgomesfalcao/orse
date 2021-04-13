@@ -1,0 +1,23 @@
+uuid: 61ebccdb-5d10-4b00-a40f-941ee8c8644b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cobertura_valor
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_cobertura_valor
+field_name: field_cobertura_valor
+entity_type: node
+bundle: formulario_fotografo
+label: 'Cobertura Valor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

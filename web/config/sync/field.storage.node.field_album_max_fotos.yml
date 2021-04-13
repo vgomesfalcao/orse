@@ -1,0 +1,20 @@
+uuid: a273c826-03e7-4421-a8c9-bf95b0632bc5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_album_max_fotos
+field_name: field_album_max_fotos
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

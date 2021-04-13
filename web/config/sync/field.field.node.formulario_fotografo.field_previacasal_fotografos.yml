@@ -1,0 +1,23 @@
+uuid: a8c6a740-d4a4-41d0-b478-1c630e675cfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_previacasal_fotografos
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_previacasal_fotografos
+field_name: field_previacasal_fotografos
+entity_type: node
+bundle: formulario_fotografo
+label: 'PreviaCasal Fotógrafos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

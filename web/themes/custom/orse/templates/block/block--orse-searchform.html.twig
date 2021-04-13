@@ -1,0 +1,11 @@
+<div {{ attributes.addClass('search-box') }}>
+    {{ title_suffix }}
+    <div class="content">
+        <div class="form-control">
+            {% if content %}
+                {{ content }}
+            {% endif %}
+        </div>
+        <a href="#" class="close-btn mar-1">x</a>
+    </div>
+</div>

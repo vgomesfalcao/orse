@@ -1,0 +1,49 @@
+uuid: a9ebeddd-b4b6-4b3a-afc7-8cea29ff6335
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home
+    - views.view._apar_blog
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: sec-padding
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: enable
+    color: '#000000'
+    thumbnail_preview: ''
+    bg_image:
+      - '120'
+    bg_image_type: default
+    bg_repeat: 'yes'
+    bg_image_position: 'center top'
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_block_section_content_lastest_blogs
+theme: orse
+region: section
+weight: 142
+provider: null
+plugin: 'views_block:_apar_blog-block_section_content_lastest_blogs'
+settings:
+  id: 'views_block:_apar_blog-block_section_content_lastest_blogs'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home
+    context_mapping: {  }

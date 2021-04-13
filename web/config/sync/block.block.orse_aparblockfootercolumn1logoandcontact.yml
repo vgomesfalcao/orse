@@ -1,0 +1,47 @@
+uuid: 5f3dc5b3-54ce-4b92-a193-5021f5a11703
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d23e737c-871f-4637-ac10-30723e8eef99'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: 'col-md-3 col-sm-12 colmargin clearfix margin-bottom'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_aparblockfootercolumn1logoandcontact
+theme: orse
+region: footer_column_1
+weight: 0
+provider: null
+plugin: 'block_content:d23e737c-871f-4637-ac10-30723e8eef99'
+settings:
+  id: 'block_content:d23e737c-871f-4637-ac10-30723e8eef99'
+  label: '[Apar]Block Footer Column 1 - Logo and Contact'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

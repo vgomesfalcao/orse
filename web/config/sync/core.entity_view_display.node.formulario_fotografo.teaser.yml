@@ -1,0 +1,100 @@
+uuid: 703b2160-5ee7-4930-8955-a871679910ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.formulario_fotografo.body
+    - field.field.node.formulario_fotografo.field_album_max_fotos
+    - field.field.node.formulario_fotografo.field_album_paginas
+    - field.field.node.formulario_fotografo.field_album_valor
+    - field.field.node.formulario_fotografo.field_cerimonia_fotografos
+    - field.field.node.formulario_fotografo.field_cerimonia_horas
+    - field.field.node.formulario_fotografo.field_cerimonia_valor
+    - field.field.node.formulario_fotografo.field_cobertura_fotografos
+    - field.field.node.formulario_fotografo.field_cobertura_horas
+    - field.field.node.formulario_fotografo.field_cobertura_valor
+    - field.field.node.formulario_fotografo.field_combocr_fotografos
+    - field.field.node.formulario_fotografo.field_combocr_horas
+    - field.field.node.formulario_fotografo.field_combocr_valor
+    - field.field.node.formulario_fotografo.field_formulario_cliente
+    - field.field.node.formulario_fotografo.field_makingof_fotografos
+    - field.field.node.formulario_fotografo.field_makingof_horas
+    - field.field.node.formulario_fotografo.field_makingof_valor
+    - field.field.node.formulario_fotografo.field_makingofnoiva_fotografos
+    - field.field.node.formulario_fotografo.field_makingofnoiva_horas
+    - field.field.node.formulario_fotografo.field_makingofnoiva_valor
+    - field.field.node.formulario_fotografo.field_makingofnoivo_fotografos
+    - field.field.node.formulario_fotografo.field_makingofnoivo_horas
+    - field.field.node.formulario_fotografo.field_makingofnoivo_valor
+    - field.field.node.formulario_fotografo.field_previa_fotografos
+    - field.field.node.formulario_fotografo.field_previa_horas
+    - field.field.node.formulario_fotografo.field_previa_valor
+    - field.field.node.formulario_fotografo.field_previacasal_fotografos
+    - field.field.node.formulario_fotografo.field_previacasal_horas
+    - field.field.node.formulario_fotografo.field_previacasal_valor
+    - field.field.node.formulario_fotografo.field_previanoiva_fotografos
+    - field.field.node.formulario_fotografo.field_previanoiva_horas
+    - field.field.node.formulario_fotografo.field_previanoiva_valor
+    - field.field.node.formulario_fotografo.field_recepcao_fotografos
+    - field.field.node.formulario_fotografo.field_recepcao_horas
+    - field.field.node.formulario_fotografo.field_recepcao_valor
+    - field.field.node.formulario_fotografo.field_tipo_de_evento
+    - node.type.formulario_fotografo
+  module:
+    - text
+    - user
+id: node.formulario_fotografo.teaser
+targetEntityType: node
+bundle: formulario_fotografo
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_album_max_fotos: true
+  field_album_paginas: true
+  field_album_valor: true
+  field_cerimonia_fotografos: true
+  field_cerimonia_horas: true
+  field_cerimonia_valor: true
+  field_cobertura_fotografos: true
+  field_cobertura_horas: true
+  field_cobertura_valor: true
+  field_combocr_fotografos: true
+  field_combocr_horas: true
+  field_combocr_valor: true
+  field_formulario_cliente: true
+  field_makingof_fotografos: true
+  field_makingof_horas: true
+  field_makingof_valor: true
+  field_makingofnoiva_fotografos: true
+  field_makingofnoiva_horas: true
+  field_makingofnoiva_valor: true
+  field_makingofnoivo_fotografos: true
+  field_makingofnoivo_horas: true
+  field_makingofnoivo_valor: true
+  field_previa_fotografos: true
+  field_previa_horas: true
+  field_previa_valor: true
+  field_previacasal_fotografos: true
+  field_previacasal_horas: true
+  field_previacasal_valor: true
+  field_previanoiva_fotografos: true
+  field_previanoiva_horas: true
+  field_previanoiva_valor: true
+  field_recepcao_fotografos: true
+  field_recepcao_horas: true
+  field_recepcao_valor: true
+  field_tipo_de_evento: true

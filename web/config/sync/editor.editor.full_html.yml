@@ -25,6 +25,14 @@ settings:
             - '-'
             - RemoveFormat
         -
+          name: Text
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+            - Underline
+        -
           name: Linking
           items:
             - DrupalLink
@@ -37,10 +45,11 @@ settings:
         -
           name: Media
           items:
-            - Blockquote
             - DrupalImage
+            - Blockquote
             - Table
             - HorizontalRule
+            - ImceImage
         -
           name: 'Block Formatting'
           items:
@@ -53,11 +62,13 @@ settings:
   plugins:
     stylescombo:
       styles: ''
+    language:
+      language_list: un
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

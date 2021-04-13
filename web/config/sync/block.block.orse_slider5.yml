@@ -1,0 +1,44 @@
+uuid: 3ff24211-9709-4695-92ed-fb99a9382921
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_5
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - md_slider
+    - ntv_block_background
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_slider5
+theme: orse
+region: disable
+weight: 0
+provider: null
+plugin: 'md_slider_block:slider_5'
+settings:
+  id: 'md_slider_block:slider_5'
+  label: 'Slider 5'
+  provider: md_slider
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_5
+    context_mapping: {  }

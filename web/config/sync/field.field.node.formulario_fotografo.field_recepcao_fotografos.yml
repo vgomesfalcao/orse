@@ -1,0 +1,23 @@
+uuid: 60b04266-05fc-49e5-a469-839c767e3ff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recepcao_fotografos
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_recepcao_fotografos
+field_name: field_recepcao_fotografos
+entity_type: node
+bundle: formulario_fotografo
+label: 'Recepção Fotógrafos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,46 @@
+uuid: 658ad716-dec4-46d5-8837-a49106f9ea70
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view._apar_product
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: sidebar-item-holder
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_block_sidebar_latest_products
+theme: orse
+region: sidebar_shop
+weight: -26
+provider: null
+plugin: 'views_block:_apar_product-block_sidebar_latest_products'
+settings:
+  id: 'views_block:_apar_product-block_sidebar_latest_products'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

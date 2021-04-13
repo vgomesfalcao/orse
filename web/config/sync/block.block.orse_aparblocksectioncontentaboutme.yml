@@ -1,0 +1,49 @@
+uuid: 5ac5c315-226b-4e25-8e17-76d676cee57c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about_me
+  content:
+    - 'block_content:basic:e5748fea-cc77-4232-bf37-a161b2e15c10'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: 'sec-padding section-light'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_aparblocksectioncontentaboutme
+theme: orse
+region: section
+weight: 15
+provider: null
+plugin: 'block_content:e5748fea-cc77-4232-bf37-a161b2e15c10'
+settings:
+  id: 'block_content:e5748fea-cc77-4232-bf37-a161b2e15c10'
+  label: '[Apar]Block Section Content - About Me'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about_me
+    context_mapping: {  }

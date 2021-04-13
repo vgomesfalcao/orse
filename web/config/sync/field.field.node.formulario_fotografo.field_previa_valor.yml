@@ -1,0 +1,23 @@
+uuid: 522fca66-b8f0-41d6-a638-6afcd1e00b30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_previa_valor
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_previa_valor
+field_name: field_previa_valor
+entity_type: node
+bundle: formulario_fotografo
+label: 'Previa Valor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

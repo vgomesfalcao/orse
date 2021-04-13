@@ -1,0 +1,23 @@
+uuid: e5cd3cf0-d294-4eee-9da2-029ba0b8da09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_combocr_horas
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_combocr_horas
+field_name: field_combocr_horas
+entity_type: node
+bundle: formulario_fotografo
+label: 'ComboCR Horas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

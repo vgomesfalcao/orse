@@ -1,0 +1,23 @@
+uuid: 44c233b3-e17a-4c2e-b06f-074c67594b55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_numero_de_convidados
+    - node.type.formulario_cliente
+id: node.formulario_cliente.field_numero_de_convidados
+field_name: field_numero_de_convidados
+entity_type: node
+bundle: formulario_cliente
+label: 'Número de Convidados'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,20 @@
+uuid: 0e6d5662-85a6-4670-aa92-f7955f9b530a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_album_paginas
+field_name: field_album_paginas
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

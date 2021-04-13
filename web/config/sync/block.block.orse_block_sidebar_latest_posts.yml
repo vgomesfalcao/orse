@@ -1,0 +1,46 @@
+uuid: a3805866-1043-4f7b-83a2-a65c7e248ea8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view._apar_sidebar_widget
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: bg2-right-col-item-holder
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_block_sidebar_latest_posts
+theme: orse
+region: sidebar
+weight: -11
+provider: null
+plugin: 'views_block:_apar_sidebar_widget-block_sidebar_latest_posts'
+settings:
+  id: 'views_block:_apar_sidebar_widget-block_sidebar_latest_posts'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

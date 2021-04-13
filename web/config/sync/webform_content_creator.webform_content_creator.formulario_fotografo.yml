@@ -1,0 +1,198 @@
+uuid: 4873e106-c00d-466e-8071-5bb04e75ef11
+langcode: en
+status: true
+dependencies: {  }
+id: formulario_fotografo
+title: 'Formulário Fotografo'
+webform: formulario_fotografo
+field_title: null
+use_encrypt: null
+encryption_profile: null
+sync_content: false
+sync_content_delete: false
+sync_content_node_field: null
+sync_content_field: ''
+elements:
+  field_album_max_fotos:
+    type: false
+    webform_field: album_max_fotos
+    custom_check: false
+    custom_value: ''
+  field_album_paginas:
+    type: false
+    webform_field: album_paginas
+    custom_check: false
+    custom_value: ''
+  field_album_valor:
+    type: false
+    webform_field: album_valor
+    custom_check: false
+    custom_value: ''
+  field_cerimonia_fotografos:
+    type: false
+    webform_field: cerimonia_fotografos
+    custom_check: false
+    custom_value: ''
+  field_cerimonia_horas:
+    type: false
+    webform_field: cerimonia_horas
+    custom_check: false
+    custom_value: ''
+  field_cerimonia_valor:
+    type: false
+    webform_field: cerimonia_valor
+    custom_check: false
+    custom_value: ''
+  field_cobertura_fotografos:
+    type: false
+    webform_field: cobertura_fotografos
+    custom_check: false
+    custom_value: ''
+  field_cobertura_horas:
+    type: false
+    webform_field: cobertura_horas
+    custom_check: false
+    custom_value: ''
+  field_cobertura_valor:
+    type: false
+    webform_field: cobertura_valor
+    custom_check: false
+    custom_value: ''
+  field_combocr_fotografos:
+    type: false
+    webform_field: combocr_fotografos
+    custom_check: false
+    custom_value: ''
+  field_combocr_horas:
+    type: false
+    webform_field: combocr_horas
+    custom_check: false
+    custom_value: ''
+  field_combocr_valor:
+    type: false
+    webform_field: combocr_valor
+    custom_check: false
+    custom_value: ''
+  field_formulario_cliente:
+    type: false
+    webform_field: codigo_do_evento
+    custom_check: false
+    custom_value: ''
+  field_makingof_fotografos:
+    type: false
+    webform_field: makingof_fotografos
+    custom_check: false
+    custom_value: ''
+  field_makingof_horas:
+    type: false
+    webform_field: makingof_horas
+    custom_check: false
+    custom_value: ''
+  field_makingof_valor:
+    type: false
+    webform_field: makingof_valor
+    custom_check: false
+    custom_value: ''
+  field_makingofnoiva_fotografos:
+    type: false
+    webform_field: makingofnoiva_fotografos
+    custom_check: false
+    custom_value: ''
+  field_makingofnoiva_horas:
+    type: false
+    webform_field: makingofnoiva_horas
+    custom_check: false
+    custom_value: ''
+  field_makingofnoiva_valor:
+    type: false
+    webform_field: makingofnoiva_valor
+    custom_check: false
+    custom_value: ''
+  field_makingofnoivo_fotografos:
+    type: false
+    webform_field: makingofnoivo_fotografos
+    custom_check: false
+    custom_value: ''
+  field_makingofnoivo_horas:
+    type: false
+    webform_field: makingofnoivo_horas
+    custom_check: false
+    custom_value: ''
+  field_makingofnoivo_valor:
+    type: false
+    webform_field: makingofnoivo_valor
+    custom_check: false
+    custom_value: ''
+  field_previa_fotografos:
+    type: false
+    webform_field: previa_fotografos
+    custom_check: false
+    custom_value: ''
+  field_previa_horas:
+    type: false
+    webform_field: previa_horas
+    custom_check: false
+    custom_value: ''
+  field_previa_valor:
+    type: false
+    webform_field: previa_valor
+    custom_check: false
+    custom_value: ''
+  field_previacasal_fotografos:
+    type: false
+    webform_field: previacasal_fotografos
+    custom_check: false
+    custom_value: ''
+  field_previacasal_horas:
+    type: false
+    webform_field: previacasal_horas
+    custom_check: false
+    custom_value: ''
+  field_previacasal_valor:
+    type: false
+    webform_field: previa_valor
+    custom_check: false
+    custom_value: ''
+  field_previanoiva_fotografos:
+    type: false
+    webform_field: previanoiva_fotografos
+    custom_check: false
+    custom_value: ''
+  field_previanoiva_horas:
+    type: false
+    webform_field: previanoiva_horas
+    custom_check: false
+    custom_value: ''
+  field_previanoiva_valor:
+    type: false
+    webform_field: previanoiva_valor
+    custom_check: false
+    custom_value: ''
+  field_recepcao_fotografos:
+    type: false
+    webform_field: recepcao_fotografos
+    custom_check: false
+    custom_value: ''
+  field_recepcao_horas:
+    type: false
+    webform_field: recepcao_horas
+    custom_check: false
+    custom_value: ''
+  field_recepcao_valor:
+    type: false
+    webform_field: recepcao_valor
+    custom_check: false
+    custom_value: ''
+  field_tipo_de_evento:
+    type: false
+    webform_field: tipo_de_evento
+    custom_check: false
+    custom_value: ''
+  title:
+    type: false
+    webform_field: ''
+    custom_check: true
+    custom_value: '[webform_submission:values:tipo_de_evento] - [current-date:html_date]'
+content_type: null
+target_entity_type: node
+target_bundle: formulario_fotografo

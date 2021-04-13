@@ -1,0 +1,23 @@
+uuid: b2b61fd6-e209-4902-98f0-20cf03549c8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_album_paginas
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_album_paginas
+field_name: field_album_paginas
+entity_type: node
+bundle: formulario_fotografo
+label: 'Álbum Páginas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

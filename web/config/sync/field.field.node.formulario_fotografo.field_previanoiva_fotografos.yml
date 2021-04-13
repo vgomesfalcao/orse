@@ -1,0 +1,23 @@
+uuid: bf591924-6a00-4cbe-9b24-c457b741812a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_previanoiva_fotografos
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_previanoiva_fotografos
+field_name: field_previanoiva_fotografos
+entity_type: node
+bundle: formulario_fotografo
+label: 'PreviaNoiva Fotografos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

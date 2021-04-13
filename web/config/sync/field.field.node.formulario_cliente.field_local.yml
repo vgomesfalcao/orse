@@ -1,0 +1,28 @@
+uuid: 559975a6-60bd-4df2-9c16-ae36c1110adb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_local
+    - node.type.formulario_cliente
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.formulario_cliente.field_local
+field_name: field_local
+entity_type: node
+bundle: formulario_cliente
+label: Local
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

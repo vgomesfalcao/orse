@@ -1,0 +1,23 @@
+uuid: 32d95346-ecae-42c8-86ca-ac72dcaebd9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_previacasal_valor
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_previacasal_valor
+field_name: field_previacasal_valor
+entity_type: node
+bundle: formulario_fotografo
+label: 'PreviaCasal Valor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

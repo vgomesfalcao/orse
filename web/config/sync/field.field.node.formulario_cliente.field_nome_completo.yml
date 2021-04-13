@@ -1,0 +1,19 @@
+uuid: e10f9175-f0a3-4b98-94b4-cca75b6f652f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nome_completo
+    - node.type.formulario_cliente
+id: node.formulario_cliente.field_nome_completo
+field_name: field_nome_completo
+entity_type: node
+bundle: formulario_cliente
+label: 'Nome Completo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

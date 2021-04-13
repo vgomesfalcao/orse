@@ -1,0 +1,21 @@
+uuid: 1e28a651-fb14-46fe-a5f9-16ab1170f0d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_casamento
+    - node.type.formulario_cliente
+  module:
+    - options
+id: node.formulario_cliente.field_tipo_de_casamento
+field_name: field_tipo_de_casamento
+entity_type: node
+bundle: formulario_cliente
+label: 'Tipo de Casamento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: aaf2688f-ff19-42cd-9f74-8d9e54341547
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_makingof_valor
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_makingof_valor
+field_name: field_makingof_valor
+entity_type: node
+bundle: formulario_fotografo
+label: 'MakingOf Valor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

@@ -1,0 +1,21 @@
+uuid: 10009930-aed8-49ef-a832-ac76af5ccbb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_do_evento
+    - node.type.formulario_cliente
+  module:
+    - datetime
+id: node.formulario_cliente.field_data_do_evento
+field_name: field_data_do_evento
+entity_type: node
+bundle: formulario_cliente
+label: 'Data do Evento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

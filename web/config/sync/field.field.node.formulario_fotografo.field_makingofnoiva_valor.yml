@@ -1,0 +1,23 @@
+uuid: fd784035-452d-44fc-af83-a2aa134c1218
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_makingofnoiva_valor
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_makingofnoiva_valor
+field_name: field_makingofnoiva_valor
+entity_type: node
+bundle: formulario_fotografo
+label: 'MakingOfNoiva Valor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

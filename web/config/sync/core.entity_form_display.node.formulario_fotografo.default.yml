@@ -1,0 +1,359 @@
+uuid: fd22afda-3a04-4ec6-95ce-eeb1f416bd0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.formulario_fotografo.body
+    - field.field.node.formulario_fotografo.field_album_max_fotos
+    - field.field.node.formulario_fotografo.field_album_paginas
+    - field.field.node.formulario_fotografo.field_album_valor
+    - field.field.node.formulario_fotografo.field_cerimonia_fotografos
+    - field.field.node.formulario_fotografo.field_cerimonia_horas
+    - field.field.node.formulario_fotografo.field_cerimonia_valor
+    - field.field.node.formulario_fotografo.field_cobertura_fotografos
+    - field.field.node.formulario_fotografo.field_cobertura_horas
+    - field.field.node.formulario_fotografo.field_cobertura_valor
+    - field.field.node.formulario_fotografo.field_combocr_fotografos
+    - field.field.node.formulario_fotografo.field_combocr_horas
+    - field.field.node.formulario_fotografo.field_combocr_valor
+    - field.field.node.formulario_fotografo.field_formulario_cliente
+    - field.field.node.formulario_fotografo.field_makingof_fotografos
+    - field.field.node.formulario_fotografo.field_makingof_horas
+    - field.field.node.formulario_fotografo.field_makingof_valor
+    - field.field.node.formulario_fotografo.field_makingofnoiva_fotografos
+    - field.field.node.formulario_fotografo.field_makingofnoiva_horas
+    - field.field.node.formulario_fotografo.field_makingofnoiva_valor
+    - field.field.node.formulario_fotografo.field_makingofnoivo_fotografos
+    - field.field.node.formulario_fotografo.field_makingofnoivo_horas
+    - field.field.node.formulario_fotografo.field_makingofnoivo_valor
+    - field.field.node.formulario_fotografo.field_previa_fotografos
+    - field.field.node.formulario_fotografo.field_previa_horas
+    - field.field.node.formulario_fotografo.field_previa_valor
+    - field.field.node.formulario_fotografo.field_previacasal_fotografos
+    - field.field.node.formulario_fotografo.field_previacasal_horas
+    - field.field.node.formulario_fotografo.field_previacasal_valor
+    - field.field.node.formulario_fotografo.field_previanoiva_fotografos
+    - field.field.node.formulario_fotografo.field_previanoiva_horas
+    - field.field.node.formulario_fotografo.field_previanoiva_valor
+    - field.field.node.formulario_fotografo.field_recepcao_fotografos
+    - field.field.node.formulario_fotografo.field_recepcao_horas
+    - field.field.node.formulario_fotografo.field_recepcao_valor
+    - field.field.node.formulario_fotografo.field_tipo_de_evento
+    - node.type.formulario_fotografo
+  module:
+    - path
+    - text
+id: node.formulario_fotografo.default
+targetEntityType: node
+bundle: formulario_fotografo
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_album_max_fotos:
+    weight: 158
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_album_paginas:
+    weight: 157
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_album_valor:
+    weight: 156
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_cerimonia_fotografos:
+    weight: 160
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_cerimonia_horas:
+    weight: 133
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_cerimonia_valor:
+    weight: 134
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_cobertura_fotografos:
+    weight: 161
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_cobertura_horas:
+    weight: 124
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_cobertura_valor:
+    weight: 125
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_combocr_fotografos:
+    weight: 138
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_combocr_horas:
+    weight: 139
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_combocr_valor:
+    weight: 140
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_formulario_cliente:
+    weight: 166
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_makingof_fotografos:
+    weight: 163
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_makingof_horas:
+    weight: 127
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_makingof_valor:
+    weight: 128
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_makingofnoiva_fotografos:
+    weight: 141
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_makingofnoiva_horas:
+    weight: 142
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_makingofnoiva_valor:
+    weight: 144
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_makingofnoivo_fotografos:
+    weight: 145
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_makingofnoivo_horas:
+    weight: 146
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_makingofnoivo_valor:
+    weight: 147
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_previa_fotografos:
+    weight: 164
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_previa_horas:
+    weight: 130
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_previa_valor:
+    weight: 131
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_previacasal_fotografos:
+    weight: 148
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_previacasal_horas:
+    weight: 150
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_previacasal_valor:
+    weight: 152
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_previanoiva_fotografos:
+    weight: 153
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_previanoiva_horas:
+    weight: 154
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_previanoiva_valor:
+    weight: 155
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_recepcao_fotografos:
+    weight: 165
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_recepcao_horas:
+    weight: 136
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_recepcao_valor:
+    weight: 137
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_tipo_de_evento:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

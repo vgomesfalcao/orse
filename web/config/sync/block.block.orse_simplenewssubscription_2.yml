@@ -1,0 +1,46 @@
+uuid: cf16dba4-6e17-4b45-9022-c9208b49128b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - simplenews
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: 'section-dark sec-padding'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_simplenewssubscription_2
+theme: orse
+region: section_pd
+weight: -26
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'SIGN UP FOR OUR NEWSLETTER & PROMOTIONS'
+  provider: simplenews
+  label_display: visible
+  newsletters:
+    default: default
+  message: ''
+  unique_id: ef945ea7-bb01-4676-a0dd-50fe3051dc7b
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

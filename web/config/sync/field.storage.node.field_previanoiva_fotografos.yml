@@ -1,0 +1,20 @@
+uuid: accdca60-fd3c-4f80-ae57-287b0c8b5ecb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_previanoiva_fotografos
+field_name: field_previanoiva_fotografos
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

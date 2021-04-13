@@ -1,0 +1,23 @@
+uuid: 453c48da-0cc6-403c-a559-fc411a5abff0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cobertura_horas
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_cobertura_horas
+field_name: field_cobertura_horas
+entity_type: node
+bundle: formulario_fotografo
+label: 'Cobertura Horas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

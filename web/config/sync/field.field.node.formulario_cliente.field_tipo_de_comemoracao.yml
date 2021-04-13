@@ -1,0 +1,28 @@
+uuid: e4a782ef-bed1-431f-829f-8d957a7d9219
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_comemoracao
+    - node.type.formulario_cliente
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.formulario_cliente.field_tipo_de_comemoracao
+field_name: field_tipo_de_comemoracao
+entity_type: node
+bundle: formulario_cliente
+label: 'Tipo de Comemoração'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

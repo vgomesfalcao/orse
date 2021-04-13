@@ -1,0 +1,20 @@
+uuid: 19dc6fd6-c602-459a-9b5d-aac7d181f7dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_data_do_evento
+field_name: field_data_do_evento
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

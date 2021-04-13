@@ -1,0 +1,23 @@
+uuid: a0110cda-4b8d-49ee-891e-144bb66482eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_album_max_fotos
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_album_max_fotos
+field_name: field_album_max_fotos
+entity_type: node
+bundle: formulario_fotografo
+label: 'Álbum Max Fotos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

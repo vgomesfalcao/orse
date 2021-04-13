@@ -1,0 +1,55 @@
+<div class="offcanvas-menu">
+    <div id="btn" class="dark">
+        <div id='top'></div>
+        <div id='middle'></div>
+        <div id='bottom'></div>
+    </div>
+    <div id="box">
+        {% if page.menu_side %}{{ page.menu_side }}{% endif %}
+        <div class="clearfix"></div>
+        <div class="contact-info">
+            {% if page.menu_side_bottom %}{{ page.menu_side_bottom }}{% endif %}
+        </div>
+    </div>
+</div>
+<div class="topbar light topbar-padding">
+    <div class="container">
+        <div class="row nopadding">
+            <div class="topbar-left-items">
+                {% if page.top_left_menu %}{{ page.top_left_menu }}{% endif %}
+            </div>
+            <div class="topbar-right-items pull-right">
+                {% if page.top_menu_social %}{{ page.top_menu_social }}{% endif %}
+                {% if page.top_right_menu %}{{ page.top_right_menu }}{% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="col-md-12 nopadding">
+    <div class="header-section white style1 links-dark pin-style">
+        <div class="container">
+            <div class="mod-menu">
+                <div class="row">
+                    {% if page.header %}{{ page.header }}{% endif %}
+                    <div class="col-sm-10">
+                        <div class="main-nav">
+                            <ul class="nav navbar-nav top-nav">
+                                <li class="search-parent">
+                                    <a href="javascript:void(0)" title="" class="m-link"><i aria-hidden="true" class="fa fa-search"></i></a>
+                                    {% if page.search %}{{ page.search }}{% endif %}
+                                </li>
+                                <li class="cart-parent">
+                                    {% if page.header_cart %}{{ page.header_cart }}{% endif %}
+                                </li>
+                                <li class="visible-xs menu-icon"> <a href="javascript:void(0)" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false"> <i aria-hidden="true" class="fa fa-bars"></i> </a> </li>
+                            </ul>
+                            {% if page.main_menu %}{{ page.main_menu }}{% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>

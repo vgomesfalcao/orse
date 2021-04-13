@@ -1,0 +1,49 @@
+uuid: e1e3300a-4b1a-4bb1-8fa5-d71b1fc4d38b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about_style_1
+  content:
+    - 'block_content:basic:521d903c-3bbb-46b9-8766-0f3753214eea'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: feature-box-18
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_aparblocksectioncontentwhychooseus
+theme: orse
+region: section
+weight: 69
+provider: null
+plugin: 'block_content:521d903c-3bbb-46b9-8766-0f3753214eea'
+settings:
+  id: 'block_content:521d903c-3bbb-46b9-8766-0f3753214eea'
+  label: '[Apar]Block Section Content - Why Choose Us'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about_style_1
+    context_mapping: {  }

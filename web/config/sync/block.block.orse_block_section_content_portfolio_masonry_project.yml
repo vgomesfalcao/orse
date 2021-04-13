@@ -1,0 +1,47 @@
+uuid: bd6fb223-2127-4389-84b3-50184d122e64
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.masonry_projects
+    - views.view._apar_portfolio
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: sec-padding
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_block_section_content_portfolio_masonry_project
+theme: orse
+region: section
+weight: 113
+provider: null
+plugin: 'views_block:_apar_portfolio-block_section_content_portfolio_masonry_project'
+settings:
+  id: 'views_block:_apar_portfolio-block_section_content_portfolio_masonry_project'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: masonry_projects
+    context_mapping: {  }

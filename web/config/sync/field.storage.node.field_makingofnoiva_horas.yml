@@ -1,0 +1,18 @@
+uuid: 9855d3b6-ea00-4801-9ca3-40af15ab623e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_makingofnoiva_horas
+field_name: field_makingofnoiva_horas
+entity_type: node
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

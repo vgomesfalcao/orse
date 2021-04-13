@@ -1,0 +1,28 @@
+uuid: 701d33a1-7c2c-4645-a48f-088f3bb3bf0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_observacoes
+    - node.type.formulario_cliente
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.formulario_cliente.field_observacoes
+field_name: field_observacoes
+entity_type: node
+bundle: formulario_cliente
+label: Observações
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

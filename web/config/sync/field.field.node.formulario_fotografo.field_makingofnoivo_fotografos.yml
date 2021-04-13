@@ -1,0 +1,23 @@
+uuid: 669b70a8-226c-425b-b2c0-b36a4c1a9386
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_makingofnoivo_fotografos
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_makingofnoivo_fotografos
+field_name: field_makingofnoivo_fotografos
+entity_type: node
+bundle: formulario_fotografo
+label: 'MakingOfNoivo fotografos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,27 @@
+uuid: 01d69fdf-797a-49a8-b939-7b70eab41c99
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipo_de_casamento
+field_name: field_tipo_de_casamento
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: hetero
+      label: Hetero
+    -
+      value: homoafetivo
+      label: Homoafetivo
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,47 @@
+uuid: ecb7e542-b7c6-4970-a729-cb1a678344b9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:19ecef30-4ea5-48c3-bc60-1fb2288c618e'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: social
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_aparblockbottommenusidesocialnetwork
+theme: orse
+region: menu_side_bottom
+weight: -9
+provider: null
+plugin: 'block_content:19ecef30-4ea5-48c3-bc60-1fb2288c618e'
+settings:
+  id: 'block_content:19ecef30-4ea5-48c3-bc60-1fb2288c618e'
+  label: '[Apar]Block Bottom Menu Side - Social Network'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

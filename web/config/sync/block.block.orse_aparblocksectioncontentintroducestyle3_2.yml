@@ -1,0 +1,50 @@
+uuid: e156e619-7c61-47f6-9a9c-68517be133ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about_style_2
+  content:
+    - 'block_content:basic:e8e43a2f-3bdb-4541-868f-3e747b921d88'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: enable
+    color: '#000000'
+    bg_image:
+      - 69
+    bg_image_type: fixed
+    bg_repeat: 'no'
+    bg_image_position: 'center center'
+    bg_image_size: cover
+    background_overlay: ''
+id: orse_aparblocksectioncontentintroducestyle3_2
+theme: orse
+region: section
+weight: 56
+provider: null
+plugin: 'block_content:e8e43a2f-3bdb-4541-868f-3e747b921d88'
+settings:
+  id: 'block_content:e8e43a2f-3bdb-4541-868f-3e747b921d88'
+  label: '[Apar]Block Section Content - Introduce Style 3'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about_style_2
+    context_mapping: {  }

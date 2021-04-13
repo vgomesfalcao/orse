@@ -1,0 +1,23 @@
+uuid: c9ede173-3c16-4fa4-bed0-7c51ff34a526
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_makingof_horas
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_makingof_horas
+field_name: field_makingof_horas
+entity_type: node
+bundle: formulario_fotografo
+label: 'MakingOf Horas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

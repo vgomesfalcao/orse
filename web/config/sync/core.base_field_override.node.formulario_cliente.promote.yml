@@ -1,0 +1,22 @@
+uuid: d5a3ae56-b089-4a24-bb00-d93d1f08ca03
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.formulario_cliente
+id: node.formulario_cliente.promote
+field_name: promote
+entity_type: node
+bundle: formulario_cliente
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,54 @@
+uuid: 25ccef96-a981-4ef5-a625-87fb58a76677
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.formulario_cliente.body
+    - field.field.node.formulario_cliente.field_data_do_evento
+    - field.field.node.formulario_cliente.field_formulario_fotografo
+    - field.field.node.formulario_cliente.field_idade_da_crianca
+    - field.field.node.formulario_cliente.field_local
+    - field.field.node.formulario_cliente.field_nome_completo
+    - field.field.node.formulario_cliente.field_numero_de_convidados
+    - field.field.node.formulario_cliente.field_observacoes
+    - field.field.node.formulario_cliente.field_tipo_de_bodas
+    - field.field.node.formulario_cliente.field_tipo_de_casamento
+    - field.field.node.formulario_cliente.field_tipo_de_comemoracao
+    - field.field.node.formulario_cliente.field_tipo_de_evento
+    - field.field.node.formulario_cliente.field_valor_maximo_fotografia
+    - node.type.formulario_cliente
+  module:
+    - text
+    - user
+id: node.formulario_cliente.teaser
+targetEntityType: node
+bundle: formulario_cliente
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_data_do_evento: true
+  field_formulario_fotografo: true
+  field_idade_da_crianca: true
+  field_local: true
+  field_nome_completo: true
+  field_numero_de_convidados: true
+  field_observacoes: true
+  field_tipo_de_bodas: true
+  field_tipo_de_casamento: true
+  field_tipo_de_comemoracao: true
+  field_tipo_de_evento: true
+  field_valor_maximo_fotografia: true

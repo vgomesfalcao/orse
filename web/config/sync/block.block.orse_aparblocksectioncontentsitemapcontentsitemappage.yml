@@ -1,0 +1,47 @@
+uuid: b702481b-e0d0-4f94-a2a9-139f574ec4ae
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9a9838f4-51b0-4190-8d0c-39a4e1344ee1'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_aparblocksectioncontentsitemapcontentsitemappage
+theme: orse
+region: section_sitemap
+weight: 0
+provider: null
+plugin: 'block_content:9a9838f4-51b0-4190-8d0c-39a4e1344ee1'
+settings:
+  id: 'block_content:9a9838f4-51b0-4190-8d0c-39a4e1344ee1'
+  label: '[Apar]Block Section Content Sitemap - Content Sitemap Page'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

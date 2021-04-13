@@ -1,0 +1,23 @@
+uuid: a8d6972c-b69b-4239-b0a6-55cbb071eeb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cerimonia_fotografos
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_cerimonia_fotografos
+field_name: field_cerimonia_fotografos
+entity_type: node
+bundle: formulario_fotografo
+label: 'Cerimônia Fotógrafos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

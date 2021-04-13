@@ -1,0 +1,19 @@
+uuid: 43277ede-963c-4a36-8dbb-11993afc95c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_formulario_cliente
+field_name: field_formulario_cliente
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

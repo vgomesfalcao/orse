@@ -1,0 +1,20 @@
+uuid: 604842a2-e69e-4f73-a786-cfd7ed0bff08
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_recepcao_fotografos
+field_name: field_recepcao_fotografos
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

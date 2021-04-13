@@ -1,0 +1,23 @@
+uuid: 6c4ec51d-20f6-43a5-b2c8-e2455c99f6f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_previanoiva_valor
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_previanoiva_valor
+field_name: field_previanoiva_valor
+entity_type: node
+bundle: formulario_fotografo
+label: 'PreviaNoiva Valor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

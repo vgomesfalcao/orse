@@ -1,0 +1,23 @@
+uuid: 1e4149e8-0374-451f-a421-00660e9dafca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cobertura_fotografos
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_cobertura_fotografos
+field_name: field_cobertura_fotografos
+entity_type: node
+bundle: formulario_fotografo
+label: 'Cobertura Fotógrafos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

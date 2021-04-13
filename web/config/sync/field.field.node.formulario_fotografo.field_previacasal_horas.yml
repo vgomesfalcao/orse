@@ -1,0 +1,23 @@
+uuid: 5d116def-a70f-4984-acfc-0d597912d09a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_previacasal_horas
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_previacasal_horas
+field_name: field_previacasal_horas
+entity_type: node
+bundle: formulario_fotografo
+label: 'PreviaCasal Horas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

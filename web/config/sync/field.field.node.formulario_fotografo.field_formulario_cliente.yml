@@ -1,0 +1,28 @@
+uuid: bbbd782e-58d9-401d-b15c-faa15ecd7502
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_formulario_cliente
+    - node.type.formulario_cliente
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_formulario_cliente
+field_name: field_formulario_cliente
+entity_type: node
+bundle: formulario_fotografo
+label: 'Formulário Cliente'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      formulario_cliente: formulario_cliente
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

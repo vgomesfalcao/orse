@@ -47,6 +47,7 @@
         "drupal/soundcloudfield": "^1.0@alpha",
         "drupal/token": "^1.9",
         "drupal/webform": "^6.0",
+        "drupal/webform_content_creator": "^2.0",
         "drupal/webform_mautic": "^1.1",
         "drush/drush": "^10.4"
     },

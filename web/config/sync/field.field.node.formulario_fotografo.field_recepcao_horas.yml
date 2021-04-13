@@ -1,0 +1,23 @@
+uuid: 6e0ae7e1-744a-48cb-85ae-2ebac0b69dcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recepcao_horas
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_recepcao_horas
+field_name: field_recepcao_horas
+entity_type: node
+bundle: formulario_fotografo
+label: 'Recepção Horas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

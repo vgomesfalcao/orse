@@ -1,0 +1,56 @@
+uuid: d6d1f657-0029-438e-bf3a-f0897c376a9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.formulario_fotografo
+    - views.view.respostas_fotografos
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ctools
+    - ntv_block_background
+    - views
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: views_block__respostas_fotografos_block_1
+theme: orse
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:respostas_fotografos-block_1'
+settings:
+  id: 'views_block:respostas_fotografos-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: formulario_fotografo
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      formulario_cliente: formulario_cliente
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

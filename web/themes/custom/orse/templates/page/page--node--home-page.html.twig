@@ -1,0 +1,26 @@
+{% if header_style == 'style2' %}
+    {% include theme_path ~ "/templates/header/header-2.html.twig" %}
+{% elseif header_style == 'style3' %}
+    {% include theme_path ~ "/templates/header/header-3.html.twig" %}
+{% elseif header_style == 'style4' %}
+    {% include theme_path ~ "/templates/header/header-4.html.twig" %}
+{% else %}
+    {% include theme_path ~ "/templates/header/header-1.html.twig" %}
+{% endif %}
+
+<div class="clearfix"></div>
+{{ page.slider }}
+<div class="clearfix"></div>
+{{ page.content_full_bar }}
+{{ page.section }}
+{{ page.content }}
+
+{% if footer_style == 'style1' %}
+    {% include theme_path ~ "/templates/footer/footer-1.html.twig" %}
+{% elseif footer_style == 'style2' %}
+    {% include theme_path ~ "/templates/footer/footer-2.html.twig" %}
+{% elseif footer_style == 'style3' %}
+    {% include theme_path ~ "/templates/footer/footer-3.html.twig" %}
+{% else %}  
+    
+{% endif %}

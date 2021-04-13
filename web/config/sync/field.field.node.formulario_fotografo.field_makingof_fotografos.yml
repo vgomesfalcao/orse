@@ -1,0 +1,23 @@
+uuid: 97f245b6-294a-4dae-98ff-95590715b529
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_makingof_fotografos
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_makingof_fotografos
+field_name: field_makingof_fotografos
+entity_type: node
+bundle: formulario_fotografo
+label: 'MakingOf Fotógrafos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,7 @@
+{% set class_menu = ['collapse', 'apar-menu-main'] %}
+<div {{ attributes.setAttribute('id', 'menu').addClass(class_menu) }}>
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

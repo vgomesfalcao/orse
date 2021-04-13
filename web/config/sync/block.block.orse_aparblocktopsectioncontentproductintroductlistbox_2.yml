@@ -1,0 +1,49 @@
+uuid: 28e0b544-1a7c-4f56-8dc4-6be3be59b78c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_shop
+  content:
+    - 'block_content:basic:e438a381-e3f8-446e-870c-606cbf9f6fd9'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: sec-padding
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_aparblocktopsectioncontentproductintroductlistbox_2
+theme: orse
+region: top_section_pd
+weight: -27
+provider: null
+plugin: 'block_content:e438a381-e3f8-446e-870c-606cbf9f6fd9'
+settings:
+  id: 'block_content:e438a381-e3f8-446e-870c-606cbf9f6fd9'
+  label: '[Apar]Block Top Section Content Product - Introduct List Box'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_shop
+    context_mapping: {  }

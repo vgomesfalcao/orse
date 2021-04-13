@@ -1,0 +1,19 @@
+uuid: a078117b-bdcb-4204-b94e-603232d40579
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_idade_da_crianca
+    - node.type.formulario_cliente
+id: node.formulario_cliente.field_idade_da_crianca
+field_name: field_idade_da_crianca
+entity_type: node
+bundle: formulario_cliente
+label: 'Idade da Criança'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

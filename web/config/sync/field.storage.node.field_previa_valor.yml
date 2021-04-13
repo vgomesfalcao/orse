@@ -1,0 +1,18 @@
+uuid: 7bdd020e-bcc8-4534-be4f-6e650b4fdc3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_previa_valor
+field_name: field_previa_valor
+entity_type: node
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

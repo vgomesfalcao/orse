@@ -1,0 +1,21 @@
+uuid: 00ed0da5-8c7f-46bf-acd1-549250fba4d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_evento
+    - node.type.formulario_cliente
+  module:
+    - options
+id: node.formulario_cliente.field_tipo_de_evento
+field_name: field_tipo_de_evento
+entity_type: node
+bundle: formulario_cliente
+label: 'Tipo de Evento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

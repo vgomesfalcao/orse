@@ -1,0 +1,12 @@
+<div class="col-divider-margin-2"></div>
+<div class="text-box border white padding-4 apar-comment-item">
+    <div class="imgbox-medium left round overflow-hidden">{% if user_picture %}{{ user_picture }}{% endif %}</div>
+    <div class="text-box-right more-padding-1">
+        <h5 class="less-mar-1">{{ author }}</h5>
+        <div class="blog-post-info"><span>{{ new_indicator_timestamp|date('F d Y') ~ ' at ' ~ new_indicator_timestamp|date('h:i a') }}</span></div>
+        <br/>
+        <p>{{ content.field_comment_body }} </p>
+        <br/>
+        {{ content.links }}
+    </div>
+</div>

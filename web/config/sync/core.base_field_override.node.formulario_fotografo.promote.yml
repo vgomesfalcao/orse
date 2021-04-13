@@ -1,0 +1,22 @@
+uuid: b8c1351c-5d87-471c-9616-b591d75dcaeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.promote
+field_name: promote
+entity_type: node
+bundle: formulario_fotografo
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

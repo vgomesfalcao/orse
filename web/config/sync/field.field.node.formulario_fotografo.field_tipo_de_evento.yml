@@ -1,0 +1,21 @@
+uuid: a9aa0533-9575-41bc-babb-596eb1da24a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_evento
+    - node.type.formulario_fotografo
+  module:
+    - options
+id: node.formulario_fotografo.field_tipo_de_evento
+field_name: field_tipo_de_evento
+entity_type: node
+bundle: formulario_fotografo
+label: 'Tipo de Evento'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

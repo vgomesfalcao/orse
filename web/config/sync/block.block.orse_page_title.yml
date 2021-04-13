@@ -1,0 +1,20 @@
+uuid: bbd75098-3844-44a6-ad46-c84fd3ba6144
+langcode: en
+status: true
+dependencies:
+  theme:
+    - orse
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: orse_page_title
+theme: orse
+region: disable
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

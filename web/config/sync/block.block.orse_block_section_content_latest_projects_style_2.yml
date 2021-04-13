@@ -1,0 +1,47 @@
+uuid: 7aac5822-7bee-49e3-b51c-02ca0207b0ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_6
+    - views.view._apar_portfolio
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: 'sec-bpadding section-dark'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: orse_block_section_content_latest_projects_style_2
+theme: orse
+region: section
+weight: 21
+provider: null
+plugin: 'views_block:_apar_portfolio-block_section_content_latest_projects_style_2'
+settings:
+  id: 'views_block:_apar_portfolio-block_section_content_latest_projects_style_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_6
+    context_mapping: {  }

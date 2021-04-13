@@ -1,0 +1,23 @@
+uuid: 4ea7d5a3-623c-49ac-8298-6ec548559c85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_makingofnoiva_horas
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_makingofnoiva_horas
+field_name: field_makingofnoiva_horas
+entity_type: node
+bundle: formulario_fotografo
+label: 'MakingOfNoiva Horas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

@@ -1,0 +1,23 @@
+uuid: 50f8c5fb-49ef-4b30-a03e-bd3461e98378
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recepcao_valor
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_recepcao_valor
+field_name: field_recepcao_valor
+entity_type: node
+bundle: formulario_fotografo
+label: 'Recepção Valor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

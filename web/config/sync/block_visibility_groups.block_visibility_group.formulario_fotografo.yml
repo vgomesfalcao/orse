@@ -1,0 +1,29 @@
+uuid: abaaf5d7-8a62-4079-b8c2-c514f2a196fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: formulario_fotografo
+label: 'Formulário Fotógrafo'
+logic: and
+conditions:
+  4dafba9d-cc08-468e-8fb8-dfea0c27e1e4:
+    id: node_type
+    bundles:
+      formulario_cliente: formulario_cliente
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    uuid: 4dafba9d-cc08-468e-8fb8-dfea0c27e1e4
+  bdde4c5d-51ce-4199-947b-b1f98987e7b8:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    uuid: bdde4c5d-51ce-4199-947b-b1f98987e7b8
+allow_other_conditions: false

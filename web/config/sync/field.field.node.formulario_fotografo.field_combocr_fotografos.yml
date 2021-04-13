@@ -1,0 +1,23 @@
+uuid: ec338b86-fe24-419d-ab0f-ad1836f6149d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_combocr_fotografos
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.field_combocr_fotografos
+field_name: field_combocr_fotografos
+entity_type: node
+bundle: formulario_fotografo
+label: 'ComboCR Fotógrafos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
