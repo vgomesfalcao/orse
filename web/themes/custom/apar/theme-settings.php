@@ -173,7 +173,7 @@ function apar_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormSta
       ),
       '#default_value' => theme_get_setting('preloader_style', 'apar'),
   );
-  
+
   //Header
   $form['settings']['header'] = array(
       '#type' => 'details',
@@ -198,11 +198,11 @@ function apar_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormSta
       '#title' => t('Logo Default'),
       '#open' => FALSE,
   );
-  
+
   $form['settings']['header']['logo1']['link_config'] = array(
     '#markup' => t('<em>Change logo <a id="apar-change-logo" href="#edit-theme-settings">here</a></em>'),
   );
-  
+
   //Header Transparent
   $form['settings']['header']['header_transparent'] = array(
       '#type' => 'details',
@@ -525,7 +525,7 @@ function apar_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormSta
     '#title' => t('Social Network'),
     '#default_value' => theme_get_setting('social_network_footer', 'apar'),
   );
-  //Footer Background Image 
+  //Footer Background Image
   $form['settings']['footer']['footer_image'] = array(
       '#type' => 'details',
       '#title' => t('Footer Background Image Setting'),
@@ -591,6 +591,7 @@ function maintenance_page_header_bg_validate($element, FormStateInterface $form_
     }
  }
 }
+
 function footer_image_validate($element, FormStateInterface $form_state) {
   global $base_url;
 
@@ -609,6 +610,7 @@ function footer_image_validate($element, FormStateInterface $form_state) {
     }
  }
 }
+
 function contact_image_validate($element, FormStateInterface $form_state) {
   global $base_url;
 
@@ -627,6 +629,7 @@ function contact_image_validate($element, FormStateInterface $form_state) {
     }
  }
 }
+
 function header_transparent_logo_validate($element, FormStateInterface $form_state) {
   global $base_url;
 
@@ -645,6 +648,7 @@ function header_transparent_logo_validate($element, FormStateInterface $form_sta
     }
   }
 }
+
 function header_dark_logo_validate($element, FormStateInterface $form_state) {
   global $base_url;
 
@@ -663,7 +667,8 @@ function header_dark_logo_validate($element, FormStateInterface $form_state) {
     }
   }
 }
-function page_image_bg_validate($element, FormStateInterface $form_state){
+
+function page_image_bg_validate($element, FormStateInterface $form_state) {
   global $base_url;
 
   $validators = array('file_validate_extensions' => array('png gif jpg jpeg apng svg'));

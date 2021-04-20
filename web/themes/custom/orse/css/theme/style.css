@@ -12,3 +12,15 @@
 .webform-submission-form .form-item.js-form-radio{
   margin: 0;
 }
+
+.section-green{
+  background-color:#8EEB4C;
+}
+
+.section-orange{
+  background-color:#EB673F;
+}
+
+.header-section {
+  min-height: 75px;
+}
