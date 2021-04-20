@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: formulario_cliente
 title: 'Formulário Cliente'
-webform: formul
+webform: formulario_cliente
 field_title: null
 use_encrypt: null
 encryption_profile: null
@@ -68,11 +68,6 @@ elements:
     webform_field: valor_max_fotografia
     custom_check: false
     custom_value: ''
-  status:
-    type: false
-    webform_field: ''
-    custom_check: true
-    custom_value: '1'
   title:
     type: false
     webform_field: ''

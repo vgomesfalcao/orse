@@ -22,3 +22,4 @@ global:
       css/layouts/layout.css: {}
     theme:
       css/theme/print.css: { media: print }
+      css/theme/style.css: {}

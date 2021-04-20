@@ -192,7 +192,7 @@ elements:
     type: false
     webform_field: ''
     custom_check: true
-    custom_value: '[webform_submission:values:tipo_de_evento] - [current-date:html_date]'
+    custom_value: '[webform_submission:original:user:account-name] - [webform_submission:completed:html_date] - [webform_submission:completed:html_time]'
 content_type: null
 target_entity_type: node
 target_bundle: formulario_fotografo

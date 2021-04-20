@@ -4,3 +4,11 @@
 .webform-flex--container > .form-item.webform-element--title-inline > select {
   width: unset;
 }
+
+.webform-submission-form .form-item {
+  margin: 10px 0;
+}
+
+.webform-submission-form .form-item.js-form-radio{
+  margin: 0;
+}
