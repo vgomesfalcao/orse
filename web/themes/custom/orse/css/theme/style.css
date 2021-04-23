@@ -24,3 +24,8 @@
 .header-section {
   min-height: 75px;
 }
+
+
+.field__label {
+  font-weight: bold;
+}
