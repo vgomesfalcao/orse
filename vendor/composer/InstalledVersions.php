@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '7dcda202b2542342e76d9b62112eafca558a3a56',
+    'reference' => 'e96062085f072a9b4aa9fd6908c361dcbc7aae8e',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -1143,7 +1143,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '7dcda202b2542342e76d9b62112eafca558a3a56',
+      'reference' => 'e96062085f072a9b4aa9fd6908c361dcbc7aae8e',
     ),
     'drupal/responsive_image' => 
     array (
@@ -2233,6 +2233,7 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
+
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];
