@@ -5,6 +5,7 @@ dependencies:
   module:
     - antibot
     - honeypot
+    - webform_mautic
 third_party_settings:
   antibot:
     antibot: true
@@ -156,49 +157,100 @@ settings:
 access:
   create:
     roles:
-      - anonymous
-      - authenticated
+      - administrator
+      - cliente
     users: {  }
     permissions: {  }
   view_any:
-    roles: {  }
+    roles:
+      - administrator
     users: {  }
     permissions: {  }
   update_any:
-    roles: {  }
+    roles:
+      - administrator
     users: {  }
     permissions: {  }
   delete_any:
-    roles: {  }
+    roles:
+      - administrator
     users: {  }
     permissions: {  }
   purge_any:
-    roles: {  }
+    roles:
+      - administrator
     users: {  }
     permissions: {  }
   view_own:
-    roles: {  }
+    roles:
+      - administrator
+      - cliente
     users: {  }
     permissions: {  }
   update_own:
-    roles: {  }
+    roles:
+      - administrator
+      - cliente
     users: {  }
     permissions: {  }
   delete_own:
-    roles: {  }
+    roles:
+      - administrator
+      - cliente
     users: {  }
     permissions: {  }
   administer:
-    roles: {  }
+    roles:
+      - administrator
     users: {  }
     permissions: {  }
   test:
-    roles: {  }
+    roles:
+      - administrator
     users: {  }
     permissions: {  }
   configuration:
-    roles: {  }
+    roles:
+      - administrator
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  mautic:
+    id: mautic
+    label: Mautic
+    notes: ''
+    handler_id: mautic
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      method: POST
+      type: x-www-form-urlencoded
+      excluded_data:
+        serial: serial
+        sid: sid
+        uuid: uuid
+        token: token
+        uri: uri
+        created: created
+        completed: completed
+        changed: changed
+        in_draft: in_draft
+        current_page: current_page
+        remote_addr: remote_addr
+        uid: uid
+        langcode: langcode
+        webform_id: webform_id
+        entity_type: entity_type
+        entity_id: entity_id
+        locked: locked
+        sticky: sticky
+        notes: notes
+      custom_data: ''
+      debug: false
+      completed_url: 'http://orse.agatti.tech/mkt'
+      completed_custom_data: "mauticform[nome_completo]: '[webform_submission:values:nome_completo]'\r\nmauticform[data_evento]: '[webform_submission:values:data_evento]'\r\nmauticform[numero_convidados]: '[webform_submission:values:numero_convidados]'\r\nmauticform[local]: '[webform_submission:values:local]'\r\nmauticform[tipo_evento]: '[webform_submission:values:tipo_evento]'\r\nmauticform[tipo_bodas]: '[webform_submission:values:tipo_bodas]'\r\nmauticform[tipo_casamento]: '[webform_submission:values:tipo_casamento]'\r\nmauticform[tipo_comemoracao]: '[webform_submission:values:tipo_comemoracao]'\r\nmauticform[idade_crianca]: '[webform_submission:values:idade_crianca]'\r\nmauticform[valor_max_fotografia]: '[webform_submission:values:valor_max_fotografia]'\r\nmauticform[observacoes]: '[webform_submission:values:observacoes]'"
+      mautic_form_id: '1'
+      message: ''
+      messages: {  }
 variants: {  }

@@ -1,0 +1,11 @@
+uuid: 78eec229-62da-45b7-999f-cc013db59988
+langcode: en
+status: true
+dependencies: {  }
+id: cliente
+label: Cliente
+weight: 3
+is_admin: null
+permissions:
+  - 'create formulario_cliente content'
+  - 'edit own formulario_cliente content'

@@ -1,0 +1,14 @@
+uuid: e082fb84-3735-47e8-810a-0dbca88d45a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.fotografo
+  module:
+    - user
+id: user_remove_role_action.fotografo
+label: 'Remove the Fotógrafo role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: fotografo

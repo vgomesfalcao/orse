@@ -1,0 +1,53 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 0
+logo:
+  use_default: 0
+  path: 'public://logo_completa_3.png'
+favicon:
+  use_default: 0
+  path: ''
+display_switch: 0
+layout_page: wide
+background_styles: image
+background_color: ''
+page_image_bg: ''
+page_image_bg_upload: ''
+page_bg_css: 'repeat center top / cover fixed'
+built_in_skins_pr: green-pr
+built_in_skins_sc: green-sc
+display_preloader: 1
+preloader_style: style1
+header_style: style4
+header_transparent_logo_url: ''
+header_transparent_logo_upload: ''
+header_dark_logo_url: ''
+header_dark_logo_upload: ''
+page_title_image_url: ''
+page_title_image_upload: ''
+blog_layout: classic
+blog_sidebar: none
+product_layout: default
+product_sidebar: none
+product_page_taxonomy_items_per_page: '9'
+contact_layout: style2
+contact_image_url: ''
+contact_image_upload: ''
+title_form: 'Contact Form'
+title_contact: 'Address Info'
+contact_address: '3096 Cemetery Hollow Street, Houston, TX 77099'
+contact_email: mail@companyname.com
+contact_phone: '+1 1234-567-89000'
+contact_fax: '+1 0123-4567-8900'
+contact_website: www.yoursitename.com
+maintenance_page_header_bg: ''
+maintenance_page_header_bg_upload: ''
+custom_css: ''
+general_setting_tracking_code: ''
+footer_style: style1
+copyright_text: 'Copyright 2017 © Company'
+social_network_footer: "<ul class=\"footer-social-icons round\">\r\n    <li><a class=\"twitter\" href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\r\n    <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\r\n    <li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\r\n    <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>\r\n    <li><a href=\"#\"><i class=\"fa fa-dribbble\"></i></a></li>\r\n</ul>"
+footer_image_url: ''
+footer_image_upload: ''

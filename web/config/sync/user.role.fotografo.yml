@@ -1,0 +1,12 @@
+uuid: 796a7a8f-562d-4643-a84c-add9f5b03c72
+langcode: en
+status: true
+dependencies: {  }
+id: fotografo
+label: Fotógrafo
+weight: 4
+is_admin: null
+permissions:
+  - 'create formulario_fotografo content'
+  - 'delete own formulario_fotografo content'
+  - 'edit own formulario_fotografo content'

@@ -1,0 +1,14 @@
+uuid: 664a9352-60e5-4fd4-b94f-3a8d79c60bec
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.fotografo
+  module:
+    - user
+id: user_add_role_action.fotografo
+label: 'Add the Fotógrafo role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: fotografo

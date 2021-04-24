@@ -4,10 +4,11 @@ features:
   comment_user_verification: 1
   favicon: 1
 logo:
-  use_default: 1
+  use_default: 0
+  path: 'public://logo_completa.png'
 favicon:
   use_default: 1
-display_switch: 1
+display_switch: 0
 display_preloader: 1
 preloader_style: style1
 header_style: style4
