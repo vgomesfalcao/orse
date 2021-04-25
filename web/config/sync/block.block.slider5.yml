@@ -5,10 +5,10 @@ dependencies:
   config:
     - block_visibility_groups.block_visibility_group.home_page_5
   module:
-    - block_attributes
+
     - block_visibility_groups
     - md_slider
-    - ntv_block_background
+
   theme:
     - apar
 third_party_settings:

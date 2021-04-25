@@ -6,9 +6,9 @@ dependencies:
     - block_visibility_groups.block_visibility_group.about_style_1
     - views.view._apar_services
   module:
-    - block_attributes
+
     - block_visibility_groups
-    - ntv_block_background
+
     - views
   theme:
     - apar

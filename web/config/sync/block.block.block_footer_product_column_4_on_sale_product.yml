@@ -5,9 +5,9 @@ dependencies:
   config:
     - views.view._apar_product
   module:
-    - block_attributes
+
     - block_visibility_groups
-    - ntv_block_background
+
     - views
   theme:
     - apar

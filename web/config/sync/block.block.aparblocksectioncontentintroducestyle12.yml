@@ -7,10 +7,10 @@ dependencies:
   content:
     - 'block_content:basic:82e2b3e2-6b06-43e7-8cf7-76b2ecccb267'
   module:
-    - block_attributes
+
     - block_content
     - block_visibility_groups
-    - ntv_block_background
+
   theme:
     - apar
 third_party_settings:

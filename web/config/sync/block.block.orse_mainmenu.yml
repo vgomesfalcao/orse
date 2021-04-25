@@ -5,9 +5,9 @@ dependencies:
   config:
     - system.menu.main-menu
   module:
-    - block_attributes
+
     - block_visibility_groups
-    - ntv_block_background
+
     - system
   theme:
     - orse

@@ -6,9 +6,9 @@ dependencies:
     - block_visibility_groups.block_visibility_group.team_classic
     - views.view._apar_partners
   module:
-    - block_attributes
+
     - block_visibility_groups
-    - ntv_block_background
+
     - views
   theme:
     - orse
