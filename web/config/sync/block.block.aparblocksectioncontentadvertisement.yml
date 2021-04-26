@@ -7,10 +7,8 @@ dependencies:
   content:
     - 'block_content:basic:6382645e-82f6-40fa-9ca6-eab1346ddb54'
   module:
-
     - block_content
     - block_visibility_groups
-
   theme:
     - apar
 third_party_settings:

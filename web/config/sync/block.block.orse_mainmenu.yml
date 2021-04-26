@@ -5,9 +5,7 @@ dependencies:
   config:
     - system.menu.main-menu
   module:
-
     - block_visibility_groups
-
     - system
   theme:
     - orse

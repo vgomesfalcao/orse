@@ -3,10 +3,8 @@ langcode: en
 status: true
 dependencies:
   module:
-
     - block_visibility_groups
     - commerce_cart
-
   theme:
     - apar
 third_party_settings:

@@ -5,9 +5,7 @@ dependencies:
   config:
     - views.view._apar_taxanomy_term
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - apar

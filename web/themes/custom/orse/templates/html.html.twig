@@ -5,7 +5,7 @@
         <title>{{ head_title|safe_join(' | ') }}</title>
         <css-placeholder token="{{ placeholder_token|raw }}">
         <js-placeholder token="{{ placeholder_token|raw }}">
-        
+
         {% if general_setting_tracking_code != '' %}
             {{ general_setting_tracking_code|t }}
         {% endif %}
@@ -24,7 +24,7 @@
             <body class="apar-boxed" style="background: {{ background_color }};">
         {% endif %}
     {% else %}
-    <body>
+    <body class="{{node_type}}">
     {% endif %}
         {% if display_preloader %}
             <div class="over-loader loader-live">
@@ -102,7 +102,7 @@
                     </div>
                     <h5 class="customizer-style-tytle-padd uppercase apar-text-switcher">Color Options</h5>
                     <label for="sc-color-prim" class="control-label color-text">Primary Color</label>
-                    <ul class="styles" id="apr-color-pr">     
+                    <ul class="styles" id="apr-color-pr">
                         <li><a href="javascript:void(0)" data-color='default-pr'><span class="pre-color-skin1"></span></a></li>
                         <li><a href="javascript:void(0)" data-color='orange-pr'><span class="pre-color-skin2"></span></a></li>
                         <li><a href="javascript:void(0)" data-color='lightgreen-pr'><span class="pre-color-skin3"></span></a></li>
@@ -117,7 +117,7 @@
                         <li><a href="javascript:void(0)" data-color='purple-2-pr'><span class="pre-color-skin12"></span></a></li>
                     </ul>
                     <label for="sc-color-prim" class="control-label color-text">Secondary Color</label>
-                    <ul class="styles" id="apr-color-sc">     
+                    <ul class="styles" id="apr-color-sc">
                         <li><a href="javascript:void(0)" data-color='default-sc'><span class="pre-color-skin1"></span></a></li>
                         <li><a href="javascript:void(0)" data-color='orange-sc'><span class="pre-color-skin2"></span></a></li>
                         <li><a href="javascript:void(0)" data-color='lightgreen-sc'><span class="pre-color-skin3"></span></a></li>

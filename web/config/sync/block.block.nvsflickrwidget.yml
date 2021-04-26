@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-
     - block_visibility_groups
-
     - nvs_widget
   theme:
     - apar

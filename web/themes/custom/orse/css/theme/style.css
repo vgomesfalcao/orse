@@ -13,6 +13,27 @@
   margin: 0;
 }
 
+#webform-submission-formulario-cliente-node-151-add-form input,
+#webform-submission-formulario-cliente-node-151-add-form textarea {
+  max-width:calc(100% - 25px);
+  margin: 10px 0;
+}
+
+#webform-submission-formulario-cliente-node-151-add-form {
+  padding: 20px;
+  background-color: white;
+}
+#webform-submission-formulario-cliente-node-151-add-form div.form-item,
+#webform-submission-formulario-cliente-node-151-add-form div.form-actions,
+#webform-submission-formulario-cliente-node-151-add-form fieldset {
+  max-width: 500px;
+  margin:10px auto;
+}
+
+.webform .sec-padding {
+  background-color: #8EEB4C;
+}
+
 .section-green{
   background-color:#8EEB4C;
 }
@@ -25,7 +46,47 @@
   min-height: 75px;
 }
 
+.btn-primary:hover{
+  background-color:#EB673F;
+  border-color:#EB673F;
+}
+
+.ui-datepicker-calendar tr {
+  display:table-row;
+}
+
+.ui-datepicker-calendar td,
+.ui-datepicker-calendar th {
+  display:table-cell;
+}
 
 .field__label {
   font-weight: bold;
+}
+
+
+#webform-submission-formulario-cliente-node-151-add-form input[type=radio] {
+    display:none;
+    margin:10px;
+}
+
+
+#webform-submission-formulario-cliente-node-151-add-form input[type=radio] + label {
+  padding: 4px 12px;
+  background-color: #e7e7e7;
+  border-color: #ddd;
+  width:25%;
+}
+
+#webform-submission-formulario-cliente-node-151-add-form input[type=radio]:checked + label {
+  background-image: none;
+  background-color:#8EEB4C;
+  border-color: #8EEB4C;
+}
+
+
+@media screen and (max-width: 720px) {
+  #webform-submission-formulario-cliente-node-151-add-form input[type=radio] + label {
+    width:50%;
+  }
 }

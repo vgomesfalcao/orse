@@ -6,9 +6,7 @@ dependencies:
     - block_visibility_groups.block_visibility_group.home_page_8
     - views.view._apar_team
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - apar

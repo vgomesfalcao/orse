@@ -5,9 +5,7 @@ dependencies:
   config:
     - views.view._apar_blog
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - orse

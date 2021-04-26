@@ -5,10 +5,8 @@ dependencies:
   content:
     - 'block_content:basic:d23e737c-871f-4637-ac10-30723e8eef99'
   module:
-
     - block_content
     - block_visibility_groups
-
   theme:
     - orse
 third_party_settings:
