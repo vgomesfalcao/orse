@@ -13,6 +13,15 @@
   margin: 0;
 }
 
+.webform-submission-formulario-fotografo-add-form .form-item{
+  display:flex;
+  justify-content: space-around;
+}
+
+.webform-submission-formulario-fotografo-add-form fieldset.form-item{
+  display:block;
+}
+
 #webform-submission-formulario-cliente-node-151-add-form input,
 #webform-submission-formulario-cliente-node-151-add-form textarea {
   max-width:calc(100% - 25px);
@@ -84,6 +93,62 @@
   border-color: #8EEB4C;
 }
 
+.table-orcamentos table{
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.table-orcamentos table > thead > tr > th,
+.table-orcamentos table > tbody > tr > td{
+  border:1px solid #ddd;
+  text-align: center;
+}
+
+.table-orcamentos table > thead {
+  background-color:#8EEB4C;
+  color:white;
+}
+
+.table-orcamentos table > thead a{
+  color: white;
+}
+
+.table-orcamento-links-col {
+  padding:20px;
+}
+
+.table-orcamento-links-col a {
+    background-color: #EB673F;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.table-orcamento-links-col a:hover {
+    background-color: #286090;
+    color:white;
+}
+
+.node--type-formulario-fotografo {
+  border: 1px solid #ddd;
+}
+
+.node--type-formulario-fotografo fieldset .fieldset-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  padding: 20px 0;
+}
+
+.header-orcamento {
+padding: 40px 0;
+display: flex;
+justify-content: space-around;
+}
+
+.node--type-formulario-fotografo .node__meta {
+text-align: center;
+}
 
 @media screen and (max-width: 720px) {
   #webform-submission-formulario-cliente-node-151-add-form input[type=radio] + label {

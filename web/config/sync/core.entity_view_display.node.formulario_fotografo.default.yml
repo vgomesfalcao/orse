@@ -41,9 +41,185 @@ dependencies:
     - field.field.node.formulario_fotografo.field_tipo_de_evento
     - node.type.formulario_fotografo
   module:
+    - field_group
     - options
     - text
     - user
+third_party_settings:
+  field_group:
+    group_cobertura:
+      children:
+        - field_cobertura_fotografos
+        - field_cobertura_horas
+        - field_cobertura_valor
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Cobertura
+    group_making_of:
+      children:
+        - field_makingof_fotografos
+        - field_makingof_valor
+        - field_makingof_horas
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Making Of'
+    group_previa:
+      children:
+        - field_previa_fotografos
+        - field_previa_horas
+        - field_previa_valor
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Prévia
+    group_cerim:
+      children:
+        - field_cerimonia_fotografos
+        - field_cerimonia_horas
+        - field_cerimonia_valor
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Cerimônia
+    group_combocr:
+      children:
+        - field_combocr_fotografos
+        - field_combocr_horas
+        - field_combocr_valor
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Combo Cerimônia Recepção'
+    group_recepcao:
+      children:
+        - field_recepcao_fotografos
+        - field_recepcao_horas
+        - field_recepcao_valor
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Recepção
+    group_makingofnoiva:
+      children:
+        - field_makingofnoiva_fotografos
+        - field_makingofnoiva_horas
+        - field_makingofnoiva_valor
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Making Of Noiva'
+    group_makingofnoivo:
+      children:
+        - field_makingofnoivo_fotografos
+        - field_makingofnoivo_horas
+        - field_makingofnoivo_valor
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Making Of Noivo'
+    group_previacasal:
+      children:
+        - field_previacasal_fotografos
+        - field_previacasal_horas
+        - field_previacasal_valor
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Previa Casal'
+    group_previanoiva:
+      children:
+        - field_previanoiva_fotografos
+        - field_previanoiva_horas
+        - field_previanoiva_valor
+      parent_name: ''
+      weight: 10
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Previa Noiva'
+    group_album:
+      children:
+        - field_album_max_fotos
+        - field_album_paginas
+        - field_album_valor
+      parent_name: ''
+      weight: 11
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Álbum
+    group_detalhes:
+      children:
+        - field_tipo_de_evento
+        - field_formulario_cliente
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: header-orcamento
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Detalhes
 id: node.formulario_fotografo.default
 targetEntityType: node
 bundle: formulario_fotografo
@@ -52,13 +228,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     region: content
   field_album_max_fotos:
-    weight: 138
-    label: above
+    weight: 24
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -66,8 +242,8 @@ content:
     type: number_integer
     region: content
   field_album_paginas:
-    weight: 137
-    label: above
+    weight: 25
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -75,8 +251,8 @@ content:
     type: number_integer
     region: content
   field_album_valor:
-    weight: 136
-    label: above
+    weight: 26
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -86,8 +262,8 @@ content:
     type: number_decimal
     region: content
   field_cerimonia_fotografos:
-    weight: 140
-    label: above
+    weight: 7
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -95,8 +271,8 @@ content:
     type: number_integer
     region: content
   field_cerimonia_horas:
-    weight: 113
-    label: above
+    weight: 8
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -106,8 +282,8 @@ content:
     type: number_decimal
     region: content
   field_cerimonia_valor:
-    weight: 114
-    label: above
+    weight: 9
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -117,8 +293,8 @@ content:
     type: number_decimal
     region: content
   field_cobertura_fotografos:
-    weight: 141
-    label: above
+    weight: 4
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -126,8 +302,8 @@ content:
     type: number_integer
     region: content
   field_cobertura_horas:
-    weight: 104
-    label: above
+    weight: 5
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -137,8 +313,8 @@ content:
     type: number_decimal
     region: content
   field_cobertura_valor:
-    weight: 105
-    label: above
+    weight: 6
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -148,8 +324,8 @@ content:
     type: number_decimal
     region: content
   field_combocr_fotografos:
-    weight: 118
-    label: above
+    weight: 11
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -157,8 +333,8 @@ content:
     type: number_integer
     region: content
   field_combocr_horas:
-    weight: 119
-    label: above
+    weight: 12
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -168,8 +344,8 @@ content:
     type: number_decimal
     region: content
   field_combocr_valor:
-    weight: 120
-    label: above
+    weight: 13
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -179,16 +355,16 @@ content:
     type: number_decimal
     region: content
   field_formulario_cliente:
-    weight: 146
-    label: above
+    weight: 3
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_makingof_fotografos:
-    weight: 143
-    label: above
+    weight: 5
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -196,8 +372,8 @@ content:
     type: number_integer
     region: content
   field_makingof_horas:
-    weight: 107
-    label: above
+    weight: 7
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -207,8 +383,8 @@ content:
     type: number_decimal
     region: content
   field_makingof_valor:
-    weight: 108
-    label: above
+    weight: 6
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -218,8 +394,8 @@ content:
     type: number_decimal
     region: content
   field_makingofnoiva_fotografos:
-    weight: 121
-    label: above
+    weight: 10
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -227,8 +403,8 @@ content:
     type: number_integer
     region: content
   field_makingofnoiva_horas:
-    weight: 122
-    label: above
+    weight: 11
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -238,8 +414,8 @@ content:
     type: number_decimal
     region: content
   field_makingofnoiva_valor:
-    weight: 124
-    label: above
+    weight: 12
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -249,8 +425,8 @@ content:
     type: number_decimal
     region: content
   field_makingofnoivo_fotografos:
-    weight: 125
-    label: above
+    weight: 14
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -258,8 +434,8 @@ content:
     type: number_integer
     region: content
   field_makingofnoivo_horas:
-    weight: 126
-    label: above
+    weight: 15
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -269,8 +445,8 @@ content:
     type: number_decimal
     region: content
   field_makingofnoivo_valor:
-    weight: 127
-    label: above
+    weight: 16
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -280,8 +456,8 @@ content:
     type: number_decimal
     region: content
   field_previa_fotografos:
-    weight: 144
-    label: above
+    weight: 6
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -289,8 +465,8 @@ content:
     type: number_integer
     region: content
   field_previa_horas:
-    weight: 110
-    label: above
+    weight: 7
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -300,8 +476,8 @@ content:
     type: number_decimal
     region: content
   field_previa_valor:
-    weight: 111
-    label: above
+    weight: 8
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -311,8 +487,8 @@ content:
     type: number_decimal
     region: content
   field_previacasal_fotografos:
-    weight: 128
-    label: above
+    weight: 18
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -320,8 +496,8 @@ content:
     type: number_integer
     region: content
   field_previacasal_horas:
-    weight: 130
-    label: above
+    weight: 19
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -331,8 +507,8 @@ content:
     type: number_decimal
     region: content
   field_previacasal_valor:
-    weight: 132
-    label: above
+    weight: 20
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -342,8 +518,8 @@ content:
     type: number_decimal
     region: content
   field_previanoiva_fotografos:
-    weight: 133
-    label: above
+    weight: 22
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -351,8 +527,8 @@ content:
     type: number_integer
     region: content
   field_previanoiva_horas:
-    weight: 134
-    label: above
+    weight: 23
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -362,8 +538,8 @@ content:
     type: number_decimal
     region: content
   field_previanoiva_valor:
-    weight: 135
-    label: above
+    weight: 24
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -373,8 +549,8 @@ content:
     type: number_decimal
     region: content
   field_recepcao_fotografos:
-    weight: 145
-    label: above
+    weight: 8
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -382,8 +558,8 @@ content:
     type: number_integer
     region: content
   field_recepcao_horas:
-    weight: 116
-    label: above
+    weight: 9
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -393,8 +569,8 @@ content:
     type: number_decimal
     region: content
   field_recepcao_valor:
-    weight: 117
-    label: above
+    weight: 10
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -404,15 +580,12 @@ content:
     type: number_decimal
     region: content
   field_tipo_de_evento:
-    weight: 102
-    label: above
+    weight: 2
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  langcode: true
+  links: true

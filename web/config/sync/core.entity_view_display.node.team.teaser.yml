@@ -32,3 +32,4 @@ hidden:
   field_linkedin: true
   field_short_description_ct: true
   field_twitter: true
+  langcode: true

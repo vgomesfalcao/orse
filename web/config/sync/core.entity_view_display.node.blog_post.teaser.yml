@@ -59,3 +59,4 @@ hidden:
   field_header_style: true
   field_short_description: true
   field_video_embed: true
+  langcode: true

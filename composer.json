@@ -8,12 +8,16 @@
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
     },
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
-    ],
+    },
     "require": {
         "commerceguys/intl": "^1.0",
         "composer/installers": "^1.2",
@@ -46,6 +50,7 @@
         "drupal/sitemap": "^1.5",
         "drupal/soundcloudfield": "^1.0@alpha",
         "drupal/token": "^1.9",
+        "drupal/twig_vardumper": "^2.2",
         "drupal/views_aggregator": "^1.0@beta",
         "drupal/webform": "^6.0",
         "drupal/webform_content_creator": "^2.0",

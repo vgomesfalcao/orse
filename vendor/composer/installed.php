@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '47deab3d18ea8cd2f01eb6ad53a0461e5290ce6b',
+    'reference' => 'ca512490d00f9a8bcc854aeb38419d727434b155',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -1119,7 +1119,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '47deab3d18ea8cd2f01eb6ad53a0461e5290ce6b',
+      'reference' => 'ca512490d00f9a8bcc854aeb38419d727434b155',
     ),
     'drupal/responsive_image' => 
     array (
@@ -1298,6 +1298,15 @@
       array (
         0 => '8.9.13',
       ),
+    ),
+    'drupal/twig_vardumper' => 
+    array (
+      'pretty_version' => '2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.2',
     ),
     'drupal/update' => 
     array (

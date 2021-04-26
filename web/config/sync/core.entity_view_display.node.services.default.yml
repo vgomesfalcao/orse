@@ -41,4 +41,5 @@ hidden:
   field_header_style: true
   field_icon_fontawesome: true
   field_short_description: true
+  langcode: true
   links: true

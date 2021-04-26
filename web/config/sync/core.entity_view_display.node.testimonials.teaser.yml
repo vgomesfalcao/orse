@@ -24,3 +24,4 @@ hidden:
   field_image: true
   field_job: true
   field_quote_review: true
+  langcode: true

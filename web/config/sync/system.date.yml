@@ -1,8 +1,8 @@
 country:
-  default: GB
+  default: BR
 first_day: 0
 timezone:
-  default: America/New_York
+  default: America/Sao_Paulo
   user:
     configurable: true
     warn: false

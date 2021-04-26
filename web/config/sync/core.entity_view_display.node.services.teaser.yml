@@ -32,3 +32,4 @@ hidden:
   field_image: true
   field_short_description: true
   field_short_description_ct: true
+  langcode: true

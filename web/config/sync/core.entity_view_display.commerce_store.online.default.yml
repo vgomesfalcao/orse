@@ -23,5 +23,9 @@ content:
 hidden:
   billing_countries: true
   default_currency: true
+  is_default: true
+  langcode: true
   mail: true
   name: true
+  timezone: true
+  uid: true

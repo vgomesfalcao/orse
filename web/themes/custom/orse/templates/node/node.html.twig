@@ -101,8 +101,10 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
-  </div>
+  {% block content %}
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content }}
+    </div>
+  {% endblock %}
 
 </article>

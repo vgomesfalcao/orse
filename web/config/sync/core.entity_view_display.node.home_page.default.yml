@@ -25,4 +25,5 @@ content:
 hidden:
   field_footer_style: true
   field_header_style: true
+  langcode: true
   links: true

@@ -1,0 +1,40 @@
+{% extends "node.html.twig" %}
+
+
+{% block content %}
+<div{{content_attributes.addClass('node__content')}}>
+  <div class="row">
+    <div class="col-md-6">
+      <ul class="port-project-info">
+          <li>
+            <span>Cliente:</span> {{ content.field_nome_completo }}
+          </li>
+          <li>
+            <span>Data do Evento:</span> {{ content.field_data_do_evento }}
+          </li>
+          <li>
+            <span>Número de Convidados:</span> {{ content.field_numero_de_convidados }}
+          </li>
+          <li>
+            <span>Tipo de Evento:</span> {{ content.field_tipo_de_evento }}
+          </li>
+          <li>
+            <span>Valor Máximo Com Fotografia:</span> {{ content.field_valor_maximo_fotografia }}
+          </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      {{content|without(['field_nome_completo','field_data_do_evento',
+      'field_numero_de_convidados','field_tipo_de_evento',
+      'field_valor_maximo_fotografia','field_formulario_fotografo'])}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      {{ content.field_formulario_fotografo }}
+    </div>
+  </div>
+
+{% endblock %}
+

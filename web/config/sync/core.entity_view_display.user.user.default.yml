@@ -31,6 +31,8 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  blog__personal_blog_link: true
   commerce_remote_id: true
   customer_profiles: true
+  langcode: true
   simplenews: true

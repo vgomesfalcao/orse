@@ -52,3 +52,4 @@ hidden:
   field_tipo_de_comemoracao: true
   field_tipo_de_evento: true
   field_valor_maximo_fotografia: true
+  langcode: true

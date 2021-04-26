@@ -98,3 +98,4 @@ hidden:
   field_recepcao_horas: true
   field_recepcao_valor: true
   field_tipo_de_evento: true
+  langcode: true

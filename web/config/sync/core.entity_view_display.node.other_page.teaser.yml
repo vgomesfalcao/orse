@@ -38,3 +38,4 @@ hidden:
   field_header_style: true
   field_short_description: true
   field_sidebar: true
+  langcode: true

@@ -30,7 +30,7 @@ mode: default
 content:
   field_data_do_evento:
     weight: 1
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: date_time_single
@@ -46,7 +46,7 @@ content:
     type: webform_entity_reference_entity_view
     region: content
   field_idade_da_crianca:
-    weight: 8
+    weight: 9
     label: above
     settings:
       link_to_entity: false
@@ -54,7 +54,7 @@ content:
     type: string
     region: content
   field_local:
-    weight: 3
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -62,7 +62,7 @@ content:
     region: content
   field_nome_completo:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -70,7 +70,7 @@ content:
     region: content
   field_numero_de_convidados:
     weight: 2
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -85,36 +85,36 @@ content:
     type: text_default
     region: content
   field_tipo_de_bodas:
-    weight: 5
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_tipo_de_casamento:
-    weight: 6
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_tipo_de_comemoracao:
-    weight: 7
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_tipo_de_evento:
-    weight: 4
-    label: above
+    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_valor_maximo_fotografia:
-    weight: 9
-    label: above
+    weight: 4
+    label: hidden
     settings:
       thousand_separator: .
       decimal_separator: ','
@@ -125,4 +125,5 @@ content:
     region: content
 hidden:
   body: true
+  langcode: true
   links: true

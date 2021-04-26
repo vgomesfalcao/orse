@@ -31,4 +31,5 @@ hidden:
   field_header_background_image: true
   field_header_style: true
   field_short_description: true
+  langcode: true
   links: true

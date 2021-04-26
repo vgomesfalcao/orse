@@ -1,0 +1,53 @@
+label: Assinantes
+display:
+  default:
+    display_title: Principal
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Reiniciar
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Ascendente
+          sort_desc_label: Decrescente
+      pager:
+        options:
+          tags:
+            previous: '‹ anterior'
+            next: 'próximo ›'
+            first: '« início'
+            last: 'fim »'
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Tudo -'
+            offset_label: Offset
+      fields:
+        mail:
+          label: E-mail
+        user_name:
+          label: Usuário
+        subscriptions_target_id:
+          label: Inscrições
+          separator: ', '
+        status:
+          label: Ativo
+        created:
+          label: Criado
+        operations:
+          label: Operações
+      filters:
+        mail:
+          expose:
+            label: E-mail
+        subscriptions_target_id:
+          expose:
+            label: Newsletters
+        status:
+          expose:
+            label: Ativo
+        subscriptions_status:
+          expose:
+            label: Status
+      title: Assinantes
+  page_1:
+    display_title: Página

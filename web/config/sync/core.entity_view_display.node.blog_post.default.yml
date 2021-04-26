@@ -58,8 +58,8 @@ content:
     label: hidden
     settings:
       responsive: true
-      width: '854'
-      height: '480'
+      width: 854
+      height: 480
       autoplay: false
     third_party_settings: {  }
     type: video_embed_field_video
@@ -73,4 +73,5 @@ hidden:
   field_header_background_image: true
   field_header_style: true
   field_short_description: true
+  langcode: true
   links: true
