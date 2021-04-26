@@ -46,6 +46,7 @@
         "drupal/sitemap": "^1.5",
         "drupal/soundcloudfield": "^1.0@alpha",
         "drupal/token": "^1.9",
+        "drupal/views_aggregator": "^1.0@beta",
         "drupal/webform": "^6.0",
         "drupal/webform_content_creator": "^2.0",
         "drupal/webform_mautic": "^1.1",

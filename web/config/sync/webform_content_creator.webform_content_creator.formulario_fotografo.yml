@@ -150,7 +150,7 @@ elements:
     custom_value: ''
   field_previacasal_valor:
     type: false
-    webform_field: previa_valor
+    webform_field: previacasal_valor
     custom_check: false
     custom_value: ''
   field_previanoiva_fotografos:

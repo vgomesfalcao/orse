@@ -83,6 +83,8 @@ module:
   update: 0
   user: 0
   video_embed_field: 0
+  views_aggregator: 0
+  views_aggregator_more_functions: 0
   views_ui: 0
   webform: 0
   webform_access: 0

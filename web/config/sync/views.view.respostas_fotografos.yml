@@ -103,7 +103,7 @@ display:
             field_cobertura_valor:
               sortable: false
               default_sort_order: asc
-              align: ''
+              align: views-align-right
               separator: ''
               empty_column: false
               responsive: ''
@@ -869,7 +869,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% set valores = [field_cobertura_valor, 100] %}\r\n{% set total = 0 %}\r\n{% for valor in valores %}\r\n  {% if valor %}\r\n    {% set total = total + valor %}\r\n  {% endif %}\r\n{% endfor %}\r\n{{ total }}\r\n\r\n{% set val = [field_cerimonia_valor, field_cobertura_valor, field_combocr_valor, field_makingof_valor, field_makingofnoiva_valor, field_makingofnoivo_valor, field_previa_valor, field_previacasal_valor, field_previanoiva_valor, field_recepcao_valor] %}"
+            text: "{% set v1 = field_cobertura_valor|trim %}\r\n{% set valores = [field_cerimonia_valor|trim, field_cobertura_valor|trim, field_combocr_valor|trim, field_makingof_valor|trim, field_makingofnoiva_valor|trim, field_makingofnoivo_valor|trim, field_previa_valor|trim, field_previacasal_valor|trim, field_previanoiva_valor|trim, field_recepcao_valor|trim] %}\r\n{% set total = 0 %}\r\n{% for valor in valores %}\r\n  {% if valor %}\r\n    {% set total = valor + total %}\r\n  {% endif %}\r\n{% endfor %}\r\n{{ total }}\r\n\r\n{% set val = [field_cerimonia_valor, field_cobertura_valor, field_combocr_valor, field_makingof_valor, field_makingofnoiva_valor, field_makingofnoivo_valor, field_previa_valor, field_previacasal_valor, field_previanoiva_valor, field_recepcao_valor] %}"
             make_link: false
             path: ''
             absolute: false
@@ -933,22 +933,7 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
+      sorts: {  }
       title: 'Respostas Fotógrafos'
       header: {  }
       footer: {  }
