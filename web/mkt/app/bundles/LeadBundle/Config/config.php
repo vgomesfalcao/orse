@@ -540,13 +540,6 @@ return [
                     'mautic.lead.model.dnc',
                 ],
             ],
-            'mautic.lead.subscriber.segment.filter' => [
-                'class'     => \Mautic\LeadBundle\EventListener\SegmentFiltersSubscriber::class,
-                'arguments' => [
-                    'translator',
-                    'mautic.lead.model.list',
-                ],
-            ],
         ],
         'forms' => [
             'mautic.form.type.lead' => [
@@ -1050,7 +1043,6 @@ return [
                     'mautic.helper.core_parameters',
                     'mautic.lead.model.lead_segment_service',
                     'mautic.lead.segment.stat.chart.query.factory',
-                    'request_stack',
                 ],
             ],
             'mautic.lead.repository.lead_segment_filter_descriptor' => [

@@ -11,15 +11,14 @@
 
 namespace Mautic\LeadBundle\Event;
 
-use Mautic\CoreBundle\Event\AbstractCustomRequestEvent;
+use Mautic\CoreBundle\Event\CommonEvent;
 use Mautic\CoreBundle\Translation\Translator;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Translation\TranslatorInterface;
 
 /**
  * Class LeadListFiltersChoicesEvent.
  */
-class LeadListFiltersChoicesEvent extends AbstractCustomRequestEvent
+class LeadListFiltersChoicesEvent extends CommonEvent
 {
     /**
      * Please refer to ListModel.php, inside getChoiceFields method, for examples of choices.
@@ -44,10 +43,8 @@ class LeadListFiltersChoicesEvent extends AbstractCustomRequestEvent
      * @param array $choices
      * @param array $operators
      */
-    public function __construct($choices, $operators, TranslatorInterface $translator, Request $request = null)
+    public function __construct($choices, $operators, TranslatorInterface $translator)
     {
-        parent::__construct($request);
-
         $this->choices    = $choices;
         $this->operators  = $operators;
         $this->translator = $translator;

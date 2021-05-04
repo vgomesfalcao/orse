@@ -18,7 +18,6 @@ use FOS\RestBundle\View\View;
 use JMS\Serializer\Exclusion\ExclusionStrategyInterface;
 use Mautic\ApiBundle\ApiEvents;
 use Mautic\ApiBundle\Event\ApiEntityEvent;
-use Mautic\ApiBundle\Helper\BatchIdToEntityHelper;
 use Mautic\ApiBundle\Serializer\Exclusion\ParentChildrenExclusionStrategy;
 use Mautic\ApiBundle\Serializer\Exclusion\PublishDetailsExclusionStrategy;
 use Mautic\CategoryBundle\Entity\Category;
@@ -775,54 +774,54 @@ class CommonApiController extends FOSRestController implements MauticController
      */
     protected function getBatchEntities($parameters, &$errors, $prepareForSerialization = false, $requestIdColumn = 'id', $model = null, $returnWithOriginalKeys = true)
     {
-        $idHelper = new BatchIdToEntityHelper($parameters, $requestIdColumn);
+        $ids = [];
+        if (isset($parameters['ids'])) {
+            foreach ($parameters['ids'] as $key => $id) {
+                $ids[(int) $id] = $key;
+            }
+        } else {
+            foreach ($parameters as $key => $params) {
+                if (is_array($params) && !isset($params[$requestIdColumn])) {
+                    $this->setBatchError($key, 'mautic.api.call.id_missing', Response::HTTP_BAD_REQUEST, $errors);
+                    continue;
+                }
 
-        if (!$idHelper->hasIds()) {
-            return [];
+                $id       = (is_array($params)) ? (int) $params[$requestIdColumn] : (int) $params;
+                $ids[$id] = $key;
+            }
         }
-
-        $model    = ($model) ? $model : $this->model;
-        $entities = $model->getEntities(
-            [
-                'filter' => [
-                    'force' => [
-                        [
-                            'column' => $model->getRepository()->getTableAlias().'.id',
-                            'expr'   => 'in',
-                            'value'  => $idHelper->getIds(),
+        $return = [];
+        if (!empty($ids)) {
+            $model    = ($model) ? $model : $this->model;
+            $entities = $model->getEntities(
+                [
+                    'filter' => [
+                        'force' => [
+                            [
+                                'column' => $model->getRepository()->getTableAlias().'.id',
+                                'expr'   => 'in',
+                                'value'  => array_keys($ids),
+                            ],
                         ],
                     ],
-                ],
-                'ignore_paginator' => true,
-            ]
-        );
+                    'ignore_paginator' => true,
+                ]
+            );
 
-        [$entities, $total] = $prepareForSerialization
+            [$entities, $total] = $prepareForSerialization
                 ?
                 $this->prepareEntitiesForView($entities)
                 :
                 $this->prepareEntityResultsToArray($entities);
 
-        // Set errors
-        if ($idHelper->hasErrors()) {
-            foreach ($idHelper->getErrors() as $key => $error) {
-                $this->setBatchError($key, $error, Response::HTTP_BAD_REQUEST, $errors);
+            foreach ($entities as $entity) {
+                if ($returnWithOriginalKeys) {
+                    // Ensure same keys as params
+                    $return[$ids[$entity->getId()]] = $entity;
+                } else {
+                    $return[$entity->getId()] = $entity;
+                }
             }
-        }
-
-        // Return the response with matching keys from the request
-        if ($returnWithOriginalKeys) {
-            if ($entities instanceof Paginator) {
-                $entities = $entities->getIterator()->getArrayCopy();
-            }
-
-            return $idHelper->orderByOriginalKey($entities);
-        }
-
-        // Return the response with IDs as keys (default behavior)
-        $return = [];
-        foreach ($entities as $entity) {
-            $return[$entity->getId()] = $entity;
         }
 
         return $return;

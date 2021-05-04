@@ -52,7 +52,7 @@ trait TranslationModelTrait
             $translationList = [];
             foreach ($translations as $id => $language) {
                 $core = $this->getTranslationLocaleCore($language);
-                if (!isset($translationList[$core])) {
+                if (!isset($languageList[$core])) {
                     $translationList[$core] = [];
                 }
                 $translationList[$core][$language] = $id;

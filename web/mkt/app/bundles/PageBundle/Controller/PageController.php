@@ -21,7 +21,6 @@ use Mautic\CoreBundle\Form\Type\DateRangeType;
 use Mautic\CoreBundle\Helper\InputHelper;
 use Mautic\PageBundle\Entity\Page;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class PageController extends FormController
 {
@@ -212,7 +211,7 @@ class PageController extends FormController
         }
 
         //get A/B test information
-        [$parent, $children]     = $activePage->getVariants();
+        list($parent, $children) = $activePage->getVariants();
         $properties              = [];
         $variantError            = false;
         $weight                  = 0;
@@ -286,7 +285,7 @@ class PageController extends FormController
         );
 
         //get related translations
-        [$translationParent, $translationChildren] = $activePage->getTranslations();
+        list($translationParent, $translationChildren) = $activePage->getTranslations();
 
         return $this->delegateView([
             'returnUrl' => $this->generateUrl('mautic_page_action', [
@@ -328,7 +327,7 @@ class PageController extends FormController
                 'abTestResults' => $abTestResults,
                 'security'      => $security,
                 'pageUrl'       => $model->generateUrl($activePage, true),
-                'previewUrl'    => $this->generateUrl('mautic_page_preview', ['id' => $objectId], UrlGeneratorInterface::ABSOLUTE_URL),
+                'previewUrl'    => $this->generateUrl('mautic_page_preview', ['id' => $objectId], true),
                 'logs'          => $logs,
                 'dateRangeForm' => $dateRangeForm->createView(),
             ],
@@ -597,7 +596,7 @@ class PageController extends FormController
                 'sections'      => $this->buildSlotForms($sections),
                 'builderAssets' => trim(preg_replace('/\s+/', ' ', $this->getAssetsForBuilder())), // strip new lines
                 'sectionForm'   => $sectionForm->createView(),
-                'previewUrl'    => $this->generateUrl('mautic_page_preview', ['id' => $objectId], UrlGeneratorInterface::ABSOLUTE_URL),
+                'previewUrl'    => $this->generateUrl('mautic_page_preview', ['id' => $objectId], true),
                 'permissions'   => $security->isGranted(
                     [
                         'page:preference_center:editown',
@@ -860,30 +859,28 @@ class PageController extends FormController
         $model  = $this->getModel('page.page');
         $entity = $model->getEntity($objectId);
 
-        if (!$entity) {
-            return $this->notFound();
-        }
+        if (null != $entity) {
+            $parent = $entity->getVariantParent();
 
-        $parent = $entity->getVariantParent();
-
-        if ($parent || !$this->get('mautic.security')->isGranted('page:pages:create') ||
+            if ($parent || !$this->get('mautic.security')->isGranted('page:pages:create') ||
                 !$this->get('mautic.security')->hasEntityAccess(
                     'page:pages:viewown', 'page:pages:viewother', $entity->getCreatedBy()
                 )
             ) {
-            return $this->accessDenied();
+                return $this->accessDenied();
+            }
+
+            $clone = clone $entity;
+
+            //reset
+            $clone->setHits(0);
+            $clone->setRevision(0);
+            $clone->setVariantHits(0);
+            $clone->setUniqueHits(0);
+            $clone->setVariantStartDate(null);
+            $clone->setIsPublished(false);
+            $clone->setVariantParent($entity);
         }
-
-        $clone = clone $entity;
-
-        //reset
-        $clone->setHits(0);
-        $clone->setRevision(0);
-        $clone->setVariantHits(0);
-        $clone->setUniqueHits(0);
-        $clone->setVariantStartDate(null);
-        $clone->setIsPublished(false);
-        $clone->setVariantParent($entity);
 
         return $this->newAction($clone);
     }

@@ -21,5 +21,6 @@ return array(
     'Gaufrette' => array($vendorDir . '/knplabs/gaufrette/src'),
     'Debril\\RssAtomBundle' => array($vendorDir . '/debril/rss-atom-bundle'),
     'ComponentInstaller' => array($vendorDir . '/robloach/component-installer/src'),
+    'Behat\\Gherkin' => array($vendorDir . '/behat/gherkin/src'),
     'Assetic' => array($vendorDir . '/kriswallsmith/assetic/src'),
 );
