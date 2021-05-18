@@ -1,0 +1,8 @@
+uuid: a14a53b1-7a8b-40c9-826b-dd8d23a0b6c5
+langcode: pt-br
+status: true
+dependencies: {  }
+id: menu-do-usuario
+label: 'Menu do Usuário'
+description: ''
+locked: false

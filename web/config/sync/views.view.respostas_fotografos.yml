@@ -1015,7 +1015,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Mais detalhes'
+          label: ''
           exclude: false
           alter:
             alter_text: false
