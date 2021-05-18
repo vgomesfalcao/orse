@@ -1,5 +1,5 @@
 uuid: 158d8b8b-bac9-4dfc-9205-77a5ec882062
-langcode: en
+langcode: pt-br
 status: true
 dependencies:
   config:
@@ -40,9 +40,9 @@ content:
     third_party_settings: {  }
   simplenews:
     weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   timezone:
     weight: 6
     region: content

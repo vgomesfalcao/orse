@@ -1,5 +1,5 @@
 uuid: 4d1721a6-a14d-454f-a304-45e7a5e44184
-langcode: en
+langcode: pt-br
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ dependencies:
 _core:
   default_config_hash: HuVRq8jAJW0fd2D6rM4IFSjVVl0zaXy3GRZMHpgstik
 id: simplenews_newsletters
-label: Newsletters
+label: 'Newsletter issues'
 module: views
 description: ''
 tag: ''
@@ -564,7 +564,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Newsletters
+      title: 'Newsletter issues'
       header: {  }
       footer: {  }
       empty:

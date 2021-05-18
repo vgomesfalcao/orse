@@ -1,0 +1,10 @@
+uuid: 29e95bc9-ec71-4c01-bbb3-74763f7ba8b6
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lRLlMHtAftGXOKGJyMblVU24LDFCeBIuSU_mOWdKQcM
+name: 'Font Tags'
+vid: font_tags
+description: 'The tags that came with the font.'
+weight: 0

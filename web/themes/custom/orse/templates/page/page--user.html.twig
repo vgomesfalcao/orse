@@ -25,15 +25,32 @@
 <section class="sec-padding apar-page-user">
     <div class="container">
         <div class="row">
-            <div class="smart-wrap">
-                <div class="smart-forms smart-container wrap-3">
-                	<div class="spacer-t30 spacer-b30">
-                        <div class="tagline"><span> {{ title }} </span></div>
-                    </div>
-                    {{ page.content_full_bar }}
-	                {{ page.content }}
+            {% if page.sidebar_left %}
+                <div class="col-md-3">
+                    {{ page.sidebar_left }}
                 </div>
-            </div>
+                <div class="col-md-9">
+                    <div class="smart-wrap">
+                        <div class="smart-forms smart-container wrap-3">
+                            <div class="spacer-t30 spacer-b30">
+                                <div class="tagline"><span> {{ title }} </span></div>
+                            </div>
+                            {{ page.content_full_bar }}
+                            {{ page.content }}
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="smart-wrap">
+                    <div class="smart-forms smart-container wrap-3">
+                        <div class="spacer-t30 spacer-b30">
+                            <div class="tagline"><span> {{ title }} </span></div>
+                        </div>
+                        {{ page.content_full_bar }}
+                        {{ page.content }}
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 </section>
@@ -44,6 +61,6 @@
     {% include theme_path ~ "/templates/footer/footer-2.html.twig" %}
 {% elseif footer_style == 'style3' %}
     {% include theme_path ~ "/templates/footer/footer-3.html.twig" %}
-{% else %}	
-	
+{% else %}
+
 {% endif %}

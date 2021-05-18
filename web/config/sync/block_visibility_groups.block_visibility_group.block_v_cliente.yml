@@ -1,0 +1,26 @@
+uuid: b9b7adea-3e0b-47ed-be70-c28c9cf3459e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+id: block_v_cliente
+label: 'Block V Cliente'
+logic: and
+conditions:
+  3a7030a7-408c-454c-b020-d6b268aa6753:
+    id: user_role
+    roles:
+      cliente: cliente
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    uuid: 3a7030a7-408c-454c-b020-d6b268aa6753
+  ab90f2c2-defa-48d7-895c-7888ef733509:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }
+    uuid: ab90f2c2-defa-48d7-895c-7888ef733509
+allow_other_conditions: false

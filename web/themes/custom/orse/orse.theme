@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * @file
  * Functions to support theming in the orse theme.
@@ -24,4 +26,11 @@ function orse_preprocess_page(&$variables) {
  */
 function orse_preprocess_node(&$variables) {
 
+}
+
+/**
+ * Implements hook_HOOK_form_alter () for node.html.twig.
+ */
+function orse_form_user_form_alter(&$form, FormStateInterface $form_state) {
+  $form["select_roles"]["#title"] = t("Are you a photographer or client?");
 }

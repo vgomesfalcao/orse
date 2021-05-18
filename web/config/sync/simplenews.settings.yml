@@ -32,3 +32,4 @@ mail:
   debug: false
 _core:
   default_config_hash: cy-hJPYCnfCsuUZA7VDoAwssKhRJCa8N88iJTaWiims
+langcode: pt-br

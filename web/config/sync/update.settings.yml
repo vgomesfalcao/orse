@@ -1,0 +1,7 @@
+check:
+  disabled_extensions: false
+  interval_days: 7
+notification:
+  emails: {  }
+  threshold: security
+langcode: pt-br

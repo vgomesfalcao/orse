@@ -7,3 +7,4 @@ _core:
 mautic_enable: true
 mautic_base_url: 'http://orse.agatti.tech/mkt'
 lift_enable: null
+langcode: pt-br

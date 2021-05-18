@@ -1,0 +1,12 @@
+uuid: 47d01a39-9f01-4b32-8251-5e2ce4076508
+langcode: en
+status: true
+dependencies: {  }
+id: quicksand
+label: Quicksand
+font_url: 'https://www.google.com/webfonts/family?family=Quicksand&subset=latin-ext#regular'
+style: null
+weight: null
+fallback: ''
+selectors: .fontyourface
+theme: orse

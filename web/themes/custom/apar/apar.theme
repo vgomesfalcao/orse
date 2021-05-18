@@ -31,7 +31,7 @@ function apar_preprocess_block(&$variables) {
 	}else{
 		$variables['region'] = $variables['elements']['#configuration']['region'];
 	}
-	
+
 }
 function apar_preprocess_html(&$variables){
 	global $base_url;
@@ -44,7 +44,7 @@ function apar_preprocess_html(&$variables){
 	$variables['site_name'] = $site_name;
 	$apar_theme_path = base_path().drupal_get_path('theme', 'apar');
 	$variables['apar_theme_path'] = $apar_theme_path;
-  	
+
   	if(\Drupal::routeMatch()->getParameter('node')){
 		$node = \Drupal::routeMatch()->getParameter('node');
 		$ntype = $node->getType();
@@ -52,7 +52,7 @@ function apar_preprocess_html(&$variables){
 			$variables['#attached']['library'][] = 'apar/apar-lib-basic';
 		}else{
 			$variables['#attached']['library'][] = 'apar/apar-lib';
-		}	
+		}
 	}else{
 		$variables['#attached']['library'][] = 'apar/apar-lib';
 	}
@@ -100,7 +100,7 @@ function apar_preprocess_html(&$variables){
 	}else{
 		$variables['background_styles'] = 'image';
 	}
-		
+
 
 }
 function apar_preprocess(&$variables){
@@ -117,7 +117,7 @@ function apar_preprocess(&$variables){
 		}else{
 			$variables['vcname'] = $vname;
 		}
-		$variables['current_term'] = $term;	
+		$variables['current_term'] = $term;
 	}
 	//border
 	if (isset($_GET['pre'])) {
@@ -151,7 +151,7 @@ function apar_preprocess(&$variables){
 	    }
 	    if (isset($node->field_footer_style) && !empty($node->field_footer_style->getValue()[0]['value'])) {
 	        $variables['footer_style'] = $node->field_footer_style->getValue()[0]['value'];
-	    }    
+	    }
 	}
 
 	if(\Drupal::routeMatch()->getParameter('node')){
@@ -178,7 +178,7 @@ function apar_preprocess(&$variables){
 		    foreach(entity_load_multiple('node',$nids) as $k => $n){
 		    	$options = ['absolute' => TRUE];
     			$url_object = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $n->nid->value], $options);
-		    	
+
 				$node_url = $url_object->toString();
 				//image
 				$fid = $n->field_portfolio_image->getValue()[0]['target_id'];
@@ -197,9 +197,9 @@ function apar_preprocess(&$variables){
 			    	else:
 			    		$categ .= $v->entity->name->value;
 			    	endif;
-			    	
+
 			    endforeach;
-			    
+
 
 			  	if($portfolio_format == 'video'){
 					$related_link = '<a href="'.$node_url.'" class="cbp-l-caption-buttonLeft" rel="nofollow">more info</a>
@@ -209,7 +209,7 @@ function apar_preprocess(&$variables){
 				}else{
 					$related_link = '<a href="'.$node_url.'" class="cbp-l-caption-buttonLeft" rel="nofollow">more info</a>
 
-				                    <a href="'.$url_ori.'" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="'.$n->title->value.'<br>by '.$project_by.'">view larger 
+				                    <a href="'.$url_ori.'" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="'.$n->title->value.'<br>by '.$project_by.'">view larger
 				                    </a>';
 				}
 				$related_posts .=   '<div class="cbp-item">
@@ -228,13 +228,13 @@ function apar_preprocess(&$variables){
 									    <div class="cbp-l-grid-projects-title">'.$n->title->value.'</div>
 									    <div class="cbp-l-grid-projects-desc">'.($categ ? $categ : '').'</div>
 									</div>';
-		    
+
 			}
-			
+
 			$variables['is_exist_rp'] = $nids;
 			$variables['related_posts'] = $related_posts;
 			//related posts end
-			
+
 		}
 	}
 	//Header Image
@@ -350,11 +350,11 @@ function apar_breadcrumb($variables){
     	foreach ($breadcrumb as $crumb) {
     		if($crumb['url']){
     			$output .= '<a href="'.$crumb['url'].'">'.$crumb['text'].'</a>';
-			
+
 			}else{
 				$output .= $crumb['text'];
 			}
-    		
+
     	}
     	$output .= '<span>'.render($current_title).'</span>';
   	}
@@ -363,8 +363,8 @@ function apar_breadcrumb($variables){
 function apar_preprocess_page(&$variables) {
 
 	global $base_url, $product_entity;
-	
-	$pageURL = 'http';	
+
+	$pageURL = 'http';
  	if(!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'){
  		$pageURL .= "s";
  	}
@@ -426,7 +426,7 @@ function apar_preprocess_page(&$variables) {
 	        	$field_price_old = \Drupal::service('renderer')->renderRoot($field_price_old_build);
 	        	$field_price_old_striptags = strip_tags($field_price_old);
 	            $price_old_pd = trim($field_price_old_striptags);
-	            
+
 	        	//kint($field_price_old);
 	            $pd_id = $pd->product_id->value;
 	            $options = ['absolute' => TRUE];
@@ -469,7 +469,7 @@ function apar_preprocess_page(&$variables) {
 								    <div class="sp-feature-box-3 margin-bottom">
 								        <div class="img-box">
 								            <a href="'.$url_object->toString().'" class="view-btn uppercase">View</a>
-								            <img src="'.$pd_imageone_url_image.'" alt="'.$pd->title->value.'" class="img-responsive"/> 
+								            <img src="'.$pd_imageone_url_image.'" alt="'.$pd->title->value.'" class="img-responsive"/>
 								        </div>
 								        <div class="clearfix"></div>
 								        <br/>
@@ -485,7 +485,7 @@ function apar_preprocess_page(&$variables) {
 								    <div class="sp-feature-box-3 margin-bottom">
 								        <div class="img-box">
 								            <a href="'.$url_object->toString().'" class="view-btn uppercase">View</a>
-								            <img src="'.$pd_imageone_url_image.'" alt="'.$pd->title->value.'" class="img-responsive"/> 
+								            <img src="'.$pd_imageone_url_image.'" alt="'.$pd->title->value.'" class="img-responsive"/>
 								        </div>
 								        <div class="clearfix"></div>
 								        <br/>
@@ -528,7 +528,7 @@ function apar_preprocess_page(&$variables) {
 	    $current_term_id = $term_id;
 
 	    /**************************PRODUCTS*********************/
-	    
+
 	    $storage = \Drupal::entityTypeManager()->getStorage('commerce_product');
 
 	    if(isset($_GET['page']) && is_numeric($_GET['page'])){
@@ -623,7 +623,7 @@ function apar_preprocess_page(&$variables) {
 	                                    <div class="sp-feature-box-3 margin-bottom">
 	                                        <div class="img-box">
 	                                            <a href="'.$url_object->toString().'" class="view-btn uppercase">View</a>
-	                                            <img src="'.$pd_imageone_url_image.'" alt="'.$pd->title->value.'" class="img-responsive"/> 
+	                                            <img src="'.$pd_imageone_url_image.'" alt="'.$pd->title->value.'" class="img-responsive"/>
 	                                        </div>
 	                                        <div class="clearfix"></div>
 	                                        <br/>
@@ -634,15 +634,15 @@ function apar_preprocess_page(&$variables) {
 	                                        '.($addtocart_btn ? $addtocart_btn : '').'
 	                                    </div>
 	                                </div>';
-	                        
+
 	            //$output[$i] = $url_object->toString();
-	        
+
 	            $i++;
 	        }
 	        if(isset($product_array) && !empty($product_array)){
 	            $variables['product_taxonomy_term_content'] = $product_array;
 	        }
-	        
+
 	        //********************************** Pager Starts ********************************************/
 	        global $base_path;
 	        $variables['trust_current_path'] = $base_path;
@@ -669,7 +669,7 @@ function apar_preprocess_page(&$variables) {
 	            //next page
 	            if($page >= 0 && $page < $number_page - 1){
 	                $product_txnm_pager .= '<li><a href="?page='.($page + 1).'" title="'.t('Go to next page').'"><i class="fa fa-angle-right"></i></a></li>';
-	            }       
+	            }
 	            //last page
 	            if($page != $number_page - 1){
 	                $product_txnm_pager .= '<li><a href="'.$variables['trust_current_path'].'?page='.($number_page - 1).'" title="'.t('Go to last page').'"><i class="fa fa-angle-double-right"></i></a></li>';
@@ -679,30 +679,30 @@ function apar_preprocess_page(&$variables) {
 	            $product_txnm_pager .= '</ul></div>';
 	        }
 	        /*********************************** Pager Ends *********************************************/
-	        
+
 
 	        //pager
 	        if(isset($product_txnm_pager) && !empty($product_txnm_pager)){
 	            $variables['product_txnm_pager'] = $product_txnm_pager;
 	        }
-	       
-	       
+
+
 	    }
 	    /************************PRODUCTs ENDS*******************/
-	    
+
 	}
 	$variables['#attached']['drupalSettings']['path']['themeUrl'] = base_path().\Drupal::theme()->getActiveTheme()->getPath();
 }
 function apar_preprocess_node(&$variables) {
 	global $base_url;
-	
+
 	$site_name = \Drupal::config('system.site')->get('name');
-	$variables['site_name'] = $site_name;	
+	$variables['site_name'] = $site_name;
 	$request = \Drupal::request();
 	if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
 		$variables['title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
 	}
-	$pageURL = 'http';	
+	$pageURL = 'http';
  	if(!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'){
  		$pageURL .= "s";
  	}
@@ -716,7 +716,7 @@ function apar_preprocess_node(&$variables) {
  	if(\Drupal::routeMatch()->getParameter('node')){
 		$node = \Drupal::routeMatch()->getParameter('node');
 		$ntype = $node->getType();
-		
+
 	}
 
 }
@@ -730,7 +730,7 @@ function apar_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_stat
 	  	//unset($form['search_block_form']['#title']); // remove label form
 	    unset($form['actions']['submit']['#value']);
 	    $form['keys']['#attributes']['placeholder'] = 'Search';
-	    
+
 	    //print_r($form);
     }elseif(preg_match("/simplenews_subscriptions_block/", $form_id)){
 	   	$form['actions']['subscribe']['#attributes']['class'] = array('btn');
@@ -758,14 +758,14 @@ function apar_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_stat
     }elseif(preg_match("/user_register_form/", $form_id)){
     	//kint($form);
     	$form['account']['name']['#attributes']['class']= array('gui-input');
-    	$form['account']['name']['#prefix'] = '<div class="field prepend-icon">';
-		$form['account']['name']['#suffix'] = '<span class="field-icon"><i class="fa fa-user"></i></span></div>';
+    	//$form['account']['name']['#prefix'] = '<div class="field prepend-icon">';
+			//$form['account']['name']['#suffix'] = '<span class="field-icon"><i class="fa fa-user"></i></span></div>';
     	$form['account']['name']['#attributes']['placeholder']= t('Enter username');
     	$form['account']['mail']['#attributes']['class']= array('gui-input');
     	$form['account']['mail']['#prefix'] = '<div class="field prepend-icon">';
 		$form['account']['mail']['#suffix'] = '<span class="field-icon"><i class="fa fa-envelope"></i></span></div>';
     	$form['account']['mail']['#attributes']['placeholder']= t('example@domain.com...');
-    	
+
     	// $form['field_full_name']['widget'][0]['value']['#attributes']['class'] = array('form-control');
     	$form['actions']['#prefix'] = '<div class="form-footer">';
 		$form['actions']['#suffix'] = '</div>';
@@ -796,7 +796,7 @@ function apar_form_comment_form_alter(&$form, \Drupal\Core\Form\FormStateInterfa
 	$form['subject']['widget'][0]['value']['#attributes']['placeholder'] = t('Title');
 	$form['author']['name']['#attributes']['placeholder'] = t('Enter Name');
 	$form['author']['name']['#attributes']['class'] = array('bg-cinput');
-	
+
 	$form['field_email_comment']['widget'][0]['value']['#placeholder'] = t('Email Address');
 	$form['field_email_comment']['widget'][0]['value']['#attributes']['class'] = array('bg-cinput');
 	$form['field_comment_body']['widget'][0]['value']['#placeholder'] = t('Your Message');
@@ -840,16 +840,16 @@ function apar_form_contact_message_form_alter(&$form, \Drupal\Core\Form\FormStat
 	$form['field_phone']['widget'][0]['value']['#attributes']['placeholder'] = t('Enter Telephone...');
 	//$form['field_phone']['#attributes']['class'] = array('form-control', 'form-value');
 	unset($form['actions']['preview']);
-	$form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-primary');  
+	$form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-primary');
 	$form['actions']['submit']['#attributes']['value'] = t('Submit');
-	
+
 }
 // function apar_form_uc_cart_view_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
 // 	//kint($form);
 // 	foreach($form['items'] as $k => $v){
 // 		if(is_numeric($k)){
 // 			$form['items'][$k]['remove']['#attributes']['class'] = array('button', 'btn', 'btn-default');
-// 		}	
+// 		}
 // 	}
 // 	//$form['actions']['checkout']['#attributes']['class'] = array('');
 // 	//unset($form['items']['#footer']);
@@ -894,7 +894,7 @@ function apar_form_contact_message_form_alter(&$form, \Drupal\Core\Form\FormStat
 // 	$str = render($variables['summary_links'])->__toString();
 // 	$variables['summary_links_cs'] = strip_tags($str,'<a>');
 
-	
+
 // }
 // function apar_form_uc_product_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
 // 	unset($form['actions']['submit']['#id']);
@@ -905,7 +905,7 @@ function apar_form_contact_message_form_alter(&$form, \Drupal\Core\Form\FormStat
 // }
 function apar_preprocess_commerce_product(&$variables){
 	//kint($variables);
-	$pageURL = 'http';	
+	$pageURL = 'http';
  	if(!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'){
  		$pageURL .= "s";
  	}

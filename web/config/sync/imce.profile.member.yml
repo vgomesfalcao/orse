@@ -1,5 +1,5 @@
 uuid: 9e1b1add-3b7e-44b5-81a6-596905809baf
-langcode: en
+langcode: pt-br
 status: true
 dependencies: {  }
 _core:
@@ -9,8 +9,8 @@ label: 'Member profile'
 description: 'Configuration for site members'
 conf:
   extensions: 'jpg png gif'
-  maxsize: 2
-  quota: 50
+  maxsize: !!float 2
+  quota: !!float 50
   maxwidth: 1024
   maxheight: 1024
   replace: 0

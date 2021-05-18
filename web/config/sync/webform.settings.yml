@@ -195,7 +195,7 @@ requirements:
   bootstrap: true
   clientside_validation: true
   spam: true
-langcode: en
+langcode: pt-br
 third_party_settings:
   captcha:
     replace_administration_mode: true

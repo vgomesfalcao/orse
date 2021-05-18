@@ -1,0 +1,8 @@
+uuid: 1cddd96a-c4f0-4f57-ac4b-babd47b5e041
+langcode: pt-br
+status: true
+dependencies: {  }
+id: menu-cliente
+label: 'Menu Cliente'
+description: ''
+locked: false

@@ -1,7 +1,7 @@
 apar-lib:
   version: VERSION
   css:
-    theme:
+    base:
       js/bootstrap/bootstrap.min.css: {}
 
       https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i: {}
@@ -40,25 +40,25 @@ apar-lib:
       # less/skin.less: {}
       css/update.css: {}
   js:
-    js/jquery/jquery.js: {} 
-    js/bootstrap/bootstrap.min.js: {} 
-    js/style-customizer/js/spectrum.js: {} 
-    js/less/less.min.js: {} 
-    js/style-customizer/js/style-customizer.js: {} 
+    js/jquery/jquery.js: {}
+    js/bootstrap/bootstrap.min.js: {}
+    js/style-customizer/js/spectrum.js: {}
+    js/less/less.min.js: {}
+    js/style-customizer/js/style-customizer.js: {}
 
     js/megamenu/js/main.js: {}
-    js/owl-carousel/owl.carousel.js: {} 
-    js/owl-carousel/custom.js: {} 
+    js/owl-carousel/owl.carousel.js: {}
+    js/owl-carousel/custom.js: {}
     js/accordion/js/accordion.js: {}
     js/apar-accordion.js: {}
-    js/ytplayer/jquery.mb.YTPlayer.js: {} 
-    js/ytplayer/elementvideo-custom.js: {} 
-    js/ytplayer/play-pause-btn.js: {} 
+    js/ytplayer/jquery.mb.YTPlayer.js: {}
+    js/ytplayer/elementvideo-custom.js: {}
+    js/ytplayer/play-pause-btn.js: {}
     js/cubeportfolio/jquery.cubeportfolio.min.js: {}
-    js/cubeportfolio/slider-projects.js: {} 
-    js/cubeportfolio/main-mosaic3.js: {} 
-    js/accordion/js/smk-accordion.js: {} 
-    js/accordion/js/custom.js: {} 
+    js/cubeportfolio/slider-projects.js: {}
+    js/cubeportfolio/main-mosaic3.js: {}
+    js/accordion/js/smk-accordion.js: {}
+    js/accordion/js/custom.js: {}
     js/tabs/js/responsive-tabs.min.js: {}
     js/tabs/one/opentabby.js: {}
     js/apar-tabs.js: {}
@@ -80,13 +80,13 @@ apar-lib:
 apar-lib-basic:
   version: VERSION
   css:
-    theme:
+    base:
       js/bootstrap/bootstrap.min.css: {}
 
       https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i: {}
       https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700: {}
       https://fonts.googleapis.com/css?family=Yesteryear: {}
-      js/style-switcher/color-switcher.css: {} 
+      js/style-switcher/color-switcher.css: {}
 
       js/megamenu/stylesheets/screen.css: {}
       css/theme-default.css: {}
@@ -124,8 +124,8 @@ apar-lib-basic:
       # less/skin.less: {}
       css/update.css: {}
   js:
-    js/jquery/jquery.js: {} 
-    js/bootstrap/bootstrap.min.js: {} 
+    js/jquery/jquery.js: {}
+    js/bootstrap/bootstrap.min.js: {}
     js/star-rating/js/star-rating.js: {}
     js/apar-star-rating.js: {}
     js/switches/bootstrap-switch.js: {}
@@ -135,23 +135,23 @@ apar-lib-basic:
     js/file-upload/fileinput.js: {}
     js/file-upload/fr.js: {}
     js/file-upload/es.js: {}
-    js/style-customizer/js/spectrum.js: {} 
-    js/less/less.min.js: {} 
-    js/style-customizer/js/style-customizer.js: {} 
-    
-    js/megamenu/js/main.js: {} 
+    js/style-customizer/js/spectrum.js: {}
+    js/less/less.min.js: {}
+    js/style-customizer/js/style-customizer.js: {}
+
+    js/megamenu/js/main.js: {}
     js/accordion/js/accordion.js: {}
     js/apar-accordion.js: {}
     http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js: {}
     js/counterup/jquery.counterup.min.js: {}
     js/countdown-timers/countdown/jquery.countdown.js: {}
     js/apar-couters.js: {}
-    js/owl-carousel/owl.carousel.js: {} 
-    js/owl-carousel/custom.js: {} 
-    js/ytplayer/jquery.mb.YTPlayer.js: {} 
-    js/ytplayer/elementvideo-custom.js: {} 
-    js/ytplayer/play-pause-btn.js: {} 
-    js/cubeportfolio/jquery.cubeportfolio.min.js: {} 
+    js/owl-carousel/owl.carousel.js: {}
+    js/owl-carousel/custom.js: {}
+    js/ytplayer/jquery.mb.YTPlayer.js: {}
+    js/ytplayer/elementvideo-custom.js: {}
+    js/ytplayer/play-pause-btn.js: {}
+    js/cubeportfolio/jquery.cubeportfolio.min.js: {}
     js/cubeportfolio/cols-2.js: {}
     js/cubeportfolio/cols-3.js: {}
     js/cubeportfolio/cols-4.js: {}
@@ -164,10 +164,10 @@ apar-lib-basic:
     js/cubeportfolio/mosaic-projects.js: {}
     js/cubeportfolio/slider-projects.js: {}
     js/cubeportfolio/lightbox-gallery.js: {}
-    js/cubeportfolio/main-mosaic3.js: {} 
-    js/accordion/js/smk-accordion.js: {} 
-    js/accordion/js/custom.js: {} 
-    js/tabs/js/responsive-tabs.min.js: {} 
+    js/cubeportfolio/main-mosaic3.js: {}
+    js/accordion/js/smk-accordion.js: {}
+    js/accordion/js/custom.js: {}
+    js/tabs/js/responsive-tabs.min.js: {}
     js/parallax/parallax-background.min.js: {}
     js/apar-prallax-background.js: {}
     js/gmaps/jquery.gmap.min.js: {}
@@ -188,5 +188,5 @@ apar-lib-basic:
 admin-lib:
   version: VERSION
   css:
-    theme:
+    base:
       css/drupalet_base/admin.css: {}

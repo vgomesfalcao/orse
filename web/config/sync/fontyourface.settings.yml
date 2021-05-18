@@ -1,0 +1,13 @@
+enabled_fonts:
+  - 'https://www.google.com/webfonts/family?family=Quicksand&subset=latin-ext#300'
+  - 'https://www.google.com/webfonts/family?family=Quicksand&subset=latin-ext#500'
+  - 'https://www.google.com/webfonts/family?family=Quicksand&subset=latin-ext#600'
+  - 'https://www.google.com/webfonts/family?family=Quicksand&subset=latin-ext#700'
+  - 'https://www.google.com/webfonts/family?family=Quicksand&subset=latin-ext#regular'
+load_all_enabled_fonts: 1
+load_on_themes:
+  apar: apar
+  orse: orse
+_core:
+  default_config_hash: TghDxAeHu4gER0JZhzPbMawpRgxggVsIu54oyTeaJOo
+langcode: pt-br

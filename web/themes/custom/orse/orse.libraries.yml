@@ -9,7 +9,6 @@ global:
       css/components/block.css: {}
       css/components/breadcrumb.css: {}
       css/components/field.css: {}
-      css/components/form.css: {}
       css/components/header.css: {}
       css/components/menu.css: {}
       css/components/messages.css: {}
@@ -23,3 +22,8 @@ global:
     theme:
       css/theme/print.css: { media: print }
       css/theme/style.css: {}
+
+forms:
+  css:
+    component:
+            css/components/form.css: {}

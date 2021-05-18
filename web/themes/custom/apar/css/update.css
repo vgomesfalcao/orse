@@ -181,7 +181,8 @@ ul.apar-primary-tabs li{
     margin-top: 10px;
 }
 .apar-page-register form .field-icon{
-    top: 45px !important;
+    /* top: 45px !important; */
+    top: 45px;
 }
 .apar-page-register form input{
     margin-bottom: 22px !important;
