@@ -26,12 +26,12 @@
     <div class="container">
         <div class="row">
             {% if page.sidebar_left %}
-                <div class="col-md-3">
+                <div class="col-md-3 wells">
                     {{ page.sidebar_left }}
                 </div>
                 <div class="col-md-9">
                     <div class="smart-wrap">
-                        <div class="smart-forms smart-container wrap-3">
+                        <div class="smart-forms smart-container">
                             <div class="spacer-t30 spacer-b30">
                                 <div class="tagline"><span> {{ title }} </span></div>
                             </div>
@@ -42,7 +42,7 @@
                 </div>
             {% else %}
                 <div class="smart-wrap">
-                    <div class="smart-forms smart-container wrap-3">
+                    <div class="smart-forms smart-container">
                         <div class="spacer-t30 spacer-b30">
                             <div class="tagline"><span> {{ title }} </span></div>
                         </div>

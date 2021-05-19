@@ -149,8 +149,7 @@ settings:
 access:
   create:
     roles:
-      - anonymous
-      - authenticated
+      - fotografo
     users: {  }
     permissions: {  }
   view_any:

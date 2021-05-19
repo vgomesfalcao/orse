@@ -10,3 +10,5 @@ permissions:
   - 'create formulario_fotografo content'
   - 'delete own formulario_fotografo content'
   - 'edit own formulario_fotografo content'
+  - 'view any formulario_cliente content'
+  - 'view own formulario_fotografo content'

@@ -93,30 +93,37 @@
   border-color: #8EEB4C;
 }
 
+.table-meus-eventos table,
 .table-orcamentos table{
   width: 100%;
   border: 1px solid #ddd;
 }
 
+.table-meus-eventos table > thead > tr > th,
+.table-meus-eventos table > tbody > tr > td,
 .table-orcamentos table > thead > tr > th,
 .table-orcamentos table > tbody > tr > td{
   border:1px solid #ddd;
   text-align: center;
 }
 
+.table-meus-eventos table > thead,
 .table-orcamentos table > thead {
   background-color:#8EEB4C;
   color:white;
 }
 
+.table-meus-eventos table > thead a,
 .table-orcamentos table > thead a{
   color: white;
 }
 
+.table-meus-eventos-links-col,
 .table-orcamento-links-col {
   padding:20px;
 }
 
+.table-meus-eventos-links-col a,
 .table-orcamento-links-col a {
     background-color: #EB673F;
     color: white;
@@ -124,6 +131,7 @@
     padding: 10px;
 }
 
+.table-meus-eventos-links-col a:hover,
 .table-orcamento-links-col a:hover {
     background-color: #286090;
     color:white;

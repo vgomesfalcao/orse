@@ -9,3 +9,5 @@ is_admin: null
 permissions:
   - 'create formulario_cliente content'
   - 'edit own formulario_cliente content'
+  - 'view any formulario_fotografo content'
+  - 'view own formulario_cliente content'

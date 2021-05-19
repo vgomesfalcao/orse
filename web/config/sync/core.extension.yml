@@ -61,6 +61,7 @@ module:
   menu_attributes: 0
   menu_ui: 0
   node: 0
+  node_view_permissions: 0
   nvs_func: 0
   nvs_geolocation: 0
   nvs_widget: 0
