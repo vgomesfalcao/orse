@@ -20,6 +20,8 @@ use Composer\Semver\VersionParser;
 
 
 
+
+
 class InstalledVersions
 {
 private static $installed = array (
@@ -30,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'ca512490d00f9a8bcc854aeb38419d727434b155',
+    'reference' => '451a425036ab369031232a062cdf89253598a852',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -1058,6 +1060,15 @@ private static $installed = array (
         0 => '8.9.13',
       ),
     ),
+    'drupal/node_view_permissions' => 
+    array (
+      'pretty_version' => '1.4.0',
+      'version' => '1.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.4',
+    ),
     'drupal/options' => 
     array (
       'replaced' => 
@@ -1143,7 +1154,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'ca512490d00f9a8bcc854aeb38419d727434b155',
+      'reference' => '451a425036ab369031232a062cdf89253598a852',
     ),
     'drupal/responsive_image' => 
     array (
@@ -1165,6 +1176,15 @@ private static $installed = array (
       array (
         0 => '8.9.13',
       ),
+    ),
+    'drupal/select_registration_roles' => 
+    array (
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.2',
     ),
     'drupal/serialization' => 
     array (
@@ -2046,7 +2066,6 @@ foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
 
-
 if (1 === \count($packages)) {
 return $packages[0];
 }
@@ -2238,6 +2257,7 @@ public static function reload($data)
 self::$installed = $data;
 self::$installedByVendor = array();
 }
+
 
 
 
