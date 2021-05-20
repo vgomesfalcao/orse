@@ -1,0 +1,22 @@
+uuid: bd2b9dfa-8fbd-4906-86c7-e517f107d210
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.404
+id: node.404.sticky
+field_name: sticky
+entity_type: node
+bundle: '404'
+label: 'Destacado no topo da página'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

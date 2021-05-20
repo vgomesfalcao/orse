@@ -1,0 +1,22 @@
+uuid: cab9843f-3d9d-49e5-825d-446202d6b481
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.font_classification
+id: taxonomy_term.font_classification.status
+field_name: status
+entity_type: taxonomy_term
+bundle: font_classification
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

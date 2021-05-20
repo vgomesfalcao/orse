@@ -38,9 +38,11 @@ dependencies:
     - field.field.node.formulario_fotografo.field_recepcao_fotografos
     - field.field.node.formulario_fotografo.field_recepcao_horas
     - field.field.node.formulario_fotografo.field_recepcao_valor
+    - field.field.node.formulario_fotografo.field_soma_valor
     - field.field.node.formulario_fotografo.field_tipo_de_evento
     - node.type.formulario_fotografo
   module:
+    - computed_field
     - path
     - text
 id: node.formulario_fotografo.default
@@ -304,6 +306,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_soma_valor:
+    weight: 167
+    settings: {  }
+    third_party_settings: {  }
+    type: computed_number_widget
     region: content
   field_tipo_de_evento:
     weight: 122

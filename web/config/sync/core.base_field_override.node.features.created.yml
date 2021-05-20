@@ -1,0 +1,18 @@
+uuid: 0f1ccf58-119e-487d-a45d-d97650a96fbf
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.features
+id: node.features.created
+field_name: created
+entity_type: node
+bundle: features
+label: 'Escrito em'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

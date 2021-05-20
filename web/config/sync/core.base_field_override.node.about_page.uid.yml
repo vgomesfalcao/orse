@@ -1,0 +1,20 @@
+uuid: 2938aab5-b2fa-4985-adbc-b0ddc47d67e2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.about_page
+id: node.about_page.uid
+field_name: uid
+entity_type: node
+bundle: about_page
+label: 'Escrito por'
+description: 'O nome de usuário do autor do conteúdo.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

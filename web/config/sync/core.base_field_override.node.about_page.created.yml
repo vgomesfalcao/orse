@@ -1,0 +1,18 @@
+uuid: 792ebe20-2a23-4a4a-8fab-5780d675377c
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.about_page
+id: node.about_page.created
+field_name: created
+entity_type: node
+bundle: about_page
+label: 'Escrito em'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

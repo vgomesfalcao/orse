@@ -1,0 +1,20 @@
+uuid: a9ac9580-c9cf-4983-8f50-ba39355b4e1f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.portfolio
+  module:
+    - path
+id: node.portfolio.path
+field_name: path
+entity_type: node
+bundle: portfolio
+label: 'URL alternativa'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

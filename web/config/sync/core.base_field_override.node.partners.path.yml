@@ -1,0 +1,20 @@
+uuid: 573e44df-3287-46f7-bbc7-65c06323d346
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.partners
+  module:
+    - path
+id: node.partners.path
+field_name: path
+entity_type: node
+bundle: partners
+label: 'URL alternativa'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,22 @@
+uuid: 3b6bbe76-2c74-420b-a0b9-b7c6cb0ddefd
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.coming_soon
+id: node.coming_soon.sticky
+field_name: sticky
+entity_type: node
+bundle: coming_soon
+label: 'Destacado no topo da página'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

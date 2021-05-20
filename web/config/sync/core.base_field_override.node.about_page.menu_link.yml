@@ -1,0 +1,20 @@
+uuid: c70188f3-d3df-459b-8575-d4d89830e2c8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.about_page
+id: node.about_page.menu_link
+field_name: menu_link
+entity_type: node
+bundle: about_page
+label: 'Link de menu'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

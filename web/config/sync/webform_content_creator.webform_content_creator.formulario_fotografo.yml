@@ -13,6 +13,11 @@ sync_content_delete: false
 sync_content_node_field: null
 sync_content_field: ''
 elements:
+  body:
+    type: false
+    webform_field: observacoes
+    custom_check: false
+    custom_value: ''
   field_album_max_fotos:
     type: false
     webform_field: album_max_fotos
@@ -192,7 +197,7 @@ elements:
     type: false
     webform_field: ''
     custom_check: true
-    custom_value: '[webform_submission:original:user:account-name] - [webform_submission:completed:html_date] - [webform_submission:completed:html_time]'
+    custom_value: '[webform_submission:user:account-name] - [webform_submission:completed:html_date] - [webform_submission:completed:html_time]'
 content_type: null
 target_entity_type: node
 target_bundle: formulario_fotografo

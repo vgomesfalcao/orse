@@ -1,0 +1,20 @@
+uuid: d69624da-9232-4052-a82e-e410b2c89577
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_categories
+  module:
+    - path
+id: taxonomy_term.product_categories.path
+field_name: path
+entity_type: taxonomy_term
+bundle: product_categories
+label: 'URL alternativa'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

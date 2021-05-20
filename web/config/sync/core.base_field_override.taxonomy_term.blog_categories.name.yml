@@ -1,0 +1,18 @@
+uuid: 6970cdb5-9ecd-4f1b-9475-f7f951fa4e17
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_categories
+id: taxonomy_term.blog_categories.name
+field_name: name
+entity_type: taxonomy_term
+bundle: blog_categories
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

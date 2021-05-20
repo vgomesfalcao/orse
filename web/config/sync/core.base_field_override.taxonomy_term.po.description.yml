@@ -1,0 +1,20 @@
+uuid: 4ed2fb1e-8a32-4530-99fd-00b18edebbc4
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.po
+  module:
+    - text
+id: taxonomy_term.po.description
+field_name: description
+entity_type: taxonomy_term
+bundle: po
+label: Descrição
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,18 @@
+uuid: 5eb4599e-d8fd-45bf-9dec-29c63c5671a0
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.about_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.about_page
+target_entity_type_id: node
+target_bundle: about_page
+default_langcode: site_default
+language_alterable: false

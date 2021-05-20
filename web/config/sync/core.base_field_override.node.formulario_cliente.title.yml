@@ -1,0 +1,18 @@
+uuid: 155ae2af-41fd-4bc2-a53d-673c442e1e29
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.formulario_cliente
+id: node.formulario_cliente.title
+field_name: title
+entity_type: node
+bundle: formulario_cliente
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

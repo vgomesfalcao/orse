@@ -1,0 +1,22 @@
+uuid: e5adc2f5-c3af-4830-a567-f61bd1691e5d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.sticky
+field_name: sticky
+entity_type: node
+bundle: formulario_fotografo
+label: 'Destacado no topo da página'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

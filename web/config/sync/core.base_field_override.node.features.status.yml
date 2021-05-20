@@ -1,0 +1,22 @@
+uuid: edf25286-a911-4367-8e1a-28f3c9fa9c67
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.features
+id: node.features.status
+field_name: status
+entity_type: node
+bundle: features
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

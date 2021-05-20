@@ -1,0 +1,18 @@
+uuid: c050b648-4676-4196-b55c-644cd3cbb803
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.po
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.po
+target_entity_type_id: taxonomy_term
+target_bundle: po
+default_langcode: site_default
+language_alterable: false

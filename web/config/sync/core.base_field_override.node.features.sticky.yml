@@ -1,0 +1,22 @@
+uuid: d15bf2e6-a1df-4678-8ac8-efe1fdc900af
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.features
+id: node.features.sticky
+field_name: sticky
+entity_type: node
+bundle: features
+label: 'Destacado no topo da página'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

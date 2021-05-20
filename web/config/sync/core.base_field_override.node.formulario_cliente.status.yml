@@ -1,0 +1,22 @@
+uuid: 3e7393ac-5dad-49f5-82f6-af70d99898fa
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.formulario_cliente
+id: node.formulario_cliente.status
+field_name: status
+entity_type: node
+bundle: formulario_cliente
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

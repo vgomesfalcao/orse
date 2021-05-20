@@ -1,0 +1,28 @@
+<?php
+
+function computed_field_field_soma_valor_compute($entity_type_manager, $entity, $fields, $delta) {
+  $value = 0;
+  $valCobertura = is_null($entity->field_cobertura_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $value += $valCobertura;
+  $valMakingOf = is_null($entity->field_makingof_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $value += $valMakingOf;
+  $valPrevia = is_null($entity->field_previa_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $value += $valPrevia;
+
+  $valCerimonia = is_null($entity->field_cerimonia_valor->first()) ? 0 : $entity->field_cerimonia_valor->first()->getValue()["value"];
+  $value += $valCerimonia;
+  $valRecepcao = is_null($entity->field_recepcao_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $value += $valRecepcao;
+  $valComboCR = is_null($entity->field_combocr_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $value += $valComboCR;
+  $valMakingOfNoiva = is_null($entity->field_makingofnoiva_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $value += $valMakingOfNoiva;
+  $valMakingOfNoivo = is_null($entity->field_makingofnoivo_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $value += $valMakingOfNoivo;
+  $valPreviaCasal = is_null($entity->field_previacasal_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $value += $valPreviaCasal;
+  $valPreviaNoiva = is_null($entity->field_previanoiva_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $value += $valPreviaNoiva;
+
+  return $value;
+}

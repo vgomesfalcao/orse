@@ -27,6 +27,7 @@ module:
   commerce_price: 0
   commerce_product: 0
   commerce_store: 0
+  computed_field: 0
   config: 0
   config_translation: 0
   contact: 0
@@ -67,6 +68,7 @@ module:
   nvs_widget: 0
   nvt_block_settings: 0
   options: 0
+  orse_cm: 0
   page_cache: 0
   path: 0
   path_alias: 0

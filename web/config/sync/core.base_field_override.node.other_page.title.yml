@@ -1,0 +1,18 @@
+uuid: 05d4997f-3fef-418b-bbbe-729dc8d88509
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.other_page
+id: node.other_page.title
+field_name: title
+entity_type: node
+bundle: other_page
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

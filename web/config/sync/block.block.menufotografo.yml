@@ -1,0 +1,48 @@
+uuid: 8455c67c-8bea-4fc1-8dc2-f98ac1e55f15
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.block_v_fotografo
+    - system.menu.menu-fotografo
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - system
+  theme:
+    - orse
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: menufotografo
+theme: orse
+region: sidebar_left
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-fotografo'
+settings:
+  id: 'system_menu_block:menu-fotografo'
+  label: 'Menu Fotografo'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: block_v_fotografo
+    context_mapping: {  }

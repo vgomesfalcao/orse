@@ -1,0 +1,18 @@
+uuid: 57b1a077-4fdf-4c01-b185-1de019834288
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.testimonials
+id: node.testimonials.changed
+field_name: changed
+entity_type: node
+bundle: testimonials
+label: Alterado
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

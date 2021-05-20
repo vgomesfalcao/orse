@@ -1,0 +1,18 @@
+uuid: 1eeea9e1-2053-477c-b7c3-166b71d68dba
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.article
+id: node.article.changed
+field_name: changed
+entity_type: node
+bundle: article
+label: Alterado
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

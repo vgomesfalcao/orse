@@ -1,0 +1,20 @@
+uuid: 45c80a89-03b9-4378-b213-00aac3416a70
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.simplenews_issue
+id: node.simplenews_issue.menu_link
+field_name: menu_link
+entity_type: node
+bundle: simplenews_issue
+label: 'Link de menu'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

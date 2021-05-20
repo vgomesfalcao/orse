@@ -1,0 +1,18 @@
+uuid: f094a660-f41e-427b-8615-1dee82673aa1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_categories
+id: taxonomy_term.product_categories.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: product_categories
+label: Alterado
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

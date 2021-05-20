@@ -39,6 +39,7 @@ dependencies:
     - field.field.node.formulario_fotografo.field_recepcao_fotografos
     - field.field.node.formulario_fotografo.field_recepcao_horas
     - field.field.node.formulario_fotografo.field_recepcao_valor
+    - field.field.node.formulario_fotografo.field_soma_valor
     - field.field.node.formulario_fotografo.field_tipo_de_evento
     - node.type.formulario_fotografo
   module:
@@ -97,5 +98,6 @@ hidden:
   field_recepcao_fotografos: true
   field_recepcao_horas: true
   field_recepcao_valor: true
+  field_soma_valor: true
   field_tipo_de_evento: true
   langcode: true

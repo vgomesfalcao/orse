@@ -1,0 +1,18 @@
+uuid: c37de948-e52f-422a-ac6a-6bb36ccb20d1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.po
+id: taxonomy_term.po.name
+field_name: name
+entity_type: taxonomy_term
+bundle: po
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

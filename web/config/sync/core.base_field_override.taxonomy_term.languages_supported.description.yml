@@ -1,0 +1,20 @@
+uuid: 9a7a0a01-4a12-4ee9-87b2-d2c492c696a0
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.languages_supported
+  module:
+    - text
+id: taxonomy_term.languages_supported.description
+field_name: description
+entity_type: taxonomy_term
+bundle: languages_supported
+label: Descrição
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

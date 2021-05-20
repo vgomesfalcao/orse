@@ -1,0 +1,18 @@
+uuid: b3172b83-6c9a-4fdb-9050-bb43d69d29a3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.coming_soon
+id: node.coming_soon.title
+field_name: title
+entity_type: node
+bundle: coming_soon
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

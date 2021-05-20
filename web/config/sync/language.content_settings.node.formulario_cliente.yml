@@ -1,0 +1,18 @@
+uuid: ba0c14fd-0cc2-43e4-8d82-111f57be7740
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.formulario_cliente
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.formulario_cliente
+target_entity_type_id: node
+target_bundle: formulario_cliente
+default_langcode: site_default
+language_alterable: false

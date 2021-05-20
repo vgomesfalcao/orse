@@ -1,0 +1,20 @@
+uuid: 55808d5f-9774-4c2f-b08f-ecc01223f68d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.team
+id: node.team.menu_link
+field_name: menu_link
+entity_type: node
+bundle: team
+label: 'Link de menu'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -14,7 +14,7 @@ bundle: '404'
 label: 'Header Style'
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     value: style4

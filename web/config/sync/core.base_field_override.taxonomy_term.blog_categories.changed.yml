@@ -1,0 +1,18 @@
+uuid: 02ac1fee-71bd-4b23-9b4a-a7191c6563a6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_categories
+id: taxonomy_term.blog_categories.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: blog_categories
+label: Alterado
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

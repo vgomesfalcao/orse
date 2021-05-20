@@ -13,7 +13,7 @@ id: node.simplenews_issue.body
 field_name: body
 entity_type: node
 bundle: simplenews_issue
-label: Body
+label: Corpo
 description: ''
 required: false
 translatable: false

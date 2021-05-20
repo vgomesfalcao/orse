@@ -1,0 +1,20 @@
+uuid: bb17f39d-fb18-47aa-bcde-a226ded0c99f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.uid
+field_name: uid
+entity_type: node
+bundle: formulario_fotografo
+label: 'Escrito por'
+description: 'O nome de usuário do autor do conteúdo.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

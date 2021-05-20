@@ -1,0 +1,20 @@
+uuid: f7e7bb56-d120-4137-ba13-8974538b8e16
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_categories
+  module:
+    - path
+id: taxonomy_term.blog_categories.path
+field_name: path
+entity_type: taxonomy_term
+bundle: blog_categories
+label: 'URL alternativa'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

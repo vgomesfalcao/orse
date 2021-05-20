@@ -1,0 +1,20 @@
+uuid: a6788452-0f93-4bb1-aefb-2678d6d1212a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.formulario_cliente
+id: node.formulario_cliente.menu_link
+field_name: menu_link
+entity_type: node
+bundle: formulario_cliente
+label: 'Link de menu'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

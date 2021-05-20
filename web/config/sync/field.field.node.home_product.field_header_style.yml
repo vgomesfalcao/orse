@@ -14,7 +14,7 @@ bundle: home_product
 label: 'Header Style'
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     value: style4

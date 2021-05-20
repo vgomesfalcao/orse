@@ -1,0 +1,20 @@
+uuid: aac82b23-933f-4363-befa-8010f3c2a83f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_tags
+  module:
+    - text
+id: taxonomy_term.product_tags.description
+field_name: description
+entity_type: taxonomy_term
+bundle: product_tags
+label: Descrição
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

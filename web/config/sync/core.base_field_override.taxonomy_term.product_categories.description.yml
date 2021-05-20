@@ -1,0 +1,20 @@
+uuid: 1f8be018-c65f-4ba1-8ef4-4d5e6e028afe
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.product_categories
+  module:
+    - text
+id: taxonomy_term.product_categories.description
+field_name: description
+entity_type: taxonomy_term
+bundle: product_categories
+label: Descrição
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

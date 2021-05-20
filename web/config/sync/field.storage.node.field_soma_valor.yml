@@ -1,0 +1,19 @@
+uuid: fa362d4e-99ba-40c5-b3dd-c53dd5986187
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - computed_field
+    - node
+id: node.field_soma_valor
+field_name: field_soma_valor
+entity_type: node
+type: computed_float
+settings: {  }
+module: computed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

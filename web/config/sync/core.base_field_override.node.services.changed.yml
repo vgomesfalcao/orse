@@ -1,0 +1,18 @@
+uuid: 1b9bd724-52e1-4e75-9f76-8be26a50aec7
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.services
+id: node.services.changed
+field_name: changed
+entity_type: node
+bundle: services
+label: Alterado
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

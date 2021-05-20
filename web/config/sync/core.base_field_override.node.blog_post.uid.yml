@@ -1,0 +1,20 @@
+uuid: efd64733-fd53-42aa-9a62-12c829ef4433
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+id: node.blog_post.uid
+field_name: uid
+entity_type: node
+bundle: blog_post
+label: 'Escrito por'
+description: 'O nome de usuário do autor do conteúdo.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

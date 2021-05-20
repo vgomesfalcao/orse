@@ -1,0 +1,18 @@
+uuid: ba298833-68d3-4d1b-bfeb-9837c8200d21
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.team
+id: node.team.changed
+field_name: changed
+entity_type: node
+bundle: team
+label: Alterado
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

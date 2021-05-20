@@ -1,0 +1,18 @@
+uuid: 83363bff-1238-4dee-b8ec-315a6cca7b46
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.po
+id: taxonomy_term.po.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: po
+label: Alterado
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

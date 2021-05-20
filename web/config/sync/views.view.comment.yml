@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: cCq1vjj1qmyd39oBIUyOe8YPDsobJ5fZRhp2Xy5O7lA
 id: comment
-label: Comments
+label: Comentários
 module: comment
 description: 'Find and manage comments.'
 tag: default
@@ -815,7 +815,7 @@ display:
           entity_type: comment
           entity_field: changed
           plugin_id: date
-      title: Comments
+      title: Comentários
       header: {  }
       footer: {  }
       empty:
@@ -875,7 +875,7 @@ display:
       path: admin/content/comment
       menu:
         type: tab
-        title: Comments
+        title: Comentários
         description: 'Comments published'
         parent: ''
         weight: 0

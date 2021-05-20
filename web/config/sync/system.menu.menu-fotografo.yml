@@ -1,0 +1,8 @@
+uuid: cad3863e-7622-40ee-b36f-dcdbd4ef2e79
+langcode: pt-br
+status: true
+dependencies: {  }
+id: menu-fotografo
+label: 'Menu Fotógrafo'
+description: ''
+locked: false

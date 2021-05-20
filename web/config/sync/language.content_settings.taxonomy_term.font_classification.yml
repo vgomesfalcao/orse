@@ -1,0 +1,18 @@
+uuid: 7e81454a-5d82-4d72-ae67-7caf7494f11b
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.font_classification
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.font_classification
+target_entity_type_id: taxonomy_term
+target_bundle: font_classification
+default_langcode: site_default
+language_alterable: false

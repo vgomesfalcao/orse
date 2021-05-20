@@ -1,0 +1,22 @@
+uuid: 3f86c942-7785-42f2-bfa8-93acb6809a96
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.formulario_cliente
+id: node.formulario_cliente.sticky
+field_name: sticky
+entity_type: node
+bundle: formulario_cliente
+label: 'Destacado no topo da página'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

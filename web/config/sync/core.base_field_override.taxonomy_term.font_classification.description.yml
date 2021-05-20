@@ -1,0 +1,20 @@
+uuid: 9c315900-8142-4ce6-af46-642b6d533aa2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.font_classification
+  module:
+    - text
+id: taxonomy_term.font_classification.description
+field_name: description
+entity_type: taxonomy_term
+bundle: font_classification
+label: Descrição
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

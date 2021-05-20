@@ -1,0 +1,20 @@
+uuid: 7be539ad-888a-48ef-88ac-805c75804461
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.coming_soon
+id: node.coming_soon.menu_link
+field_name: menu_link
+entity_type: node
+bundle: coming_soon
+label: 'Link de menu'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

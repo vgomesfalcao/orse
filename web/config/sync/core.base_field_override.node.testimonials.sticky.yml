@@ -1,0 +1,22 @@
+uuid: a78ea545-7ede-4776-88d4-e1ec1c401967
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.testimonials
+id: node.testimonials.sticky
+field_name: sticky
+entity_type: node
+bundle: testimonials
+label: 'Destacado no topo da página'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

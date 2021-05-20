@@ -1,0 +1,22 @@
+uuid: c41abae8-5dbd-4b0a-bd99-21b1c0e9a7a8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.status
+field_name: status
+entity_type: node
+bundle: formulario_fotografo
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

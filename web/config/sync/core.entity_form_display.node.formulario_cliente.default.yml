@@ -117,7 +117,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 17
     region: content
     settings:
       include_locked: true

@@ -28,6 +28,7 @@
         "drupal/block_visibility_groups": "^1.4",
         "drupal/blog": "^3.0",
         "drupal/commerce": "^2.24",
+        "drupal/computed_field": "^3.0",
         "drupal/contact_block": "^1.5",
         "drupal/contact_storage": "^1.1",
         "drupal/core-composer-scaffold": "^8.8",

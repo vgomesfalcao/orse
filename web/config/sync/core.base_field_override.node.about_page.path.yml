@@ -1,0 +1,20 @@
+uuid: 3d8ebb3c-96b6-4495-b738-13c78922f19b
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.about_page
+  module:
+    - path
+id: node.about_page.path
+field_name: path
+entity_type: node
+bundle: about_page
+label: 'URL alternativa'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

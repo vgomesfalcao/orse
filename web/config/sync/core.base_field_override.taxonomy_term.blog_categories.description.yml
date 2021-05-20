@@ -1,0 +1,20 @@
+uuid: f81c6f64-583b-458c-a8f2-9b8a549c461a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_categories
+  module:
+    - text
+id: taxonomy_term.blog_categories.description
+field_name: description
+entity_type: taxonomy_term
+bundle: blog_categories
+label: Descrição
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

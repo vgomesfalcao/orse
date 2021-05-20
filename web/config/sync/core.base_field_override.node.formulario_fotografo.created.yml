@@ -1,0 +1,18 @@
+uuid: c12ff041-1b31-4d6e-9a2b-109ad27a4c57
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.formulario_fotografo
+id: node.formulario_fotografo.created
+field_name: created
+entity_type: node
+bundle: formulario_fotografo
+label: 'Escrito em'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,18 @@
+uuid: 7b1a8b30-bb34-41d3-854e-0b1ac120cc76
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_categories
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.blog_categories
+target_entity_type_id: taxonomy_term
+target_bundle: blog_categories
+default_langcode: site_default
+language_alterable: false

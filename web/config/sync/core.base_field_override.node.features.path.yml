@@ -1,0 +1,20 @@
+uuid: 14bd847a-4142-48fe-a503-ab19ecb6e6ff
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.features
+  module:
+    - path
+id: node.features.path
+field_name: path
+entity_type: node
+bundle: features
+label: 'URL alternativa'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

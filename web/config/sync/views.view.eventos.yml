@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_data_do_evento
     - field.storage.node.field_tipo_de_evento
     - node.type.formulario_cliente
+    - user.role.cliente
+    - user.role.fotografo
   module:
     - datetime
     - node
@@ -26,9 +28,10 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            cliente: cliente
       cache:
         type: tag
         options: {  }
@@ -441,7 +444,7 @@ display:
         - url
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_data_do_evento'
         - 'config:field.storage.node.field_tipo_de_evento'
@@ -461,7 +464,34 @@ display:
         - url
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_data_do_evento'
+        - 'config:field.storage.node.field_tipo_de_evento'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: 'Page 2'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      arguments: {  }
+      defaults:
+        arguments: false
+        access: false
+      path: user/eventos
+      access:
+        type: role
+        options:
+          role:
+            fotografo: fotografo
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.roles
       tags:
         - 'config:field.storage.node.field_data_do_evento'
         - 'config:field.storage.node.field_tipo_de_evento'

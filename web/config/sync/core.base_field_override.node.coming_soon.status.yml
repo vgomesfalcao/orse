@@ -1,0 +1,22 @@
+uuid: 8d131f52-1cc6-4d10-894a-366c1b5f24fe
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.coming_soon
+id: node.coming_soon.status
+field_name: status
+entity_type: node
+bundle: coming_soon
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
