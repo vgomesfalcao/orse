@@ -14,6 +14,7 @@ from_name: Apar
 subject: '[[simplenews-newsletter:name]] [node:title]'
 from_address: apar@yourdomain.com
 hyperlinks: false
+allowed_handlers: {  }
 new_account: none
 opt_inout: double
 weight: 0

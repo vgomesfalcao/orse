@@ -15,7 +15,7 @@ bundle: formulario_cliente
 label: 'Formulário Fotógrafo'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     webform_access_group: {  }

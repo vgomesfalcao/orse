@@ -6,9 +6,7 @@ dependencies:
     - block_visibility_groups.block_visibility_group.block_v_fotografo
     - system.menu.menu-fotografo
   module:
-    - block_attributes
     - block_visibility_groups
-    - ntv_block_background
     - system
   theme:
     - orse

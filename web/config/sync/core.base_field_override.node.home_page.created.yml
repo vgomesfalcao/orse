@@ -11,7 +11,7 @@ bundle: home_page
 label: 'Escrito em'
 description: 'The time that the node was created.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

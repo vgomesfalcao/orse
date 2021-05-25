@@ -14,7 +14,7 @@ bundle: page
 label: 'Footer Style'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: style1

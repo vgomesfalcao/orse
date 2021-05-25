@@ -12,7 +12,7 @@ bundle: portfolio
 label: 'Display Page Title'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0
