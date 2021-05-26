@@ -6,7 +6,9 @@ dependencies:
     - block_visibility_groups.block_visibility_group.home_page_2
     - views.view._apar_features
   module:
+    - block_attributes
     - block_visibility_groups
+    - ntv_block_background
     - views
   theme:
     - orse

@@ -34,3 +34,7 @@ function orse_preprocess_node(&$variables) {
 function orse_form_user_form_alter(&$form, FormStateInterface $form_state) {
   $form["select_roles"]["#title"] = t("Are you a photographer or client?");
 }
+
+function orse_preprocess_menu__account(&$variables) {
+
+}

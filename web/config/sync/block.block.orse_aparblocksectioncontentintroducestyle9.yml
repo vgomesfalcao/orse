@@ -7,8 +7,10 @@ dependencies:
   content:
     - 'block_content:basic:d67c6761-c331-4103-b37e-83c05b06e39c'
   module:
+    - block_attributes
     - block_content
     - block_visibility_groups
+    - ntv_block_background
   theme:
     - orse
 third_party_settings:

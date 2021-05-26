@@ -1,0 +1,5 @@
+<?php
+
+function orse_interface_preprocess_menu(&$variables) {
+  dump($variables);
+}
