@@ -3,16 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_cerimonia_valor
-    - field.storage.node.field_cobertura_valor
-    - field.storage.node.field_combocr_valor
-    - field.storage.node.field_makingof_valor
-    - field.storage.node.field_makingofnoiva_valor
-    - field.storage.node.field_makingofnoivo_valor
-    - field.storage.node.field_previa_valor
-    - field.storage.node.field_previacasal_valor
-    - field.storage.node.field_previanoiva_valor
-    - field.storage.node.field_recepcao_valor
     - field.storage.node.field_soma_valor
     - node.type.formulario_fotografo
   module:
@@ -51,7 +41,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: 'Aplicar Filtro'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -201,642 +191,6 @@ display:
       row:
         type: fields
       fields:
-        field_cerimonia_valor:
-          id: field_cerimonia_valor
-          table: node__field_cerimonia_valor
-          field: field_cerimonia_valor
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Cerimônia Valor'
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_cerimonia_valor__value }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_unformatted
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_cobertura_valor:
-          id: field_cobertura_valor
-          table: node__field_cobertura_valor
-          field: field_cobertura_valor
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Cobertura Valor'
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_cobertura_valor__value }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: true
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: true
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_unformatted
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_combocr_valor:
-          id: field_combocr_valor
-          table: node__field_combocr_valor
-          field: field_combocr_valor
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'ComboCR Valor'
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_combocr_valor__value }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_decimal
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-            decimal_separator: .
-            scale: 2
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_makingof_valor:
-          id: field_makingof_valor
-          table: node__field_makingof_valor
-          field: field_makingof_valor
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'MakingOf Valor'
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_makingof_valor__value }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_decimal
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-            decimal_separator: .
-            scale: 2
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_makingofnoiva_valor:
-          id: field_makingofnoiva_valor
-          table: node__field_makingofnoiva_valor
-          field: field_makingofnoiva_valor
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'MakingOfNoiva Valor'
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_makingofnoiva_valor__value }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_decimal
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-            decimal_separator: .
-            scale: 2
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_makingofnoivo_valor:
-          id: field_makingofnoivo_valor
-          table: node__field_makingofnoivo_valor
-          field: field_makingofnoivo_valor
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'MakingOfNoivo Valor'
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_makingofnoivo_valor__value }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_decimal
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-            decimal_separator: .
-            scale: 2
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_previa_valor:
-          id: field_previa_valor
-          table: node__field_previa_valor
-          field: field_previa_valor
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Previa Valor'
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_previa_valor__value }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_unformatted
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_previacasal_valor:
-          id: field_previacasal_valor
-          table: node__field_previacasal_valor
-          field: field_previacasal_valor
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'PreviaCasal Valor'
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_previacasal_valor__value }} '
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_unformatted
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_previanoiva_valor:
-          id: field_previanoiva_valor
-          table: node__field_previanoiva_valor
-          field: field_previanoiva_valor
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'PreviaNoiva Valor'
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_previanoiva_valor__value }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_unformatted
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_recepcao_valor:
-          id: field_recepcao_valor
-          table: node__field_recepcao_valor
-          field: field_recepcao_valor
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Recepção Valor'
-          exclude: true
-          alter:
-            alter_text: true
-            text: '{{ field_recepcao_valor__value }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_unformatted
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         uid:
           id: uid
           table: node_field_data
@@ -976,7 +330,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Soma Valor'
+          label: 'Valor Total'
           exclude: false
           alter:
             alter_text: false
@@ -1116,6 +470,150 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: uid_op
+            label: Fotógrafo
+            description: 'Digite alguns nomes de fotógrafos, separando-os por vírgulas. '
+            use_operator: false
+            operator: uid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: uid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              cliente: '0'
+              fotografo: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: uid
+          plugin_id: user_name
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: created_op
+            label: 'Escrito entre'
+            description: ''
+            use_operator: false
+            operator: created_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: created
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              cliente: '0'
+              fotografo: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+        field_soma_valor_value:
+          id: field_soma_valor_value
+          table: node__field_soma_valor
+          field: field_soma_valor_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_soma_valor_value_op
+            label: 'Valor Total Entre'
+            description: ''
+            use_operator: false
+            operator: field_soma_valor_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_soma_valor_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              cliente: '0'
+              fotografo: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
       sorts: {  }
       title: 'Respostas Fotógrafos'
       header: {  }
@@ -1174,6 +672,7 @@ display:
           plugin_id: numeric
       display_extenders: {  }
       css_class: table-orcamentos
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1184,16 +683,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_cerimonia_valor'
-        - 'config:field.storage.node.field_cobertura_valor'
-        - 'config:field.storage.node.field_combocr_valor'
-        - 'config:field.storage.node.field_makingof_valor'
-        - 'config:field.storage.node.field_makingofnoiva_valor'
-        - 'config:field.storage.node.field_makingofnoivo_valor'
-        - 'config:field.storage.node.field_previa_valor'
-        - 'config:field.storage.node.field_previacasal_valor'
-        - 'config:field.storage.node.field_previanoiva_valor'
-        - 'config:field.storage.node.field_recepcao_valor'
         - 'config:field.storage.node.field_soma_valor'
   block_1:
     display_plugin: block
@@ -1212,16 +701,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_cerimonia_valor'
-        - 'config:field.storage.node.field_cobertura_valor'
-        - 'config:field.storage.node.field_combocr_valor'
-        - 'config:field.storage.node.field_makingof_valor'
-        - 'config:field.storage.node.field_makingofnoiva_valor'
-        - 'config:field.storage.node.field_makingofnoivo_valor'
-        - 'config:field.storage.node.field_previa_valor'
-        - 'config:field.storage.node.field_previacasal_valor'
-        - 'config:field.storage.node.field_previanoiva_valor'
-        - 'config:field.storage.node.field_recepcao_valor'
         - 'config:field.storage.node.field_soma_valor'
   page_1:
     display_plugin: page
@@ -1281,14 +760,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_cerimonia_valor'
-        - 'config:field.storage.node.field_cobertura_valor'
-        - 'config:field.storage.node.field_combocr_valor'
-        - 'config:field.storage.node.field_makingof_valor'
-        - 'config:field.storage.node.field_makingofnoiva_valor'
-        - 'config:field.storage.node.field_makingofnoivo_valor'
-        - 'config:field.storage.node.field_previa_valor'
-        - 'config:field.storage.node.field_previacasal_valor'
-        - 'config:field.storage.node.field_previanoiva_valor'
-        - 'config:field.storage.node.field_recepcao_valor'
         - 'config:field.storage.node.field_soma_valor'

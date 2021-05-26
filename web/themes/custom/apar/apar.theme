@@ -723,6 +723,7 @@ function apar_preprocess_node(&$variables) {
 function apar_preprocess_container(&$variables){
 	$variables['container_type'] = $variables['element']['#type'];
 }
+
 function apar_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 	//kint($form_id);
   	if($form_id == 'search_block_form'){
@@ -783,10 +784,6 @@ function apar_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_stat
     	$form['advanced']['keywords-fieldset']['keywords']['negative']['#attributes']['class'] = array('form-control');
     	$form['basic']['submit']['#attributes']['class'] = array('btn', 'btn-medium', 'btn-grey', 'btn-3d', 'xround-1', 'uppercase');
     	$form['advanced']['submit']['#attributes']['class'] = array('btn', 'btn-medium', 'btn-grey', 'btn-3d', 'xround-1', 'uppercase');
-    }
-    if(preg_match('/views_exposed_form/i', $form_id)){
-        $form['actions']['submit']['#attributes']['class'] = array('hidden');
-        $form['sort_by']['#attributes']['onchange'] = 'if(this.value != 0) { this.form.submit(); }';
     }
 
 }

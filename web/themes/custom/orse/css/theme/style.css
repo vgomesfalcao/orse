@@ -171,6 +171,71 @@ text-align: center;
   padding: 0 30px
 }
 
+#views-exposed-form-respostas-fotografos-page-1,
+#views-exposed-form-respostas-fotografos-block-1 {
+  display: grid;
+  grid-template-areas:
+    'fotografo data-min valor-min empty'
+    'fotografo data-max valor-max empty';
+  grid-template-columns: 22% 25% 23% 22%;
+  grid-gap: 15px;
+  margin-bottom:20px;
+}
+
+#views-exposed-form-respostas-fotografos-page-1 .js-form-type-entity-autocomplete,
+#views-exposed-form-respostas-fotografos-block-1 .js-form-type-entity-autocomplete {
+  grid-area: fotografo;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+#views-exposed-form-respostas-fotografos-page-1 > div.js-form-item:nth-child(2),
+#views-exposed-form-respostas-fotografos-block-1 > div.js-form-item:nth-child(2) {
+  grid-area: data-min;
+  display:flex;
+  flex-direction:column;
+}
+
+#views-exposed-form-respostas-fotografos-page-1 > div.js-form-item:nth-child(3),
+#views-exposed-form-respostas-fotografos-block-1 > div.js-form-item:nth-child(3) {
+  grid-area: data-max;
+  display:flex;
+  flex-direction:column;
+}
+
+#views-exposed-form-respostas-fotografos-page-1 > div.js-form-item:nth-child(4),
+#views-exposed-form-respostas-fotografos-block-1 > div.js-form-item:nth-child(4) {
+  grid-area: valor-min;
+  display:flex;
+  flex-direction:column;
+}
+
+#views-exposed-form-respostas-fotografos-page-1 > div.js-form-item:nth-child(5),
+#views-exposed-form-respostas-fotografos-block-1 > div.js-form-item:nth-child(5) {
+  grid-area: valor-max;
+  display:flex;
+  flex-direction:column;
+}
+
+#views-exposed-form-respostas-fotografos-page-1 > div.form-actions,
+#views-exposed-form-respostas-fotografos-block-1 > div.form-actions {
+  grid-area: empty;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+
+#views-exposed-form-respostas-fotografos-page-1 > div.form-actions input,
+#views-exposed-form-respostas-fotografos-block-1 > div.form-actions input {
+  background-color: #EB673F;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+
 @media screen and (max-width: 720px) {
   #webform-submission-formulario-cliente-node-155-add-form input[type=radio] + label {
     width:50%;
