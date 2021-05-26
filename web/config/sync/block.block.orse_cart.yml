@@ -3,10 +3,10 @@ langcode: en
 status: false
 dependencies:
   module:
-    - block_attributes
+
     - block_visibility_groups
     - commerce_cart
-    - ntv_block_background
+
   theme:
     - orse
 third_party_settings:

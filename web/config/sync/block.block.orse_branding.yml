@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block_attributes
+
     - block_visibility_groups
-    - ntv_block_background
+
     - system
   theme:
     - orse
