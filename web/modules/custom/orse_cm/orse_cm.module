@@ -11,17 +11,17 @@ function computed_field_field_soma_valor_compute($entity_type_manager, $entity, 
 
   $valCerimonia = is_null($entity->field_cerimonia_valor->first()) ? 0 : $entity->field_cerimonia_valor->first()->getValue()["value"];
   $value += $valCerimonia;
-  $valRecepcao = is_null($entity->field_recepcao_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $valRecepcao = is_null($entity->field_recepcao_valor->first()) ? 0 : $entity->field_recepcao_valor->first()->getValue()["value"];
   $value += $valRecepcao;
-  $valComboCR = is_null($entity->field_combocr_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $valComboCR = is_null($entity->field_combocr_valor->first()) ? 0 : $entity->field_combocr_valor->first()->getValue()["value"];
   $value += $valComboCR;
-  $valMakingOfNoiva = is_null($entity->field_makingofnoiva_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $valMakingOfNoiva = is_null($entity->field_makingofnoiva_valor->first()) ? 0 : $entity->field_makingofnoiva_valor->first()->getValue()["value"];
   $value += $valMakingOfNoiva;
-  $valMakingOfNoivo = is_null($entity->field_makingofnoivo_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $valMakingOfNoivo = is_null($entity->field_makingofnoivo_valor->first()) ? 0 : $entity->field_makingofnoivo_valor->first()->getValue()["value"];
   $value += $valMakingOfNoivo;
-  $valPreviaCasal = is_null($entity->field_previacasal_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $valPreviaCasal = is_null($entity->field_previacasal_valor->first()) ? 0 : $entity->field_previacasal_valor->first()->getValue()["value"];
   $value += $valPreviaCasal;
-  $valPreviaNoiva = is_null($entity->field_previanoiva_valor->first()) ? 0 : $entity->field_cobertura_valor->first()->getValue()["value"];
+  $valPreviaNoiva = is_null($entity->field_previanoiva_valor->first()) ? 0 : $entity->field_previanoiva_valor->first()->getValue()["value"];
   $value += $valPreviaNoiva;
 
   return $value;
