@@ -1,0 +1,10 @@
+name: Anonymous Login
+type: module
+core_version_requirement: ^8.8 || ^9
+description: Specify pages that when visited by anonymous users will be forced to login.
+configure: anonymous_login.settings
+
+# Information added by Drupal.org packaging script on 2020-07-29
+version: '8.x-2.0'
+project: 'anonymous_login'
+datestamp: 1596026193

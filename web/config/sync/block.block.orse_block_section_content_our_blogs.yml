@@ -6,9 +6,7 @@ dependencies:
     - block_visibility_groups.block_visibility_group.home_page_6
     - views.view._apar_blog
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - orse

@@ -7,10 +7,8 @@ dependencies:
   content:
     - 'block_content:basic:895976d3-cc26-4872-bf13-d03728a0d320'
   module:
-
     - block_content
     - block_visibility_groups
-
   theme:
     - orse
 third_party_settings:

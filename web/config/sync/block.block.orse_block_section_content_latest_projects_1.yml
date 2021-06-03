@@ -6,9 +6,7 @@ dependencies:
     - block_visibility_groups.block_visibility_group.home_page_5
     - views.view._apar_portfolio
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - orse
