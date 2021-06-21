@@ -18,7 +18,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Principal
     position: 0
     display_options:
       access:
@@ -39,13 +39,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Aplicar
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Reiniciar
+          exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Ascendente
+          sort_desc_label: Decrescente
       pager:
         type: mini
         options:
@@ -54,14 +54,14 @@ display:
           id: 0
           total_pages: null
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: '‹ Voltar'
+            next: 'Avançar ›'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Itens por página'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Tudo -'
             offset: false
             offset_label: Offset
       style:
@@ -307,7 +307,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Operações
           exclude: false
           alter:
             alter_text: false
@@ -518,7 +518,7 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: Página
     position: 1
     display_options:
       display_extenders: {  }

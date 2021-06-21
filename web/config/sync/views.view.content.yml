@@ -30,20 +30,20 @@ display:
         options:
           submit_button: Filter
           reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Reiniciar
+          exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Ascendente
+          sort_desc_label: Decrescente
       pager:
         type: full
         options:
           items_per_page: 50
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '‹ Voltar'
+            next: 'Avançar ›'
+            first: '« Primeiro'
+            last: 'Último »'
       style:
         type: table
         options:
@@ -311,7 +311,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Operações
           exclude: false
           alter:
             alter_text: false
@@ -570,7 +570,7 @@ display:
           1: AND
       display_extenders: {  }
     display_plugin: default
-    display_title: Master
+    display_title: Principal
     id: default
     position: 0
     cache_metadata:
@@ -602,7 +602,7 @@ display:
         weight: -10
       display_extenders: {  }
     display_plugin: page
-    display_title: Page
+    display_title: Página
     id: page_1
     position: 1
     cache_metadata:

@@ -5,7 +5,9 @@ dependencies:
   config:
     - views.view._apar_sidebar_widget
   module:
+    - block_attributes
     - block_visibility_groups
+    - ntv_block_background
     - views
   theme:
     - orse
@@ -25,7 +27,7 @@ third_party_settings:
     background_overlay: ''
 id: orse_block_sidebar_popular_posts
 theme: orse
-region: sidebar_right
+region: disable
 weight: 2
 provider: null
 plugin: 'views_block:_apar_sidebar_widget-block_sidebar_popular_posts'

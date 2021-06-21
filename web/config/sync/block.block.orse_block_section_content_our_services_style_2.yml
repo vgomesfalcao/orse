@@ -6,7 +6,9 @@ dependencies:
     - block_visibility_groups.block_visibility_group.home_page_8
     - views.view._apar_services
   module:
+    - block_attributes
     - block_visibility_groups
+    - ntv_block_background
     - views
   theme:
     - orse
@@ -26,7 +28,7 @@ third_party_settings:
     background_overlay: ''
 id: orse_block_section_content_our_services_style_2
 theme: orse
-region: section
+region: disable
 weight: 5
 provider: null
 plugin: 'views_block:_apar_services-block_section_content_our_services_style_2'

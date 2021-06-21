@@ -5,8 +5,10 @@ dependencies:
   config:
     - block_visibility_groups.block_visibility_group.home
   module:
+    - block_attributes
     - block_visibility_groups
     - md_slider
+    - ntv_block_background
   theme:
     - orse
 third_party_settings:
@@ -26,7 +28,7 @@ third_party_settings:
 id: orse_slider1
 theme: orse
 region: slider
-weight: 0
+weight: 1
 provider: null
 plugin: 'md_slider_block:slider_1'
 settings:

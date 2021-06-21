@@ -6,7 +6,9 @@ dependencies:
     - block_visibility_groups.block_visibility_group.home_page_4
     - views.view._apar_testimonials
   module:
+    - block_attributes
     - block_visibility_groups
+    - ntv_block_background
     - views
   theme:
     - orse
@@ -26,7 +28,7 @@ third_party_settings:
     background_overlay: ''
 id: orse_block_section_content_what_people_says
 theme: orse
-region: section
+region: disable
 weight: 68
 provider: null
 plugin: 'views_block:_apar_testimonials-block_section_content_what_people_says'

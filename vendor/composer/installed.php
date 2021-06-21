@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8867d53b5e89442828d33f3ddd0afc2dc123f3e3',
+    'reference' => '9f5f5715ae9dbe3ca68550518b45cddd18920485',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -241,6 +241,15 @@
       ),
       'reference' => '1febd6c3ef84253d7c815bed85fc622ad207a9f8',
     ),
+    'drupal-ckeditor-libraries-group/font' => 
+    array (
+      'pretty_version' => '4.16.1',
+      'version' => '4.16.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b805d4ce394eab9d605358321d35e4fc8d5a15be',
+    ),
     'drupal/action' => 
     array (
       'replaced' => 
@@ -394,6 +403,15 @@
       array (
         0 => '8.9.13',
       ),
+    ),
+    'drupal/ckeditor_font' => 
+    array (
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.2',
     ),
     'drupal/claro' => 
     array (
@@ -1146,7 +1164,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8867d53b5e89442828d33f3ddd0afc2dc123f3e3',
+      'reference' => '9f5f5715ae9dbe3ca68550518b45cddd18920485',
     ),
     'drupal/responsive_image' => 
     array (

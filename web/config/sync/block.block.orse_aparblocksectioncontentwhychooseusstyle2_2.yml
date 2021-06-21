@@ -7,8 +7,10 @@ dependencies:
   content:
     - 'block_content:basic:3278465a-c52f-42a9-8193-77de80c98d55'
   module:
+    - block_attributes
     - block_content
     - block_visibility_groups
+    - ntv_block_background
   theme:
     - orse
 third_party_settings:
@@ -27,7 +29,7 @@ third_party_settings:
     background_overlay: ''
 id: orse_aparblocksectioncontentwhychooseusstyle2_2
 theme: orse
-region: section
+region: disable
 weight: 70
 provider: null
 plugin: 'block_content:3278465a-c52f-42a9-8193-77de80c98d55'

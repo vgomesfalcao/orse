@@ -6,7 +6,9 @@ dependencies:
     - block_visibility_groups.block_visibility_group.careers
     - views.view._apar_partners
   module:
+    - block_attributes
     - block_visibility_groups
+    - ntv_block_background
     - views
   theme:
     - orse
@@ -26,7 +28,7 @@ third_party_settings:
     background_overlay: ''
 id: orse_block_section_content_partners_4
 theme: orse
-region: section
+region: disable
 weight: 103
 provider: null
 plugin: 'views_block:_apar_partners-block_section_content_partners'

@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_attributes
     - block_visibility_groups
+    - ntv_block_background
     - search
   theme:
     - orse
@@ -23,7 +25,7 @@ third_party_settings:
     background_overlay: ''
 id: orse_searchform_3
 theme: orse
-region: search_404
+region: disable
 weight: 0
 provider: null
 plugin: search_form_block

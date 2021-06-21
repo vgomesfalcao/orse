@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_data_do_evento
     - field.storage.node.field_tipo_de_evento
     - node.type.formulario_cliente
+    - user.role.administrator
     - user.role.cliente
     - user.role.fotografo
   module:
@@ -31,6 +32,7 @@ display:
         type: role
         options:
           role:
+            administrator: administrator
             cliente: cliente
       cache:
         type: tag

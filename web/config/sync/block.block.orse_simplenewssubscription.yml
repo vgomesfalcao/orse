@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_attributes
     - block_visibility_groups
+    - ntv_block_background
     - simplenews
   theme:
     - orse
@@ -23,7 +25,7 @@ third_party_settings:
     background_overlay: ''
 id: orse_simplenewssubscription
 theme: orse
-region: sidebar
+region: disable
 weight: -9
 provider: null
 plugin: simplenews_subscription_block

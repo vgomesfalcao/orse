@@ -33,7 +33,7 @@ $parameters = array(
 	'image_path' => 'media/images',
 	'tmp_path' => '/var/www/orse_d/web/mkt/app/../var/tmp',
 	'db_server_version' => '5.7',
-	'locale' => 'en_US',
+	'locale' => 'pt_BR',
 	'dev_hosts' => array(
 
 	),

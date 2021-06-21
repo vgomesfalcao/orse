@@ -5,7 +5,9 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - block_attributes
     - block_visibility_groups
+    - ntv_block_background
     - system
   theme:
     - orse
@@ -27,7 +29,7 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: orse_main_menu
 theme: orse
-region: main_menu
+region: disable
 weight: 2
 provider: null
 plugin: 'system_menu_block:main'

@@ -24,6 +24,9 @@ settings:
             - Subscript
             - '-'
             - RemoveFormat
+            - '-'
+            - Font
+            - FontSize
         -
           name: Text
           items:
@@ -45,7 +48,6 @@ settings:
         -
           name: Media
           items:
-            - DrupalImage
             - Blockquote
             - Table
             - HorizontalRule
@@ -60,10 +62,13 @@ settings:
             - ShowBlocks
             - Source
   plugins:
-    stylescombo:
-      styles: ''
     language:
       language_list: un
+    stylescombo:
+      styles: ''
+    font:
+      font_names: ''
+      font_sizes: ''
 image_upload:
   status: true
   scheme: public
