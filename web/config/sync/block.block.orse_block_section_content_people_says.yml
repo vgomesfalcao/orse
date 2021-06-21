@@ -6,27 +6,13 @@ dependencies:
     - block_visibility_groups.block_visibility_group.home
     - views.view._apar_testimonials
   module:
-    - block_attributes
+
     - block_visibility_groups
-    - ntv_block_background
+
     - views
   theme:
     - orse
-third_party_settings:
-  block_attributes:
-    attr_class: sec-padding
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: enable
-    color: '#000000'
-    bg_image:
-      - 122
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: 'center top'
-    bg_image_size: cover
-    background_overlay: ''
+
 id: orse_block_section_content_people_says
 theme: orse
 region: disable

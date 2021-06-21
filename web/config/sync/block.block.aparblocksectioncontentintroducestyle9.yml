@@ -11,21 +11,7 @@ dependencies:
     - block_visibility_groups
   theme:
     - apar
-third_party_settings:
-  block_attributes:
-    attr_class: sec-padding
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: enable
-    color: '#000000'
-    bg_image:
-      - 110
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: 'left top'
-    bg_image_size: ''
-    background_overlay: ''
+
 id: aparblocksectioncontentintroducestyle9
 theme: apar
 region: section

@@ -5,26 +5,13 @@ dependencies:
   content:
     - 'block_content:basic:a451b94b-89c6-42f6-9610-ad64070fcd59'
   module:
-    - block_attributes
+
     - block_content
     - block_visibility_groups
-    - ntv_block_background
+
   theme:
     - orse
-third_party_settings:
-  block_attributes:
-    attr_class: 'col-md-3 col-xs-12 clearfix margin-bottom'
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
+
 id: orse_aparblockfootercolumn3usefullinks
 theme: orse
 region: footer_column_1

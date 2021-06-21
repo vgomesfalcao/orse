@@ -5,26 +5,13 @@ dependencies:
   content:
     - 'block_content:basic:82dbf8ab-321b-43be-9e6d-2ef37bf3f376'
   module:
-    - block_attributes
+
     - block_content
     - block_visibility_groups
-    - ntv_block_background
+
   theme:
     - orse
-third_party_settings:
-  block_attributes:
-    attr_class: 'toplist toppadding pull-left paddtop1 roboto'
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
+
 id: orse_aparblocktopleftmenucustomercare
 theme: orse
 region: disable

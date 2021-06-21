@@ -5,26 +5,13 @@ dependencies:
   config:
     - views.view._apar_product
   module:
-    - block_attributes
+
     - block_visibility_groups
-    - ntv_block_background
+
     - views
   theme:
     - orse
-third_party_settings:
-  block_attributes:
-    attr_class: 'col-md-3 col-sm-12 col-xs-12 bmargin clearfix margin-bottom'
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
+
 id: orse_block_footer_product_column_4_on_sale_product
 theme: orse
 region: disable
