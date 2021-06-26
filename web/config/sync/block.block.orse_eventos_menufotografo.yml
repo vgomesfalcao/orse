@@ -1,0 +1,32 @@
+uuid: b0110d53-ddc3-4c31-8489-12429c723641
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.block_v_fotografo
+    - system.menu.menu-fotografo
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - orse_eventos
+id: orse_eventos_menufotografo
+theme: orse_eventos
+region: sidebar
+weight: -4
+provider: null
+plugin: 'system_menu_block:menu-fotografo'
+settings:
+  id: 'system_menu_block:menu-fotografo'
+  label: 'Menu Fotografo'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: block_v_fotografo
+    context_mapping: {  }

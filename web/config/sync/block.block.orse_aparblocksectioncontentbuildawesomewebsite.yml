@@ -7,26 +7,10 @@ dependencies:
   content:
     - 'block_content:basic:137e5c8d-138e-49db-8cf3-802c0c75222f'
   module:
-    - block_attributes
     - block_content
     - block_visibility_groups
-    - ntv_block_background
   theme:
     - orse
-third_party_settings:
-  block_attributes:
-    attr_class: vertical-align
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
 id: orse_aparblocksectioncontentbuildawesomewebsite
 theme: orse
 region: disable

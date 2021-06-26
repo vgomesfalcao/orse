@@ -1,0 +1,42 @@
+// Formulário Fotógrafo
+// -----------------------------------------------------------------------------
+.formulario-fotografo {
+  border: 1px solid $gray-500;
+  margin-bottom: 50px;
+  .node__meta{
+    text-align: center;
+  }
+  .header-orcamento{
+    display:flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    [class^="formulario-fotografo__field-"] {
+        flex-direction:column;
+    }
+  }
+  .card {
+    border:none;
+    .card-header {
+      background-color:$white;
+      font-weight: 700;
+      padding:0.75rem 0 0 0;
+      legend {
+        .fieldset-legend {
+          font-size: 1.25rem;
+        }
+      }
+    }
+    .card-body{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 40px 0 20px;
+      [class^="formulario-fotografo__field-"] {
+        flex-direction:column;
+      }
+      .formulario-fotografo__body{
+        padding: 0 20px;
+      }
+    }
+  }
+}

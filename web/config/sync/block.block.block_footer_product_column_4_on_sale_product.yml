@@ -9,20 +9,6 @@ dependencies:
     - views
   theme:
     - apar
-third_party_settings:
-  block_attributes:
-    attr_class: 'col-md-3 col-sm-12 col-xs-12 bmargin clearfix margin-bottom'
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
 id: block_footer_product_column_4_on_sale_product
 theme: apar
 region: footer_pd_column_4

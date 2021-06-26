@@ -1,0 +1,52 @@
+// Page: Content
+// -----------------------------------------------------------------------------
+.page__content {
+  min-height: 60vh;
+  .container-fluid{
+    >.block {
+      margin: 0 -15px;
+      padding: 0 15px;
+    }
+    >.row {
+      >.col-md-12, .col-lg-12, .col-xl-12 {
+        >.block{
+          margin:0 -15px;
+          padding:0 15px;
+        }
+        >.block.block--bloco-fundo-verde,
+        .block.block--bloco-fundo-laranja,
+        .block.block--bloco-fundo-escuro {
+          padding: 15px;
+        }
+      }
+    }
+    .block--orse-eventos-content {
+      margin-bottom:50px;
+    }
+  }
+}
+
+.webform {
+  .page__content {
+    background-color:$primary;
+    padding: 50px 0;
+  }
+}
+
+.block--bloco-fundo-verde {
+  background-color: $primary;
+  color: black;
+  padding: 40px 0;
+}
+
+.block--bloco-fundo-laranja {
+  background-color: $secondary;
+  color: white;
+  padding: 40px 0;
+}
+
+.block--bloco-fundo-escuro {
+  background-color: $dark;
+  color: white;
+  padding: 40px 0;
+}

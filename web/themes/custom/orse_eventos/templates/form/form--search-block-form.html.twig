@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Template for the Search block form.
+ */
+#}
+<div class="search-parent">
+  <a href="javascript:void(0)" title="" class="m-link">
+    <i aria-hidden="true" class="fa fa-search"></i>
+  </a>
+  <div class="search-box">
+    <div class="search-box-inner">
+      <form{{ attributes.addClass('form-inline') }}>
+        {{ children }}
+      </form>
+      <a href="javascript:void(0)" title="" class="m-link vertical-center">
+        <i aria-hidden="true" class="fa fa-times"></i>
+      </a>
+    </div>
+  </div>
+
+</div>

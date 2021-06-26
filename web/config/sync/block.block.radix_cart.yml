@@ -1,0 +1,27 @@
+uuid: c66b472b-d9af-4d50-bb9d-83437ee533ab
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_visibility_groups
+    - commerce_cart
+  theme:
+    - radix
+id: radix_cart
+theme: radix
+region: navbar_branding
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  provider: commerce_cart
+  label_display: '0'
+  dropdown: true
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

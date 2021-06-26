@@ -5,26 +5,10 @@ dependencies:
   config:
     - block_visibility_groups.block_visibility_group.home_page_2
   module:
-    - block_attributes
     - block_visibility_groups
     - md_slider
-    - ntv_block_background
   theme:
     - orse
-third_party_settings:
-  block_attributes:
-    attr_class: ''
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
 id: orse_slider2
 theme: orse
 region: disable

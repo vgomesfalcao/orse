@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Orse Eventos theme.
+
+orse_eventos.settings:
+  type: theme_settings
+  label: 'Orse Eventos settings'

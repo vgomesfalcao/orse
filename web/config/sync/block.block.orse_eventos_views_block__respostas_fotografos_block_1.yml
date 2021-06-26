@@ -1,0 +1,40 @@
+uuid: ff80a276-fad8-4fe9-a8c4-846e1649440c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.formulario_fotografo
+    - views.view.respostas_fotografos
+  module:
+    - block_visibility_groups
+    - ctools
+    - views
+  theme:
+    - orse_eventos
+id: orse_eventos_views_block__respostas_fotografos_block_1
+theme: orse_eventos
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:respostas_fotografos-block_1'
+settings:
+  id: 'views_block:respostas_fotografos-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: formulario_fotografo
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      formulario_cliente: formulario_cliente
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

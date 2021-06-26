@@ -5,26 +5,10 @@ dependencies:
   config:
     - system.menu.account
   module:
-    - block_attributes
     - block_visibility_groups
-    - ntv_block_background
     - system
   theme:
     - orse
-third_party_settings:
-  block_attributes:
-    attr_class: ''
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
 id: menudecontadeusuario
 theme: orse
 region: main_menu

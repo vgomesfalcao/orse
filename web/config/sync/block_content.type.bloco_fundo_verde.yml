@@ -1,0 +1,8 @@
+uuid: 7e4df229-2727-4476-bb57-e65f08808df4
+langcode: pt-br
+status: true
+dependencies: {  }
+id: bloco_fundo_verde
+label: 'Bloco Fundo Verde'
+revision: 1
+description: ''

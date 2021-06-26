@@ -1,0 +1,31 @@
+uuid: a0427138-ef3b-447a-ab07-4db348e392e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.mosaic
+    - views.view._apar_portfolio
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_portfolio_mosaic
+theme: radix
+region: navbar_branding
+weight: 115
+provider: null
+plugin: 'views_block:_apar_portfolio-block_section_content_portfolio_mosaic'
+settings:
+  id: 'views_block:_apar_portfolio-block_section_content_portfolio_mosaic'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: mosaic
+    context_mapping: {  }

@@ -1,0 +1,30 @@
+uuid: 6cda4d54-5b47-42b4-a435-6f0f6c8e89e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view._apar_sidebar_widget
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_sidebar_latest_posts
+theme: radix
+region: navbar_branding
+weight: -11
+provider: null
+plugin: 'views_block:_apar_sidebar_widget-block_sidebar_latest_posts'
+settings:
+  id: 'views_block:_apar_sidebar_widget-block_sidebar_latest_posts'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

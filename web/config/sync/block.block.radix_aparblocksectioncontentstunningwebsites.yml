@@ -1,0 +1,33 @@
+uuid: 9209e742-7221-4c54-8829-67cc815f9da6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.services_style_1
+  content:
+    - 'block_content:basic:6662c7d1-bb95-4935-bc6d-4d81e167f5b7'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocksectioncontentstunningwebsites
+theme: radix
+region: navbar_branding
+weight: 47
+provider: null
+plugin: 'block_content:6662c7d1-bb95-4935-bc6d-4d81e167f5b7'
+settings:
+  id: 'block_content:6662c7d1-bb95-4935-bc6d-4d81e167f5b7'
+  label: '[Apar]Block Section Content - Stunning Websites'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: services_style_1
+    context_mapping: {  }

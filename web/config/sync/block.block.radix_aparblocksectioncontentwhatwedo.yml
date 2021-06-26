@@ -1,0 +1,33 @@
+uuid: 8b604d89-38e6-450f-84a4-8f6713ba8685
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about_style_1
+  content:
+    - 'block_content:basic:dcd46893-c3ed-49b4-bec5-4024eb6b1176'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocksectioncontentwhatwedo
+theme: radix
+region: navbar_branding
+weight: 87
+provider: null
+plugin: 'block_content:dcd46893-c3ed-49b4-bec5-4024eb6b1176'
+settings:
+  id: 'block_content:dcd46893-c3ed-49b4-bec5-4024eb6b1176'
+  label: '[Apar]Block Section Content - What we do'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about_style_1
+    context_mapping: {  }

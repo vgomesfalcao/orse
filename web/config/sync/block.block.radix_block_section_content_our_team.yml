@@ -1,0 +1,31 @@
+uuid: 740403c7-0c42-422c-9597-8f8d41208e4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.team_dark
+    - views.view._apar_team
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_our_team
+theme: radix
+region: navbar_branding
+weight: 97
+provider: null
+plugin: 'views_block:_apar_team-block_section_content_our_team'
+settings:
+  id: 'views_block:_apar_team-block_section_content_our_team'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: team_dark
+    context_mapping: {  }

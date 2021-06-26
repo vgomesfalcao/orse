@@ -1,0 +1,37 @@
+uuid: a32442f8-9357-411b-9644-0d26316f3230
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.block_v_cliente
+    - system.menu.menu-cliente
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - radix
+id: radix_menucliente
+theme: radix
+region: navbar_branding
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-cliente'
+settings:
+  id: 'system_menu_block:menu-cliente'
+  label: 'Menu Cliente'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: block_v_cliente
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

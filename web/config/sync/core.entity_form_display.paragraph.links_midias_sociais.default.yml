@@ -1,0 +1,33 @@
+uuid: 495c030b-c194-4b0e-ac58-0361a3ea34c9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.links_midias_sociais.field_icone
+    - field.field.paragraph.links_midias_sociais.field_url
+    - paragraphs.paragraphs_type.links_midias_sociais
+  module:
+    - fontawesome
+    - link
+id: paragraph.links_midias_sociais.default
+targetEntityType: paragraph
+bundle: links_midias_sociais
+mode: default
+content:
+  field_icone:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: fontawesome_icon_widget
+    region: content
+  field_url:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

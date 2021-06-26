@@ -1,0 +1,33 @@
+uuid: eb64b7ef-a361-414a-b2de-e9cab1e42e1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_1
+  content:
+    - 'block_content:basic:3278465a-c52f-42a9-8193-77de80c98d55'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocksectioncontentwhychooseusstyle2_2
+theme: radix
+region: navbar_branding
+weight: 70
+provider: null
+plugin: 'block_content:3278465a-c52f-42a9-8193-77de80c98d55'
+settings:
+  id: 'block_content:3278465a-c52f-42a9-8193-77de80c98d55'
+  label: '[Apar]Block Section Content - Why Choose Us Style 2'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_1
+    context_mapping: {  }

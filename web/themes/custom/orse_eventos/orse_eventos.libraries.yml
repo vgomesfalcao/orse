@@ -1,0 +1,11 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/orse_eventos.style.css: {}
+  js:
+    assets/js/orse_eventos.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once

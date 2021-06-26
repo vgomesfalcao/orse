@@ -7,26 +7,10 @@ dependencies:
   content:
     - 'block_content:basic:68792b29-82d3-4946-9d3b-45af739e9bc7'
   module:
-    - block_attributes
     - block_content
     - block_visibility_groups
-    - ntv_block_background
   theme:
     - orse
-third_party_settings:
-  block_attributes:
-    attr_class: 'sec-padding section-secondary price-sec-one'
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
 id: orse_aparblocksectioncontentpackage
 theme: orse
 region: disable

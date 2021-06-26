@@ -1,0 +1,31 @@
+uuid: ffbc24ab-6c9b-4463-9b5e-4b53ca054003
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.page_fullwidth
+    - views.view._apar_partners
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_partners_1
+theme: radix
+region: navbar_branding
+weight: 100
+provider: null
+plugin: 'views_block:_apar_partners-block_section_content_partners'
+settings:
+  id: 'views_block:_apar_partners-block_section_content_partners'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: page_fullwidth
+    context_mapping: {  }

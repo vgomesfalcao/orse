@@ -1,0 +1,31 @@
+uuid: dc7648cf-4408-47d5-9079-ad14819b3452
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-sider
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - radix
+id: radix_menuside
+theme: radix
+region: navbar_branding
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-sider'
+settings:
+  id: 'system_menu_block:menu-sider'
+  label: 'Menu Side'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

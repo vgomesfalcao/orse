@@ -1,0 +1,23 @@
+uuid: b79cbd49-3112-4ac3-b758-a7299135daf3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.bloco_fundo_escuro
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.bloco_fundo_escuro.body
+field_name: body
+entity_type: block_content
+bundle: bloco_fundo_escuro
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

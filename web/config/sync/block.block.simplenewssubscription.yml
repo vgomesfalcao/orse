@@ -7,20 +7,6 @@ dependencies:
     - simplenews
   theme:
     - apar
-third_party_settings:
-  block_attributes:
-    attr_class: 'bg2-right-col-item-holder apar-newsletter-sidebar'
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
 id: simplenewssubscription
 theme: apar
 region: sidebar

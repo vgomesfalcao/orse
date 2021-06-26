@@ -1,0 +1,30 @@
+uuid: 97373af0-53aa-4541-9e5b-6399d9e5f277
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view._apar_product
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_sidebar_product
+theme: radix
+region: navbar_branding
+weight: 0
+provider: null
+plugin: 'views_block:_apar_product-block_sidebar_product'
+settings:
+  id: 'views_block:_apar_product-block_sidebar_product'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

@@ -1,0 +1,33 @@
+uuid: 035ca6b4-99ba-4d51-bf4f-6b60bf512e22
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_5
+  content:
+    - 'block_content:basic:751696c7-d547-46be-9e50-20d2669353a7'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocksectioncontentexenllentsupport_2
+theme: radix
+region: navbar_branding
+weight: 77
+provider: null
+plugin: 'block_content:751696c7-d547-46be-9e50-20d2669353a7'
+settings:
+  id: 'block_content:751696c7-d547-46be-9e50-20d2669353a7'
+  label: '[Apar]Block Section Content - Exenllent Support'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_5
+    context_mapping: {  }

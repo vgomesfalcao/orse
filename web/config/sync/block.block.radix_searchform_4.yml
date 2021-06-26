@@ -1,0 +1,27 @@
+uuid: 87169ad0-e9fb-49ad-be0c-02441a36cbda
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - search
+  theme:
+    - radix
+id: radix_searchform_4
+theme: radix
+region: navbar_branding
+weight: -26
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

@@ -1,0 +1,31 @@
+uuid: 4280c466-8e54-44ed-aab9-f5cea9844324
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:960c8ce0-5a69-4e6e-9f92-f95879b3d2d8'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocktopmenusocialsocialnetwork
+theme: radix
+region: navbar_branding
+weight: -8
+provider: null
+plugin: 'block_content:960c8ce0-5a69-4e6e-9f92-f95879b3d2d8'
+settings:
+  id: 'block_content:960c8ce0-5a69-4e6e-9f92-f95879b3d2d8'
+  label: '[Apar]Block Top Menu Social - Social Network'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

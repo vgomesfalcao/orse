@@ -10,20 +10,6 @@ dependencies:
     - views
   theme:
     - apar
-third_party_settings:
-  block_attributes:
-    attr_class: sec-padding
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
 id: block_section_content_what_we_offer_style_4_1
 theme: apar
 region: section

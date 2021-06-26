@@ -1,0 +1,31 @@
+uuid: 4a77438f-bf63-4dfd-b2d6-235995b7a75d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.portfolio_two
+    - views.view._apar_portfolio
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_two_column
+theme: radix
+region: navbar_branding
+weight: 122
+provider: null
+plugin: 'views_block:_apar_portfolio-block_section_content_two_column'
+settings:
+  id: 'views_block:_apar_portfolio-block_section_content_two_column'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: portfolio_two
+    context_mapping: {  }

@@ -1,0 +1,33 @@
+uuid: 5cfd5b97-51a1-42a1-8fb2-7adad84a049e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about_style_4
+  content:
+    - 'block_content:basic:74bdd008-886b-4a53-982e-956a1c05f7b4'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocksectioncontentwebelieveinstandards
+theme: radix
+region: navbar_branding
+weight: 84
+provider: null
+plugin: 'block_content:74bdd008-886b-4a53-982e-956a1c05f7b4'
+settings:
+  id: 'block_content:74bdd008-886b-4a53-982e-956a1c05f7b4'
+  label: '[Apar]Block Section Content - We Believe in Standards'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about_style_4
+    context_mapping: {  }

@@ -1,0 +1,8 @@
+uuid: f09cb7a0-c518-4ec3-8f13-2a0fd695e8c4
+langcode: pt-br
+status: true
+dependencies: {  }
+id: bloco_fundo_escuro
+label: 'Bloco Fundo Escuro'
+revision: 1
+description: ''

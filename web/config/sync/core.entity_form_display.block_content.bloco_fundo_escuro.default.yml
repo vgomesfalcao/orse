@@ -1,0 +1,54 @@
+uuid: 5183cf52-0c6e-4ae4-b035-589443d4d539
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.bloco_fundo_escuro
+    - field.field.block_content.bloco_fundo_escuro.body
+    - field.field.block_content.bloco_fundo_escuro.field_midias_sociais
+  module:
+    - paragraphs
+    - text
+id: block_content.bloco_fundo_escuro.default
+targetEntityType: block_content
+bundle: bloco_fundo_escuro
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_midias_sociais:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Parágrafo
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

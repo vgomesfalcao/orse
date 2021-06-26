@@ -27,12 +27,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-develop',
+    'version' => 'dev-develop',
     'aliases' => 
     array (
     ),
-    'reference' => '9f5f5715ae9dbe3ca68550518b45cddd18920485',
+    'reference' => '5e612c7dc5278954db3b67a12e22c85f87f312be',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -476,6 +476,15 @@ private static $installed = array (
       ),
       'reference' => '8.x-2.24',
     ),
+    'drupal/components' => 
+    array (
+      'pretty_version' => '2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.4',
+    ),
     'drupal/computed_field' => 
     array (
       'pretty_version' => '3.0.0-alpha2',
@@ -880,6 +889,15 @@ private static $installed = array (
         0 => '8.9.13',
       ),
     ),
+    'drupal/fontawesome' => 
+    array (
+      'pretty_version' => '2.19.0',
+      'version' => '2.19.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.19',
+    ),
     'drupal/forum' => 
     array (
       'replaced' => 
@@ -1176,6 +1194,15 @@ private static $installed = array (
         0 => '8.9.13',
       ),
     ),
+    'drupal/radix' => 
+    array (
+      'pretty_version' => '4.10.0',
+      'version' => '4.10.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-4.10',
+    ),
     'drupal/rdf' => 
     array (
       'replaced' => 
@@ -1185,12 +1212,12 @@ private static $installed = array (
     ),
     'drupal/recommended-project' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-develop',
+      'version' => 'dev-develop',
       'aliases' => 
       array (
       ),
-      'reference' => '9f5f5715ae9dbe3ca68550518b45cddd18920485',
+      'reference' => '5e612c7dc5278954db3b67a12e22c85f87f312be',
     ),
     'drupal/responsive_image' => 
     array (

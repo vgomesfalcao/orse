@@ -1,0 +1,31 @@
+uuid: 0b15ee52-bd4b-4267-a43c-fca581093bdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.slider_projects
+    - views.view._apar_portfolio
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_portfolio_slider_project
+theme: radix
+region: navbar_branding
+weight: 120
+provider: null
+plugin: 'views_block:_apar_portfolio-block_section_content_portfolio_slider_project'
+settings:
+  id: 'views_block:_apar_portfolio-block_section_content_portfolio_slider_project'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: slider_projects
+    context_mapping: {  }

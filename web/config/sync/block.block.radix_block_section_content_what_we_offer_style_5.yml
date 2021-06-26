@@ -1,0 +1,31 @@
+uuid: d0e0b288-3ab0-400c-b002-75659238618d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_6
+    - views.view._apar_services
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_what_we_offer_style_5
+theme: radix
+region: navbar_branding
+weight: 1
+provider: null
+plugin: 'views_block:_apar_services-block_section_content_what_we_offer_style_5'
+settings:
+  id: 'views_block:_apar_services-block_section_content_what_we_offer_style_5'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_6
+    context_mapping: {  }

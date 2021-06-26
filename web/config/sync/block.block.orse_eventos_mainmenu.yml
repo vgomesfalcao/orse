@@ -1,0 +1,31 @@
+uuid: 9c31635a-b7de-4561-8911-3af8124170d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-menu
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - orse_eventos
+id: orse_eventos_mainmenu
+theme: orse_eventos
+region: navbar_right
+weight: 0
+provider: null
+plugin: 'system_menu_block:main-menu'
+settings:
+  id: 'system_menu_block:main-menu'
+  label: 'Main Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

@@ -1,0 +1,31 @@
+uuid: 6609b9f2-0a11-4621-84b1-894239b411e6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.bloco_fundo_escuro
+    - field.storage.block_content.field_midias_sociais
+    - paragraphs.paragraphs_type.links_midias_sociais
+  module:
+    - entity_reference_revisions
+id: block_content.bloco_fundo_escuro.field_midias_sociais
+field_name: field_midias_sociais
+entity_type: block_content
+bundle: bloco_fundo_escuro
+label: 'Mídias Sociais'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      links_midias_sociais: links_midias_sociais
+    target_bundles_drag_drop:
+      links_midias_sociais:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions
