@@ -7,6 +7,6 @@ label: 'Quicksand Orse Eventos'
 font_url: 'https://www.google.com/webfonts/family?family=Quicksand&subset=latin-ext#regular'
 style: null
 weight: null
-fallback: ''
+fallback: sans
 selectors: .fontyourface
 theme: orse_eventos

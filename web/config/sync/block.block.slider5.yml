@@ -2,10 +2,7 @@ uuid: c3c2bac1-0dcf-4df8-9624-7eaac2daf3e9
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.home_page_5
   module:
-    - block_visibility_groups
     - md_slider
   theme:
     - apar
@@ -20,9 +17,4 @@ settings:
   label: 'Slider 5'
   provider: md_slider
   label_display: '0'
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: home_page_5
-    context_mapping: {  }
+visibility: {  }

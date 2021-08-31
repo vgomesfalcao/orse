@@ -3,10 +3,8 @@ langcode: pt-br
 status: true
 dependencies:
   config:
-    - block_visibility_groups.block_visibility_group.block_v_fotografo
     - system.menu.menu-fotografo
   module:
-    - block_visibility_groups
     - system
   theme:
     - orse
@@ -24,9 +22,4 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: block_v_fotografo
-    context_mapping: {  }
+visibility: {  }

@@ -2,13 +2,10 @@ uuid: d7ad992d-4678-41c7-9a8e-90645d09c920
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.about_style_4
   content:
     - 'block_content:basic:0d839ceb-9be7-46fc-94dc-b3e4742f6c41'
   module:
     - block_content
-    - block_visibility_groups
   theme:
     - apar
 id: aparblocksectioncontentparallaxbackground
@@ -25,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: about_style_4
-    context_mapping: {  }
+visibility: {  }

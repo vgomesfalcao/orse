@@ -2,10 +2,7 @@ uuid: ff131f1d-5120-48ff-822b-817c938d7012
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.home_page_7
   module:
-    - block_visibility_groups
     - md_slider
   theme:
     - apar
@@ -20,9 +17,4 @@ settings:
   label: 'Slider 7'
   provider: md_slider
   label_display: '0'
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: home_page_7
-    context_mapping: {  }
+visibility: {  }

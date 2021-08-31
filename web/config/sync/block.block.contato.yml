@@ -1,31 +1,25 @@
-uuid: 1bd10da8-492d-4681-a97d-f600ed210aed
+uuid: fad9a5be-f1ab-4755-8b45-fa6c609fa036
 langcode: pt-br
 status: true
 dependencies:
   content:
-    - 'block_content:bloco_fundo_laranja:1146d929-ff3a-4e84-bc9f-9c16fc3ff460'
+    - 'block_content:bloco_fundo_laranja:c55f666f-4671-429c-9cf1-22f0b0584f05'
   module:
     - block_content
-    - block_visibility_groups
   theme:
     - orse_eventos
 id: contato
 theme: orse_eventos
 region: footer
-weight: -6
+weight: 0
 provider: null
-plugin: 'block_content:1146d929-ff3a-4e84-bc9f-9c16fc3ff460'
+plugin: 'block_content:c55f666f-4671-429c-9cf1-22f0b0584f05'
 settings:
-  id: 'block_content:1146d929-ff3a-4e84-bc9f-9c16fc3ff460'
+  id: 'block_content:c55f666f-4671-429c-9cf1-22f0b0584f05'
   label: Contato
   provider: block_content
   label_display: '0'
   status: true
   info: ''
   view_mode: full
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: ''
-    context_mapping: {  }
+visibility: {  }

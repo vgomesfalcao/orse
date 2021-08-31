@@ -2,13 +2,10 @@ uuid: b6affa42-5306-450e-ad0f-d0009a11408e
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.about_style_2
   content:
     - 'block_content:basic:6662c7d1-bb95-4935-bc6d-4d81e167f5b7'
   module:
     - block_content
-    - block_visibility_groups
   theme:
     - apar
 id: aparblocksectioncontentstunningwebsites_2
@@ -25,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: about_style_2
-    context_mapping: {  }
+visibility: {  }

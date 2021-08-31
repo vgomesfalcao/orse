@@ -2,10 +2,7 @@ uuid: 636cc326-ccde-47fc-ada3-b6d44f267378
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.home
   module:
-    - block_visibility_groups
     - md_slider
   theme:
     - radix
@@ -20,9 +17,4 @@ settings:
   label: 'Slider 1'
   provider: md_slider
   label_display: '0'
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: home
-    context_mapping: {  }
+visibility: {  }

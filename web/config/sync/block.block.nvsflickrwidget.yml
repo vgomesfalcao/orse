@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block_visibility_groups
     - nvs_widget
   theme:
     - apar
@@ -20,9 +19,4 @@ settings:
   label_display: visible
   user_name: 78715597@N07
   record: '6'
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: ''
-    context_mapping: {  }
+visibility: {  }

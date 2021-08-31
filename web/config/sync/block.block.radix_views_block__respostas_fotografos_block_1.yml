@@ -3,10 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_visibility_groups.block_visibility_group.formulario_fotografo
     - views.view.respostas_fotografos
   module:
-    - block_visibility_groups
     - ctools
     - views
   theme:
@@ -26,11 +24,6 @@ settings:
   items_per_page: none
   context_mapping: {  }
 visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: formulario_fotografo
-    context_mapping: {  }
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:

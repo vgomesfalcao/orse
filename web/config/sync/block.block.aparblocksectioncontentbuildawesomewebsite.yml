@@ -2,13 +2,10 @@ uuid: d17bc2fe-9e7a-457a-9657-a672ec26cb3c
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.home_page_3
   content:
     - 'block_content:basic:137e5c8d-138e-49db-8cf3-802c0c75222f'
   module:
     - block_content
-    - block_visibility_groups
   theme:
     - apar
 id: aparblocksectioncontentbuildawesomewebsite
@@ -25,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: home_page_3
-    context_mapping: {  }
+visibility: {  }

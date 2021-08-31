@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: content
-label: Content
+label: Conteúdo
 module: node
 description: 'Find and manage content.'
 tag: default
@@ -160,7 +160,7 @@ display:
           id: title
           table: node_field_data
           field: title
-          label: Title
+          label: Título
           exclude: false
           alter:
             alter_text: false
@@ -246,7 +246,7 @@ display:
           table: users_field_data
           field: name
           relationship: uid
-          label: Author
+          label: Autor
           exclude: false
           alter:
             alter_text: false
@@ -368,7 +368,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Título
             description: ''
             use_operator: false
             operator: title_op
@@ -545,7 +545,7 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       sorts: {  }
-      title: Content
+      title: Conteúdo
       empty:
         area_text_custom:
           id: area_text_custom
@@ -589,14 +589,14 @@ display:
       path: admin/content/node
       menu:
         type: 'default tab'
-        title: Content
+        title: Conteúdo
         description: ''
         menu_name: admin
         weight: -10
         context: ''
       tab_options:
         type: normal
-        title: Content
+        title: Conteúdo
         description: 'Find and manage content'
         menu_name: admin
         weight: -10

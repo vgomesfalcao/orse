@@ -6,7 +6,6 @@ dependencies:
     - 'block_content:basic:960c8ce0-5a69-4e6e-9f92-f95879b3d2d8'
   module:
     - block_content
-    - block_visibility_groups
   theme:
     - orse
 id: orse_aparblocktopmenusocialsocialnetwork
@@ -23,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: ''
-    context_mapping: {  }
+visibility: {  }

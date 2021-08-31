@@ -2,13 +2,10 @@ uuid: 587a73e1-06d7-40b4-b239-61c76edeabf5
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.about_me
   content:
     - 'block_content:basic:e5748fea-cc77-4232-bf37-a161b2e15c10'
   module:
     - block_content
-    - block_visibility_groups
   theme:
     - apar
 id: aparblocksectioncontentaboutme
@@ -25,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: about_me
-    context_mapping: {  }
+visibility: {  }
