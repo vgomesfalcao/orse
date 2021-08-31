@@ -57,6 +57,8 @@ module:
   imce: 0
   inline_entity_form: 0
   language: 0
+  layout_discovery: 0
+  layout_paragraphs: 0
   link: 0
   locale: 0
   mautic: 0
