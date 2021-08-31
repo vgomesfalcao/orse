@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\soundcloudfield\Plugin\Field\FieldWidget\SoundCloudWidget.
- */
-
 namespace Drupal\soundcloudfield\Plugin\Field\FieldWidget;
 
 use Drupal\Core\Field\FieldItemListInterface;
@@ -31,12 +26,12 @@ class SoundCloudWidget extends WidgetBase {
    */
   public static function defaultSettings() {
     // todo: investigate
-    $settings = parent::defaultSettings();
+    // $settings = parent::defaultSettings();
 
-    return array(
+    return [
       'url' => '',
       'placeholder_url' => '',
-    ) + parent::defaultSettings();
+    ] + parent::defaultSettings();
   }
 
   /**
@@ -48,13 +43,17 @@ class SoundCloudWidget extends WidgetBase {
     // Build the element render array.
     $element['url'] = array(
       '#type' => 'url', // investigate, other types? (textfield)
-      '#title' => t('SoundCloud URL'),
+      '#title' => $this->t('SoundCloud URL'),
       '#placeholder' => $this->getSetting('placeholder_url'), // investigate
       '#default_value' => isset($item->url) ? $item->url : NULL,
-      '#element_validate' => array(array(get_called_class(), 'validateSoundCloudUriElement')),
+      '#element_validate' => [[get_called_class(), 'validateSoundCloudUriElement']],
       '#maxlength' => 2048,
       '#required' => $element['#required'],
     );
+
+    if (empty($element['url']['#description'])) {
+      $element['url']['#description'] = $this->t('Enter the SoundCloud URL. A valid example: https://soundcloud.com/archives-5/purl-form-is-emptiness.');
+    }
 
     if ($this->fieldDefinition->getFieldStorageDefinition()->getCardinality() == 1) {
       $element += array(
@@ -73,9 +72,9 @@ class SoundCloudWidget extends WidgetBase {
 
     $elements['placeholder_url'] = array(
       '#type' => 'textfield',
-      '#title' => t('Placeholder for URL'),
+      '#title' => $this->t('Placeholder for URL'),
       '#default_value' => $this->getSetting('placeholder_url'),
-      '#description' => t('Text that will be shown inside the field until a value is entered. This hint is usually a sample value or a brief description of the expected format.'),
+      '#description' => $this->t('Text that will be shown inside the field until a value is entered. This hint is usually a sample value or a brief description of the expected format.'),
     );
 
     return $elements;
@@ -89,11 +88,11 @@ class SoundCloudWidget extends WidgetBase {
 
     $placeholder_url = $this->getSetting('placeholder_url');
     if (empty($placeholder_url)) {
-      $summary[] = t('No placeholders');
+      $summary[] = $this->t('No placeholders');
     }
     else {
       if (!empty($placeholder_url)) {
-        $summary[] = t('URL placeholder: @placeholder_url', array('@placeholder_url' => $placeholder_url));
+        $summary[] = $this->t('URL placeholder: @placeholder_url', array('@placeholder_url' => $placeholder_url));
       }
     }
 
@@ -101,11 +100,14 @@ class SoundCloudWidget extends WidgetBase {
   }
 
   /**
-   * Form element validation handler for ...().
+   * Form element validation handler for the 'url' element.
    */
-  function validateSoundCloudUriElement(&$element, FormStateInterface $form_state, $form) {
+  public static function validateSoundCloudUriElement($element, FormStateInterface $form_state, $form) {
     $input = $element['#value'];
 
+    if (!empty($input) && !preg_match('@^https?://soundcloud\.com/([^"\&]+)@i', $input, $matches)) {
+      $form_state->setError($element, t('Please provide a valid SoundCloud URL.'));
+    }
   }
 
 }

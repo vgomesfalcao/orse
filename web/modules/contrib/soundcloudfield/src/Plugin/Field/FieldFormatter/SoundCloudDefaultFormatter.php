@@ -1,12 +1,8 @@
 <?php
 
-/**
- * @file
- * Contains Drupal\soundcloudfield\Plugin\Field\FieldFormatter\SoundCloudDefaultFormatter.
- */
-
 namespace Drupal\soundcloudfield\Plugin\Field\FieldFormatter;
 
+use Drupal\Component\Serialization\Json;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -51,8 +47,8 @@ class SoundCloudDefaultFormatter extends FormatterBase {
     $elements = parent::settingsForm($form, $form_state);
 
     $elements['soundcloud_player_type'] = array(
-      '#title' => t('HTML5 player type'),
-      '#description' => t('Select which HTML5 player to use.'),
+      '#title' => $this->t('HTML5 player type'),
+      '#description' => $this->t('Select which HTML5 player to use.'),
       '#type' => 'select',
       '#default_value' => $this->getSetting('soundcloud_player_type'),
       '#options' => array(
@@ -63,15 +59,15 @@ class SoundCloudDefaultFormatter extends FormatterBase {
 
     $elements['soundcloud_player_width'] = array(
       '#type' => 'textfield',
-      '#title' => t('Width'),
+      '#title' => $this->t('Width'),
       '#size' => 4,
       '#default_value' => $this->getSetting('soundcloud_player_width'),
-      '#description' => t('Player width in percent. Default is @width.', array('@width' => SOUNDCLOUDFIELD_DEFAULT_WIDTH)),
+      '#description' => $this->t('Player width in percent. Default is @width.', array('@width' => SOUNDCLOUDFIELD_DEFAULT_WIDTH)),
     );
 
     $elements['soundcloud_player_height'] = array(
       '#type' => 'textfield',
-      '#title' => t('Height'),
+      '#title' => $this->t('Height'),
       '#size' => 4,
       '#default_value' => $this->getSetting('soundcloud_player_height'),
       '#states' => array(
@@ -83,7 +79,7 @@ class SoundCloudDefaultFormatter extends FormatterBase {
 
     $elements['soundcloud_player_height_sets'] = array(
       '#type' => 'textfield',
-      '#title' => t('Height for sets'),
+      '#title' => $this->t('Height for sets'),
       '#size' => 4,
       '#default_value' => $this->getSetting('soundcloud_player_height_sets'),
       '#states' => array(
@@ -95,7 +91,7 @@ class SoundCloudDefaultFormatter extends FormatterBase {
 
     $elements['soundcloud_player_visual_height'] = array(
       '#type' => 'select',
-      '#title' => t('Height of the visual player'),
+      '#title' => $this->t('Height of the visual player'),
       '#size' => 4,
       '#default_value' => $this->getSetting('soundcloud_player_visual_height'),
       '#options' => array(
@@ -112,38 +108,38 @@ class SoundCloudDefaultFormatter extends FormatterBase {
 
     $elements['soundcloud_player_autoplay'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Play audio automatically when loaded (autoplay).'),
+      '#title' => $this->t('Play audio automatically when loaded (autoplay).'),
       '#default_value' => $this->getSetting('soundcloud_player_autoplay'),
     );
 
     $elements['soundcloud_player_color'] = array(
       '#type' => 'textfield',
-      '#title' => t('Player color.'),
+      '#title' => $this->t('Player color.'),
       '#default_value' => $this->getSetting('soundcloud_player_color'),
-      '#description' => t('Player color in hexadecimal format. Default is ff7700. Turn on the jQuery Colorpicker module if available.'),
+      '#description' => $this->t('Player color in hexadecimal format. Default is ff7700. Turn on the jQuery Colorpicker module if available.'),
     );
 
     $elements['soundcloud_player_hiderelated'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Hide raleted tracks.'),
+      '#title' => $this->t('Hide related tracks.'),
       '#default_value' => $this->getSetting('soundcloud_player_hiderelated'),
     );
 
     $elements['soundcloud_player_showartwork'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Show artwork.'),
+      '#title' => $this->t('Show artwork.'),
       '#default_value' => $this->getSetting('soundcloud_player_showartwork'),
     );
 
     $elements['soundcloud_player_showcomments'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Show comments.'),
+      '#title' => $this->t('Show comments.'),
       '#default_value' => $this->getSetting('soundcloud_player_showcomments'),
     );
 
     $elements['soundcloud_player_showplaycount'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Show play count.'),
+      '#title' => $this->t('Show play count.'),
       '#default_value' => $this->getSetting('soundcloud_player_showplaycount'),
     );
 
@@ -157,7 +153,7 @@ class SoundCloudDefaultFormatter extends FormatterBase {
     $summary = array();
     $settings = $this->getSettings();
 
-    $summary[] = t('Displays the SoundCloud player.');
+    $summary[] = $this->t('Displays the SoundCloud player.');
 
     return $summary;
   }
@@ -178,7 +174,7 @@ class SoundCloudDefaultFormatter extends FormatterBase {
     $color = $this->getSetting('soundcloud_player_color') ? $this->getSetting('soundcloud_player_color') : 'ff7700';
 
     //
-    $oembed_endpoint = 'http://soundcloud.com/oembed';
+    $oembed_endpoint = 'https://soundcloud.com/oembed';
 
     // Get 'HTML5 player'-specific settings.
     $html5_player_height = (empty($settings['html5_player']['html5_player_height']) ? SOUNDCLOUDFIELD_DEFAULT_HTML5_PLAYER_HEIGHT : $settings['html5_player']['html5_player_height']);
@@ -193,7 +189,7 @@ class SoundCloudDefaultFormatter extends FormatterBase {
       // - classic player: track default is 166px, set default is 450px.
       // - visual player: player height it's the same for tracks and sets.
       if ($visual_player == 'true') {
-        $iframe_height = $settings['visual_player']['visual_player_height'];
+        $iframe_height = $settings['soundcloud_player_visual_height'];
       }
       else {
         $parsed_url = parse_url($item->url);
@@ -203,19 +199,19 @@ class SoundCloudDefaultFormatter extends FormatterBase {
       }
 
       // Create the URL.
-      $oembed_url = $oembed_endpoint . '?iframe=true&url=' . ($encoded_url);
+      $oembed_url = $oembed_endpoint . '?iframe=true&format=json&url=' . ($encoded_url);
 
       // curl get.
       $soundcloud_curl_get = _soundcloudfield_curl_get($oembed_url);
 
       if ($soundcloud_curl_get != ' ') {
         // Load in the oEmbed XML.
-        $oembed = simplexml_load_string($soundcloud_curl_get);
+        $oembed = Json::decode($soundcloud_curl_get);
 
         // Replace player default settings with our settings,
         // set player width and height first.
-        $final_iframe = preg_replace('/(width=)"([^"]+)"/', 'width="' . $width . '%"', $oembed->html);
-        $final_iframe = preg_replace('/(height=)"([^"]+)"/', 'height="' . $iframe_height . '"', $oembed->html);
+        $final_iframe = preg_replace('/(width=)"([^"]+)"/', 'width="' . $width . '%"', $oembed['html']);
+        $final_iframe = preg_replace('/(height=)"([^"]+)"/', 'height="' . $iframe_height . '"', $oembed['html']);
         // Set autoplay.
         if (preg_match('/auto_play=(true|false)/', $final_iframe)) {
           $final_iframe = preg_replace('/auto_play=(true|false)/', 'auto_play=' . $autoplay, $final_iframe);
@@ -262,7 +258,7 @@ class SoundCloudDefaultFormatter extends FormatterBase {
         $output = html_entity_decode($final_iframe);
       }
       else {
-        $output = t('The SoundCloud content at !url is not available, or it is set to private.', array('!url' => l($item['url'], $item['url'])));
+        $output = $this->t('The SoundCloud content at <a href=":url">:url</a> is not available, or it is set to private.', [':url' => $item->url]);
       }
 
       // Extract field item attributes for the theme function, and unset them
