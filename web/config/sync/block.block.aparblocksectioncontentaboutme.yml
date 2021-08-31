@@ -11,7 +11,6 @@ dependencies:
     - block_visibility_groups
   theme:
     - apar
-
 id: aparblocksectioncontentaboutme
 theme: apar
 region: section

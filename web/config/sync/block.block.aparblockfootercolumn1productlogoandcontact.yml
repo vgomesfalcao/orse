@@ -9,7 +9,6 @@ dependencies:
     - block_visibility_groups
   theme:
     - apar
-
 id: aparblockfootercolumn1productlogoandcontact
 theme: apar
 region: footer_pd_column_1

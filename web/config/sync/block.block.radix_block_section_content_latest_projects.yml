@@ -1,0 +1,31 @@
+uuid: a8a54c1c-452b-46f1-b852-f99c4247b288
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about_style_3
+    - views.view._apar_portfolio
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_latest_projects
+theme: radix
+region: navbar_branding
+weight: 37
+provider: null
+plugin: 'views_block:_apar_portfolio-block_section_content_latest_projects'
+settings:
+  id: 'views_block:_apar_portfolio-block_section_content_latest_projects'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about_style_3
+    context_mapping: {  }

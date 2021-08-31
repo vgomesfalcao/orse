@@ -10,7 +10,6 @@ dependencies:
     - views
   theme:
     - apar
-
 id: block_section_content_portfolio_slider_project
 theme: apar
 region: section

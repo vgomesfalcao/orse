@@ -9,7 +9,6 @@ dependencies:
     - block_visibility_groups
   theme:
     - apar
-
 id: aparblocktopmenusocialsocialnetwork
 theme: apar
 region: top_menu_social

@@ -1,0 +1,23 @@
+uuid: 7cf75412-5a5b-439d-bc8c-075e55531bc9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.bloco_fundo_laranja
+    - field.field.block_content.bloco_fundo_laranja.body
+  module:
+    - text
+id: block_content.bloco_fundo_laranja.default
+targetEntityType: block_content
+bundle: bloco_fundo_laranja
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -6,14 +6,11 @@ dependencies:
     - block_visibility_groups.block_visibility_group.formulario_fotografo
     - views.view.respostas_fotografos
   module:
-
     - block_visibility_groups
     - ctools
-
     - views
   theme:
     - orse
-
 id: views_block__respostas_fotografos_block_1
 theme: orse
 region: content

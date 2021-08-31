@@ -1,0 +1,8 @@
+uuid: ef81177a-3ae0-48f8-b8a9-156bc604d757
+langcode: pt-br
+status: true
+dependencies: {  }
+id: bloco_fundo_laranja
+label: 'Bloco Fundo Laranja'
+revision: 1
+description: ''

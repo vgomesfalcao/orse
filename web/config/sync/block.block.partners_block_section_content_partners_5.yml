@@ -10,7 +10,6 @@ dependencies:
     - views
   theme:
     - apar
-
 id: partners_block_section_content_partners_5
 theme: apar
 region: section

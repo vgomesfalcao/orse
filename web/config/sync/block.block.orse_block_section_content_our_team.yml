@@ -6,13 +6,10 @@ dependencies:
     - block_visibility_groups.block_visibility_group.team_dark
     - views.view._apar_team
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - orse
-
 id: orse_block_section_content_our_team
 theme: orse
 region: disable

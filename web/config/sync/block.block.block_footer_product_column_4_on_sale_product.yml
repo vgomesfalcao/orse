@@ -9,7 +9,6 @@ dependencies:
     - views
   theme:
     - apar
-
 id: block_footer_product_column_4_on_sale_product
 theme: apar
 region: footer_pd_column_4

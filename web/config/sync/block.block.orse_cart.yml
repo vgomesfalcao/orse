@@ -3,13 +3,10 @@ langcode: en
 status: false
 dependencies:
   module:
-
     - block_visibility_groups
     - commerce_cart
-
   theme:
     - orse
-
 id: orse_cart
 theme: orse
 region: header_cart

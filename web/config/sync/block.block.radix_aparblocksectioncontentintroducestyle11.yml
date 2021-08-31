@@ -1,0 +1,33 @@
+uuid: 4ec935cb-1fc9-4381-a39c-98e55c1d1eaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_5
+  content:
+    - 'block_content:basic:a4cc4d4c-861a-4b78-a27b-2de455d2a8e0'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocksectioncontentintroducestyle11
+theme: radix
+region: navbar_branding
+weight: 18
+provider: null
+plugin: 'block_content:a4cc4d4c-861a-4b78-a27b-2de455d2a8e0'
+settings:
+  id: 'block_content:a4cc4d4c-861a-4b78-a27b-2de455d2a8e0'
+  label: '[Apar]Block Section Content - Introduce Style 11'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_5
+    context_mapping: {  }

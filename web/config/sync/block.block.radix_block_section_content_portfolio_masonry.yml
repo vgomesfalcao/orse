@@ -1,0 +1,31 @@
+uuid: 7e11c5b9-827c-403a-8f73-6aae2946106b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.masonry
+    - views.view._apar_portfolio
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_portfolio_masonry
+theme: radix
+region: navbar_branding
+weight: 112
+provider: null
+plugin: 'views_block:_apar_portfolio-block_section_content_portfolio_masonry'
+settings:
+  id: 'views_block:_apar_portfolio-block_section_content_portfolio_masonry'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: masonry
+    context_mapping: {  }

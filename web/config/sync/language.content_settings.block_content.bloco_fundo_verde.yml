@@ -1,0 +1,11 @@
+uuid: 9fc8cc81-6d64-436f-abbd-b5d7280f4a2f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.bloco_fundo_verde
+id: block_content.bloco_fundo_verde
+target_entity_type_id: block_content
+target_bundle: bloco_fundo_verde
+default_langcode: site_default
+language_alterable: false

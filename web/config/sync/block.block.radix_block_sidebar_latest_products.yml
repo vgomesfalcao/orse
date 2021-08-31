@@ -1,0 +1,30 @@
+uuid: 8b2bb233-c7a5-4fca-8bb9-f0352f448b02
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view._apar_product
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_sidebar_latest_products
+theme: radix
+region: navbar_branding
+weight: -26
+provider: null
+plugin: 'views_block:_apar_product-block_sidebar_latest_products'
+settings:
+  id: 'views_block:_apar_product-block_sidebar_latest_products'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

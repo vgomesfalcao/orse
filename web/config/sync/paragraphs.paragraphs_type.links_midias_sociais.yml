@@ -1,0 +1,10 @@
+uuid: 8b6e599b-4800-4662-8930-88cd5ea22711
+langcode: pt-br
+status: true
+dependencies: {  }
+id: links_midias_sociais
+label: 'Links Mídias Sociais'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

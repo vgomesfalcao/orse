@@ -6,13 +6,10 @@ dependencies:
     - block_visibility_groups.block_visibility_group.portfolio_four
     - views.view._apar_portfolio
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - orse
-
 id: orse_block_section_content_portfolio_four_column
 theme: orse
 region: disable

@@ -1,0 +1,33 @@
+uuid: 2483ee22-41bb-4a35-afa2-c53f71e739ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_6
+  content:
+    - 'block_content:basic:d8631120-3d97-4739-9bfa-23365cffa152'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocksectioncontentourpricing
+theme: radix
+region: navbar_branding
+weight: 4
+provider: null
+plugin: 'block_content:d8631120-3d97-4739-9bfa-23365cffa152'
+settings:
+  id: 'block_content:d8631120-3d97-4739-9bfa-23365cffa152'
+  label: '[Apar]Block Section Content - Our Pricing'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_6
+    context_mapping: {  }

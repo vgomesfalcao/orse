@@ -10,7 +10,6 @@ dependencies:
     - views
   theme:
     - apar
-
 id: block_section_content_portfolio_mosaic_project
 theme: apar
 region: section

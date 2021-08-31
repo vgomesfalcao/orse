@@ -5,13 +5,10 @@ dependencies:
   config:
     - views.view._apar_product
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - orse
-
 id: orse_block_sidebar_latest_products
 theme: orse
 region: disable

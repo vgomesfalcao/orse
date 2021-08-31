@@ -7,7 +7,6 @@ dependencies:
     - nvs_widget
   theme:
     - apar
-
 id: nvsflickrwidget
 theme: apar
 region: footer_column_4

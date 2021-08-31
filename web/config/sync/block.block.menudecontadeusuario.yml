@@ -5,13 +5,10 @@ dependencies:
   config:
     - system.menu.account
   module:
-
     - block_visibility_groups
-
     - system
   theme:
     - orse
-
 id: menudecontadeusuario
 theme: orse
 region: main_menu

@@ -5,13 +5,10 @@ dependencies:
   content:
     - 'block_content:basic:19ecef30-4ea5-48c3-bc60-1fb2288c618e'
   module:
-
     - block_content
     - block_visibility_groups
-
   theme:
     - orse
-
 id: orse_aparblockbottommenusidesocialnetwork
 theme: orse
 region: menu_side_bottom

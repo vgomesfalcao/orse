@@ -3,13 +3,10 @@ langcode: en
 status: true
 dependencies:
   module:
-
     - block_visibility_groups
-
     - simplenews
   theme:
     - orse
-
 id: orse_simplenewssubscription
 theme: orse
 region: disable

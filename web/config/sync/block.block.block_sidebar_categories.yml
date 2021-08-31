@@ -9,7 +9,6 @@ dependencies:
     - views
   theme:
     - apar
-
 id: block_sidebar_categories
 theme: apar
 region: sidebar

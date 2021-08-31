@@ -1,0 +1,31 @@
+uuid: fd4bdf1c-6624-44d3-807b-69c4d95969a4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c9760027-c53c-4637-9c81-b163f71c899f'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblockbottommenusidecontact
+theme: radix
+region: navbar_branding
+weight: -8
+provider: null
+plugin: 'block_content:c9760027-c53c-4637-9c81-b163f71c899f'
+settings:
+  id: 'block_content:c9760027-c53c-4637-9c81-b163f71c899f'
+  label: '[Apar]Block Bottom Menu Side - Contact'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

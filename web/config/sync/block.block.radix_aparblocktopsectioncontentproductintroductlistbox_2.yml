@@ -1,0 +1,33 @@
+uuid: 3186ebda-23de-49ec-9e7a-b4e97c9c7fbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_shop
+  content:
+    - 'block_content:basic:e438a381-e3f8-446e-870c-606cbf9f6fd9'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocktopsectioncontentproductintroductlistbox_2
+theme: radix
+region: navbar_branding
+weight: -27
+provider: null
+plugin: 'block_content:e438a381-e3f8-446e-870c-606cbf9f6fd9'
+settings:
+  id: 'block_content:e438a381-e3f8-446e-870c-606cbf9f6fd9'
+  label: '[Apar]Block Top Section Content Product - Introduct List Box'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_shop
+    context_mapping: {  }

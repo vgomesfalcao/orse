@@ -6,13 +6,10 @@ dependencies:
     - block_visibility_groups.block_visibility_group.services_style_3
     - views.view._apar_partners
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - orse
-
 id: orse_block_section_content_partners_style_2_1
 theme: orse
 region: disable

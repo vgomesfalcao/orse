@@ -9,7 +9,6 @@ dependencies:
     - system
   theme:
     - apar
-
 id: menuside
 theme: apar
 region: menu_side

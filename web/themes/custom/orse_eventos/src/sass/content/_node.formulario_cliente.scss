@@ -1,0 +1,51 @@
+// Formulário Cliente
+// -----------------------------------------------------------------------------
+.node {
+  .evento-info{
+    width: 100%;
+    float: left;
+    padding: 40px;
+    border: 1px solid $gray-500;
+    list-style-type:none;
+    li {
+      padding: 0 0 10px 0;
+      margin: 0;
+      span {
+        font-weight:700;
+        color: black;
+      }
+    }
+  }
+}
+
+#views-exposed-form-respostas-fotografos-block-1 {
+  display: grid;
+  grid-template-areas: 'fotografo data-min valor-min empty'
+                        'fotografo data-max valor-max empty';
+  grid-template-columns: 22% 25% 23% 22%;
+  grid-gap: 15px;
+  margin-bottom: 20px;
+  > .js-form-type-entity-autocomplete {
+    grid-area: fotografo;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  > div.js-form-item:nth-child(2) {
+    grid-area: data-min;
+    display: flex;
+    flex-direction: column;
+  }
+  > div.js-form-item:nth-child(3){
+    grid-area: data-max;
+    display: flex;
+    flex-direction: column;
+  }
+  > div.form-actions {
+    grid-area: empty;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}

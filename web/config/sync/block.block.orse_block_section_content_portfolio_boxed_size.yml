@@ -6,13 +6,10 @@ dependencies:
     - block_visibility_groups.block_visibility_group.portfolio_boxed_size
     - views.view._apar_portfolio
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - orse
-
 id: orse_block_section_content_portfolio_boxed_size
 theme: orse
 region: disable

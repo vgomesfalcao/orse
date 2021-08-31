@@ -5,13 +5,10 @@ dependencies:
   content:
     - 'block_content:basic:f9cd48f8-96c8-41b2-bb3d-6c1ff9a9095a'
   module:
-
     - block_content
     - block_visibility_groups
-
   theme:
     - orse
-
 id: orse_aparblockbottomfooterproductcopyrighttext
 theme: orse
 region: disable

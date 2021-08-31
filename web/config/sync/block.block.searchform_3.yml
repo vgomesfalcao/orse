@@ -7,7 +7,6 @@ dependencies:
     - search
   theme:
     - apar
-
 id: searchform_3
 theme: apar
 region: search_404

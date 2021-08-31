@@ -7,7 +7,6 @@ dependencies:
     - simplenews
   theme:
     - apar
-
 id: simplenewssubscription
 theme: apar
 region: sidebar

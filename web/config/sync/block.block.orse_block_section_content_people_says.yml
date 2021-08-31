@@ -6,13 +6,10 @@ dependencies:
     - block_visibility_groups.block_visibility_group.home
     - views.view._apar_testimonials
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - orse
-
 id: orse_block_section_content_people_says
 theme: orse
 region: disable

@@ -1,0 +1,12 @@
+uuid: 19be9100-3821-44fb-abcb-4383b3eecccf
+langcode: pt-br
+status: true
+dependencies: {  }
+id: quicksand_orse_eventos
+label: 'Quicksand Orse Eventos'
+font_url: 'https://www.google.com/webfonts/family?family=Quicksand&subset=latin-ext#regular'
+style: null
+weight: null
+fallback: ''
+selectors: .fontyourface
+theme: orse_eventos

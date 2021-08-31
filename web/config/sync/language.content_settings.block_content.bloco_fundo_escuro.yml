@@ -1,0 +1,11 @@
+uuid: a63cc0b8-8ec5-442a-a66c-8c386be476a2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.bloco_fundo_escuro
+id: block_content.bloco_fundo_escuro
+target_entity_type_id: block_content
+target_bundle: bloco_fundo_escuro
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,30 @@
+uuid: 2d1b6dea-1f76-423d-af99-d0c22e33ad5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view._apar_product
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_footer_product_column_4_on_sale_product
+theme: radix
+region: navbar_branding
+weight: 0
+provider: null
+plugin: 'views_block:_apar_product-block_footer_product_column_4_on_sale_product'
+settings:
+  id: 'views_block:_apar_product-block_footer_product_column_4_on_sale_product'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

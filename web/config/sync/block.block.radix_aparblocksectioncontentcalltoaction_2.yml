@@ -1,0 +1,33 @@
+uuid: 4cd2987d-f719-4eda-ab34-2484804f403a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_7
+  content:
+    - 'block_content:basic:3a49f84c-4cef-4824-a49d-ae878ee910f2'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocksectioncontentcalltoaction_2
+theme: radix
+region: navbar_branding
+weight: 74
+provider: null
+plugin: 'block_content:3a49f84c-4cef-4824-a49d-ae878ee910f2'
+settings:
+  id: 'block_content:3a49f84c-4cef-4824-a49d-ae878ee910f2'
+  label: '[Apar]Block Section Content - Call To Action'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_7
+    context_mapping: {  }

@@ -1,0 +1,13 @@
+.table {
+  margin-bottom:40px;
+  thead {
+    a {
+      color: $white;
+    }
+  }
+  tbody {
+    a {
+      border-radius:0;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+uuid: bc388c0d-aa2e-4163-bfbf-e20482d6fcad
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view._apar_product
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_views_block___apar_product_block_footer_product_column_2_lastest
+theme: radix
+region: navbar_branding
+weight: 0
+provider: null
+plugin: 'views_block:_apar_product-block_footer_product_column_2_lastest'
+settings:
+  id: 'views_block:_apar_product-block_footer_product_column_2_lastest'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

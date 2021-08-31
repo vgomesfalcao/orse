@@ -6,13 +6,10 @@ dependencies:
     - block_visibility_groups.block_visibility_group.block_v_cliente
     - system.menu.menu-cliente
   module:
-
     - block_visibility_groups
-
     - system
   theme:
     - orse
-
 id: menucliente
 theme: orse
 region: sidebar_left

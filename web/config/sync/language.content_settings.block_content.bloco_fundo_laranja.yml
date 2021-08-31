@@ -1,0 +1,11 @@
+uuid: 2c384fc1-aa4b-40e0-9906-e5a359001d4f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.bloco_fundo_laranja
+id: block_content.bloco_fundo_laranja
+target_entity_type_id: block_content
+target_bundle: bloco_fundo_laranja
+default_langcode: site_default
+language_alterable: false

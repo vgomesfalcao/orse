@@ -1,0 +1,33 @@
+uuid: 7a89eeae-7067-4357-a866-837e25a45c7a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home
+  content:
+    - 'block_content:bloco_fundo_verde:14493475-e9b6-4623-9b78-b9a06a0152c0'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - orse_eventos
+id: conteudohome
+theme: orse_eventos
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:14493475-e9b6-4623-9b78-b9a06a0152c0'
+settings:
+  id: 'block_content:14493475-e9b6-4623-9b78-b9a06a0152c0'
+  label: 'Conteúdo Home'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home
+    context_mapping: {  }

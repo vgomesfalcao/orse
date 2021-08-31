@@ -1,0 +1,31 @@
+uuid: 52af99de-f79d-4131-b6d7-752f7ca2a31d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:82dbf8ab-321b-43be-9e6d-2ef37bf3f376'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblocktopleftmenucustomercare
+theme: radix
+region: navbar_branding
+weight: 0
+provider: null
+plugin: 'block_content:82dbf8ab-321b-43be-9e6d-2ef37bf3f376'
+settings:
+  id: 'block_content:82dbf8ab-321b-43be-9e6d-2ef37bf3f376'
+  label: '[Apar]Block Top Left Menu - Customer Care'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

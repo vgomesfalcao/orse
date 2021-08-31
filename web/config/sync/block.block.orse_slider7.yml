@@ -5,13 +5,10 @@ dependencies:
   config:
     - block_visibility_groups.block_visibility_group.home_page_7
   module:
-
     - block_visibility_groups
     - md_slider
-
   theme:
     - orse
-
 id: orse_slider7
 theme: orse
 region: disable

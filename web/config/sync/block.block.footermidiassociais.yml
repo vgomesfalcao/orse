@@ -1,0 +1,31 @@
+uuid: 5c41bef5-2dcb-4df5-b42a-618a666086ba
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:bloco_fundo_escuro:2fae1285-58c5-4c9b-87f9-10aa7caca4b4'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - orse_eventos
+id: footermidiassociais
+theme: orse_eventos
+region: footer_bottom
+weight: -6
+provider: null
+plugin: 'block_content:2fae1285-58c5-4c9b-87f9-10aa7caca4b4'
+settings:
+  id: 'block_content:2fae1285-58c5-4c9b-87f9-10aa7caca4b4'
+  label: 'Footer Mídias Sociais'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

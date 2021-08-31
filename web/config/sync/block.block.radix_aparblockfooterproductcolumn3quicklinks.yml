@@ -1,0 +1,31 @@
+uuid: 6dd0dd40-340a-42ff-ab6f-9ab6f0d50534
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:474f0a86-1c93-4d46-a0cd-a0184aecd47c'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblockfooterproductcolumn3quicklinks
+theme: radix
+region: navbar_branding
+weight: 0
+provider: null
+plugin: 'block_content:474f0a86-1c93-4d46-a0cd-a0184aecd47c'
+settings:
+  id: 'block_content:474f0a86-1c93-4d46-a0cd-a0184aecd47c'
+  label: 'Quick Links'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

@@ -10,7 +10,6 @@ dependencies:
     - views
   theme:
     - apar
-
 id: block_section_content_lastest_product
 theme: apar
 region: top_section_pd

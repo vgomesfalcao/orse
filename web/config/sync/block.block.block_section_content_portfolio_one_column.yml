@@ -10,7 +10,6 @@ dependencies:
     - views
   theme:
     - apar
-
 id: block_section_content_portfolio_one_column
 theme: apar
 region: section

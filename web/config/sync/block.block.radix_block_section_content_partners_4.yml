@@ -1,0 +1,31 @@
+uuid: b3afc5ca-3f0a-4a03-a6d9-7461f2a63237
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.careers
+    - views.view._apar_partners
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_partners_4
+theme: radix
+region: navbar_branding
+weight: 103
+provider: null
+plugin: 'views_block:_apar_partners-block_section_content_partners'
+settings:
+  id: 'views_block:_apar_partners-block_section_content_partners'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: careers
+    context_mapping: {  }

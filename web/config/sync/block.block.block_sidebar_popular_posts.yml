@@ -9,7 +9,6 @@ dependencies:
     - views
   theme:
     - apar
-
 id: block_sidebar_popular_posts
 theme: apar
 region: sidebar_right

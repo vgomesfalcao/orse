@@ -9,7 +9,6 @@ dependencies:
     - block_visibility_groups
   theme:
     - apar
-
 id: aparblockfootercolumn3usefullinks
 theme: apar
 region: footer_column_3

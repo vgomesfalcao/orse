@@ -1,0 +1,23 @@
+uuid: ed00fa4f-9ae6-4bd6-a9db-e3dcb8de497f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.bloco_fundo_verde
+    - field.field.block_content.bloco_fundo_verde.body
+  module:
+    - text
+id: block_content.bloco_fundo_verde.default
+targetEntityType: block_content
+bundle: bloco_fundo_verde
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

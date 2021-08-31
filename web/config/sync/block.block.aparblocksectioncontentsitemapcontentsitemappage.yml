@@ -9,7 +9,6 @@ dependencies:
     - block_visibility_groups
   theme:
     - apar
-
 id: aparblocksectioncontentsitemapcontentsitemappage
 theme: apar
 region: section_sitemap

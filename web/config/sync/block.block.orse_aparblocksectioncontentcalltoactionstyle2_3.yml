@@ -7,13 +7,10 @@ dependencies:
   content:
     - 'block_content:basic:cf9b72db-0b0f-42ba-a422-08c071293a78'
   module:
-
     - block_content
     - block_visibility_groups
-
   theme:
     - orse
-
 id: orse_aparblocksectioncontentcalltoactionstyle2_3
 theme: orse
 region: disable

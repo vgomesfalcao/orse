@@ -9,7 +9,6 @@ dependencies:
     - md_slider
   theme:
     - apar
-
 id: slider10
 theme: apar
 region: slider

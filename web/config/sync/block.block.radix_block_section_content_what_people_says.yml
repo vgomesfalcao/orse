@@ -1,0 +1,31 @@
+uuid: 75b6766b-fa13-4602-b8b1-e916f73dab80
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_4
+    - views.view._apar_testimonials
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_what_people_says
+theme: radix
+region: navbar_branding
+weight: 68
+provider: null
+plugin: 'views_block:_apar_testimonials-block_section_content_what_people_says'
+settings:
+  id: 'views_block:_apar_testimonials-block_section_content_what_people_says'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_4
+    context_mapping: {  }

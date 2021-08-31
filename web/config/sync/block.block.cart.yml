@@ -7,7 +7,6 @@ dependencies:
     - commerce_cart
   theme:
     - apar
-
 id: cart
 theme: apar
 region: header_cart

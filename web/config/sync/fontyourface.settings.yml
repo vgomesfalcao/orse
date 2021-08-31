@@ -6,8 +6,7 @@ enabled_fonts:
   - 'https://www.google.com/webfonts/family?family=Quicksand&subset=latin-ext#regular'
 load_all_enabled_fonts: 1
 load_on_themes:
-  apar: apar
-  orse: orse
+  orse_eventos: orse_eventos
 _core:
   default_config_hash: TghDxAeHu4gER0JZhzPbMawpRgxggVsIu54oyTeaJOo
 langcode: pt-br

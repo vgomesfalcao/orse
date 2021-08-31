@@ -1,0 +1,31 @@
+uuid: 18eb9711-67a9-427d-a62a-97f059809b54
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_5
+    - views.view._apar_team
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_meet_our_team_style_5
+theme: radix
+region: navbar_branding
+weight: 41
+provider: null
+plugin: 'views_block:_apar_team-block_section_content_meet_our_team_style_5'
+settings:
+  id: 'views_block:_apar_team-block_section_content_meet_our_team_style_5'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_5
+    context_mapping: {  }

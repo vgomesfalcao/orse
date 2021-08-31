@@ -1,0 +1,77 @@
+// Page: Header
+// -----------------------------------------------------------------------------
+.page__header {
+  .container-fluid{
+    > div.block--orse-eventos-slider1{
+      margin: 0 -15px;
+    }
+  }
+  .block--orse-eventos-page-title {
+    padding: 15vh 0;
+    background-color: $gray-400;
+    margin: 0 -15px 50px;
+    h1 {
+      font-size: 5vh;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}
+
+.navbar {
+  background-color:white;
+  .nav, .navbar-nav{
+    .nav-item {
+      a {
+        font-weight:bold;
+        color:black;
+        @include hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.navbar-expand-lg {
+  .navbar-collapse{
+    justify-content: end;
+  }
+}
+
+.search-parent {
+  .search-box {
+    display:none;
+    opacity:0;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top:100%;
+    transition: all 4s;
+    transition-delay: .3s;
+    .search-box-inner{
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color:white;
+      border: 1px solid $dark;
+      #search-block-form {
+        width:98%;
+        display:inline-block;
+        div {
+          width: 100%;
+          input {
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-parent.active{
+  .search-box {
+    display: block;
+    opacity:1;
+  }
+}

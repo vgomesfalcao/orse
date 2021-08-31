@@ -1,0 +1,31 @@
+uuid: 77ec6dde-d2a9-4b68-bed9-7977fa3365e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page_2
+    - views.view._apar_features
+  module:
+    - block_visibility_groups
+    - views
+  theme:
+    - radix
+id: radix_block_section_content_awesome_features
+theme: radix
+region: navbar_branding
+weight: 52
+provider: null
+plugin: 'views_block:_apar_features-block_section_content_awesome_features'
+settings:
+  id: 'views_block:_apar_features-block_section_content_awesome_features'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page_2
+    context_mapping: {  }

@@ -5,13 +5,10 @@ dependencies:
   config:
     - system.menu.menu-sider
   module:
-
     - block_visibility_groups
-
     - system
   theme:
     - orse
-
 id: orse_menuside
 theme: orse
 region: menu_side

@@ -1,0 +1,31 @@
+uuid: 89c11a1f-0a72-4225-881b-1b4f2e66be0e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f9cd48f8-96c8-41b2-bb3d-6c1ff9a9095a'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - radix
+id: radix_aparblockbottomfooterproductcopyrighttext
+theme: radix
+region: navbar_branding
+weight: -26
+provider: null
+plugin: 'block_content:f9cd48f8-96c8-41b2-bb3d-6c1ff9a9095a'
+settings:
+  id: 'block_content:f9cd48f8-96c8-41b2-bb3d-6c1ff9a9095a'
+  label: '[Apar]Block Bottom Footer Product - Copyright text'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

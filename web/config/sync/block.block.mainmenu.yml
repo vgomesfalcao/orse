@@ -9,7 +9,6 @@ dependencies:
     - system
   theme:
     - apar
-
 id: mainmenu
 theme: apar
 region: main_menu

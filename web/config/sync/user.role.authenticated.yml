@@ -55,3 +55,4 @@ permissions:
   - 'view own testimonials content'
   - 'view own unpublished content'
   - 'view own webform content'
+  - 'view paragraph content links_midias_sociais'

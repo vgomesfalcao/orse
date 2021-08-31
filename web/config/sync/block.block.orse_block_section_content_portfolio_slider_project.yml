@@ -6,13 +6,10 @@ dependencies:
     - block_visibility_groups.block_visibility_group.slider_projects
     - views.view._apar_portfolio
   module:
-
     - block_visibility_groups
-
     - views
   theme:
     - orse
-
 id: orse_block_section_content_portfolio_slider_project
 theme: orse
 region: disable

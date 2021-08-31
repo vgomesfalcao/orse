@@ -9,7 +9,6 @@ dependencies:
     - views
   theme:
     - apar
-
 id: block_sidebar_latest_products
 theme: apar
 region: sidebar_shop
