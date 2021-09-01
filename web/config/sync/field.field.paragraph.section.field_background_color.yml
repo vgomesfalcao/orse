@@ -1,0 +1,25 @@
+uuid: 76a8a1d3-f189-4788-95e3-735976b00c1a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.section
+  module:
+    - color_field
+id: paragraph.section.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: section
+label: 'Cor de fundo'
+description: "A cor do tema é verde: #8EEB4C\r\nE laranja: #EB673F"
+required: false
+translatable: false
+default_value:
+  -
+    color: '#8eeb4c'
+    opacity: !!float 1
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type
