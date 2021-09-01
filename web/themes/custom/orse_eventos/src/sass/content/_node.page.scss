@@ -2,8 +2,9 @@
 // -----------------------------------------------------------------------------
 article.page--full.node {
   position: initial;
+  margin: 0 -15px;
   .paragraph--type--section {
-    position: absolute;
+    position: relative;
     left: 0px;
     width: 100vw;
   }
