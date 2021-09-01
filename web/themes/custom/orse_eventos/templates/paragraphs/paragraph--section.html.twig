@@ -47,11 +47,10 @@
   ]
 %}
 {% block paragraph %}
-	<div{{attributes.addClass(classes)}} style="background-color: {{bgcolor.color}}; opacity: {{bgcolor.opacity}}">
-    {# {{dump(content.field_background_color)}} #}
+	<div{{attributes.addClass(classes)}} style="background-color: {{bgcolor.color}}; opacity: {{bgcolor.opacity}}; padding-top: {{padding.top}}px; padding-bottom: {{padding.bottom}}px">
 		{% block content %}
       <div class="container">
-			  {{ content | without('field_background_color') }}
+			  {{ content | without('field_background_color', 'field_padding_top', 'field_padding_bottom') }}
       </div>
 		{% endblock %}
 	</div>
