@@ -25,6 +25,8 @@ import 'bootstrap';
           console.log("showing");
         }
       });
+      $('.form-item-data-evento .ui-datepicker-trigger').clone().appendTo('.form-item-data-evento label.form-required');
+      $('.form-item-data-evento>.ui-datepicker-trigger').remove();
     }
   };
 
