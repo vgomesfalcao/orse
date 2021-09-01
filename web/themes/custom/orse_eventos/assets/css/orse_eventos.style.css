@@ -9750,6 +9750,15 @@ a:hover {
   font-size: 20px;
 }
 
+article.page--full.node {
+  position: initial;
+}
+article.page--full.node .paragraph--type--section {
+  position: absolute;
+  left: 0px;
+  width: 100vw;
+}
+
 .node .evento-info {
   width: 100%;
   float: left;
