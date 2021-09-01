@@ -2,10 +2,6 @@ uuid: e3d8c20b-2d5e-4eae-8151-f81bd3c41be6
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.home_page_4
-  module:
-    - block_visibility_groups
   theme:
     - radix
 id: radix_slider4
@@ -19,9 +15,4 @@ settings:
   label: 'Slider 4'
   provider: md_slider
   label_display: '0'
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: home_page_4
-    context_mapping: {  }
+visibility: {  }

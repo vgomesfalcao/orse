@@ -30,7 +30,13 @@ function webform_theme() {
     'webform_help_video_youtube' => [
       'variables' => ['youtube_id' => NULL, 'autoplay' => TRUE],
     ],
-
+    'webform_help_support' => [
+      'variables' => [
+        'account' => [],
+        'membership' => [],
+        'contribution' => [],
+      ],
+    ],
     'webform' => [
       'render element' => 'element',
     ],
@@ -435,6 +441,10 @@ function webform_preprocess_fieldset(&$variables) {
 
   $element = &$variables['element'];
 
+  // @todo [Drupal 9.3] Remove the below code
+  // Fieldset elements now respect the #description_display option
+  // @see https://www.drupal.org/node/3143489
+  //
   // If the description is displayed 'before' we need to move it to the
   // fieldset's prefix.
   // @see fieldset.html.twig
@@ -512,6 +522,9 @@ function webform_preprocess_form_element(&$variables) {
   if (isset($variables['description_display']) && $variables['description_display'] === 'before') {
     // Add system .description class.
     if (isset($variables['description'])) {
+      if (empty($variables['description']['attributes'])) {
+        $variables['description']['attributes'] = new Attribute();
+      }
       $variables['description']['attributes']->addClass('description');
     }
   }

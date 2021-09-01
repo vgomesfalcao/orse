@@ -42,3 +42,7 @@ sites/simpletest
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
+
+
+# Ignore mautic instalation. 
+/web/mkt

@@ -3,11 +3,10 @@ langcode: pt-br
 status: true
 dependencies:
   config:
-    - block_visibility_groups.block_visibility_group.block_v_fotografo
     - system.menu.menu-fotografo
   module:
-    - block_visibility_groups
     - system
+    - user
   theme:
     - orse_eventos
 id: orse_eventos_menufotografo
@@ -25,8 +24,16 @@ settings:
   depth: 0
   expand_all_items: false
 visibility:
-  condition_group:
-    id: condition_group
+  request_path:
+    id: request_path
+    pages: "/user\r\n/user/*"
     negate: false
-    block_visibility_group: block_v_fotografo
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      fotografo: fotografo
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

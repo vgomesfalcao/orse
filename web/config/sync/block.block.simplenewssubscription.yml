@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block_visibility_groups
     - simplenews
   theme:
     - apar
@@ -22,9 +21,4 @@ settings:
     default: default
   message: ''
   unique_id: e140dfce-2073-476b-ae4c-7c1c65674ddb
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: ''
-    context_mapping: {  }
+visibility: {  }

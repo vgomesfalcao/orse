@@ -2,13 +2,10 @@ uuid: 8a5b0c4b-60e9-4ec6-99c1-6ba3986a8a6a
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.about_style_2
   content:
     - 'block_content:basic:3278465a-c52f-42a9-8193-77de80c98d55'
   module:
     - block_content
-    - block_visibility_groups
   theme:
     - radix
 id: radix_aparblocksectioncontentwhychooseusstyle2
@@ -25,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: about_style_2
-    context_mapping: {  }
+visibility: {  }

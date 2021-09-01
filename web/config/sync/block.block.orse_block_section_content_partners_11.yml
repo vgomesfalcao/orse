@@ -3,10 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_visibility_groups.block_visibility_group.services_style_2
     - views.view._apar_partners
   module:
-    - block_visibility_groups
     - views
   theme:
     - orse
@@ -23,9 +21,4 @@ settings:
   label_display: '0'
   views_label: ''
   items_per_page: none
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: services_style_2
-    context_mapping: {  }
+visibility: {  }

@@ -2,13 +2,10 @@ uuid: c1800829-de93-4765-8db5-e77f951a1959
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.home_page_4
   content:
     - 'block_content:basic:c6e3fe51-97d1-44a9-a87a-821684305069'
   module:
     - block_content
-    - block_visibility_groups
   theme:
     - orse
 id: orse_aparblocksectioncontentwhoweare_2
@@ -25,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: home_page_4
-    context_mapping: {  }
+visibility: {  }

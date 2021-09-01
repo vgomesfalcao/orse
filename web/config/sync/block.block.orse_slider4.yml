@@ -2,10 +2,6 @@ uuid: 655f4e43-3bb5-4ab2-9ec7-2d4cdcee4527
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.home_page_4
-  module:
-    - block_visibility_groups
   theme:
     - orse
 id: orse_slider4
@@ -19,9 +15,4 @@ settings:
   label: 'Slider 4'
   provider: md_slider
   label_display: '0'
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: home_page_4
-    context_mapping: {  }
+visibility: {  }

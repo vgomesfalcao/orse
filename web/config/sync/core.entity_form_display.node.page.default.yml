@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.field_footer_style
     - field.field.node.page.field_header_background_image
     - field.field.node.page.field_header_style
+    - field.field.node.page.field_layout
     - field.field.node.page.field_short_description
     - image.style.thumbnail
     - node.type.page
@@ -14,6 +15,7 @@ dependencies:
     - field_group
     - image
     - imce
+    - layout_paragraphs
     - path
     - text
 third_party_settings:
@@ -77,6 +79,15 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_layout:
+    type: layout_paragraphs
+    weight: 26
+    settings:
+      preview_view_mode: default
+      nesting_depth: 0
+      require_layouts: 1
+    third_party_settings: {  }
+    region: content
   field_short_description:
     weight: 9
     settings:
@@ -119,6 +130,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

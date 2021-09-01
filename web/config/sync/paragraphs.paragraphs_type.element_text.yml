@@ -1,0 +1,10 @@
+uuid: c386279b-46fb-4889-b67a-4e3d1ae2a1f3
+langcode: pt-br
+status: true
+dependencies: {  }
+id: element_text
+label: 'Element - Text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

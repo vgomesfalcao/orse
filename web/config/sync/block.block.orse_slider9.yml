@@ -2,10 +2,6 @@ uuid: c63a31c4-bf9a-4b33-8764-40e108888e40
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.home_page_9
-  module:
-    - block_visibility_groups
   theme:
     - orse
 id: orse_slider9
@@ -19,9 +15,4 @@ settings:
   label: 'Slider 9'
   provider: md_slider
   label_display: '0'
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: home_page_9
-    context_mapping: {  }
+visibility: {  }

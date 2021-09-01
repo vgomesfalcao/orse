@@ -2,13 +2,10 @@ uuid: aea23db1-8163-44e1-a449-6cc4bda8f052
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.about_me
   content:
     - 'block_content:basic:0d839ceb-9be7-46fc-94dc-b3e4742f6c41'
   module:
     - block_content
-    - block_visibility_groups
   theme:
     - orse
 id: orse_aparblocksectioncontentparallaxbackground_2
@@ -25,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: about_me
-    context_mapping: {  }
+visibility: {  }
