@@ -1,0 +1,39 @@
+uuid: 90fc2c67-6fdb-4ebd-9a6e-5e3d5621cbd3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_layout
+    - node.type.page
+    - paragraphs.paragraphs_type.element_text
+    - paragraphs.paragraphs_type.section
+  module:
+    - entity_reference_revisions
+id: node.page.field_layout
+field_name: field_layout
+entity_type: node
+bundle: page
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      element_text: element_text
+      section: section
+    target_bundles_drag_drop:
+      element_text:
+        enabled: true
+        weight: 4
+      links_midias_sociais:
+        weight: 2
+        enabled: false
+      section:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

@@ -1,2 +1,10 @@
 // Page
 // -----------------------------------------------------------------------------
+article.page--full.node {
+  position: initial;
+  .paragraph--type--section {
+    position: absolute;
+    left: 0px;
+    width: 100vw;
+  }
+}

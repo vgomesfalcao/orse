@@ -1,0 +1,25 @@
+uuid: aadf5b21-060c-4906-afed-74092e1a80af
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_bottom
+    - paragraphs.paragraphs_type.section
+id: paragraph.section.field_padding_bottom
+field_name: field_padding_bottom
+entity_type: paragraph
+bundle: section
+label: 'Margem Interior Inferior'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

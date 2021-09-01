@@ -1,0 +1,24 @@
+uuid: 56ef0d34-d4d1-461b-84a3-99cb5745d689
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section.field_background_color
+    - paragraphs.paragraphs_type.section
+  module:
+    - color_field
+id: paragraph.section.default
+targetEntityType: paragraph
+bundle: section
+mode: default
+content:
+  field_background_color:
+    weight: 0
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+hidden: {  }
