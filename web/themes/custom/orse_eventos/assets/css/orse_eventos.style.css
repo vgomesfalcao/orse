@@ -9752,9 +9752,10 @@ a:hover {
 
 article.page--full.node {
   position: initial;
+  margin: 0 -15px;
 }
 article.page--full.node .paragraph--type--section {
-  position: absolute;
+  position: relative;
   left: 0px;
   width: 100vw;
 }
