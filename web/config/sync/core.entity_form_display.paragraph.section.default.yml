@@ -6,10 +6,14 @@ dependencies:
     - field.field.paragraph.section.field_background_color
     - field.field.paragraph.section.field_padding_bottom
     - field.field.paragraph.section.field_padding_top
+    - field.field.paragraph.section.field_section_background
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.section
   module:
     - color_field
     - field_group
+    - image
+    - imce
 third_party_settings:
   field_group:
     group_padding:
@@ -17,7 +21,7 @@ third_party_settings:
         - field_padding_top
         - field_padding_bottom
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: fieldset
       region: content
       format_settings:
@@ -38,19 +42,29 @@ content:
     type: color_field_widget_html5
     region: content
   field_padding_bottom:
-    type: number
-    weight: 6
-    region: content
+    weight: 3
     settings:
       placeholder: ''
     third_party_settings: {  }
+    type: number
+    region: content
   field_padding_top:
-    type: number
-    weight: 5
-    region: content
+    weight: 2
     settings:
       placeholder: ''
     third_party_settings: {  }
+    type: number
+    region: content
+  field_section_background:
+    weight: 1
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
+    type: image_image
+    region: content
 hidden:
   created: true
   status: true

@@ -6,9 +6,12 @@ dependencies:
     - field.field.paragraph.section.field_background_color
     - field.field.paragraph.section.field_padding_bottom
     - field.field.paragraph.section.field_padding_top
+    - field.field.paragraph.section.field_section_background
+    - image.style.image_2000x900
     - paragraphs.paragraphs_type.section
   module:
     - color_field
+    - image
 id: paragraph.section.default
 targetEntityType: paragraph
 bundle: section
@@ -25,15 +28,6 @@ content:
     region: content
   field_padding_bottom:
     type: number_integer
-    weight: 1
-    region: content
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-  field_padding_top:
-    type: number_integer
     weight: 2
     region: content
     label: above
@@ -41,4 +35,21 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
+  field_padding_top:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_section_background:
+    weight: 3
+    label: above
+    settings:
+      image_style: image_2000x900
+    third_party_settings: {  }
+    type: image_url
+    region: content
 hidden: {  }
