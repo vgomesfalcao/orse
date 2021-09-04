@@ -3,3 +3,6 @@ type: module
 description: 'Allows settings attributes block advanced.'
 package: Orse
 core: 8.x
+
+dependencies:
+  - drupal:computed_field
