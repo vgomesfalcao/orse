@@ -25,10 +25,15 @@ import 'bootstrap';
           console.log("showing");
         }
       });
+    }
+  };
+  
+  Drupal.behaviors.webformDateLocation = {
+    attach: function (context) {
       $('.form-item-data-evento .ui-datepicker-trigger').once('form-item-data-evento').each(function() {
         $(this).clone().appendTo('.form-item-data-evento label.form-required');
+	$(this).remove();
       });
-      $('.form-item-data-evento>.ui-datepicker-trigger').remove();
     }
   };
 
