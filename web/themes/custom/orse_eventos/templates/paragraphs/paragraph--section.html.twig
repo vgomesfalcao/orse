@@ -47,10 +47,10 @@
   ]
 %}
 {% block paragraph %}
-	<div{{attributes.addClass(classes)}} style="background-color: {{bgcolor.color}}; opacity: {{bgcolor.opacity}}; padding-top: {{padding.top}}px; padding-bottom: {{padding.bottom}}px">
+	<div{{attributes.addClass(classes)}} style="background-image:url({{bgimage}}); background-position: center; background-size:cover; background-repeat: no-repeat; background-color: {{bgcolor.color}}; opacity: {{bgcolor.opacity}}; padding-top: {{padding.top}}px; padding-bottom: {{padding.bottom}}px">
 		{% block content %}
       <div class="container">
-			  {{ content | without('field_background_color', 'field_padding_top', 'field_padding_bottom') }}
+			  {{ content | without('field_background_color', 'field_padding_top', 'field_padding_bottom', 'field_section_background') }}
       </div>
 		{% endblock %}
 	</div>
