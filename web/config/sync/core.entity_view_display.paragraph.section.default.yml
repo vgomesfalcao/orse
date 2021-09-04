@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.section.field_background_color
+    - field.field.paragraph.section.field_padding_bottom
+    - field.field.paragraph.section.field_padding_top
     - paragraphs.paragraphs_type.section
   module:
     - color_field
@@ -21,4 +23,22 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_text
     region: content
+  field_padding_bottom:
+    type: number_integer
+    weight: 1
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_padding_top:
+    type: number_integer
+    weight: 2
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
 hidden: {  }

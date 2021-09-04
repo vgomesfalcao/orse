@@ -4,9 +4,28 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.section.field_background_color
+    - field.field.paragraph.section.field_padding_bottom
+    - field.field.paragraph.section.field_padding_top
     - paragraphs.paragraphs_type.section
   module:
     - color_field
+    - field_group
+third_party_settings:
+  field_group:
+    group_padding:
+      children:
+        - field_padding_top
+        - field_padding_bottom
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Padding
 id: paragraph.section.default
 targetEntityType: paragraph
 bundle: section
@@ -18,6 +37,20 @@ content:
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
+  field_padding_bottom:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_padding_top:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
   status: true
