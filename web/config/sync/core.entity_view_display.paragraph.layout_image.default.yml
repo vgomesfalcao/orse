@@ -1,0 +1,25 @@
+uuid: bfaae69b-702c-4d48-b467-c0ffb3309cc8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.layout_image.field_image
+    - paragraphs.paragraphs_type.layout_image
+    - responsive_image.styles.wide
+  module:
+    - responsive_image
+id: paragraph.layout_image.default
+targetEntityType: paragraph
+bundle: layout_image
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      responsive_image_style: wide
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden: {  }
