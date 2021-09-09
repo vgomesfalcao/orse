@@ -51,6 +51,7 @@ module:
   file: 0
   filter: 0
   fontawesome: 0
+  gavias_sliderlayer: 0
   help: 0
   history: 0
   honeypot: 0
@@ -81,6 +82,7 @@ module:
   profile: 0
   quickedit: 0
   rdf: 0
+  responsive_image: 0
   search: 0
   shortcut: 0
   simplenews: 0

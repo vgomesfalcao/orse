@@ -1,0 +1,7 @@
+uuid: 3fb7fb1c-f334-4f4e-a09a-5fe6e3d3d214
+langcode: pt-br
+status: true
+dependencies: {  }
+name: responsive
+label: Responsive
+effects: {  }

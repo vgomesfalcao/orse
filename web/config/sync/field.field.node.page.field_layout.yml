@@ -5,8 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_layout
     - node.type.page
-    - paragraphs.paragraphs_type.element_text
-    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.links_midias_sociais
   module:
     - entity_reference_revisions
 id: node.page.field_layout
@@ -22,18 +21,20 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
+    negate: 1
     target_bundles:
-      element_text: element_text
-      section: section
+      links_midias_sociais: links_midias_sociais
     target_bundles_drag_drop:
       element_text:
-        enabled: true
         weight: 4
-      links_midias_sociais:
-        weight: 2
         enabled: false
-      section:
+      layout_image:
+        weight: 6
+        enabled: false
+      links_midias_sociais:
         enabled: true
+        weight: 2
+      section:
         weight: 4
+        enabled: false
 field_type: entity_reference_revisions

@@ -4,9 +4,32 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.section.field_background_color
+    - field.field.paragraph.section.field_padding_bottom
+    - field.field.paragraph.section.field_padding_top
+    - field.field.paragraph.section.field_section_background
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.section
   module:
     - color_field
+    - field_group
+    - image
+    - imce
+third_party_settings:
+  field_group:
+    group_padding:
+      children:
+        - field_padding_top
+        - field_padding_bottom
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Padding
 id: paragraph.section.default
 targetEntityType: paragraph
 bundle: section
@@ -17,6 +40,30 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
+    region: content
+  field_padding_bottom:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_padding_top:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_section_background:
+    weight: 1
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
+    type: image_image
     region: content
 hidden:
   created: true
