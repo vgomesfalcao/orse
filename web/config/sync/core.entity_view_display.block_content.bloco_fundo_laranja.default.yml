@@ -5,7 +5,9 @@ dependencies:
   config:
     - block_content.type.bloco_fundo_laranja
     - field.field.block_content.bloco_fundo_laranja.body
+    - field.field.block_content.bloco_fundo_laranja.field_midias_sociais
   module:
+    - entity_reference_revisions
     - text
 id: block_content.bloco_fundo_laranja.default
 targetEntityType: block_content
@@ -18,6 +20,15 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_midias_sociais:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
 hidden:
   langcode: true

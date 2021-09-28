@@ -1,0 +1,40 @@
+uuid: fdf45623-cc08-49af-aaec-eb6ab945dde5
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.bloco_fundo_laranja
+    - field.storage.block_content.field_midias_sociais
+    - paragraphs.paragraphs_type.links_midias_sociais
+  module:
+    - entity_reference_revisions
+id: block_content.bloco_fundo_laranja.field_midias_sociais
+field_name: field_midias_sociais
+entity_type: block_content
+bundle: bloco_fundo_laranja
+label: 'Mídias Sociais'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      links_midias_sociais: links_midias_sociais
+    target_bundles_drag_drop:
+      element_text:
+        weight: 5
+        enabled: false
+      layout_image:
+        weight: 6
+        enabled: false
+      links_midias_sociais:
+        enabled: true
+        weight: 7
+      section:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

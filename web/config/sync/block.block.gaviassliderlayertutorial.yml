@@ -1,0 +1,26 @@
+uuid: 39f503f3-3175-40a6-8971-78fb601d6997
+langcode: pt-br
+status: false
+dependencies:
+  module:
+    - gavias_sliderlayer
+    - system
+  theme:
+    - orse_eventos
+id: gaviassliderlayertutorial
+theme: orse_eventos
+region: header
+weight: -7
+provider: null
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
+settings:
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
+  label: 'Gavias SliderLayer - Tutorial'
+  provider: gavias_sliderlayer
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /tutorial
+    negate: false
+    context_mapping: {  }

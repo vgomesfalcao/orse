@@ -5,7 +5,9 @@ dependencies:
   config:
     - block_content.type.bloco_fundo_laranja
     - field.field.block_content.bloco_fundo_laranja.body
+    - field.field.block_content.bloco_fundo_laranja.field_midias_sociais
   module:
+    - paragraphs
     - text
 id: block_content.bloco_fundo_laranja.default
 targetEntityType: block_content
@@ -21,6 +23,18 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+    region: content
+  field_midias_sociais:
+    weight: 27
+    settings:
+      title: Parágrafo
+      title_plural: Parágrafos
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   info:
     type: string_textfield
