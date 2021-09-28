@@ -11,7 +11,7 @@ dependencies:
 id: contato
 theme: orse_eventos
 region: footer
-weight: 0
+weight: -7
 provider: null
 plugin: 'block_content:c55f666f-4671-429c-9cf1-22f0b0584f05'
 settings:

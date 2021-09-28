@@ -1,12 +1,9 @@
-uuid: 5b68102a-3051-4ebd-9d38-ef00d1289158
+uuid: 4b90d41c-6cff-4aa4-8662-e308eb822996
 langcode: pt-br
-status: false
+status: true
 dependencies:
-  content:
-    - 'block_content:basic:9a8b40bb-d0ef-4476-9abd-28dd0f68481e'
   module:
-    - block_content
-    - language
+    - md_slider
     - system
   theme:
     - orse_eventos
@@ -15,23 +12,13 @@ theme: orse_eventos
 region: header
 weight: 0
 provider: null
-plugin: 'block_content:9a8b40bb-d0ef-4476-9abd-28dd0f68481e'
+plugin: 'md_slider_block:tutorial'
 settings:
-  id: 'block_content:9a8b40bb-d0ef-4476-9abd-28dd0f68481e'
+  id: 'md_slider_block:tutorial'
   label: Tutorial
-  provider: block_content
+  provider: md_slider
   label_display: '0'
-  status: true
-  info: ''
-  view_mode: full
 visibility:
-  language:
-    id: language
-    langcodes:
-      pt-br: pt-br
-    negate: false
-    context_mapping:
-      language: '@language.current_language_context:language_interface'
   request_path:
     id: request_path
     pages: /tutorial
