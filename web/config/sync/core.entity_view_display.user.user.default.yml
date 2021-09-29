@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.user.user.commerce_remote_id
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.large
   module:
     - image
     - user
@@ -16,17 +16,12 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  member_for:
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   user_picture:
     type: image
     weight: 0
     region: content
     settings:
-      image_style: thumbnail
+      image_style: large
       image_link: content
     third_party_settings: {  }
     label: hidden
@@ -35,4 +30,5 @@ hidden:
   commerce_remote_id: true
   customer_profiles: true
   langcode: true
+  member_for: true
   simplenews: true

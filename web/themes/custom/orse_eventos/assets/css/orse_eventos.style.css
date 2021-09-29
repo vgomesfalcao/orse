@@ -9706,6 +9706,36 @@ img {
   padding: 40px 0;
 }
 
+#views-exposed-form-respostas-fotografos-page-1 {
+  display: grid;
+  grid-template-areas: "fotografo data-min valor-min empty" "fotografo data-max valor-max empty";
+  grid-template-columns: 22% 25% 23% 22%;
+  grid-gap: 15px;
+  margin-bottom: 20px;
+}
+#views-exposed-form-respostas-fotografos-page-1 > .js-form-type-entity-autocomplete {
+  grid-area: fotografo;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#views-exposed-form-respostas-fotografos-page-1 > div.js-form-item:nth-child(2) {
+  grid-area: data-min;
+  display: flex;
+  flex-direction: column;
+}
+#views-exposed-form-respostas-fotografos-page-1 > div.js-form-item:nth-child(3) {
+  grid-area: data-max;
+  display: flex;
+  flex-direction: column;
+}
+#views-exposed-form-respostas-fotografos-page-1 > div.form-actions {
+  grid-area: empty;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .page__footer .container-fluid > .block, .page__footer_bottom .container-fluid > .block {
   margin: 0 -15px;
   padding: 0 15px;
@@ -9782,6 +9812,12 @@ article.page--full.node .paragraph--type--section {
 .node .evento-info li span {
   font-weight: 700;
   color: black;
+}
+
+.block--orse-eventos-views-block--respostas-fotografos-block-1 h2 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 #views-exposed-form-respostas-fotografos-block-1 {

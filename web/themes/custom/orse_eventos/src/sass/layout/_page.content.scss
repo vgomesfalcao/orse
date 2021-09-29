@@ -50,3 +50,35 @@
   color: white;
   padding: 40px 0;
 }
+
+
+#views-exposed-form-respostas-fotografos-page-1 {
+  display: grid;
+  grid-template-areas: 'fotografo data-min valor-min empty'
+                        'fotografo data-max valor-max empty';
+  grid-template-columns: 22% 25% 23% 22%;
+  grid-gap: 15px;
+  margin-bottom: 20px;
+  > .js-form-type-entity-autocomplete {
+    grid-area: fotografo;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  > div.js-form-item:nth-child(2) {
+    grid-area: data-min;
+    display: flex;
+    flex-direction: column;
+  }
+  > div.js-form-item:nth-child(3){
+    grid-area: data-max;
+    display: flex;
+    flex-direction: column;
+  }
+  > div.form-actions {
+    grid-area: empty;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
