@@ -9,7 +9,7 @@ dependencies:
 _core:
   default_config_hash: '-X1gJHmWCoN8z6urr4N2eYcfT9_kGyKMCoS1kh1IbPQ'
 id: commerce_stores
-label: Stores
+label: Lojas
 module: views
 description: ''
 tag: Commerce
@@ -63,10 +63,10 @@ display:
             offset: false
             offset_label: Offset
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: '‹ anterior'
+            next: 'próximo ›'
+            first: '« início'
+            last: 'fim »'
           quantity: 9
       style:
         type: table
@@ -158,7 +158,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: 'With selection'
+          action_title: 'Selecione a ação'
           include_exclude: exclude
           selected_actions: {  }
           entity_type: commerce_store
@@ -391,7 +391,7 @@ display:
           entity_field: type
           plugin_id: commerce_entity_bundle
       sorts: {  }
-      title: Stores
+      title: Lojas
       header: {  }
       footer: {  }
       empty:

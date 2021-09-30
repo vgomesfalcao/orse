@@ -10,7 +10,7 @@ dependencies:
 id: orse_eventos_slider1
 theme: orse_eventos
 region: header
-weight: 0
+weight: -5
 provider: null
 plugin: 'md_slider_block:slider_1'
 settings:

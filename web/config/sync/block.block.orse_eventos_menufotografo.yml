@@ -11,13 +11,13 @@ dependencies:
     - orse_eventos
 id: orse_eventos_menufotografo
 theme: orse_eventos
-region: sidebar
-weight: -4
+region: content
+weight: -6
 provider: null
 plugin: 'system_menu_block:menu-fotografo'
 settings:
   id: 'system_menu_block:menu-fotografo'
-  label: 'Menu Fotografo'
+  label: 'Área do Fotógrafo'
   provider: system
   label_display: visible
   level: 1

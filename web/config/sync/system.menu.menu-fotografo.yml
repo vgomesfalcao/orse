@@ -3,6 +3,6 @@ langcode: pt-br
 status: true
 dependencies: {  }
 id: menu-fotografo
-label: 'Menu Fotógrafo'
+label: 'Área do Fotógrafo'
 description: ''
 locked: false

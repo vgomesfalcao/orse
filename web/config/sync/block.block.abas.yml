@@ -1,15 +1,13 @@
-uuid: 476b7617-bb5e-4959-95b4-b038abd617a8
-langcode: en
+uuid: aa4a7401-87b1-4aca-8f3c-401fd91e3bc4
+langcode: pt-br
 status: true
 dependencies:
   theme:
     - orse_eventos
-_core:
-  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
-id: orse_eventos_local_tasks
+id: abas
 theme: orse_eventos
 region: header
-weight: 3
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

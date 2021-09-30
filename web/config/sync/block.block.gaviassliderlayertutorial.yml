@@ -10,7 +10,7 @@ dependencies:
 id: gaviassliderlayertutorial
 theme: orse_eventos
 region: header
-weight: -7
+weight: -2
 provider: null
 plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
 settings:

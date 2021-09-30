@@ -6,17 +6,18 @@ dependencies:
     - system.menu.menu-cliente
   module:
     - system
+    - user
   theme:
     - orse_eventos
 id: orse_eventos_menucliente
 theme: orse_eventos
-region: sidebar
-weight: -5
+region: content
+weight: -7
 provider: null
 plugin: 'system_menu_block:menu-cliente'
 settings:
   id: 'system_menu_block:menu-cliente'
-  label: 'Menu Cliente'
+  label: 'Área do Cliente'
   provider: system
   label_display: visible
   level: 1
@@ -25,6 +26,13 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/user/*'
+    pages: "/user/*\r\n!/user/*/edit"
     negate: false
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

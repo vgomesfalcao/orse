@@ -65,10 +65,10 @@ display:
             offset: false
             offset_label: Offset
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: '‹ anterior'
+            next: 'próximo ›'
+            first: '« início'
+            last: 'fim »'
           quantity: 9
       style:
         type: table
@@ -123,7 +123,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: 'With selection'
+          action_title: 'Selecione a ação'
           include_exclude: include
           selected_actions:
             - simplenews_send_action
@@ -137,7 +137,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Issue
+          label: Ocorrência
           exclude: false
           alter:
             alter_text: false
@@ -252,7 +252,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Published
+          label: Publicado
           exclude: false
           alter:
             alter_text: false
@@ -319,7 +319,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Updated
+          label: Atualizado
           exclude: false
           alter:
             alter_text: false
@@ -423,7 +423,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Operations links'
+          label: 'Links de operações'
           exclude: false
           alter:
             alter_text: false

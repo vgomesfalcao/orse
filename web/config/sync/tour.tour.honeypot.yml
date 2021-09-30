@@ -18,50 +18,50 @@ tips:
     plugin: text
     label: Honeypot
     weight: -10
-    body: "Congratulations on installing Honeypot on your site! With just a few clicks, you can have your site well-protected against automated spam bots.\r\n\r\nClick Next to be guided through this configuration page."
+    body: "Parabéns pela instalação do Honeypot em seu site! Com apenas alguns cliques, você pode ter seu site bem protegido contra bots de spam automatizados.\r\n\r\nClique em Próximo para ser guiado através desta página de configuração."
     location: top
   protect-all-forms:
     id: protect-all-forms
     plugin: text
-    label: 'Protect all forms'
+    label: 'Proteger todos os formulários'
     weight: -9
     attributes:
       data-id: edit-protect-all-forms
-    body: "Protecting all the forms is the easiest way to quickly cut down on spam on your site, but doing this disables Drupal's caching for every page where a form is displayed.\r\n\r\nNote: If you have the honeypot time limit enabled, this option may cause issues with Drupal Commerce product forms or similarly-sparse forms that are able to be completed in a very short time."
+    body: "Proteger todos os formulários é a maneira mais fácil de reduzir rapidamente o spam em seu site, mas fazer isso desativa o cache do Drupal para cada página onde um formulário é exibido.\r\n\r\nNota: Se você tiver o limite de tempo habilitado para o Honeypot, essa opção pode causar problemas com formulários de produtos do Drupal Commerce ou formulários similarmente esparsos que podem ser concluídos em um tempo muito curto."
     location: bottom
   log-blocked-form-submissions:
     id: log-blocked-form-submissions
     plugin: text
-    label: 'Log blocked form submissions'
+    label: 'Registro de submissões de formulário bloqueadas'
     weight: -8
     attributes:
       data-id: edit-log
-    body: 'Check this box to log every form submission using watchdog. If you have Database Logging enabled, you can view these log entries in the Recent log messages page under Reports.'
+    body: 'Marque esta caixa para registrar cada submissão de formulário usando o watchdog. Se você tiver o Database Logging habilitado, você poderá ver essas entradas de registro na página de Mensagens recentes do registro em Relatórios.'
     location: bottom
   honeypot-element-name:
     id: honeypot-element-name
     plugin: text
-    label: 'Honeypot Element Name'
+    label: 'Nome do Elemento Honeypot'
     weight: -7
     attributes:
       data-id: edit-element-name
-    body: 'Spam bots typically fill out any field they believe will help get links back to their site, so tempting them with a field named something like ''url'', ''homepage'', or ''link'' makes it hard for them to resist filling in the field—and easy to catch them in the trap and reject their submissions!'
+    body: 'Os bots de spam normalmente preenchem qualquer campo que eles acreditam que ajudarão a obter links de volta para seu site, então tentá-los com um campo chamado ''url'', ''homepage'' ou ''link'' torna difícil para eles resistirem em preencher o campo — e fácil pegá-los na armadilha e rejeitar suas submissões!'
     location: top
   honeypot-time-limit:
     id: honeypot-time-limit
     plugin: text
-    label: 'Honeypot Time Limit'
+    label: 'Limite de Tempo do Honeypot'
     weight: -6
     attributes:
       data-id: edit-time-limit
-    body: 'If you enter a positive value, Honeypot will require that all protected forms take at least that many seconds long to fill out. Most forms take at least 5-10 seconds to complete (if you''re a human), so setting this to a value < 5 will help protect against spam bots. Set to 0 to disable.'
+    body: 'Se você digitou um valor positivo, o Honeypot exigirá que todos os formulários protegidos levem pelo menos muitos segundos para serem preenchidos. A maioria dos formulários leva pelo menos 5-10 segundos para ser concluído (se você é um humano), então definir isso para um valor < 5 ajudará a proteger contra bots de spam. Definido para 0 para desativar.'
     location: top
   honeypot-form-specific-settings:
     id: honeypot-form-specific-settings
     plugin: text
-    label: 'Honeypot form-specific settings'
+    label: 'Configurações Específicas de Formulário Honeypot'
     weight: -5
     attributes:
       data-id: edit-form-settings
-    body: 'If you would like to choose particular forms to be protected by Honeypot, check the forms you wish to protect in this section. Most common types of forms are available for protection.'
+    body: 'Se você quiser escolher formulários específicos para serem protegidos pelo Honeypot, marque os formulários que deseja proteger nesta seção. Os tipos mais comuns de formulários estão disponíveis para proteção.'
     location: top
