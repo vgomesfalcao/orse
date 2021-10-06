@@ -32,7 +32,8 @@ visibility:
   user_role:
     id: user_role
     roles:
-      authenticated: authenticated
+      administrator: administrator
+      cliente: cliente
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
