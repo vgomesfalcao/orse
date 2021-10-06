@@ -16,7 +16,12 @@
         "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "npm-assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
+
     },
     "require": {
         "commerceguys/intl": "^1.0",
@@ -29,6 +34,7 @@
         "drupal/block_visibility_groups": "^1.4",
         "drupal/blog": "^3.0",
         "drupal/ckeditor_font": "^1.2",
+        "drupal/clientside_validation": "^1.2",
         "drupal/color_field": "^2.4",
         "drupal/commerce": "^2.24",
         "drupal/components": "^2.4",
@@ -65,7 +71,9 @@
         "drupal/webform": "^6.0",
         "drupal/webform_content_creator": "^2.0",
         "drupal/webform_mautic": "^1.1",
-        "drush/drush": "^10.4"
+        "drush/drush": "^10.4",
+        "npm-asset/jquery-validation": "^1.17",
+        "oomphinc/composer-installers-extender": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -76,6 +84,19 @@
         "sort-packages": true
     },
     "extra": {
+	    "patches": {
+            "drupal/select_registration_roles": {
+                "Fix compatibility with login with email module": "https://www.drupal.org/files/issues/2020-02-28/3027552-fix-incompat-with-username-altering-modules.patch"
+        },
+        "installer-types": [
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "web/libraries/{$name}": [
+                "type:npm-asset"
+            ]
+        }
+	},
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
