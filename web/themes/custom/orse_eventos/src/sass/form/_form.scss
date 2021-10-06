@@ -5,3 +5,47 @@
 .btn-secondary {
   font-weight:bold;
 }
+
+
+.webform-submission-formulario-fotografo-form{
+  h3 {
+    text-align: center;
+  }
+  .form-control {
+    width:calc(100% - 25px);
+  }
+  .hasDatepicker{
+    display:inline-block;
+  }
+  .card {
+    border:none;
+    .card-header {
+      background-color:$white;
+      font-weight: 700;
+      padding:0.75rem 0 0 0;
+      legend {
+        .fieldset-legend {
+          font-size: 1.25rem;
+        }
+      }
+    }
+    .card-body{
+      input[type="radio"]{
+        display:none;
+        margin:10px;
+      }
+      input[type="radio"] + label {
+        padding: 4px 12px;
+        background-color: $gray-400;
+        border-color: $gray-600;
+        margin: 10px;
+        font-weight: 600;
+      }
+      input[type="radio"]:checked + label {
+        background-image:none;
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+}
