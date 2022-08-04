@@ -17,6 +17,8 @@
 # custom module, theme, etc., are not ignored unless you purposely do so.
 /vendor/
 /.vscode
+core
+contrib
 
 
 # Ignore configuration files that may contain sensitive information.
@@ -42,7 +44,7 @@ sites/simpletest
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
+.env
 
-
-# Ignore mautic instalation. 
+# Ignore mautic instalation.
 /web/mkt
