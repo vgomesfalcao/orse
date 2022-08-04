@@ -1,0 +1,30 @@
+name: Drupal Deploy
+
+on:
+  push:
+    branches: [ "develop" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_CLIENT_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_CLIENT_SECRET }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      # Step 2
+      - name: Create CodeDeploy Deployment
+        id: deploy
+        run: |
+          aws deploy create-deployment \
+            --file-exists-behavior OVERWRITE \
+            --application-name orse \
+            --deployment-group-name dev_orse \
+            --deployment-config-name CodeDeployDefault.OneAtATime \
+            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
