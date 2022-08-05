@@ -1,10 +1,10 @@
 #!/bin/bash
 
-chown -R www-data:www-data /var/www/orse_d
+chown -R www-data:www-data /var/www/orse/orse_d
 
-chmod -R 775 /var/www/orse_d
+chmod -R 775 /var/www/orse/orse_d
 
-cd /var/www/orse_d
+cd /var/www/orse/orse_d
 
 composer install --no-interaction
 
