@@ -1,8 +1,12 @@
 #!/bin/bash
 
+chown -R www-data:www-data /var/www/orse_d
+
+chmod -R 775 /var/www/orse_d
+
 cd /var/www/orse_d
 
-composer install
+composer install --no-interaction
 
 drush cr
 

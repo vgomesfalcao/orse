@@ -21,7 +21,6 @@
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-
     },
     "require": {
         "commerceguys/intl": "^1.0",
@@ -81,6 +80,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "process-timeout": 0,
         "sort-packages": true,
         "allow-plugins": {
             "cweagans/composer-patches": true,
@@ -91,19 +91,19 @@
         }
     },
     "extra": {
-	    "patches": {
+        "patches": {
             "drupal/select_registration_roles": {
                 "Fix compatibility with login with email module": "https://www.drupal.org/files/issues/2020-02-28/3027552-fix-incompat-with-username-altering-modules.patch"
+            },
+            "installer-types": [
+                "npm-asset"
+            ],
+            "installer-paths": {
+                "web/libraries/{$name}": [
+                    "type:npm-asset"
+                ]
+            }
         },
-        "installer-types": [
-            "npm-asset"
-        ],
-        "installer-paths": {
-            "web/libraries/{$name}": [
-                "type:npm-asset"
-            ]
-        }
-	},
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
