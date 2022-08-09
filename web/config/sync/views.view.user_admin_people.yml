@@ -295,8 +295,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Active
-            format_custom_false: Blocked
+            format_custom_true: Ativo
+            format_custom_false: Bloqueado
           entity_type: user
           entity_field: status
         roles_target_id:
@@ -662,11 +662,11 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Active
+                title: Ativo
                 operator: '='
                 value: '1'
               2:
-                title: Blocked
+                title: Bloqueado
                 operator: '='
                 value: '0'
           plugin_id: boolean

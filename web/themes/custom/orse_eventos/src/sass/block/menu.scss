@@ -1,0 +1,18 @@
+@include media-breakpoint-down(md) {
+  .block--orse-eventos-mainmenu ,.block--orse-eventos-menudecontadeusuario{
+    .nav {
+      flex-direction: column;
+      .nav-item {
+        a {
+          font-size: calc(0.8rem + 0.5vw);
+        }
+      }
+    }
+    .nav-link {
+      padding: 0.5rem 1rem 0.5rem 0rem;
+    }
+  }
+  .block--orse-eventos-branding{
+    max-width: calc(70vw);
+  }
+}

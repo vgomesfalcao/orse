@@ -1,38 +1,37 @@
-.btn-primary{
+.btn-primary {
   font-weight: bold;
 }
 
 .btn-secondary {
-  font-weight:bold;
+  font-weight: bold;
 }
 
-
-.webform-submission-formulario-fotografo-form{
+.webform-submission-formulario-fotografo-form {
   h3 {
     text-align: center;
   }
   .form-control {
-    width:calc(100% - 25px);
+    width: calc(100% - 25px);
   }
-  .hasDatepicker{
-    display:inline-block;
+  .hasDatepicker {
+    display: inline-block;
   }
   .card {
-    border:none;
+    border: none;
     .card-header {
-      background-color:$white;
+      background-color: $white;
       font-weight: 700;
-      padding:0.75rem 0 0 0;
+      padding: 0.75rem 0 0 0;
       legend {
         .fieldset-legend {
           font-size: 1.25rem;
         }
       }
     }
-    .card-body{
-      input[type="radio"]{
-        display:none;
-        margin:10px;
+    .card-body {
+      input[type="radio"] {
+        display: none;
+        margin: 10px;
       }
       input[type="radio"] + label {
         padding: 4px 12px;
@@ -42,7 +41,7 @@
         font-weight: 600;
       }
       input[type="radio"]:checked + label {
-        background-image:none;
+        background-image: none;
         background-color: $primary;
         border-color: $primary;
       }
