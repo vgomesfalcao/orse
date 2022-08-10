@@ -4,7 +4,8 @@
       flex-direction: column;
       .nav-item {
         a {
-          font-size: calc(0.8rem + 0.5vw);
+          font-size: clamp(0.7em, calc(0.7em + 1vw), 2em);
+          margin: 2px 0;
         }
       }
     }
@@ -15,4 +16,8 @@
   .block--orse-eventos-branding{
     max-width: calc(70vw);
   }
+
+}
+.navbar-toggler{
+  font-size: clamp(1.4em,calc(1em + 1vw),2em);
 }

@@ -25,8 +25,6 @@ settings:
             - '-'
             - RemoveFormat
             - '-'
-            - Font
-            - FontSize
         -
           name: Text
           items:
@@ -55,17 +53,17 @@ settings:
         -
           name: 'Block Formatting'
           items:
-            - Format
+            - Styles
         -
           name: Tools
           items:
             - ShowBlocks
             - Source
   plugins:
+    stylescombo:
+      styles: "p.header-text-editor|Título\r\np.body-text-editor|Corpo"
     language:
       language_list: un
-    stylescombo:
-      styles: ''
     font:
       font_names: ''
       font_sizes: ''

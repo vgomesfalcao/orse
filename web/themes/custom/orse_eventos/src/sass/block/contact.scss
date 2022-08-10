@@ -1,0 +1,6 @@
+.block--contato {
+  p,
+  p a {
+    font-size: clamp(0.8em, calc(0.8em + 1vw), 2em);
+  }
+}

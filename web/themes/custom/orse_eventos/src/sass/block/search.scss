@@ -5,6 +5,14 @@
       width: 90%;
     }
   }
+  .block--orse-eventos-searchform {
+    margin-top: 10px;
+  }
+}
+@include media-breakpoint-up(md){
+  .block--orse-eventos-searchform {
+    margin-left: 10px;
+  }
 }
 #search-form .form-submit {
   margin: 10px 0;

@@ -2,18 +2,20 @@
 // -----------------------------------------------------------------------------
 .page__content {
   min-height: 60vh;
-  .container-fluid{
-    >.block {
+  .container-fluid {
+    > .block {
       margin: 0 -15px;
       padding: 0 15px;
     }
-    >.row {
-      >.col-md-12, .col-lg-12, .col-xl-12 {
-        >.block{
-          margin:0 -15px;
-          padding:0 15px;
+    > .row {
+      > .col-md-12,
+      .col-lg-12,
+      .col-xl-12 {
+        > .block {
+          margin: 0 -15px;
+          padding: 0 15px;
         }
-        >.block.block--bloco-fundo-verde,
+        > .block.block--bloco-fundo-verde,
         .block.block--bloco-fundo-laranja,
         .block.block--bloco-fundo-escuro {
           padding: 15px;
@@ -21,14 +23,20 @@
       }
     }
     .block--orse-eventos-content {
-      margin-bottom:50px;
+      margin-bottom: 50px;
+    }
+    .block--conteudohome .bloco-fundo-verde__body {
+      padding: 2.5rem 0;
+      img{
+        margin: 3rem 0 0;
+      }
     }
   }
 }
 
 .webform {
   .page__content {
-    background-color:$primary;
+    background-color: $primary;
     padding: 50px 0;
   }
 }
@@ -51,11 +59,11 @@
   padding: 40px 0;
 }
 
-
 #views-exposed-form-respostas-fotografos-page-1 {
   display: grid;
-  grid-template-areas: 'fotografo data-min valor-min empty'
-                        'fotografo data-max valor-max empty';
+  grid-template-areas:
+    "fotografo data-min valor-min empty"
+    "fotografo data-max valor-max empty";
   grid-template-columns: 22% 25% 23% 22%;
   grid-gap: 15px;
   margin-bottom: 20px;
@@ -70,7 +78,7 @@
     display: flex;
     flex-direction: column;
   }
-  > div.js-form-item:nth-child(3){
+  > div.js-form-item:nth-child(3) {
     grid-area: data-max;
     display: flex;
     flex-direction: column;
@@ -81,4 +89,8 @@
     flex-direction: column;
     justify-content: center;
   }
+}
+
+.layout.layout--onecol{
+  padding: 2rem 0;
 }
