@@ -50,7 +50,7 @@
         "drupal/fontawesome": "^2.19",
         "drupal/fontyourface": "^3.6",
         "drupal/honeypot": "^2.0",
-        "drupal/image_raw_formatter": "1.x-dev",
+        "drupal/image_raw_formatter": "^1.x-dev",
         "drupal/imce": "^2.3",
         "drupal/layout_paragraphs": "^1.0",
         "drupal/mautic": "^1.11",
