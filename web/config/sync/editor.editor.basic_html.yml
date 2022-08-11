@@ -44,7 +44,7 @@ settings:
             - Styles
   plugins:
     stylescombo:
-      styles: "p.header-text-editor|Título\r\np.body-text-editor|Corpo"
+      styles: "p.header-text-editor-gg|Título GG\r\np.header-text-editor-g|Título G\r\np.header-text-editor-m|Título M\r\np.header-text-editor-p|Título P\r\np.header-text-editor-pp|Título PP\r\np.body-text-editor-gg|Corpo GG\r\np.body-text-editor-g|Corpo G\r\np.body-text-editor-m|Corpo M\r\np.body-text-editor-p|Corpo P\r\np.body-text-editor-pp|Corpo PP"
     language:
       language_list: un
     font:
