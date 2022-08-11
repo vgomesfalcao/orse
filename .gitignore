@@ -48,3 +48,4 @@ sites/simpletest
 
 # Ignore mautic instalation.
 /web/mkt
+node_modules
