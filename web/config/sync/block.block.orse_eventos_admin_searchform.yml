@@ -1,0 +1,21 @@
+uuid: 7200f94b-4af2-4aea-bec0-b81c9c75a2bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - orse_eventos_admin
+id: orse_eventos_admin_searchform
+theme: orse_eventos_admin
+region: sidebar_first
+weight: 2
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 1fee77f4-acc3-4ad6-bcec-632829514a9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - orse_eventos_admin
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: orse_eventos_admin_content
+theme: orse_eventos_admin
+region: content
+weight: -7
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

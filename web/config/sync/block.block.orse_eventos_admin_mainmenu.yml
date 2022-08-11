@@ -1,0 +1,25 @@
+uuid: 3fd88697-8380-4588-89c8-1d634944e78e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-menu
+  module:
+    - system
+  theme:
+    - orse_eventos_admin
+id: orse_eventos_admin_mainmenu
+theme: orse_eventos_admin
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:main-menu'
+settings:
+  id: 'system_menu_block:main-menu'
+  label: 'Main Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
