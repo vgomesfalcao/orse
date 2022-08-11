@@ -1,6 +1,14 @@
 .block--contato {
   p,
   p a {
-    font-size: clamp(0.8em, calc(0.8em + 1vw), 2em);
+    font-size: 1.45rem;
+  }
+}
+@include media-breakpoint-down(md) {
+  .block--contato {
+    p,
+    p a {
+      font-size: 1.1rem;
+    }
   }
 }

@@ -1,6 +1,7 @@
 // Bootstrap
 // -----------------------------------------------------------------------------
 @import "~bootstrap/scss/functions";
+@import "base/custom_variables";
 @import "base/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/print";
@@ -42,6 +43,7 @@
 @import "base/helpers";
 @import "base/elements";
 @import "base/typography";
+
 
 // Layout
 // -----------------------------------------------------------------------------

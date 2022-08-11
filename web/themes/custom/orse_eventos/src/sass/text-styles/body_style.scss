@@ -1,6 +1,30 @@
-.body-text-editor {
-  text-align: center;
-  font-size: clamp(0.8em, calc(0.8em + 1vw), 2em) ;
-  font-family: 'Quicksand', sans;
-  color: rgb(172, 39, 0);
+@mixin body-size-text-editor($sizes) {
+  @each $name, $size in $sizes {
+    .body-text-editor-#{$name} {
+      text-align: center;
+      font-family: "Quicksand", sans;
+      color: rgb(172, 39, 0);
+      font-size: $size;
+    }
+  }
+}
+@include media-breakpoint-down(md) {
+  $sizes: (
+    "pp": $font-size-base * 0.6,
+    "p": $font-size-base * 0.8,
+    "m": $font-size-base,
+    "g": $font-size-base * 1.2,
+    "gg": $font-size-base * 1.35,
+  );
+  @include body-size-text-editor($sizes);
+}
+@include media-breakpoint-up(md) {
+  $sizes: (
+    "pp": $font-size-base * 0.7,
+    "p": $font-size-base,
+    "m": $font-size-base * 1.45,
+    "g": $font-size-base * 1.75,
+    "gg": $font-size-base * 1.95,
+  );
+  @include body-size-text-editor($sizes);
 }

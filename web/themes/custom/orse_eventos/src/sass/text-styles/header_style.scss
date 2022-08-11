@@ -1,8 +1,33 @@
-.header-text-editor {
-  text-align: center;
-  font-size: clamp(1.4em, calc(1em + 1.9vw), 3em);
-  font-weight: 600;
-  margin: 1rem 0 1rem;
-  font-family: 'Quicksand', sans;
-  color:rgb(172, 39, 0);
+@mixin header-size-text-editor($sizes) {
+  @each $name, $size in $sizes {
+    .header-text-editor-#{$name} {
+      font-size: $size;
+      text-align: center;
+      font-weight: 600;
+      margin: 1rem 0 1rem;
+      font-family: "Quicksand", sans;
+      color: rgb(172, 39, 0);
+    }
+  }
+}
+@include media-breakpoint-down(md) {
+    $sizes: (
+    "pp": $font-size-base * 1.4,
+    "p": $font-size-base * 1.7,
+    "m": $font-size-base * 1.9,
+    "g": $font-size-base * 2.1,
+    "gg": $font-size-base * 2.3,
+  );
+  @include header-size-text-editor($sizes);
+}
+
+@include media-breakpoint-up(md) {
+  $sizes: (
+    "pp": $font-size-base * 2,
+    "p": $font-size-base * 2.3,
+    "m": $font-size-base * 2.8,
+    "g": $font-size-base * 3.4,
+    "gg": $font-size-base * 4,
+  );
+  @include header-size-text-editor($sizes);
 }
