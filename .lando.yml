@@ -1,0 +1,35 @@
+name: orse_d
+recipe: drupal8
+
+config:
+  php: 7.3
+  webroot: web
+  composer_version: '2'
+  xdebug: true
+  drush: '^10'
+
+services:
+  myservice:
+    type: mysql:5.7
+    via: nginx
+    scanner: false
+
+  mail:
+    type: mailhog
+    hogfrom:
+      - appserver
+    scanner: false
+
+  database:
+    creds:
+      user: drupal8
+      password: drupal8
+      database: drupal8
+    scanner: false
+
+tooling:
+  drush:
+    service: appserver
+    env:
+      DRUSH_OPTIONS_URI: "https://orse_d.lndo.site"
+
