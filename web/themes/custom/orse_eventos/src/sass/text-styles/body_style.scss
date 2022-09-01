@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 @mixin body-size-text-editor($sizes) {
   @each $name, $size in $sizes {
     .body-text-editor-#{$name} {
       text-align: center;
-      font-family: "Quicksand", sans;
-      color: rgb(172, 39, 0);
+      font-family: "Lato", sans-serif;
+      color: rgb(34, 34, 34);
       font-size: $size;
+      margin: 0 20px 0 20px;
+      line-height: 35px;
     }
   }
 }
@@ -12,9 +15,9 @@
   $sizes: (
     "pp": $font-size-base * 0.6,
     "p": $font-size-base * 0.8,
-    "m": $font-size-base,
-    "g": $font-size-base * 1.2,
-    "gg": $font-size-base * 1.35,
+    "m": $font-size-base * 1.2,
+    "g": $font-size-base * 1.35,
+    "gg": $font-size-base * 1.4,
   );
   @include body-size-text-editor($sizes);
 }
