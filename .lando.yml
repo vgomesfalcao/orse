@@ -9,6 +9,17 @@ config:
   drush: '^10'
 
 services:
+  appserver:
+    build_as_root:
+      # Note that you will want to use the script for the major version of node you want to install
+      # See: https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
+      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+      - apt-get install -y nodejs
+    build:
+      - composer install
+    overrides:
+      environment:
+        DRUSH_OPTIONS_URI: "https://hgcd.lndo.site/"
   myservice:
     type: mysql:5.7
     via: nginx
@@ -32,4 +43,7 @@ tooling:
     service: appserver
     env:
       DRUSH_OPTIONS_URI: "https://orsed.lndo.site"
-
+  node:
+    service: appserver
+  npm:
+    service: appserver
