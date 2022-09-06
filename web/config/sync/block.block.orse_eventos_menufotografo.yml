@@ -12,7 +12,7 @@ dependencies:
 id: orse_eventos_menufotografo
 theme: orse_eventos
 region: content
-weight: -6
+weight: -5
 provider: null
 plugin: 'system_menu_block:menu-fotografo'
 settings:

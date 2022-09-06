@@ -56,5 +56,7 @@ permissions:
   - 'view own unpublished content'
   - 'view own webform content'
   - 'view paragraph content element_text'
+  - 'view paragraph content img_link'
+  - 'view paragraph content layout_image'
   - 'view paragraph content links_midias_sociais'
   - 'view paragraph content section'

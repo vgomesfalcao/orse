@@ -9,7 +9,7 @@ dependencies:
 id: mensagens
 theme: orse_eventos
 region: header
-weight: -7
+weight: -8
 provider: null
 plugin: system_messages_block
 settings:

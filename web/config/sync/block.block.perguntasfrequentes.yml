@@ -1,6 +1,6 @@
 uuid: 658d2440-94d3-42e1-aad4-15b1b9e2e881
 langcode: pt-br
-status: true
+status: false
 dependencies:
   module:
     - md_slider
@@ -10,7 +10,7 @@ dependencies:
 id: perguntasfrequentes
 theme: orse_eventos
 region: header
-weight: -6
+weight: -4
 provider: null
 plugin: 'md_slider_block:perguntas_frequentes'
 settings:

@@ -1,0 +1,12 @@
+div.home-block{
+    .bloco-fundo-verde__field-cover{
+        margin: -15px;
+    }
+}
+@include media-breakpoint-down(md){
+    div.home-block{
+        .bloco-fundo-verde__field-cover{
+            margin: -15px -100px;
+        }
+    }
+}

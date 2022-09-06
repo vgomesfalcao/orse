@@ -31,5 +31,5 @@ tooling:
   drush:
     service: appserver
     env:
-      DRUSH_OPTIONS_URI: "https://orse_d.lndo.site"
+      DRUSH_OPTIONS_URI: "https://orsed.lndo.site"
 
