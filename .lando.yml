@@ -1,48 +1,22 @@
 name: orse_d
-recipe: drupal8
+recipe: drupal9
 
 config:
-  php: 7.3
+  php: 7.4
   webroot: web
-  composer_version: '2'
   xdebug: true
-  drush: '^10'
 
 services:
   appserver:
     build_as_root:
-      # Note that you will want to use the script for the major version of node you want to install
-      # See: https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
       - apt-get install -y nodejs
     build:
       - composer install
     overrides:
       environment:
-        DRUSH_OPTIONS_URI: "https://hgcd.lndo.site/"
-  myservice:
-    type: mysql:5.7
-    via: nginx
-    scanner: false
-
-  mail:
-    type: mailhog
-    hogfrom:
-      - appserver
-    scanner: false
-
-  database:
-    creds:
-      user: drupal8
-      password: drupal8
-      database: drupal8
-    scanner: false
-
+        DRUSH_OPTIONS_URI: "https://orsed.lndo.site"
 tooling:
-  drush:
-    service: appserver
-    env:
-      DRUSH_OPTIONS_URI: "https://orsed.lndo.site"
   node:
     service: appserver
   npm:
