@@ -1,4 +1,4 @@
-name: orse_d
+name: orsed
 recipe: drupal9
 
 config:
