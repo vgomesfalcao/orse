@@ -1,0 +1,7 @@
+div.container:has(div.paragraph--type--img-link){
+    max-width: 100%;
+    padding: 0;
+}
+div.layout:has(div.paragraph--type--img-link){
+    padding: 0;
+}
