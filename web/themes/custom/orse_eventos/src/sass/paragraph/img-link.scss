@@ -5,3 +5,6 @@ div.container:has(div.paragraph--type--img-link){
 div.layout:has(div.paragraph--type--img-link){
     padding: 0;
 }
+.layout.layout--onecol{
+    padding: 0;
+}
