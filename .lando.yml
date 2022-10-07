@@ -5,17 +5,18 @@ config:
   php: 7.4
   webroot: web
   xdebug: true
-
+  database: mysql:8.0
 services:
   appserver:
-    build_as_root:
-      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
-      - apt-get install -y nodejs
     build:
       - composer install
     overrides:
       environment:
         DRUSH_OPTIONS_URI: "https://orsed.lndo.site"
+  node:
+    type: node
+    build:
+      - npm install
 tooling:
   node:
     service: appserver
