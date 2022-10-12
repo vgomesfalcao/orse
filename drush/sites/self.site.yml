@@ -1,0 +1,15 @@
+local:
+  root: '${env.cwd}/web'
+  uri: 'https://orse_d.lndo.site'
+
+stage:
+  host: orsed.h1.agatti.tech
+  user: igor
+  root: /var/www/orse/orse_d/web
+  uri: https://orsed.h1.agatti.tech
+
+prod:
+  host: orsefotografia.com
+  user: igor
+  root: /var/www/orse/orse_d/web
+  uri: https://orsefotografia.com

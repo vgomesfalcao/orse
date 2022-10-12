@@ -470,6 +470,7 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+          group: 1
         uid:
           id: uid
           table: node_field_data
@@ -484,7 +485,7 @@ display:
           expose:
             operator_id: uid_op
             label: Fotógrafo
-            description: 'Digite alguns nomes de fotógrafos, separando-os por vírgulas. '
+            description: ''
             use_operator: false
             operator: uid_op
             operator_limit_selection: false
@@ -622,6 +623,10 @@ display:
       display_extenders: {  }
       css_class: table-orcamentos
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -640,6 +645,9 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
+      css_class: 'table-orcamentos container'
+      defaults:
+        css_class: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -698,6 +706,87 @@ display:
           plugin_id: numeric
       defaults:
         arguments: false
+        filters: false
+        filter_groups: false
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            formulario_fotografo: formulario_fotografo
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        field_soma_valor_value:
+          id: field_soma_valor_value
+          table: node__field_soma_valor
+          field: field_soma_valor_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_soma_valor_value_op
+            label: 'Valor Total Entre'
+            description: ''
+            use_operator: false
+            operator: field_soma_valor_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_soma_valor_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              cliente: '0'
+              fotografo: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:

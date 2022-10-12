@@ -217,7 +217,7 @@ display:
     position: 1
     display_options:
       block_description: 'Who''s online'
-      display_description: 'A list of users that are currently logged in.'
+      display_description: 'Uma lista de usuários que estão autenticados atualmente.'
       display_extenders: {  }
     cache_metadata:
       contexts:

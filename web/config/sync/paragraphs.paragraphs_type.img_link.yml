@@ -1,0 +1,10 @@
+uuid: 74e96b54-7d93-42b9-b53b-40bd4211c4ab
+langcode: pt-br
+status: true
+dependencies: {  }
+id: img_link
+label: 'Imagem Link'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

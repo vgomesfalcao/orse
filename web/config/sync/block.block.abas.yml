@@ -1,0 +1,20 @@
+uuid: aa4a7401-87b1-4aca-8f3c-401fd91e3bc4
+langcode: pt-br
+status: true
+dependencies:
+  theme:
+    - orse_eventos
+id: abas
+theme: orse_eventos
+region: header
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Abas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

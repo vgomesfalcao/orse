@@ -1,0 +1,29 @@
+@include media-breakpoint-down(md) {
+  .search-parent .search-box .search-box-inner {
+    width: 100%;
+    #search-block-form {
+      width: 90%;
+    }
+  }
+  .block--orse-eventos-searchform {
+    margin-top: 10px;
+  }
+}
+@include media-breakpoint-up(md){
+  .block--orse-eventos-searchform {
+    margin-left: 10px;
+  }
+}
+#search-form .form-submit {
+  margin: 10px 0;
+  width: 100%;
+}
+.search-parent .search-box .search-box-inner {
+  .vertical-center {
+    margin: 0 0 0 10px;
+  }
+}
+.container-inline div,
+.container-inline label {
+  width: 100%;
+}

@@ -1,0 +1,13 @@
+@include media-breakpoint-down(md){
+  .element-text__field-text-long{
+    img{
+      max-width: 70vw;
+    }
+  }
+}
+
+.element-text__field-text-long{
+  p{
+    margin: 20px 0;
+  }
+}

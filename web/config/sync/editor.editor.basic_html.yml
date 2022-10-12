@@ -35,21 +35,26 @@ settings:
             - Blockquote
             - DrupalImage
         -
-          name: 'Block Formatting'
-          items:
-            - Format
-        -
           name: Tools
           items:
             - Source
+        -
+          name: Formatação
+          items:
+            - Styles
   plugins:
     stylescombo:
-      styles: ''
+      styles: "p.header-text-editor-gg|Título GG\r\np.header-text-editor-g|Título G\r\np.header-text-editor-m|Título M\r\np.header-text-editor-p|Título P\r\np.header-text-editor-pp|Título PP\r\np.body-text-editor-gg|Corpo GG\r\np.body-text-editor-g|Corpo G\r\np.body-text-editor-m|Corpo M\r\np.body-text-editor-p|Corpo P\r\np.body-text-editor-pp|Corpo PP"
+    language:
+      language_list: un
+    font:
+      font_names: ''
+      font_sizes: ''
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

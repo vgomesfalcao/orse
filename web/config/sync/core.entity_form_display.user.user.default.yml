@@ -8,7 +8,6 @@ dependencies:
     - image.style.thumbnail
   module:
     - image
-    - path
     - user
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -18,35 +17,16 @@ bundle: user
 mode: default
 content:
   account:
-    weight: -10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  contact:
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  language:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
+  langcode:
+    type: language_select
+    weight: 2
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  simplenews:
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  timezone:
-    weight: 6
-    region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   user_picture:
     type: image_image
@@ -54,9 +34,13 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: -1
+    weight: 1
     region: content
 hidden:
   commerce_remote_id: true
+  contact: true
   customer_profiles: true
-  langcode: true
+  language: true
+  path: true
+  simplenews: true
+  timezone: true

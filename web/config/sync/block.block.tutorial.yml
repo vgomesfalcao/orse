@@ -10,7 +10,7 @@ dependencies:
 id: tutorial
 theme: orse_eventos
 region: header
-weight: 0
+weight: -7
 provider: null
 plugin: 'md_slider_block:tutorial'
 settings:

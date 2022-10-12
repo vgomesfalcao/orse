@@ -1,6 +1,7 @@
 // Bootstrap
 // -----------------------------------------------------------------------------
 @import "~bootstrap/scss/functions";
+@import "base/custom_variables";
 @import "base/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/print";
@@ -43,6 +44,7 @@
 @import "base/elements";
 @import "base/typography";
 
+
 // Layout
 // -----------------------------------------------------------------------------
 @import "layout/page.header";
@@ -63,9 +65,37 @@
 
 @import "views/views.table";
 
-// Other
+// Block
 // -----------------------------------------------------------------------------
 @import "block/block";
+@import "block/menu";
+@import "block/search";
+@import "block/contact";
+@import "block/tutorial";
+@import "block/fundo_verde";
+
+// Form
+// -----------------------------------------------------------------------------
+@import "form/form";
+
+// User
+// -----------------------------------------------------------------------------
+@import "user/register";
+
+// Text-styles
+// -----------------------------------------------------------------------------
+@import "text-styles/body_style";
+@import "text-styles/header_style";
+
+// Paragraph
+// -----------------------------------------------------------------------------
+@import "paragraph/img-link";
 
 
-@import "form/form"
+// Other
+// -----------------------------------------------------------------------------
+
+
+
+
+

@@ -4,7 +4,7 @@ mail: contato@orseeventos.com.br
 slogan: ''
 page:
   403: ''
-  404: /node/92
+  404: ''
   front: /node/133
 admin_compact_mode: false
 weight_select_max: 100

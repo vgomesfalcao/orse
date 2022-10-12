@@ -5,6 +5,6 @@ features:
   favicon: true
 logo:
   use_default: false
-  path: 'public://logo_completa_3.png'
+  path: 'public://logo_grande.png'
 favicon:
   use_default: true

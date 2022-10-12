@@ -1,4 +1,5 @@
 module:
+  webform_clientside_validation: -1
   select_registration_roles: -5
   address: 0
   admin_toolbar: 0
@@ -15,6 +16,8 @@ module:
   breakpoint: 0
   ckeditor: 0
   ckeditor_font: 0
+  clientside_validation: 0
+  clientside_validation_jquery: 0
   color: 0
   color_field: 0
   comment: 0
@@ -58,6 +61,7 @@ module:
   image: 0
   imce: 0
   inline_entity_form: 0
+  inline_form_errors: 0
   language: 0
   layout_discovery: 0
   layout_paragraphs: 0
@@ -85,7 +89,6 @@ module:
   responsive_image: 0
   search: 0
   shortcut: 0
-  simplenews: 0
   sitemap: 0
   state_machine: 0
   statistics: 0
@@ -131,6 +134,7 @@ theme:
   orse: 0
   radix: 0
   orse_eventos: 0
+  orse_eventos_admin: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

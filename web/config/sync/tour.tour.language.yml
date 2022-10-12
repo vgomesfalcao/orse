@@ -31,7 +31,7 @@ tips:
     id: language-reorder
     plugin: text
     label: 'Reordering languages'
-    body: '<p>To reorder the languages on your site, use the drag icons next to each language.</p><p>The order shown here is the display order for language lists on the site such as in the language switcher blocks provided by the Interface Translation and Content Translation modules.</p><p>When you are done with reordering the languages, click the "Save configuration" button for the changes to take effect.</p>'
+    body: '<p>Para reordenar os idiomas em seu site, use os ícones de arrastar próximos de cada idioma.</p><p>A ordem exibida aqui é a ordem de exibição para as listas de idiomas no site, tais como nos blocos de alternância de idiomas fornecidos pelos módulos Interface Translation e Content Translation.</p><p>Quando você terminar de reordenar os idiomas, clique no botão "Salvar configuração" para que as mudanças sejam aplicadas.</p>'
     weight: 3
     attributes:
       data-class: draggable
@@ -47,7 +47,7 @@ tips:
     id: language-operations
     plugin: text
     label: 'Modifying languages'
-    body: '<p>Operations are provided for editing and deleting your languages.</p><p>You can edit the name and the direction of the language.</p><p>Deleted languages can be added back at a later time. Deleting a language will remove all interface translations associated with it, and content in this language will be set to be language neutral. Note that you cannot delete the default language of the site.</p>'
+    body: '<p>São fornecidas operações para editar ou apagar seus idiomas.</p><p>Você pode editar o nome e direção do idioma.</p><p>Idiomas apagados podem ser adicionados novamente. Apagar um idioma remove todas as traduções de interface associadas à ele e o conteúdo neste idioma passará a ser definido como idioma neutro. Note que você não pode apagar o idioma padrão do site.</p>'
     weight: 5
     attributes:
       data-class: dropbutton-wrapper
@@ -55,5 +55,5 @@ tips:
     id: language-continue
     plugin: text
     label: 'Continuing on'
-    body: '<p>Now that you have an overview of the "Languages" page, you can continue by:<ul><li><a href="[site:url]admin/config/regional/language/add">Adding a language</a></li><li>Reordering languages</li><li>Editing a language</li><li>Deleting a language</li></ul></p>'
+    body: '<p>Agora que você tem uma visão geral da página de "Idiomas", você pode continuar:<ul><li><a href="[site:url]admin/config/regional/language/add">Adicionando um idioma</a></li><li>Reordenando idiomas</li><li>Editando um idioma</li><li>Apagando um idioma</li></ul></p>'
     weight: 6

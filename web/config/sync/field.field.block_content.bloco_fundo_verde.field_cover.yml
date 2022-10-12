@@ -1,0 +1,43 @@
+uuid: 1edb418e-87e1-4c99-a24e-087538bd9a3b
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.bloco_fundo_verde
+    - field.storage.block_content.field_cover
+    - paragraphs.paragraphs_type.img_link
+  module:
+    - entity_reference_revisions
+id: block_content.bloco_fundo_verde.field_cover
+field_name: field_cover
+entity_type: block_content
+bundle: bloco_fundo_verde
+label: Capa
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      img_link: img_link
+    target_bundles_drag_drop:
+      element_text:
+        weight: 6
+        enabled: false
+      img_link:
+        enabled: true
+        weight: 7
+      layout_image:
+        weight: 8
+        enabled: false
+      links_midias_sociais:
+        weight: 9
+        enabled: false
+      section:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

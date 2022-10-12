@@ -1,0 +1,45 @@
+#user-register-form {
+  text-align: left;
+  padding-bottom: 50px;
+  .card {
+      border:none;
+      .card-header {
+        background-color:$white;
+        font-weight: 700;
+        padding:0.75rem 0 0 0;
+        legend {
+          .fieldset-legend {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    .card-body{
+      input[type="radio"]{
+        display:none;
+        margin:10px;
+      }
+      input[type="radio"] + label {
+        padding: 5px 15px 5px 15px;
+        background-color: $gray-400;
+        border-color: $gray-600;
+        margin: 10px;
+        font-weight: 600;
+        i {
+          background-color:white;
+          padding: 15px 10px 15px 0;
+          position: relative;
+          left: 15px;
+          font-size: 18px;
+        }
+      }
+      input[type="radio"]:checked + label {
+        background-image:none;
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+  .form-actions{
+    text-align: center;
+  }
+}

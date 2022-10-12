@@ -1,0 +1,20 @@
+uuid: 4bf2380d-5e0c-4acb-bfb4-07ce412d6b47
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - orse_eventos
+id: mensagens
+theme: orse_eventos
+region: header
+weight: -8
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Mensagens
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -3,6 +3,6 @@ select_registration_roles_setby_admin:
   fotografo: fotografo
   administrator: 0
 select_registration_roles_admin_approval:
-  fotografo: fotografo
   administrator: 0
   cliente: 0
+  fotografo: 0

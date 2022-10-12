@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@mixin body-size-text-editor($sizes) {
+  @each $name, $size in $sizes {
+    .body-text-editor-#{$name} {
+      text-align: center;
+      font-family: "Lato", sans-serif;
+      color: rgb(34, 34, 34);
+      font-size: $size;
+      margin: 0 20px 0 20px;
+      line-height: 35px;
+    }
+  }
+}
+@include media-breakpoint-down(md) {
+  $sizes: (
+    "pp": $font-size-base * 0.6,
+    "p": $font-size-base * 0.8,
+    "m": $font-size-base * 1.2,
+    "g": $font-size-base * 1.35,
+    "gg": $font-size-base * 1.4,
+  );
+  @include body-size-text-editor($sizes);
+}
+@include media-breakpoint-up(md) {
+  $sizes: (
+    "pp": $font-size-base * 0.7,
+    "p": $font-size-base,
+    "m": $font-size-base * 1.45,
+    "g": $font-size-base * 1.75,
+    "gg": $font-size-base * 1.95,
+  );
+  @include body-size-text-editor($sizes);
+}

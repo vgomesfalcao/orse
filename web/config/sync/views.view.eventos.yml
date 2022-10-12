@@ -486,6 +486,7 @@ display:
         type: role
         options:
           role:
+            administrator: administrator
             fotografo: fotografo
     cache_metadata:
       max-age: -1

@@ -25,6 +25,7 @@
       a {
         font-weight:bold;
         color:black;
+        font-size:20px;
         @include hover {
           color: $primary;
         }
@@ -40,6 +41,7 @@
 }
 
 .search-parent {
+  font-size:20px;
   .search-box {
     display:none;
     opacity:0;

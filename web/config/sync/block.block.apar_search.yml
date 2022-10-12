@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - language
     - search
   theme:
     - apar
@@ -20,4 +21,11 @@ settings:
   provider: search
   label_display: visible
   page_id: ''
-visibility: {  }
+visibility:
+  language:
+    id: language
+    langcodes:
+      pt-br: pt-br
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

@@ -1,0 +1,83 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+{% set container = "container" %}
+{% set col_content = page.sidebar ? "9" : "12" %}
+<div class="page">
+	{% embed '@radix/navbar/navbar.twig' with {
+    placement: 'sticky-top',
+    container: 'fixed',
+    color: 'light',
+    utility_classes: [],
+  } %}
+
+		{% block branding %}
+			{% if page.navbar_branding %}
+				{{ page.navbar_branding }}
+			{% endif %}
+		{% endblock %}
+
+		{% block left %}
+			{% if page.navbar_left %}
+				<div class="mr-auto">
+					{{ page.navbar_left }}
+				</div>
+			{% endif %}
+		{% endblock %}
+
+		{% block right %}
+			{% if page.navbar_right %}
+				{{ page.navbar_right }}
+			{% endif %}
+		{% endblock %}
+	{% endembed %}
+
+	<main>
+		{% if page.header %}
+			<header class="page__header">
+				<div class="container">
+					{{ page.header }}
+				</div>
+			</header>
+		{% endif %}
+
+		{% if page.content %}
+			<div class="page__content">
+				<div class="{{container}}">
+          <div class="row">
+            {% if page.sidebar %}
+              <div class="col-md-3">
+                {{ page.sidebar }}
+              </div>
+            {% endif %}
+            <div class="col-md-{{col_content}} justify-content-center text-center">
+					    {{ page.content }}
+            </div>
+				</div>
+			</div>
+		{% endif %}
+	</main>
+
+	{% if page.footer %}
+		<footer class="page__footer">
+			<div class="container-fluid">
+				<div class="row d-flex">
+					<div class="col-md-12">
+						{{ page.footer }}
+					</div>
+				</div>
+				{% if page.footer_bottom %}
+					<div class="row bottom">
+						<div class="col-md-12">
+							{{ page.footer_bottom }}
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</footer>
+	{% endif %}
+</div>
+

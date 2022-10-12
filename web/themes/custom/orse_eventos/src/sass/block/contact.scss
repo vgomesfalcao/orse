@@ -1,0 +1,17 @@
+
+.block--contato {
+  p,
+  p a {
+    font-size: 1.45rem;
+    font-family: "Lato", sans-serif;
+  }
+}
+@include media-breakpoint-down(md) {
+  .block--contato {
+    p,
+    p a {
+      font-size: 1.1rem;
+      font-family: "Lato", sans-serif;
+    }
+  }
+}

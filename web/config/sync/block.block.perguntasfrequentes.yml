@@ -1,0 +1,26 @@
+uuid: 658d2440-94d3-42e1-aad4-15b1b9e2e881
+langcode: pt-br
+status: false
+dependencies:
+  module:
+    - md_slider
+    - system
+  theme:
+    - orse_eventos
+id: perguntasfrequentes
+theme: orse_eventos
+region: header
+weight: -4
+provider: null
+plugin: 'md_slider_block:perguntas_frequentes'
+settings:
+  id: 'md_slider_block:perguntas_frequentes'
+  label: 'Perguntas Frequentes'
+  provider: md_slider
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /perguntas-frequentes
+    negate: false
+    context_mapping: {  }

@@ -499,7 +499,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: 'Displaying @start - @end of @total'
+          content: 'Exibindo @start - @end de @total'
           plugin_id: result
       footer: {  }
       empty:

@@ -1,0 +1,9 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/orse_eventos_admin.style.css: {}
+  js:
+    assets/js/orse_eventos_admin.script.js: {}
+  dependencies:
+    - core/drupal

@@ -18,6 +18,15 @@
   }
 }
 
+.block--orse-eventos-views-block--respostas-fotografos-block-1{
+  h2 {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+}
+
+
 #views-exposed-form-respostas-fotografos-block-1 {
   display: grid;
   grid-template-areas: 'fotografo data-min valor-min empty'

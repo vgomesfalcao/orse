@@ -63,10 +63,10 @@ display:
             offset: false
             offset_label: Offset
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: '‹ anterior'
+            next: 'próximo ›'
+            first: '« início'
+            last: 'fim »'
           quantity: 9
       style:
         type: table
@@ -174,7 +174,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: 'With selection'
+          action_title: 'Selecione a ação'
           include_exclude: exclude
           selected_actions: {  }
           entity_type: commerce_product
@@ -186,7 +186,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Title
+          label: Título
           exclude: false
           alter:
             alter_text: false
@@ -362,7 +362,7 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Published
+            format_custom_true: Publicado
             format_custom_false: Unpublished
           group_column: value
           group_columns: {  }
@@ -384,7 +384,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Updated
+          label: Atualizado
           exclude: false
           alter:
             alter_text: false
@@ -553,7 +553,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Título
             description: ''
             use_operator: false
             operator: title_op
