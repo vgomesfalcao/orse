@@ -1,8 +1,8 @@
-name: Drupal Deploy
+name: Drupal Deploy PROD
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "master" ]
 
 permissions:
   contents: read
@@ -25,6 +25,6 @@ jobs:
           aws deploy create-deployment \
             --file-exists-behavior OVERWRITE \
             --application-name orse \
-            --deployment-group-name dev_orse \
+            --deployment-group-name prod_orse \
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
