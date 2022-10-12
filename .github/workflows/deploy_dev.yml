@@ -1,4 +1,4 @@
-name: Drupal Deploy
+name: Drupal Deploy Dev
 
 on:
   push:
