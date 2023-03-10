@@ -1,0 +1,14 @@
+# .htaccess main domain to subfolder redirect
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^(www.)?(dev.)?agatti.tech$
+RewriteCond %{REQUEST_URI} !^/web/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ /web/$1
+
+RewriteCond %{HTTP_HOST} ^(www.)?(dev.)?agatti.tech$
+
+RewriteRule ^(/)?$ web/index.html [L]

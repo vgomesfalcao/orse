@@ -22,7 +22,7 @@ contrib
 
 
 # Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
+sites/*/local.settings*.php
 sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
