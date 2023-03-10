@@ -1,4 +1,4 @@
-name: Drupal Deploy PROD
+name: Drupal Deploy Dev
 
 on:
   push:
@@ -11,20 +11,34 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Step 1
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_CLIENT_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_CLIENT_SECRET }}
-          aws-region: ${{ secrets.AWS_REGION }}
-      # Step 2
-      - name: Create CodeDeploy Deployment
-        id: deploy
-        run: |
-          aws deploy create-deployment \
-            --file-exists-behavior OVERWRITE \
-            --application-name orse \
-            --deployment-group-name prod_orse \
-            --deployment-config-name CodeDeployDefault.OneAtATime \
-            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
+    - name: Setup PHP without any shared extensions except mbstring
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+
+    - uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress
+
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@5.2.1
+      with:
+        switches: -avzr
+        path: ./
+        remote_path: '/home/u711810234/domains/orsefotografia.com.br/public_html/'
+        remote_host: 82.180.159.192
+        remote_port: 65002
+        remote_user: 'u711810234'
+        remote_key: ${{ secrets.DEPLOY_KEY }}
+
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v0.1.7
+      with:
+        host: 82.180.159.192
+        username: u711810234
+        key: ${{ secrets.DEPLOY_KEY }}
+        port: 65002
+        script: |
+          cd /home/u711810234/domains/orsefotografia.com.br/public_html/
+          ./vendor/bin/drush deploy
