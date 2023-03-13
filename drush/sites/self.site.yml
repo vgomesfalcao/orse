@@ -1,15 +1,21 @@
 local:
-  root: '${env.cwd}/web'
-  uri: 'https://orse_d.lndo.site'
-
-stage:
-  host: orsed.h1.agatti.tech
-  user: igor
-  root: /var/www/orse/orse_d/web
-  uri: https://orsed.h1.agatti.tech
-
+  root: ${env.cwd}/web
+  uri: https://orse_d.lndo.site
+dev:
+  host: 82.180.159.192
+  user: u711810234
+  root: /home/u711810234/domains/orsefotografia.com.br/public_html/dev/web/
+  uri: https://dev.orsefotografia.com.br
+  ssh:
+    options: '-p 65002'
+  paths:
+    drush-script: '/home/u711810234/bin/drush'
 prod:
-  host: orsefotografia.com
-  user: igor
-  root: /var/www/orse/orse_d/web
-  uri: https://orsefotografia.com
+  host: 82.180.159.192
+  user: u711810234
+  root: /home/u711810234/domains/orsefotografia.com.br/public_html/web/
+  uri: https://orsefotografia.com.br
+  ssh:
+    options: '-p 65002'
+  paths:
+    drush-script: '/home/u711810234/bin/drush'
