@@ -5,7 +5,7 @@ config:
   php: 7.4
   webroot: web
   xdebug: true
-  database: mysql:8.0
+  database: mysql
 services:
   appserver:
     build:
