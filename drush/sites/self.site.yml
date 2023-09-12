@@ -2,20 +2,16 @@ local:
   root: ${env.cwd}/web
   uri: https://orse_d.lndo.site
 dev:
-  host: 82.180.159.192
-  user: u711810234
-  root: /home/u711810234/domains/orsefotografia.com.br/public_html/dev/web/
+  host: 192.169.81.222
+  user: renata
+  root: /home4/renata/dev.orsefotografia.com.br/web/
   uri: https://dev.orsefotografia.com.br
   ssh:
-    options: '-p 65002'
-  paths:
-    drush-script: '/home/u711810234/bin/drush'
+    options: '-p 1140'
 prod:
-  host: 82.180.159.192
-  user: u711810234
-  root: /home/u711810234/domains/orsefotografia.com.br/public_html/web/
+  host: 192.169.81.222
+  user: renata
+  root: /home4/renata/orsefotografia.com.br/web/
   uri: https://orsefotografia.com.br
   ssh:
-    options: '-p 65002'
-  paths:
-    drush-script: '/home/u711810234/bin/drush'
+    options: '-p 1140'
