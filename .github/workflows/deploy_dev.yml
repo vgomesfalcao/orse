@@ -24,21 +24,23 @@ jobs:
     - name: rsync deployments
       uses: burnett01/rsync-deployments@5.2.1
       with:
-        switches: -avzr
+        switches: -avzr --delete --exclude 'web/sites/default/files' --exclude 'web/sites/default/settings.local.php' --exclude 'web/mkt'
         path: ./
-        remote_path: '/home/u711810234/domains/orsefotografia.com.br/public_html/dev/'
-        remote_host: 82.180.159.192
-        remote_port: 65002
-        remote_user: 'u711810234'
+        remote_path: '/home4/renata/dev.orsefotografia.com.br/'
+        remote_host: 192.169.81.222
+        remote_port: 1140
+        remote_user: 'renata'
         remote_key: ${{ secrets.DEPLOY_KEY }}
+        remote_key_pass: ${{ secrets.DEPLOY_KEY_PASS }}
 
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v0.1.7
       with:
-        host: 82.180.159.192
-        username: u711810234
+        host: 192.169.81.222
+        username: renata
         key: ${{ secrets.DEPLOY_KEY }}
-        port: 65002
+        passphrase: ${{ secrets.DEPLOY_KEY_PASS }}
+        port: 1140
         script: |
-          cd /home/u711810234/domains/orsefotografia.com.br/public_html/dev/
+          cd /home4/renata/dev.orsefotografia.com.br/
           ./vendor/bin/drush deploy
