@@ -53,6 +53,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  flood_control: 0
   fontawesome: 0
   gavias_sliderlayer: 0
   help: 0
@@ -90,6 +91,7 @@ module:
   search: 0
   shortcut: 0
   sitemap: 0
+  smtp: 0
   state_machine: 0
   statistics: 0
   system: 0

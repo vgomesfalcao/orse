@@ -11,9 +11,9 @@ dependencies:
 _core:
   default_config_hash: InlzG5jd3RryfIKQvjJqhVyA8SOyJmmXfjdl5l8eYD8
 id: commerce_user_orders
-label: 'User orders'
+label: 'Pedidos do usuário'
 module: views
-description: 'Display a list of placed orders for a user.'
+description: 'Exibir uma lista de pedidos feitos por um usuário.'
 tag: Commerce
 base_table: commerce_order
 base_field: order_id
@@ -570,7 +570,7 @@ display:
   order_page:
     display_plugin: page
     id: order_page
-    display_title: 'User orders'
+    display_title: 'Pedidos do usuário'
     position: 1
     display_options:
       display_extenders: {  }
