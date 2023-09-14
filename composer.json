@@ -47,6 +47,7 @@
         "drupal/devel": "^4.1",
         "drupal/email_registration": "^1.1",
         "drupal/field_group": "^3.1",
+        "drupal/flood_control": "^2.3",
         "drupal/fontawesome": "^2.19",
         "drupal/fontyourface": "^3.6",
         "drupal/honeypot": "^2.0",

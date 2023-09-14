@@ -17,7 +17,7 @@ dependencies:
 _core:
   default_config_hash: T_mtP2LLBvuVrP8WWfFLVJQI2Hk18Zt9Wv3V63du1jk
 id: commerce_cart_form
-label: 'Cart form'
+label: 'Formulário de carrinho'
 module: views
 description: ''
 tag: commerce_cart_form
