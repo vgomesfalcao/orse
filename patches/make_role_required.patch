@@ -1,0 +1,12 @@
+diff --git a/select_registration_roles.module b/select_registration_roles.module
+index 1ee7799..e390063 100644
+--- a/select_registration_roles.module
++++ b/select_registration_roles.module
+@@ -44,6 +44,7 @@ function select_registration_roles_form_alter(&$form, \Drupal\Core\Form\FormStat
+                         '#type' => 'radios',
+                         '#title' => t('Choose a role'),
+                         '#options' => $roles,
++                        '#required' => TRUE,
+                         '#cache' => array(
+                             'max-age' => -1,
+                         ),
