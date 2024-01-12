@@ -5,6 +5,6 @@ header: false
 _core:
   default_config_hash: 57YHD-gK9YrCd4mfkPt3DuRirKm_ZMRh2ILuF6JpC44
 mautic_enable: true
-mautic_base_url: 'http://orse.agatti.tech/mkt'
+mautic_base_url: 'https://orsefotografia.com.br/mkt'
 lift_enable: null
 langcode: pt-br
