@@ -124,7 +124,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: url_message
   confirmation_title: 'Evento Criado'
-  confirmation_message: 'Seu evento foi criado com sucesso!'
+  confirmation_message: "Sua solicita&ccedil;&atilde;o de or&ccedil;amento foi enviada, agora &eacute; s&oacute; aguardar, em at&eacute; 48h voc&ecirc; receber&aacute; seus or&ccedil;amentos\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -68px; top: -20px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>"
   confirmation_url: /user/meus-eventos
   confirmation_attributes: {  }
   confirmation_back: false
