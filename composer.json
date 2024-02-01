@@ -72,7 +72,7 @@
         "drupal/twig_vardumper": "^2.2",
         "drupal/video_embed_field": "^2.4",
         "drupal/views_aggregator": "^1.0@beta",
-        "drupal/webform": "^6.0",
+        "drupal/webform": "^5.29",
         "drupal/webform_content_creator": "^2.0",
         "drupal/webform_mautic": "^1.1",
         "drush/drush": "^10.4",
