@@ -27,7 +27,7 @@ jobs:
         switches: -avzr --delete --exclude 'web/sites/default/files' --exclude 'web/sites/default/settings.local.php' --exclude 'web/mkt'
         path: ./
         remote_path: '/home4/renata/dev.orsefotografia.com.br/'
-        remote_host: 192.169.81.222
+        remote_host: 64.20.40.138
         remote_port: 1140
         remote_user: 'renata'
         remote_key: ${{ secrets.DEPLOY_KEY }}
@@ -36,7 +36,7 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v0.1.7
       with:
-        host: 192.169.81.222
+        host: 64.20.40.138
         username: renata
         key: ${{ secrets.DEPLOY_KEY }}
         passphrase: ${{ secrets.DEPLOY_KEY_PASS }}
