@@ -2,14 +2,14 @@ local:
   root: ${env.cwd}/web
   uri: https://orse_d.lndo.site
 dev:
-  host: 192.169.81.222
+  host: 64.20.40.138
   user: renata
   root: /home4/renata/dev.orsefotografia.com.br/web/
   uri: https://dev.orsefotografia.com.br
   ssh:
     options: '-p 1140'
 prod:
-  host: 192.169.81.222
+  host: 64.20.40.138
   user: renata
   root: /home4/renata/orsefotografia.com.br/web/
   uri: https://orsefotografia.com.br
