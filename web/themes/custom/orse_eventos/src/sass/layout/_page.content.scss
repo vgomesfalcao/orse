@@ -2,33 +2,47 @@
 // -----------------------------------------------------------------------------
 .page__content {
   min-height: 60vh;
-  .container-fluid {
-    > .block {
+
+  .container-fluid,.container {
+    >.block {
       margin: 0 -15px;
       padding: 0 15px;
     }
-    > .row {
-      > .col-md-12,
+
+    >.row {
+      >.col-md-12,
       .col-lg-12,
       .col-xl-12 {
-        > .block {
+        >.block {
           margin: 0 -15px;
           padding: 0 15px;
         }
-        > .block.block--bloco-fundo-verde,
+
+        >.block.block--bloco-fundo-verde,
         .block.block--bloco-fundo-laranja,
         .block.block--bloco-fundo-escuro {
           padding: 15px;
         }
       }
     }
+
     .block--orse-eventos-content {
       margin-bottom: 50px;
     }
+
+    .block--conteudohome {
+      @extend .d-flex;
+      @extend .flex-wrap;
+      @extend .justify-content-center;
+
+    }
+
     .block--conteudohome .bloco-fundo-verde__body {
+      @extend .col-md-7;
       padding: 2.5rem 0 0 0;
       margin: 0 -15px 0 -15px;
-      img{
+
+      img {
         margin: 3rem auto 0 auto;
         padding-left: -15px;
         padding-right: -15px;
@@ -71,23 +85,27 @@
   grid-template-columns: 22% 25% 23% 22%;
   grid-gap: 15px;
   margin-bottom: 20px;
-  > .js-form-type-entity-autocomplete {
+
+  >.js-form-type-entity-autocomplete {
     grid-area: fotografo;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  > div.js-form-item:nth-child(2) {
+
+  >div.js-form-item:nth-child(2) {
     grid-area: data-min;
     display: flex;
     flex-direction: column;
   }
-  > div.js-form-item:nth-child(3) {
+
+  >div.js-form-item:nth-child(3) {
     grid-area: data-max;
     display: flex;
     flex-direction: column;
   }
-  > div.form-actions {
+
+  >div.form-actions {
     grid-area: empty;
     display: flex;
     flex-direction: column;
@@ -95,6 +113,6 @@
   }
 }
 
-.layout.layout--onecol{
+.layout.layout--onecol {
   padding: 2rem 0;
 }

@@ -4,9 +4,15 @@
  * Template for the main page.
  */
 #}
-{% set container = "container" %}
+{% set container = "container-fluid" %}
 {% set col_content = page.sidebar ? "9" : "6" %}
-<div class="page">
+{%
+	set classes = [
+		'page',
+		'page_' ~ nid
+	]
+%}
+<div{{attributes.addClass(classes)}}>
 	{% embed '@radix/navbar/navbar.twig' with {
     placement: 'sticky-top',
     container: 'fixed',
@@ -38,7 +44,7 @@
 	<main>
 		{% if page.header %}
 			<header class="page__header">
-				<div class="container">
+				<div class="{{container}}">
 					{{ page.header }}
 				</div>
 			</header>
@@ -47,37 +53,36 @@
 		{% if page.content %}
 			<div class="page__content">
 				<div class="{{container}}">
-          <div class="row justify-content-center">
-            {% if page.sidebar %}
-              <div class="col-md-3">
-                {{ page.sidebar }}
-              </div>
-            {% endif %}
-            <div class="col-md-{{col_content}} justify-content-center d-flex text-center">
-					    {{ page.content }}
-            </div>
-				</div>
-			</div>
-		{% endif %}
-	</main>
-
-	{% if page.footer %}
-		<footer class="page__footer">
-			<div class="container-fluid">
-				<div class="row d-flex">
-					<div class="col-md-12">
-						{{ page.footer }}
-					</div>
-				</div>
-				{% if page.footer_bottom %}
-					<div class="row bottom">
-						<div class="col-md-12">
-							{{ page.footer_bottom }}
+					<div class="row justify-content-center">
+						{% if page.sidebar %}
+							<div class="col-md-3">
+								{{ page.sidebar }}
+							</div>
+						{% endif %}
+						<div class="col-md-{{col_content}}">
+							{{ page.content }}
 						</div>
 					</div>
-				{% endif %}
-			</div>
-		</footer>
-	{% endif %}
-</div>
+				</div>
+			{% endif %}
+		</main>
 
+		{% if page.footer %}
+			<footer class="page__footer">
+				<div class="{{container}}">
+					<div class="row">
+						<div class="col-md-12">
+							{{ page.footer }}
+						</div>
+					</div>
+					{% if page.footer_bottom %}
+						<div class="row bottom">
+							<div class="col-md-12">
+								{{ page.footer_bottom }}
+							</div>
+						</div>
+					{% endif %}
+				</div>
+			</footer>
+		{% endif %}
+	</div>
