@@ -1,6 +1,0 @@
-nvs_widget.settings:
-  title: 'Naviteam widget'
-  description: 'Naviteam widget settings'
-  route_name: nvs_widget.settings
-  parent: system.admin_config_content
-  weight: 3

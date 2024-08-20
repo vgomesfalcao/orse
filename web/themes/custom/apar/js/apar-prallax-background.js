@@ -1,4 +1,0 @@
-(function ($) {
-    $('.parallax').parallaxBackground();
-
-})(jQuery);

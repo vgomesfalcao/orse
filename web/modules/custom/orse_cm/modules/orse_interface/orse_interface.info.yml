@@ -2,4 +2,4 @@ name: 'Orse Interface'
 type: module
 description: 'Create custom menus. And other complex interface customizations.'
 package: Orse
-core: 8.x
+core_version_requirement: ^8.8 || ^9

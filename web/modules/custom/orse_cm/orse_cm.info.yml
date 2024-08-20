@@ -2,7 +2,7 @@ name: 'Orse Custom Module'
 type: module
 description: 'Allows settings attributes block advanced.'
 package: Orse
-core: 8.x
+core_version_requirement: ^8 || ^9
 
 dependencies:
   - drupal:computed_field

@@ -1,5 +1,0 @@
-<div{{ attributes }}>
-  	{{ title_suffix }}
-	{% set a = content|render|replace({'class="form-search"':'class="form-search email_input"','value="" class="button js-form-submit form-submit"':'value="Search" class="input_submit button js-form-submit form-submit"'}) %}
-	{{ a ? a|t }}
-</div>

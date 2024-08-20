@@ -1,5 +1,0 @@
-widget-lib:
-  js:
-    js_flickr/jflickrfeed.js: {}
-  dependencies:
-    - core/jquery
