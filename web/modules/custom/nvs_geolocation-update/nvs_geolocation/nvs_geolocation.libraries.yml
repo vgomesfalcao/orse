@@ -1,6 +1,0 @@
-nvs_geolocation-lib:
-  version: VERSION
-  js:
-    js/custom.js: {}
-  dependencies:
-    - core/jquery
