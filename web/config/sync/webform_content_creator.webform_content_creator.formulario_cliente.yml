@@ -18,61 +18,73 @@ elements:
     webform_field: data_evento
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   field_idade_da_crianca:
     type: false
     webform_field: idade_crianca
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   field_local:
     type: false
     webform_field: local
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   field_nome_completo:
     type: false
     webform_field: nome_completo
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   field_numero_de_convidados:
     type: false
     webform_field: numero_convidados
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   field_observacoes:
     type: false
     webform_field: observacoes
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   field_tipo_de_bodas:
     type: false
     webform_field: tipo_bodas
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   field_tipo_de_casamento:
     type: false
     webform_field: tipo_casamento
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   field_tipo_de_comemoracao:
     type: false
     webform_field: tipo_comemoracao
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   field_tipo_de_evento:
     type: false
     webform_field: tipo_evento
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   field_valor_maximo_fotografia:
     type: false
     webform_field: valor_max_fotografia
     custom_check: false
     custom_value: ''
+    mapping: default_mapping
   title:
     type: false
     webform_field: ''
     custom_check: true
     custom_value: '[webform_submission:values:tipo_evento] - [webform_submission:values:data_evento]'
+    mapping: default_mapping
 sync_content_node_field: null
 target_entity_type: node
 target_bundle: formulario_cliente

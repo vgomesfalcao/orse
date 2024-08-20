@@ -5,6 +5,9 @@ dependencies:
   module:
     - comment
     - node
+  enforced:
+    module:
+      - blog
 _core:
   default_config_hash: 74kW00LeVz5khQbqsqX_nUK_pddw2cRWVxBwdi7O8x4
 id: node.field_blog_comments

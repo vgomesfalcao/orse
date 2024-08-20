@@ -5,6 +5,9 @@ dependencies:
   module:
     - node
     - taxonomy
+  enforced:
+    module:
+      - blog
 _core:
   default_config_hash: 9s4O2E-tsTsbXh6NLMZb8C-uWRKkuXBEee_SBFoP-0g
 id: node.field_blog_tags
