@@ -32,6 +32,7 @@ module:
   commerce_product: 0
   commerce_store: 0
   components: 0
+  composer_deploy: 0
   computed_field: 0
   config: 0
   config_translation: 0
