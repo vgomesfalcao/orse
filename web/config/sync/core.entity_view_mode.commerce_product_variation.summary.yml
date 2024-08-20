@@ -2,11 +2,11 @@ uuid: 264726d5-0802-4e87-9f3d-3e872dbc9d1c
 langcode: pt-br
 status: true
 dependencies:
+  module:
+    - commerce_product
   enforced:
     module:
       - commerce_checkout
-  module:
-    - commerce_product
 _core:
   default_config_hash: 23R0npqqL2T9F-gDL2Lor2GfZj_lDvmv-kwdQzPCxMw
 id: commerce_product_variation.summary

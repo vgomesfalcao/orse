@@ -14,12 +14,12 @@ bundle: layout_image
 mode: default
 content:
   field_image:
-    weight: 0
+    type: responsive_image
     label: above
     settings:
       responsive_image_style: wide
       image_link: ''
     third_party_settings: {  }
-    type: responsive_image
+    weight: 0
     region: content
 hidden: {  }

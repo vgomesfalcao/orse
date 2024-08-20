@@ -17,8 +17,8 @@ plugin: 'block_content:19ecef30-4ea5-48c3-bc60-1fb2288c618e'
 settings:
   id: 'block_content:19ecef30-4ea5-48c3-bc60-1fb2288c618e'
   label: '[Apar]Block Bottom Menu Side - Social Network'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

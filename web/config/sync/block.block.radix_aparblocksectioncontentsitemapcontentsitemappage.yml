@@ -17,8 +17,8 @@ plugin: 'block_content:9a9838f4-51b0-4190-8d0c-39a4e1344ee1'
 settings:
   id: 'block_content:9a9838f4-51b0-4190-8d0c-39a4e1344ee1'
   label: '[Apar]Block Section Content Sitemap - Content Sitemap Page'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

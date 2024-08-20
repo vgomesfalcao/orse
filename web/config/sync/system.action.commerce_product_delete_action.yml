@@ -2,11 +2,11 @@ uuid: 058a7abe-e43f-4182-9606-1f3c20233e4a
 langcode: pt-br
 status: true
 dependencies:
+  module:
+    - entity
   enforced:
     module:
       - commerce_product
-  module:
-    - entity
 _core:
   default_config_hash: rxmGRw66r86CkHY9zkcXVic946t0v1Qn0boxBY5n6c0
 id: commerce_product_delete_action

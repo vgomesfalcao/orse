@@ -1,2 +1,8 @@
 visibility:
-  request_path_pages: "/admin\n/admin/*\n/batch\n/node/add*\n/node/*/*\n/user/*/*"
+  request_path_pages: |-
+    /admin
+    /admin/*
+    /batch
+    /node/add*
+    /node/*/*
+    /user/*/*

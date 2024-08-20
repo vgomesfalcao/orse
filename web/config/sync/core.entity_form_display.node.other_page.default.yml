@@ -23,16 +23,16 @@ third_party_settings:
       children:
         - field_header_background_image
         - field_short_description
+      label: 'Page Title'
+      region: content
       parent_name: ''
       weight: 7
       format_type: details
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         open: false
         required_fields: true
-      label: 'Page Title'
-      region: content
 id: node.other_page.default
 targetEntityType: node
 bundle: other_page
@@ -41,13 +41,13 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 9
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 4
@@ -55,41 +55,41 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_footer_style:
+    type: options_select
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_header_background_image:
+    type: image_image
     weight: 125
+    region: content
     settings:
-      preview_image_style: thumbnail
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings:
       imce:
         enabled: true
-    type: image_image
-    region: content
   field_header_style:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_short_description:
+    type: string_textarea
     weight: 126
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_sidebar:
+    type: options_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -105,17 +105,17 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 5
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 6
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -128,12 +128,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 3
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden:
   status: true

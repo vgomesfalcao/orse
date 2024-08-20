@@ -17,8 +17,8 @@ plugin: 'block_content:a451b94b-89c6-42f6-9610-ad64070fcd59'
 settings:
   id: 'block_content:a451b94b-89c6-42f6-9610-ad64070fcd59'
   label: 'Useful Links'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

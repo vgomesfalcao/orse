@@ -17,8 +17,8 @@ plugin: 'block_content:75249ed6-2673-4467-88b1-fa762cfad911'
 settings:
   id: 'block_content:75249ed6-2673-4467-88b1-fa762cfad911'
   label: '[Apar]Block Section Content - Exceptional User'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

@@ -2,11 +2,11 @@ uuid: 4a9a6a3d-08cb-438f-990a-3d52d6ccd2f9
 langcode: pt-br
 status: true
 dependencies:
+  module:
+    - menu_ui
   enforced:
     module:
       - webform_node
-  module:
-    - menu_ui
 third_party_settings:
   menu_ui:
     available_menus:

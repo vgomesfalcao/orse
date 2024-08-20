@@ -32,46 +32,46 @@ bundle: portfolio
 mode: default
 content:
   field_date_time:
-    weight: 1
+    type: datetime_default
     label: hidden
     settings:
       timezone_override: ''
       format_type: date_time_single
     third_party_settings: {  }
-    type: datetime_default
+    weight: 1
     region: content
   field_description:
-    weight: 4
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 4
     region: content
   field_portfolio_categories:
-    weight: 0
+    type: entity_reference_label
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 0
     region: content
   field_portfolio_format:
-    weight: 2
+    type: list_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 2
     region: content
   field_video_embed:
-    weight: 3
+    type: video_embed_field_video
     label: hidden
     settings:
+      autoplay: false
       responsive: true
       width: 854
       height: 480
-      autoplay: false
     third_party_settings: {  }
-    type: video_embed_field_video
+    weight: 3
     region: content
 hidden:
   field_client: true

@@ -17,8 +17,8 @@ plugin: 'block_content:3a49f84c-4cef-4824-a49d-ae878ee910f2'
 settings:
   id: 'block_content:3a49f84c-4cef-4824-a49d-ae878ee910f2'
   label: '[Apar]Block Section Content - Call To Action'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

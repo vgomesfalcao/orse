@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: IGyq02Zgyl_6WJczNqeYnXXQR_B_iM-yyOFXOUmVpLk
 id: locale
-label: Translation
+label: Tradução
 module: locale
 routes:
   -
@@ -16,60 +16,54 @@ tips:
   locale-overview:
     id: locale-overview
     plugin: text
-    label: 'User interface translation'
-    body: 'Esta página permite que você traduza a interface de usuário ou modifique traduções existentes. Se você tiver instalado o seu site inicialmente em Inglês, você deve primeiro adicionar outro idioma na <a href="[site:url]admin/config/regional/language">página de Idiomas</a>, para poder usar esta página.'
+    label: 'Tradução da interface do usuário'
     weight: 1
+    body: 'Esta página permite que você traduza a interface de usuário ou modifique traduções existentes. Se você tiver instalado o seu site inicialmente em Inglês, você deve primeiro adicionar outro idioma na <a href="[site:url]admin/config/regional/language">página de Idiomas</a>, para poder usar esta página.'
   locale-language:
     id: locale-language
     plugin: text
-    label: 'Translation language'
-    body: 'Choose the language you want to translate.'
+    label: 'Idioma da tradução'
     weight: 2
-    attributes:
-      data-id: edit-langcode
+    selector: '#edit-langcode'
+    body: 'Escolha o idioma para o qual você quer traduzir.'
   locale-search:
     id: locale-search
     plugin: text
     label: Buscar
-    body: 'Enter the specific word or sentence you want to translate, you can also write just a part of a word.'
     weight: 3
-    attributes:
-      data-id: edit-string
+    selector: '#edit-string'
+    body: 'Informe a palavra ou sentença específica que você gostaria de traduzir, você pode também escrever apenas uma parte da palavra.'
   locale-filter:
     id: locale-filter
     plugin: text
-    label: 'Filter the search'
-    body: 'You can search for untranslated strings if you want to translate something that isn''t translated yet. If you want to modify an existing translation, you might want to search only for translated strings.'
+    label: 'Filtrar a busca'
     weight: 4
-    attributes:
-      data-id: edit-translation
+    selector: '#edit-translation'
+    body: 'Você pode procurar strings não traduzidas se quiser traduzir algo que ainda não foi traduzido. Se você deseja modificar uma tradução existente, você pode querer pesquisar somente por strings traduzidas.'
   locale-submit:
     id: locale-submit
     plugin: text
-    label: 'Apply your search criteria'
-    body: 'To apply your search criteria, click on the <em>Filter</em> button.'
+    label: 'Aplicar seu critério de busca'
     weight: 5
-    attributes:
-      data-id: edit-submit
+    selector: '#edit-submit'
+    body: 'Para aplicar seu critério de busca, clique no botão <em>Filtrar</em>.'
   locale-translate:
     id: locale-translate
     plugin: text
-    label: Translate
-    body: 'You can write your own translation in the text fields of the right column. Try to figure out in which context the text will be used in order to translate it in the appropriate way.'
+    label: Traduzir
     weight: 6
-    attributes:
-      data-class: js-form-type-textarea
+    selector: .js-form-type-textarea
+    body: 'Você pode escrever suas próprias traduções nos campos de texto da coluna da direita. Tente descobrir em qual contexto o texto será usado para que a tradução seja feita de forma correta.'
   locale-validate:
     id: locale-validate
     plugin: text
-    label: 'Validate the translation'
-    body: 'When you have finished your translations, click on the <em>Save translations</em> button. You must save your translations, each time before changing the page or making a new search.'
+    label: 'Validar a tradução'
     weight: 7
-    attributes:
-      data-id: edit-submit--2
+    selector: '#edit-submit--2'
+    body: 'Quando tiver terminado suas traduções, clique no botão <em>Salvar traduções</em>. Você deve salvar suas traduções toda vez antes de mudar de página ou fizer uma nova busca.'
   locale-continue:
     id: locale-continue
     plugin: text
-    label: 'Continuing on'
-    body: 'As traduções feitas aqui serão usadas na interface do seu site. Se quiser usá-las em outro site ou modificá-las em um editor externo <a href="[site:url]admin/config/regional/translate/export">exporte-as</a> para um arquivo .po e <a href="[site:url]admin/config/regional/translate/import">importe-as</a> depois.'
+    label: Continuando
     weight: 8
+    body: 'As traduções feitas aqui serão usadas na interface do seu site. Se quiser usá-las em outro site ou modificá-las em um editor externo <a href="[site:url]admin/config/regional/translate/export">exporte-as</a> para um arquivo .po e <a href="[site:url]admin/config/regional/translate/import">importe-as</a> depois.'

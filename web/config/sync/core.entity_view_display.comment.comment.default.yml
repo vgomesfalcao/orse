@@ -14,23 +14,23 @@ bundle: comment
 mode: default
 content:
   field_comment_body:
-    weight: 101
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 101
     region: content
   field_email_comment:
-    weight: 102
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 102
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   langcode: true

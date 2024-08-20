@@ -28,6 +28,8 @@ display:
           separator: ', '
         order_number:
           label: 'Order number'
+          alter:
+            path: 'user/{{ arguments.uid }}/orders/{{ order_id }}'
           separator: ', '
         placed:
           label: Date

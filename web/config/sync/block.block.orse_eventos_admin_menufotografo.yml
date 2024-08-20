@@ -18,22 +18,22 @@ plugin: 'system_menu_block:menu-fotografo'
 settings:
   id: 'system_menu_block:menu-fotografo'
   label: 'Área do Fotógrafo'
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   request_path:
     id: request_path
-    pages: "/user\r\n/user/*"
     negate: false
     context_mapping: {  }
+    pages: "/user\r\n/user/*"
   user_role:
     id: user_role
-    roles:
-      administrator: administrator
-      fotografo: fotografo
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      fotografo: fotografo

@@ -17,8 +17,8 @@ plugin: 'views_block:_apar_portfolio-block_section_content_featured_projects_sty
 settings:
   id: 'views_block:_apar_portfolio-block_section_content_featured_projects_style_2'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
   items_per_page: none
 visibility: {  }

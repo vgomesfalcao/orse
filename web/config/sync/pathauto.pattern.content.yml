@@ -11,6 +11,10 @@ pattern: '[node:title]'
 selection_criteria:
   1f0e580a-2a6b-4dbb-b85e-1b1dcfbea327:
     id: node_type
+    negate: false
+    uuid: 1f0e580a-2a6b-4dbb-b85e-1b1dcfbea327
+    context_mapping:
+      node: node
     bundles:
       404: '404'
       about_page: about_page
@@ -28,10 +32,6 @@ selection_criteria:
       simplenews_issue: simplenews_issue
       team: team
       testimonials: testimonials
-    negate: false
-    context_mapping:
-      node: node
-    uuid: 1f0e580a-2a6b-4dbb-b85e-1b1dcfbea327
 selection_logic: and
 weight: -5
 relationships: {  }

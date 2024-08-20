@@ -15,16 +15,18 @@ bundle: img_link
 mode: default
 content:
   field_img_link_img:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
   field_img_link_link:
-    weight: 1
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -33,6 +35,6 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    type: link
+    weight: 1
     region: content
 hidden: {  }

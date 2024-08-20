@@ -17,8 +17,8 @@ plugin: 'block_content:f9cd48f8-96c8-41b2-bb3d-6c1ff9a9095a'
 settings:
   id: 'block_content:f9cd48f8-96c8-41b2-bb3d-6c1ff9a9095a'
   label: '[Apar]Block Bottom Footer Product - Copyright text'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

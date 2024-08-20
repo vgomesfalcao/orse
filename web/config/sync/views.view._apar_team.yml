@@ -10,13 +10,6 @@ dependencies:
     - field.storage.node.field_linkedin
     - field.storage.node.field_short_description_ct
     - field.storage.node.field_twitter
-    - image.style.image_1000x1000
-    - image.style.image_135x135
-    - image.style.image_220x220
-    - image.style.image_500x500
-    - image.style.image_600x600
-    - image.style.image_700x800
-    - image.style.image_800x700
     - node.type.team
   module:
     - image
@@ -31,45 +24,12 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      style:
-        type: default
-      row:
-        type: fields
+      title: '<none>'
       fields:
         title:
           id: title
@@ -78,6 +38,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -133,9 +96,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -143,6 +103,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -198,7 +159,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -206,6 +166,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -261,7 +222,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -269,6 +229,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -323,7 +284,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -331,11 +291,21 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-3 col-sm-6 col-xs-12 margin-bottom\">\n    <div class=\"boxlight-hover-secondary text-box padding-4 text-center\">\n        <img src=\"{ field_image }}\" alt=\"{{ title }}\" class=\"imgbox-xlarge round img-boder\">\n        <div class=\"clearfix margin-bottom-2\"></div>\n        <h5 class=\"uppercase font-weight-6 less-mar-1\">{{ title }}</h5>\n        {{ field_job }}\n        {{ field_short_description_ct }}\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-3 col-sm-6 col-xs-12 margin-bottom">
+                  <div class="boxlight-hover-secondary text-box padding-4 text-center">
+                      <img src="{ field_image }}" alt="{{ title }}" class="imgbox-xlarge round img-boder">
+                      <div class="clearfix margin-bottom-2"></div>
+                      <h5 class="uppercase font-weight-6 less-mar-1">{{ title }}</h5>
+                      {{ field_job }}
+                      {{ field_short_description_ct }}
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -372,50 +342,86 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
       sorts:
         created:
           id: created
           table: node_field_data
           field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          exposed: false
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
           expose:
             label: ''
+            field_identifier: created
+          exposed: false
           granularity: second
-      title: '<none>'
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      style:
+        type: default
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
       header:
         area:
           id: area
@@ -424,16 +430,15 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 less-mar-3\">Team Members</h2>\n<p class=\"line-height-2 text-gray less2\">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>"
-            format: php_code
           plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 less-mar-3">Team Members</h2>
+              <p class="line-height-2 text-gray less2">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>
+            format: php_code
+          tokenize: false
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -447,99 +452,12 @@ display:
         - 'config:field.storage.node.field_job'
         - 'config:field.storage.node.field_short_description_ct'
   block_section_content_meet_our_team:
-    display_plugin: block
     id: block_section_content_meet_our_team
     display_title: '[Apar]Block Section Content - Meet Our Team'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Meet Our Team'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 text-white less-mar-3 margin-top-2\">Meet Our Team</h2>\n<p class=\"line-height-2 text-white less2\">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -548,6 +466,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -603,9 +524,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -613,6 +531,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -668,7 +587,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -676,6 +594,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -731,7 +650,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -739,6 +657,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -793,7 +712,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -801,6 +719,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -856,7 +775,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -864,6 +782,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -919,7 +838,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -927,6 +845,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -982,7 +901,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -990,6 +908,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1045,7 +964,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -1053,11 +971,31 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-3 col-sm-6 col-xs-12 text-center\">\n    <div class=\"ce4-feature-box-31 margin-bottom\">\n        <div class=\"img-box\">\n            <div class=\"icon-box\">\n                <ul class=\"sc-icons\">\n                    {{ field_twitter }}\n                    {{ field_facebook }}\n                    {{ field_google_plus }}\n                    {{ field_linkedin }}\n                </ul>\n            </div>\n            <img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/> \n        </div>\n        <div class=\"clearfix\"></div>\n        <br/>\n        <h5 class=\"less-mar-1\">{{ title }}</h5>\n        {{ field_job }}\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                  <div class="ce4-feature-box-31 margin-bottom">
+                      <div class="img-box">
+                          <div class="icon-box">
+                              <ul class="sc-icons">
+                                  {{ field_twitter }}
+                                  {{ field_facebook }}
+                                  {{ field_google_plus }}
+                                  {{ field_linkedin }}
+                              </ul>
+                          </div>
+                          <img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/> 
+                      </div>
+                      <div class="clearfix"></div>
+                      <br/>
+                      <h5 class="less-mar-1">{{ title }}</h5>
+                      {{ field_job }}
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -1094,8 +1032,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 text-white less-mar-3 margin-top-2">Meet Our Team</h2>
+              <p class="line-height-2 text-white less2">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Meet Our Team'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1112,99 +1139,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_meet_our_team_style_2:
-    display_plugin: block
     id: block_section_content_meet_our_team_style_2
     display_title: '[Apar]Block Section Content - Meet Our Team Style 2'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Meet Our Team Style 2'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<div class=\"ce4-title-line-1\"></div>\n<h4 class=\"uppercase font-weight-7 less-mar-1 text-white\">Meet Our Team</h4>\n<div class=\"clearfix\"></div>\n<p class=\"by-sub-title\">lorem ipsum dolor sit amet</p>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -1213,6 +1153,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1268,9 +1211,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -1278,6 +1218,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1333,7 +1274,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -1341,6 +1281,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1396,7 +1337,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -1404,6 +1344,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1458,7 +1399,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -1466,6 +1406,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1521,7 +1462,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -1529,6 +1469,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1584,7 +1525,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -1592,6 +1532,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1647,7 +1588,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -1655,6 +1595,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1710,7 +1651,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -1718,11 +1658,31 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-3 col-sm-6 col-xs-12 text-center\">\n    <div class=\"ce4-feature-box-31 margin-bottom\">\n        <div class=\"img-box\">\n            <div class=\"icon-box\">\n                <ul class=\"sc-icons\">\n                    {{ field_twitter }}\n                    {{ field_facebook }}\n                    {{ field_google_plus }}\n                    {{ field_linkedin }}\n                </ul>\n            </div>\n            <img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/> \n        </div>\n        <div class=\"clearfix\"></div>\n        <br/>\n        <h5 class=\"less-mar-1\">{{ title }}</h5>\n        {{ field_job }}\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                  <div class="ce4-feature-box-31 margin-bottom">
+                      <div class="img-box">
+                          <div class="icon-box">
+                              <ul class="sc-icons">
+                                  {{ field_twitter }}
+                                  {{ field_facebook }}
+                                  {{ field_google_plus }}
+                                  {{ field_linkedin }}
+                              </ul>
+                          </div>
+                          <img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/> 
+                      </div>
+                      <div class="clearfix"></div>
+                      <br/>
+                      <h5 class="less-mar-1">{{ title }}</h5>
+                      {{ field_job }}
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -1759,8 +1719,99 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <div class="ce4-title-line-1"></div>
+              <h4 class="uppercase font-weight-7 less-mar-1 text-white">Meet Our Team</h4>
+              <div class="clearfix"></div>
+              <p class="by-sub-title">lorem ipsum dolor sit amet</p>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Meet Our Team Style 2'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1777,99 +1828,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_meet_our_team_style_3:
-    display_plugin: block
     id: block_section_content_meet_our_team_style_3
     display_title: '[Apar]Block Section Content - Meet Our Team Style 3'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Meet Our Team Style 3'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 text-white less-mar-3 margin-top-2\">Meet Our Team</h2>\n<p class=\"line-height-2 text-white less2\">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 3
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -1878,6 +1842,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1933,9 +1900,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -1943,6 +1907,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1998,7 +1963,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -2006,6 +1970,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2061,7 +2026,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -2069,6 +2033,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2123,7 +2088,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -2131,6 +2095,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2186,7 +2151,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -2194,6 +2158,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2249,7 +2214,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -2257,6 +2221,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2312,7 +2277,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -2320,6 +2284,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2375,7 +2340,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -2383,11 +2347,31 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-4 col-sm-6 col-xs-12 text-center\">\n    <div class=\"ce4-feature-box-31 margin-bottom\">\n        <div class=\"img-box\">\n            <div class=\"icon-box\">\n                <ul class=\"sc-icons\">\n                    {{ field_twitter }}\n                    {{ field_facebook }}\n                    {{ field_google_plus }}\n                    {{ field_linkedin }}\n                </ul>\n            </div>\n            <img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/> \n        </div>\n        <div class=\"clearfix\"></div>\n        <br/>\n        <h5 class=\"less-mar-1\">{{ title }}</h5>\n        {{ field_job }}\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                  <div class="ce4-feature-box-31 margin-bottom">
+                      <div class="img-box">
+                          <div class="icon-box">
+                              <ul class="sc-icons">
+                                  {{ field_twitter }}
+                                  {{ field_facebook }}
+                                  {{ field_google_plus }}
+                                  {{ field_linkedin }}
+                              </ul>
+                          </div>
+                          <img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/> 
+                      </div>
+                      <div class="clearfix"></div>
+                      <br/>
+                      <h5 class="less-mar-1">{{ title }}</h5>
+                      {{ field_job }}
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -2424,8 +2408,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 text-white less-mar-3 margin-top-2">Meet Our Team</h2>
+              <p class="line-height-2 text-white less2">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Meet Our Team Style 3'
     cache_metadata:
       max-age: -1
       contexts:
@@ -2442,99 +2515,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_meet_our_team_style_4:
-    display_plugin: block
     id: block_section_content_meet_our_team_style_4
     display_title: '[Apar]Block Section Content - Meet Our Team Style 4'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Meet Our Team Style 4'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 less-mar-3\">Meet Our Team</h2>\n<p class=\"line-height-2 text-gray less2\">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -2543,6 +2529,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2598,9 +2587,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -2608,6 +2594,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2663,7 +2650,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -2671,6 +2657,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2726,7 +2713,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -2734,6 +2720,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2788,7 +2775,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -2796,6 +2782,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2851,7 +2838,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -2859,11 +2845,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
             alter_text: true
-            text: "<li><a class=\"twitter\" href=\"{{ field_twitter }}\"><i class=\"fa fa-twitter\"></i></a></li>\n"
+            text: |
+              <li><a class="twitter" href="{{ field_twitter }}"><i class="fa fa-twitter"></i></a></li>
             make_link: false
             path: ''
             absolute: false
@@ -2914,7 +2902,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -2922,6 +2909,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2977,7 +2965,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -2985,6 +2972,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3040,7 +3028,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -3048,11 +3035,34 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-3 col-sm-6 col-xs-12\">\n    <div class=\"feature-box-2  margin-bottom-2\">\n        <div class=\"img-box-main\">\n            <div class=\"img-box\">\n                <div class=\"sc-icons-box\">\n                    <ul class=\"sc-icons\">\n                        {{ field_twitter }}\n                        {{ field_facebook }}\n                        {{ field_google_plus }}\n                        {{ field_linkedin }}\n                    </ul>\n                </div>\n                <img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/> \n            </div>\n        </div>\n        <div class=\"text-box text-left\">\n            <h5 class=\"less-mar-1 font-weight-5 uppercase\">Joan Collins</h5>\n            <p class=\"text-secondary\">Marketing Manager</p>\n            <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspendisse et elite dolor justo.</p>\n        </div>\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="feature-box-2  margin-bottom-2">
+                      <div class="img-box-main">
+                          <div class="img-box">
+                              <div class="sc-icons-box">
+                                  <ul class="sc-icons">
+                                      {{ field_twitter }}
+                                      {{ field_facebook }}
+                                      {{ field_google_plus }}
+                                      {{ field_linkedin }}
+                                  </ul>
+                              </div>
+                              <img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/> 
+                          </div>
+                      </div>
+                      <div class="text-box text-left">
+                          <h5 class="less-mar-1 font-weight-5 uppercase">Joan Collins</h5>
+                          <p class="text-secondary">Marketing Manager</p>
+                          <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspendisse et elite dolor justo.</p>
+                      </div>
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -3089,8 +3099,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 less-mar-3">Meet Our Team</h2>
+              <p class="line-height-2 text-gray less2">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Meet Our Team Style 4'
     cache_metadata:
       max-age: -1
       contexts:
@@ -3107,99 +3206,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_meet_our_team_style_5:
-    display_plugin: block
     id: block_section_content_meet_our_team_style_5
     display_title: '[Apar]Block Section Content - Meet Our Team Style 5'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Meet Our Team Style 5'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 less-mar-3\">Meet Our Team</h2>\n<p class=\"line-height-2 text-gray less1\">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -3208,6 +3220,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3263,9 +3278,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -3273,6 +3285,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3328,7 +3341,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -3336,6 +3348,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3391,7 +3404,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -3399,6 +3411,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3453,7 +3466,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -3461,6 +3473,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3516,7 +3529,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -3524,6 +3536,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3579,7 +3592,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -3587,6 +3599,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3642,7 +3655,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -3650,6 +3662,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3705,7 +3718,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -3713,11 +3725,32 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"img-main\">\n    <div class=\"img-box\">\n        <div class=\"sc-icons-box\">\n            <ul class=\"sc-icons\">\n                {{ field_twitter }}\n                {{ field_facebook }}\n                {{ field_google_plus }}\n                {{ field_linkedin }}\n            </ul>\n        </div>\n        <img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/>\n    </div>\n    <div class=\"clearfix\"></div>\n    <br/>\n    <div class=\"text text-center\">\n        <h5 class=\"less-mar-1 font-weight-6 \">{{ title }}</h5>\n        {{ field_job }}\n        {{ field_short_description_ct }}\n    </div>\n</div>"
+            text: |-
+              <div class="img-main">
+                  <div class="img-box">
+                      <div class="sc-icons-box">
+                          <ul class="sc-icons">
+                              {{ field_twitter }}
+                              {{ field_facebook }}
+                              {{ field_google_plus }}
+                              {{ field_linkedin }}
+                          </ul>
+                      </div>
+                      <img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/>
+                  </div>
+                  <div class="clearfix"></div>
+                  <br/>
+                  <div class="text text-center">
+                      <h5 class="less-mar-1 font-weight-6 ">{{ title }}</h5>
+                      {{ field_job }}
+                      {{ field_short_description_ct }}
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -3754,8 +3787,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 less-mar-3">Meet Our Team</h2>
+              <p class="line-height-2 text-gray less1">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Meet Our Team Style 5'
     cache_metadata:
       max-age: -1
       contexts:
@@ -3772,99 +3894,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_meet_our_team_style_6:
-    display_plugin: block
     id: block_section_content_meet_our_team_style_6
     display_title: '[Apar]Block Section Content - Meet Our Team Style 6'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Meet Our Team Style 6'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"text-white font-weight-7 less-mar-3\">Meet Our Team</h2>\n<h6 class=\"text-white font-weight-5 line-height-3 less3\">We help you create any website quickly flexibility and performance</h6>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 3
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -3873,6 +3908,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3928,9 +3966,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -3938,6 +3973,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3993,7 +4029,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -4001,6 +4036,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4056,7 +4092,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -4064,6 +4099,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4118,7 +4154,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -4126,6 +4161,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4181,7 +4217,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -4189,6 +4224,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4244,7 +4280,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -4252,6 +4287,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4307,7 +4343,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -4315,6 +4350,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4370,7 +4406,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -4378,11 +4413,22 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"img-circle\">\n    <div class=\"img\"><img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/></div>\n</div>\n<br/>\n<div class=\"content\">\n    <h4 class=\"less-mar-1 font-weight-7  text-primary\">{{ title }}</h4>\n    {{ field_job }}\n    <div class=\"h-line\"></div>\n    {{ field_short_description_ct }}\n</div>"
+            text: |-
+              <div class="img-circle">
+                  <div class="img"><img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/></div>
+              </div>
+              <br/>
+              <div class="content">
+                  <h4 class="less-mar-1 font-weight-7  text-primary">{{ title }}</h4>
+                  {{ field_job }}
+                  <div class="h-line"></div>
+                  {{ field_short_description_ct }}
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -4419,8 +4465,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="text-white font-weight-7 less-mar-3">Meet Our Team</h2>
+              <h6 class="text-white font-weight-5 line-height-3 less3">We help you create any website quickly flexibility and performance</h6>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Meet Our Team Style 6'
     cache_metadata:
       max-age: -1
       contexts:
@@ -4437,99 +4572,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_our_experts:
-    display_plugin: block
     id: block_section_content_our_experts
     display_title: '[Apar]Block Section Content - Our Experts'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Our Experts'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 less-mar-3\">Our Experts</h2>\n<h6 class=\"font-weight-4 line-height-3 text-gray less3\">Printing and typesetting has been the industry's standard dummy text ever since the  when an unknown apar took a galley on in the release of sheets and more recently with desktop publishing software.</h6>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -4538,6 +4586,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4593,9 +4644,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -4603,6 +4651,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4658,7 +4707,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -4666,6 +4714,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4721,7 +4770,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -4729,6 +4777,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4783,7 +4832,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -4791,6 +4839,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4846,7 +4895,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -4854,6 +4902,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4909,7 +4958,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -4917,6 +4965,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -4972,7 +5021,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -4980,6 +5028,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5035,7 +5084,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -5043,11 +5091,22 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-3 col-sm-6 col-xs-12\">\n    <div class=\"bb-feature-box-3 text-center\">\n        <div class=\"img-frame\">\n            <div class=\"img\"><img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/></div>\n        </div>\n        <h5 class=\"font-weight-7 less-mar-1 padding-top-2\">{{ title }}</h5>\n        {{ field_job }}\n        {{ field_short_description_ct }}\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="bb-feature-box-3 text-center">
+                      <div class="img-frame">
+                          <div class="img"><img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/></div>
+                      </div>
+                      <h5 class="font-weight-7 less-mar-1 padding-top-2">{{ title }}</h5>
+                      {{ field_job }}
+                      {{ field_short_description_ct }}
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -5084,8 +5143,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 less-mar-3">Our Experts</h2>
+              <h6 class="font-weight-4 line-height-3 text-gray less3">Printing and typesetting has been the industry's standard dummy text ever since the  when an unknown apar took a galley on in the release of sheets and more recently with desktop publishing software.</h6>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Our Experts'
     cache_metadata:
       max-age: -1
       contexts:
@@ -5102,99 +5250,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_our_experts_style_2:
-    display_plugin: block
     id: block_section_content_our_experts_style_2
     display_title: '[Apar]Block Section Content - Our Experts Style 2'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Our Experts Style 2'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 less-mar-3\">Our Experts</h2>\n<h6 class=\"font-weight-5 line-height-3 less3\">We help you create any website quickly flexibility and performance</h6>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -5203,6 +5264,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5258,9 +5322,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -5268,6 +5329,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5323,7 +5385,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -5331,6 +5392,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5386,7 +5448,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -5394,6 +5455,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5448,7 +5510,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -5456,6 +5517,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5511,7 +5573,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -5519,6 +5580,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5574,7 +5636,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -5582,6 +5643,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5637,7 +5699,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -5645,6 +5706,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5700,7 +5762,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -5708,11 +5769,18 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"img-frame margin-bottom-2\">\n    <div class=\"img\"><img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/></div>\n</div>\n<h5 class=\"uppercase font-weight-6 less-mar-1 padding-top-6 \">{{ title }}</h5>\n{{ field_job }}\n{{ field_short_description_ct }}"
+            text: |-
+              <div class="img-frame margin-bottom-2">
+                  <div class="img"><img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/></div>
+              </div>
+              <h5 class="uppercase font-weight-6 less-mar-1 padding-top-6 ">{{ title }}</h5>
+              {{ field_job }}
+              {{ field_short_description_ct }}
             make_link: false
             path: ''
             absolute: false
@@ -5749,8 +5817,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 less-mar-3">Our Experts</h2>
+              <h6 class="font-weight-5 line-height-3 less3">We help you create any website quickly flexibility and performance</h6>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Our Experts Style 2'
     cache_metadata:
       max-age: -1
       contexts:
@@ -5767,99 +5924,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_our_team:
-    display_plugin: block
     id: block_section_content_our_team
     display_title: '[Apar]Block Section Content - Our Team'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Our Team'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 text-white less-mar-3 margin-top-2\">Our Team</h2>\n<p class=\"line-height-2 text-white less2\">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -5868,6 +5938,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5923,9 +5996,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -5933,6 +6003,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -5988,7 +6059,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -5996,6 +6066,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6051,7 +6122,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -6059,6 +6129,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6113,7 +6184,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -6121,6 +6191,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6176,7 +6247,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -6184,6 +6254,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6239,7 +6310,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -6247,6 +6317,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6302,7 +6373,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -6310,6 +6380,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6365,7 +6436,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -6373,11 +6443,31 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-3 col-sm-6 col-xs-12 text-center\">\n    <div class=\"ce4-feature-box-31 margin-bottom\">\n        <div class=\"img-box\">\n            <div class=\"icon-box\">\n                <ul class=\"sc-icons\">\n                    {{ field_twitter }}\n                    {{ field_facebook }}\n                    {{ field_google_plus }}\n                    {{ field_linkedin }}\n                </ul>\n            </div>\n            <img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/> \n        </div>\n        <div class=\"clearfix\"></div>\n        <br/>\n        <h5 class=\"less-mar-1\">{{ title }}</h5>\n        {{ field_job }}\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                  <div class="ce4-feature-box-31 margin-bottom">
+                      <div class="img-box">
+                          <div class="icon-box">
+                              <ul class="sc-icons">
+                                  {{ field_twitter }}
+                                  {{ field_facebook }}
+                                  {{ field_google_plus }}
+                                  {{ field_linkedin }}
+                              </ul>
+                          </div>
+                          <img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/> 
+                      </div>
+                      <div class="clearfix"></div>
+                      <br/>
+                      <h5 class="less-mar-1">{{ title }}</h5>
+                      {{ field_job }}
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -6414,8 +6504,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 text-white less-mar-3 margin-top-2">Our Team</h2>
+              <p class="line-height-2 text-white less2">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Our Team'
     cache_metadata:
       max-age: -1
       contexts:
@@ -6432,99 +6611,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_our_team_style_2:
-    display_plugin: block
     id: block_section_content_our_team_style_2
     display_title: '[Apar]Block Section Content - Our Team Style 2'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Our Team Style 2'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 less-mar-3\">Our Team</h2>\n<h6 class=\"font-weight-4 line-height-3 text-gray less3\">Printing and typesetting has been the industry's standard dummy text ever since the  when an unknown apar took a galley on in the release of sheets and more recently with desktop publishing software.</h6>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 3
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -6533,6 +6625,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6588,9 +6683,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -6598,6 +6690,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6653,7 +6746,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -6661,6 +6753,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6716,7 +6809,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -6724,6 +6816,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6778,7 +6871,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -6786,6 +6878,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6841,7 +6934,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -6849,6 +6941,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6904,7 +6997,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -6912,6 +7004,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -6967,7 +7060,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -6975,6 +7067,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7030,7 +7123,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -7038,11 +7130,29 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"img-box\">\n    <div class=\"text-box\">\n        <div class=\"sc-icons-box\">\n            <ul class=\"sc-icons\">\n                {{ field_twitter }}\n                {{ field_facebook }}\n                {{ field_google_plus }}\n                {{ field_linkedin }}\n            </ul>\n        </div>\n        <h5 class=\"uppercase raleway less-mar-1 title\">{{ title }}</h5>\n        {{ field_job }}\n        {{ field_short_description_ct }}\n    </div>\n    <div class=\"overlay\"></div>\n    <img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/> \n</div>"
+            text: |-
+              <div class="img-box">
+                  <div class="text-box">
+                      <div class="sc-icons-box">
+                          <ul class="sc-icons">
+                              {{ field_twitter }}
+                              {{ field_facebook }}
+                              {{ field_google_plus }}
+                              {{ field_linkedin }}
+                          </ul>
+                      </div>
+                      <h5 class="uppercase raleway less-mar-1 title">{{ title }}</h5>
+                      {{ field_job }}
+                      {{ field_short_description_ct }}
+                  </div>
+                  <div class="overlay"></div>
+                  <img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/> 
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -7079,8 +7189,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 less-mar-3">Our Team</h2>
+              <h6 class="font-weight-4 line-height-3 text-gray less3">Printing and typesetting has been the industry's standard dummy text ever since the  when an unknown apar took a galley on in the release of sheets and more recently with desktop publishing software.</h6>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Our Team Style 2'
     cache_metadata:
       max-age: -1
       contexts:
@@ -7097,99 +7296,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_our_team_style_3:
-    display_plugin: block
     id: block_section_content_our_team_style_3
     display_title: '[Apar]Block Section Content - Our Team Style 3'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Our Team Style 3'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 less-mar-3\"> Our Team</h2>\n<h6 class=\"font-weight-5 line-height-3 less3\">We help you create any website quickly flexibility and performance</h6>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        pager: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-        title: false
-      footer: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            team: team
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      title: '<none>'
       fields:
         title:
           id: title
@@ -7198,6 +7310,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7253,9 +7368,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -7263,6 +7375,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7318,7 +7431,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -7326,6 +7438,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7381,7 +7494,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -7389,6 +7501,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7443,7 +7556,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_facebook:
           id: field_facebook
           table: node__field_facebook
@@ -7451,6 +7563,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7506,7 +7619,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_twitter:
           id: field_twitter
           table: node__field_twitter
@@ -7514,11 +7626,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
             alter_text: true
-            text: "<li><a class=\"twitter\" href=\"{{ field_twitter }}\"><i class=\"fa fa-twitter\"></i></a></li>\n"
+            text: |
+              <li><a class="twitter" href="{{ field_twitter }}"><i class="fa fa-twitter"></i></a></li>
             make_link: false
             path: ''
             absolute: false
@@ -7569,7 +7683,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_google_plus:
           id: field_google_plus
           table: node__field_google_plus
@@ -7577,6 +7690,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7632,7 +7746,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_linkedin:
           id: field_linkedin
           table: node__field_linkedin
@@ -7640,6 +7753,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7695,7 +7809,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -7703,11 +7816,34 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-3 col-sm-6 col-xs-12\">\n    <div class=\"feature-box-2  margin-bottom-2\">\n        <div class=\"img-box-main\">\n            <div class=\"img-box\">\n                <div class=\"sc-icons-box\">\n                    <ul class=\"sc-icons\">\n                        {{ field_twitter }}\n                        {{ field_facebook }}\n                        {{ field_google_plus }}\n                        {{ field_linkedin }}\n                    </ul>\n                </div>\n                <img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/> \n            </div>\n        </div>\n        <div class=\"text-box text-left\">\n            <h5 class=\"less-mar-1 font-weight-5 uppercase\">Joan Collins</h5>\n            <p class=\"text-secondary\">Marketing Manager</p>\n            <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspendisse et elite dolor justo.</p>\n        </div>\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="feature-box-2  margin-bottom-2">
+                      <div class="img-box-main">
+                          <div class="img-box">
+                              <div class="sc-icons-box">
+                                  <ul class="sc-icons">
+                                      {{ field_twitter }}
+                                      {{ field_facebook }}
+                                      {{ field_google_plus }}
+                                      {{ field_linkedin }}
+                                  </ul>
+                              </div>
+                              <img src="{{ field_image }}" alt="{{ title }}" class="img-responsive"/> 
+                          </div>
+                      </div>
+                      <div class="text-box text-left">
+                          <h5 class="less-mar-1 font-weight-5 uppercase">Joan Collins</h5>
+                          <p class="text-secondary">Marketing Manager</p>
+                          <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit Suspendisse et elite dolor justo.</p>
+                      </div>
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -7744,8 +7880,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      title: '<none>'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            team: team
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 less-mar-3"> Our Team</h2>
+              <h6 class="font-weight-5 line-height-3 less3">We help you create any website quickly flexibility and performance</h6>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Our Team Style 3'
     cache_metadata:
       max-age: -1
       contexts:
@@ -7762,27 +7987,12 @@ display:
         - 'config:field.storage.node.field_short_description_ct'
         - 'config:field.storage.node.field_twitter'
   block_section_content_team_members:
-    display_plugin: block
     id: block_section_content_team_members
     display_title: '[Apar]Block Section Content - Team Members'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Team Members'
       title: '<none>'
-      defaults:
-        title: false
-        fields: false
-        style: false
-        row: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        pager: false
-        header: false
-        footer: false
-        empty: false
       fields:
         title:
           id: title
@@ -7791,6 +8001,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7846,9 +8059,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -7856,6 +8066,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7911,7 +8122,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -7919,6 +8129,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -7974,7 +8185,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -7982,6 +8192,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -8036,7 +8247,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -8044,11 +8254,21 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-3 col-sm-6 col-xs-12 margin-bottom\">\n    <div class=\"boxlight-hover-secondary text-box padding-4 text-center\">\n        <img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"imgbox-xlarge round img-boder\">\n        <div class=\"clearfix margin-bottom-2\"></div>\n        <h5 class=\"uppercase font-weight-6 less-mar-1\">{{ title }}</h5>\n        {{ field_job }}\n        {{ field_short_description_ct }}\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-3 col-sm-6 col-xs-12 margin-bottom">
+                  <div class="boxlight-hover-secondary text-box padding-4 text-center">
+                      <img src="{{ field_image }}" alt="{{ title }}" class="imgbox-xlarge round img-boder">
+                      <div class="clearfix margin-bottom-2"></div>
+                      <h5 class="uppercase font-weight-6 less-mar-1">{{ title }}</h5>
+                      {{ field_job }}
+                      {{ field_short_description_ct }}
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -8085,36 +8305,52 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            team: team
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            team: team
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -8122,27 +8358,25 @@ display:
         operator: AND
         groups:
           1: AND
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
       header:
         area:
           id: area
@@ -8151,14 +8385,17 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 less-mar-3\">Team Members</h2>\n<p class=\"line-height-2 text-gray less2\">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>"
-            format: php_code
           plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 less-mar-3">Team Members</h2>
+              <p class="line-height-2 text-gray less2">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>
+            format: php_code
+          tokenize: false
       footer: {  }
-      empty: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Team Members'
     cache_metadata:
       max-age: -1
       contexts:
@@ -8171,27 +8408,12 @@ display:
         - 'config:field.storage.node.field_job'
         - 'config:field.storage.node.field_short_description_ct'
   block_section_content_team_members_style_2:
-    display_plugin: block
     id: block_section_content_team_members_style_2
     display_title: '[Apar]Block Section Content - Team Members Style 2'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Team Members Style 2'
       title: '<none>'
-      defaults:
-        title: false
-        fields: false
-        style: false
-        row: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        pager: false
-        header: false
-        footer: false
-        empty: false
       fields:
         title:
           id: title
@@ -8200,6 +8422,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -8255,9 +8480,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -8265,6 +8487,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -8320,7 +8543,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -8328,6 +8550,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -8383,7 +8606,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -8391,6 +8613,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -8445,7 +8668,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -8453,11 +8675,21 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-3 col-sm-6 col-xs-12 margin-bottom\">\n    <div class=\"boxlight-hover-secondary text-box padding-4 text-center\">\n        <img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"imgbox-xlarge round img-boder\">\n        <div class=\"clearfix margin-bottom-2\"></div>\n        <h5 class=\"uppercase font-weight-6 less-mar-1\">{{ title }}</h5>\n        {{ field_job }}\n        {{ field_short_description_ct }}\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-3 col-sm-6 col-xs-12 margin-bottom">
+                  <div class="boxlight-hover-secondary text-box padding-4 text-center">
+                      <img src="{{ field_image }}" alt="{{ title }}" class="imgbox-xlarge round img-boder">
+                      <div class="clearfix margin-bottom-2"></div>
+                      <h5 class="uppercase font-weight-6 less-mar-1">{{ title }}</h5>
+                      {{ field_job }}
+                      {{ field_short_description_ct }}
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -8494,36 +8726,52 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            team: team
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            team: team
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -8531,27 +8779,25 @@ display:
         operator: AND
         groups:
           1: AND
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
       header:
         area:
           id: area
@@ -8560,14 +8806,17 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 text-white less-mar-3\">Team Members</h2>\n<p class=\"line-height-2 text-white less2\">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>"
-            format: php_code
           plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 text-white less-mar-3">Team Members</h2>
+              <p class="line-height-2 text-white less2">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>
+            format: php_code
+          tokenize: false
       footer: {  }
-      empty: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Team Members Style 2'
     cache_metadata:
       max-age: -1
       contexts:
@@ -8580,27 +8829,12 @@ display:
         - 'config:field.storage.node.field_job'
         - 'config:field.storage.node.field_short_description_ct'
   block_section_content_team_members_style_3:
-    display_plugin: block
     id: block_section_content_team_members_style_3
     display_title: '[Apar]Block Section Content - Team Members Style 3'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - Team Members Style 3'
       title: '<none>'
-      defaults:
-        title: false
-        fields: false
-        style: false
-        row: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        pager: false
-        header: false
-        footer: false
-        empty: false
       fields:
         title:
           id: title
@@ -8609,6 +8843,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -8664,9 +8901,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -8674,6 +8908,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -8729,7 +8964,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -8737,6 +8971,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -8792,7 +9027,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_short_description_ct:
           id: field_short_description_ct
           table: node__field_short_description_ct
@@ -8800,6 +9034,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -8854,7 +9089,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -8862,11 +9096,17 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-3 col-sm-6 \">\n    <div class=\"feature-box-5\">\n        <div class=\"dimd-pics\"><img src=\"{{ field_image }}\" alt=\"{{ title }}\" class=\"apar-image-team\"></div>\n    </div>\n</div>"
+            text: |-
+              <div class="col-md-3 col-sm-6 ">
+                  <div class="feature-box-5">
+                      <div class="dimd-pics"><img src="{{ field_image }}" alt="{{ title }}" class="apar-image-team"></div>
+                  </div>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -8903,36 +9143,52 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            team: team
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            team: team
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -8940,27 +9196,25 @@ display:
         operator: AND
         groups:
           1: AND
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
       header:
         area:
           id: area
@@ -8969,14 +9223,17 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h2 class=\"font-weight-7 text-white less-mar-3 margin-top-2\">Team Members</h2>\n<p class=\"line-height-2 text-white less2\">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>"
-            format: php_code
           plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h2 class="font-weight-7 text-white less-mar-3 margin-top-2">Team Members</h2>
+              <p class="line-height-2 text-white less2">Passages more recently with desktop software including versions of generators on the Internet tend to repeat predefined publish software like including reasonable structure versions.</p>
+            format: php_code
+          tokenize: false
       footer: {  }
-      empty: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - Team Members Style 3'
     cache_metadata:
       max-age: -1
       contexts:

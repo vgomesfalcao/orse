@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: qYkmRoScIjpvKrNO8DCi6lscVGakJCBZMp7ytg5OerM
 id: language
-label: Language
+label: Idioma
 module: language
 routes:
   -
@@ -16,44 +16,40 @@ tips:
   language-overview:
     id: language-overview
     plugin: text
-    label: Languages
-    body: '<p>The "Languages" page allows you to add, edit, delete, and reorder languages for the site.</p>'
+    label: Idiomas
     weight: 1
+    body: '<p>A página "Idiomas" permite que você adicione, edite, apague, e reordene idiomas para o site.</p>'
   language-add:
     id: language-add
     plugin: text
-    label: 'Adding languages'
-    body: '<p>To add more languages to your site, click the "Add language" button.</p><p>Added languages will be displayed in the language list and can then be edited or deleted.</p>'
+    label: 'Adicionando idiomas'
     weight: 2
-    attributes:
-      data-class: button-action
+    selector: .button-action
+    body: '<p>Para adicionar mais idiomas a seu site, clique no botão "Adicionar idioma".</p><p>Os idiomas adicionados serão exibidos na lista de idiomas e então poderão ser editados ou excluídos.</p>'
   language-reorder:
     id: language-reorder
     plugin: text
-    label: 'Reordering languages'
-    body: '<p>Para reordenar os idiomas em seu site, use os ícones de arrastar próximos de cada idioma.</p><p>A ordem exibida aqui é a ordem de exibição para as listas de idiomas no site, tais como nos blocos de alternância de idiomas fornecidos pelos módulos Interface Translation e Content Translation.</p><p>Quando você terminar de reordenar os idiomas, clique no botão "Salvar configuração" para que as mudanças sejam aplicadas.</p>'
+    label: 'Reordenando idiomas'
     weight: 3
-    attributes:
-      data-class: draggable
+    selector: .draggable
+    body: '<p>Para reordenar os idiomas em seu site, use os ícones de arrastar próximos de cada idioma.</p><p>A ordem exibida aqui é a ordem de exibição para as listas de idiomas no site, tais como nos blocos de alternância de idiomas fornecidos pelos módulos Interface Translation e Content Translation.</p><p>Quando você terminar de reordenar os idiomas, clique no botão "Salvar configuração" para que as mudanças sejam aplicadas.</p>'
   language-default:
     id: language-default
     plugin: text
-    label: 'Set a language as default'
-    body: '<p>You can change the default language of the site by choosing one of your configured languages as default. The site will use the default language in situations where no choice is made but a language should be set, for example as the language of the displayed interface.</p>'
+    label: 'Definir um idioma como padrão'
     weight: 4
-    attributes:
-      data-class: js-form-item-site-default-language
+    selector: .js-form-item-site-default-language
+    body: '<p>Você pode alterar o idioma padrão do site definindo um dos idiomas configurados por você como padrão. O site utilizará o idioma padrão em situações onde nenhum idioma foi definido, mas que seja necessário, como por exemplo, o idioma da interface exibida.</p>'
   language-operations:
     id: language-operations
     plugin: text
-    label: 'Modifying languages'
-    body: '<p>São fornecidas operações para editar ou apagar seus idiomas.</p><p>Você pode editar o nome e direção do idioma.</p><p>Idiomas apagados podem ser adicionados novamente. Apagar um idioma remove todas as traduções de interface associadas à ele e o conteúdo neste idioma passará a ser definido como idioma neutro. Note que você não pode apagar o idioma padrão do site.</p>'
+    label: 'Modificando idiomas'
     weight: 5
-    attributes:
-      data-class: dropbutton-wrapper
+    selector: .dropbutton-wrapper
+    body: '<p>São fornecidas operações para editar ou apagar seus idiomas.</p><p>Você pode editar o nome e direção do idioma.</p><p>Idiomas apagados podem ser adicionados novamente. Apagar um idioma remove todas as traduções de interface associadas à ele e o conteúdo neste idioma passará a ser definido como idioma neutro. Note que você não pode apagar o idioma padrão do site.</p>'
   language-continue:
     id: language-continue
     plugin: text
-    label: 'Continuing on'
-    body: '<p>Agora que você tem uma visão geral da página de "Idiomas", você pode continuar:<ul><li><a href="[site:url]admin/config/regional/language/add">Adicionando um idioma</a></li><li>Reordenando idiomas</li><li>Editando um idioma</li><li>Apagando um idioma</li></ul></p>'
+    label: Continuando
     weight: 6
+    body: '<p>Agora que você tem uma visão geral da página de "Idiomas", você pode continuar:<ul><li><a href="[site:url]admin/config/regional/language/add">Adicionando um idioma</a></li><li>Reordenando idiomas</li><li>Editando um idioma</li><li>Apagando um idioma</li></ul></p>'

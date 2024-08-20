@@ -1,7 +1,22 @@
 uuid: 41563b66-5cca-43fa-b79a-9b5b2f09a837
 langcode: pt-br
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.webform_default
+  module:
+    - comment
+    - commerce_checkout
+    - commerce_product
+    - contact
+    - filter
+    - node
+    - node_view_permissions
+    - paragraphs_type_permissions
+    - search
+    - shortcut
+    - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -9,7 +24,6 @@ label: 'Usuário autenticado'
 weight: 1
 is_admin: false
 permissions:
-  - 'access cart'
   - 'access checkout'
   - 'access comments'
   - 'access content'
@@ -17,9 +31,8 @@ permissions:
   - 'access site-wide contact form'
   - 'post comments'
   - 'search content'
-  - 'subscribe to newsletters'
   - 'use text format basic_html'
-  - 'view any 404 content'
+  - 'use text format webform_default'
   - 'view any about_page content'
   - 'view any article content'
   - 'view any blog_post content'
@@ -32,12 +45,10 @@ permissions:
   - 'view any partners content'
   - 'view any portfolio content'
   - 'view any services content'
-  - 'view any simplenews_issue content'
   - 'view any team content'
   - 'view any testimonials content'
   - 'view any webform content'
   - 'view commerce_product'
-  - 'view own 404 content'
   - 'view own about_page content'
   - 'view own article content'
   - 'view own blog_post content'
@@ -50,7 +61,6 @@ permissions:
   - 'view own partners content'
   - 'view own portfolio content'
   - 'view own services content'
-  - 'view own simplenews_issue content'
   - 'view own team content'
   - 'view own testimonials content'
   - 'view own unpublished content'

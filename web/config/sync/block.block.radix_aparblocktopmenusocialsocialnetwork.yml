@@ -17,8 +17,8 @@ plugin: 'block_content:960c8ce0-5a69-4e6e-9f92-f95879b3d2d8'
 settings:
   id: 'block_content:960c8ce0-5a69-4e6e-9f92-f95879b3d2d8'
   label: '[Apar]Block Top Menu Social - Social Network'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

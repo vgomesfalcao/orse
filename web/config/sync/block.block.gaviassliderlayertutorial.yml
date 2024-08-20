@@ -16,11 +16,11 @@ plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
 settings:
   id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
   label: 'Gavias SliderLayer - Tutorial'
-  provider: gavias_sliderlayer
   label_display: '0'
+  provider: gavias_sliderlayer
 visibility:
   request_path:
     id: request_path
-    pages: /tutorial
     negate: false
     context_mapping: {  }
+    pages: /tutorial

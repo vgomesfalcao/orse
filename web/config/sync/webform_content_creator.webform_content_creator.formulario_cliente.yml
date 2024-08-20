@@ -5,12 +5,12 @@ dependencies: {  }
 id: formulario_cliente
 title: 'Formulário Cliente'
 webform: formulario_cliente
+content_type: null
 field_title: null
 use_encrypt: null
 encryption_profile: null
 sync_content: false
 sync_content_delete: false
-sync_content_node_field: null
 sync_content_field: ''
 elements:
   field_data_do_evento:
@@ -73,6 +73,6 @@ elements:
     webform_field: ''
     custom_check: true
     custom_value: '[webform_submission:values:tipo_evento] - [webform_submission:values:data_evento]'
-content_type: null
+sync_content_node_field: null
 target_entity_type: node
 target_bundle: formulario_cliente

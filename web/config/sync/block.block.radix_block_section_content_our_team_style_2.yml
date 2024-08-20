@@ -17,8 +17,8 @@ plugin: 'views_block:_apar_team-block_section_content_our_team_style_2'
 settings:
   id: 'views_block:_apar_team-block_section_content_our_team_style_2'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
   items_per_page: none
 visibility: {  }

@@ -17,8 +17,8 @@ plugin: 'block_content:68792b29-82d3-4946-9d3b-45af739e9bc7'
 settings:
   id: 'block_content:68792b29-82d3-4946-9d3b-45af739e9bc7'
   label: '[Apar]Block Section Content - Package'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

@@ -17,8 +17,8 @@ plugin: 'block_content:cf9b72db-0b0f-42ba-a422-08c071293a78'
 settings:
   id: 'block_content:cf9b72db-0b0f-42ba-a422-08c071293a78'
   label: '[Apar]Block Section Content - Call To Action Style 2'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

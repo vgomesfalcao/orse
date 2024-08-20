@@ -17,8 +17,8 @@ plugin: 'block_content:6662c7d1-bb95-4935-bc6d-4d81e167f5b7'
 settings:
   id: 'block_content:6662c7d1-bb95-4935-bc6d-4d81e167f5b7'
   label: '[Apar]Block Section Content - Stunning Websites'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

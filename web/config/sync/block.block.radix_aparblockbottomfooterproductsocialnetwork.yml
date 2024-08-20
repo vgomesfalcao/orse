@@ -17,8 +17,8 @@ plugin: 'block_content:abe357b2-24dd-4bd0-89b0-68df79933f46'
 settings:
   id: 'block_content:abe357b2-24dd-4bd0-89b0-68df79933f46'
   label: '[Apar]Block Bottom Footer Product - Social Network'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

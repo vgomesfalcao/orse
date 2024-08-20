@@ -12,17 +12,134 @@ third_party_settings:
   honeypot:
     honeypot: true
     time_restriction: true
+weight: 0
 open: null
 close: null
-weight: 0
 uid: 1
 template: false
 archive: false
 id: formulario_cliente
 title: 'Formulário Cliente'
 description: ''
-category: ''
-elements: "markup:\n  '#type': webform_markup\n  '#markup': |\n    <h3>Favor preencher detalhes do evento</h3>\n    <hr>\n    \nnome_completo:\n  '#type': textfield\n  '#title': 'Nome Completo'\n  '#title_display': before\n  '#description_display': invisible\n  '#required': true\ndata_evento:\n  '#type': date\n  '#title': 'Data do Evento'\n  '#title_display': before\n  '#description_display': before\n  '#help_display': title_before\n  '#size': '60'\n  '#required': true\n  '#date_date_min': '[webform_submission:created:html_date]'\n  '#min': '[webform_submission:created:html_date]'\n  '#datepicker': true\n  '#datepicker_button': true\n  '#date_date_format': d/m/Y\nnumero_convidados:\n  '#type': number\n  '#title': 'Número de Convidados'\n  '#title_display': before\n  '#size': '60'\n  '#required': true\nlocal:\n  '#type': textarea\n  '#title': Local\n  '#description': |\n    <blockquote>\n    <p><em>Caso n&atilde;o tenha definido, informar regi&atilde;o pretendida para realiza&ccedil;&atilde;o do evento</em></p>\n    </blockquote>\n    \n  '#title_display': before\n  '#description_display': before\n  '#required': true\ntipo_evento:\n  '#type': radios\n  '#title': 'Tipo de Evento'\n  '#title_display': before\n  '#options':\n    bodas: Bodas\n    casamento: Casamento\n    corporativo: Corporativo\n    debutante: Debutante\n    festa_infantil: 'Festa Infantil'\n  '#required': true\ntipo_bodas:\n  '#type': textarea\n  '#title': 'Especifique o Tipo de Bodas a ser comemorado'\n  '#placeholder': 'Especifique o tipo de bodas a ser comemorado'\n  '#required': true\n  '#states':\n    visible:\n      ':input[name=\"tipo_evento\"]':\n        value: bodas\ntipo_casamento:\n  '#type': radios\n  '#title': 'Tipo de Casamento'\n  '#options':\n    hetero: Hetero\n    homoafetivo: Homoafetivo\n  '#required': true\n  '#states':\n    visible:\n      ':input[name=\"tipo_evento\"]':\n        value: casamento\ntipo_comemoracao:\n  '#type': textarea\n  '#title': 'Tipo de Comemoração'\n  '#title_display': none\n  '#placeholder': 'Especifique o tipo de comemoração a ser celebrada'\n  '#required': true\n  '#states':\n    visible:\n      ':input[name=\"tipo_evento\"]':\n        value: corporativo\nidade_crianca:\n  '#type': textfield\n  '#title': 'Idade da Criança'\n  '#title_display': invisible\n  '#placeholder': 'Idade da criança'\n  '#required': true\n  '#states':\n    visible:\n      ':input[name=\"tipo_evento\"]':\n        value: festa_infantil\nvalor_max_fotografia:\n  '#type': number\n  '#title': 'Valor que deseja investir em Fotografia'\n  '#description': '<em>Esse campo &eacute; opcional, o objetivo &eacute; que apenas os fot&oacute;grafos que se encontram dentro da margem de valor estipulada enviem propostas</em>'\n  '#title_display': before\n  '#description_display': before\n  '#placeholder': '00,00'\nobservacoes:\n  '#type': textarea\n  '#title': Observações\n  '#description': '<em>Informe nesse campo, de forma objetiva, outros detalhes que considere relevante sobre o evento&nbsp;</em>'\n  '#title_display': before\n  '#description_display': before\nemail:\n  '#type': hidden\n  '#title': Email\n  '#default_value': '[current-user:mail]'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Enviar\n  '#submit__attributes':\n    class:\n      - 'btn btn-primary button button--primary js-form-submit form-submit'"
+categories: {  }
+elements: |-
+  markup:
+    '#type': webform_markup
+    '#markup': |
+      <h3>Favor preencher detalhes do evento</h3>
+      <hr>
+      
+  nome_completo:
+    '#type': textfield
+    '#title': 'Nome Completo'
+    '#title_display': before
+    '#description_display': invisible
+    '#required': true
+  data_evento:
+    '#type': date
+    '#title': 'Data do Evento'
+    '#title_display': before
+    '#description_display': before
+    '#help_display': title_before
+    '#size': '60'
+    '#required': true
+    '#date_date_min': '[webform_submission:created:html_date]'
+    '#min': '[webform_submission:created:html_date]'
+    '#datepicker': true
+    '#datepicker_button': true
+    '#date_date_format': d/m/Y
+  numero_convidados:
+    '#type': number
+    '#title': 'Número de Convidados'
+    '#title_display': before
+    '#size': '60'
+    '#required': true
+  local:
+    '#type': textarea
+    '#title': Local
+    '#description': |
+      <blockquote>
+      <p><em>Caso n&atilde;o tenha definido, informar regi&atilde;o pretendida para realiza&ccedil;&atilde;o do evento</em></p>
+      </blockquote>
+      
+    '#title_display': before
+    '#description_display': before
+    '#required': true
+  tipo_evento:
+    '#type': radios
+    '#title': 'Tipo de Evento'
+    '#title_display': before
+    '#options':
+      bodas: Bodas
+      casamento: Casamento
+      corporativo: Corporativo
+      debutante: Debutante
+      festa_infantil: 'Festa Infantil'
+    '#required': true
+  tipo_bodas:
+    '#type': textarea
+    '#title': 'Especifique o Tipo de Bodas a ser comemorado'
+    '#placeholder': 'Especifique o tipo de bodas a ser comemorado'
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="tipo_evento"]':
+          value: bodas
+  tipo_casamento:
+    '#type': radios
+    '#title': 'Tipo de Casamento'
+    '#options':
+      hetero: Hetero
+      homoafetivo: Homoafetivo
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="tipo_evento"]':
+          value: casamento
+  tipo_comemoracao:
+    '#type': textarea
+    '#title': 'Tipo de Comemoração'
+    '#title_display': none
+    '#placeholder': 'Especifique o tipo de comemoração a ser celebrada'
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="tipo_evento"]':
+          value: corporativo
+  idade_crianca:
+    '#type': textfield
+    '#title': 'Idade da Criança'
+    '#title_display': invisible
+    '#placeholder': 'Idade da criança'
+    '#required': true
+    '#states':
+      visible:
+        ':input[name="tipo_evento"]':
+          value: festa_infantil
+  valor_max_fotografia:
+    '#type': number
+    '#title': 'Valor que deseja investir em Fotografia'
+    '#description': '<em>Esse campo &eacute; opcional, o objetivo &eacute; que apenas os fot&oacute;grafos que se encontram dentro da margem de valor estipulada enviem propostas</em>'
+    '#title_display': before
+    '#description_display': before
+    '#placeholder': '00,00'
+  observacoes:
+    '#type': textarea
+    '#title': Observações
+    '#description': '<em>Informe nesse campo, de forma objetiva, outros detalhes que considere relevante sobre o evento&nbsp;</em>'
+    '#title_display': before
+    '#description_display': before
+  email:
+    '#type': hidden
+    '#title': Email
+    '#default_value': '[current-user:mail]'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Enviar
+    '#submit__attributes':
+      class:
+        - 'btn btn-primary button button--primary js-form-submit form-submit'
 css: ''
 javascript: ''
 settings:
@@ -37,9 +154,9 @@ settings:
   page_theme_name: ''
   form_title: source_entity_webform
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: false
   form_confidential: false
   form_confidential_message: ''
@@ -49,28 +166,36 @@ settings:
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
   share: false
   share_node: false
   share_theme_name: ''
   share_title: true
   share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -79,11 +204,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -94,19 +214,21 @@ settings:
   wizard_progress_percentage: false
   wizard_progress_link: false
   wizard_progress_states: false
-  wizard_auto_forward: true
-  wizard_auto_forward_hide_next_button: false
-  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
   wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -123,9 +245,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: url_message
+  confirmation_url: /user/meus-eventos
   confirmation_title: 'Evento Criado'
   confirmation_message: "Sua solicita&ccedil;&atilde;o de or&ccedil;amento foi enviada, agora &eacute; s&oacute; aguardar, em at&eacute; 48h voc&ecirc; receber&aacute; seus or&ccedil;amentos\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -68px; top: -20px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>"
-  confirmation_url: /user/meus-eventos
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''
@@ -154,7 +276,6 @@ settings:
   token_update: false
   token_delete: false
   serial_disabled: false
-  form_remote_addr: true
 access:
   create:
     roles:
@@ -218,13 +339,16 @@ access:
 handlers:
   mautic:
     id: mautic
+    handler_id: mautic
     label: Mautic
     notes: ''
-    handler_id: mautic
     status: true
     conditions: {  }
     weight: 0
     settings:
+      completed_url: 'https://orsefotografia.com.br/mkt'
+      mautic_form_id: '1'
+      completed_custom_data: "mauticform[nome_completo]: '[webform_submission:values:nome_completo]'\r\nmauticform[data_evento]: '[webform_submission:values:data_evento]'\r\nmauticform[numero_convidados]: '[webform_submission:values:numero_convidados]'\r\nmauticform[local]: '[webform_submission:values:local]'\r\nmauticform[tipo_evento]: '[webform_submission:values:tipo_evento]'\r\nmauticform[tipo_bodas]: '[webform_submission:values:tipo_bodas]'\r\nmauticform[tipo_casamento]: '[webform_submission:values:tipo_casamento]'\r\nmauticform[tipo_comemoracao]: '[webform_submission:values:tipo_comemoracao]'\r\nmauticform[idade_crianca]: '[webform_submission:values:idade_crianca]'\r\nmauticform[valor_max_fotografia]: '[webform_submission:values:valor_max_fotografia]'\r\nmauticform[observacoes]: '[webform_submission:values:observacoes]'\r\nmauticform[email]: '[webform_submission:values:email]'"
       method: POST
       type: x-www-form-urlencoded
       excluded_data:
@@ -249,16 +373,13 @@ handlers:
         notes: notes
       custom_data: ''
       debug: false
-      completed_url: 'https://orsefotografia.com.br/mkt'
-      completed_custom_data: "mauticform[nome_completo]: '[webform_submission:values:nome_completo]'\r\nmauticform[data_evento]: '[webform_submission:values:data_evento]'\r\nmauticform[numero_convidados]: '[webform_submission:values:numero_convidados]'\r\nmauticform[local]: '[webform_submission:values:local]'\r\nmauticform[tipo_evento]: '[webform_submission:values:tipo_evento]'\r\nmauticform[tipo_bodas]: '[webform_submission:values:tipo_bodas]'\r\nmauticform[tipo_casamento]: '[webform_submission:values:tipo_casamento]'\r\nmauticform[tipo_comemoracao]: '[webform_submission:values:tipo_comemoracao]'\r\nmauticform[idade_crianca]: '[webform_submission:values:idade_crianca]'\r\nmauticform[valor_max_fotografia]: '[webform_submission:values:valor_max_fotografia]'\r\nmauticform[observacoes]: '[webform_submission:values:observacoes]'\r\nmauticform[email]: '[webform_submission:values:email]'"
-      mautic_form_id: '1'
       message: ''
       messages: {  }
   email:
     id: email
+    handler_id: email
     label: Email
     notes: ''
-    handler_id: email
     status: true
     conditions: {  }
     weight: 0
@@ -267,13 +388,17 @@ handlers:
         - completed
       to_mail: _default
       to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
       bcc_mail: '[webform_role:fotografo]'
       bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       subject: _default
       body: "<div data-section-wrapper=\"1\">\r\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"w320\" data-section=\"1\" style=\"margin: 0 auto;border-collapse: collapse !important;width: 600px;\" width=\"600\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td class=\"ui-sortable\" data-slot-container=\"1\" style=\"font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-size:30px; font-weight:400; text-align:center\">\r\n\t\t\t<div data-slot=\"text\"><br />\r\n\t\t\tOrse Eventos<br />\r\n\t\t\t&nbsp;</div>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n\r\n<div data-section-wrapper=\"1\">\r\n<table bgcolor=\"#55bec2\" cellpadding=\"0\" cellspacing=\"0\" class=\"w320\" data-section=\"1\" style=\"margin: 0px auto; width: 600px; border-collapse: collapse !important; background-color: rgb(85, 190, 194);\" width=\"600\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td class=\"ui-sortable\" data-slot-container=\"1\" style=\"font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-weight:400; text-align:center\">&nbsp;\r\n\t\t\t<div data-param-background-color=\"fcf9f9\" data-param-caption-color=\"f7f4f4\" data-slot=\"image\"><img alt=\"robot picture\" class=\"fr-view\" height=\"240\" src=\"https://orsefotografia.com.br/mkt/themes/neopolitan/img/robomail.gif\" width=\"224\" />\r\n\t\t\t<div data-slot-toolbar=\"true\" style=\"top: -24px;\"><span style=\"color:#ffffff; font-family:sans-serif; font-size:smaller; margin-left:10px\">IMAGE</span></div>\r\n\t\t\t</div>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td class=\"headline ui-sortable\" data-slot-container=\"1\" style=\"color:#ffffff; font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-size:36px; font-weight:400; text-align:center\">\r\n\t\t\t<div data-slot=\"text\">Chegou uma nova solicita&ccedil;&atilde;o!</div>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-weight:400; text-align:center\">\r\n\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0 auto;border-collapse: collapse !important;\" width=\"60%\">\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td class=\"ui-sortable\" data-slot-container=\"1\" style=\"color:#187272; font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-weight:400; text-align:center\">\r\n\t\t\t\t\t\t<div data-slot=\"text\"><br />\r\n\t\t\t\t\t\t<span style=\"color:#ffffff\">Fique atento, voc&ecirc; tem 48h para responder.</span><br />\r\n\t\t\t\t\t\t&nbsp;</div>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td class=\"ui-sortable\" data-slot-container=\"1\" style=\"font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-weight:400; text-align:center\"><br />\r\n\t\t\t&nbsp;</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n\r\n<div data-section-wrapper=\"1\">\r\n<table bgcolor=\"#f5774e\" cellpadding=\"0\" cellspacing=\"0\" class=\"w320\" data-section=\"1\" style=\"margin: 0 auto;border-collapse: collapse !important;width: 600px; background-color: #f5774e;\" width=\"600\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-weight:400; text-align:center\">\r\n\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" class=\"force-width-80\" style=\"margin: 0 auto;border-collapse: collapse !important;width: 80% !important;\">\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td class=\"ui-sortable\" data-slot-container=\"1\" style=\"color:#933f24; font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-weight:400; text-align:left\">\r\n\t\t\t\t\t\t<div data-slot=\"text\">\r\n\t\t\t\t\t\t<div data-empty=\"true\">&nbsp;</div>\r\n\r\n\t\t\t\t\t\t<div style=\"text-align: center;\"><br />\r\n\t\t\t\t\t\t<span style=\"color:#ffffff\">Orse Fotografia<br />\r\n\t\t\t\t\t\t61 99208.9738<br />\r\n\t\t\t\t\t\tcontato@orse.com.br<br />\r\n\t\t\t\t\t\tinsta: @orse.fotografia</span></div>\r\n\r\n\t\t\t\t\t\t<div data-empty=\"true\">&nbsp;</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t<td class=\"ui-sortable\" data-slot-container=\"1\" style=\"color:#933f24; font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-weight:400; text-align:right; vertical-align:top\">&nbsp;</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\r\n\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" class=\"force-width-80\" style=\"margin: 0 auto;border-collapse: collapse !important;width: 80% !important;\">\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td class=\"mobile-block ui-sortable\" data-slot-container=\"1\" style=\"font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-weight:400; text-align:center\">&nbsp;</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\r\n\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" class=\"force-width-80\" style=\"margin: 0 auto;border-collapse: collapse !important;width: 80% !important;\">\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td class=\"ui-sortable\" data-slot-container=\"1\" style=\"color:#933f24; font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-weight:400; text-align:left\">&nbsp;</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>\r\n\r\n<div data-section-wrapper=\"1\">\r\n<table bgcolor=\"#414141\" cellpadding=\"0\" cellspacing=\"0\" class=\"w320\" data-section=\"1\" style=\"margin: 0 auto;border-collapse: collapse !important;width: 600px\" width=\"600\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td class=\"ui-sortable\" data-slot-container=\"1\" style=\"font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-weight:400; text-align:center\">&nbsp;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td class=\"ui-sortable\" data-slot-container=\"1\" style=\"color:#bbbbbb; font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-size:12px; font-weight:400; text-align:center\">&nbsp;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td class=\"ui-sortable\" data-slot-container=\"1\" style=\"color:#bbbbbb; font-family:'Droid Sans','Helvetica Neue','Arial','sans-serif' !important; font-size:12px; font-weight:400; text-align:center\">&nbsp;</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n</div>"
       excluded_elements: {  }
@@ -284,11 +409,7 @@ handlers:
       html: true
       attachments: false
       twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
       theme_name: ''
       parameters: {  }
+      debug: false
 variants: {  }

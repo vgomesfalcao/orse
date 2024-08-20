@@ -18,38 +18,38 @@ bundle: section
 mode: default
 content:
   field_background_color:
-    weight: 0
+    type: color_field_formatter_text
     label: above
     settings:
       format: hex
       opacity: true
     third_party_settings: {  }
-    type: color_field_formatter_text
+    weight: 0
     region: content
   field_padding_bottom:
     type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
     weight: 2
     region: content
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
   field_padding_top:
-    weight: 1
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 1
     region: content
   field_section_background:
-    weight: 3
+    type: image_url
     label: above
     settings:
       image_style: image_2000x900
     third_party_settings: {  }
-    type: image_url
+    weight: 3
     region: content
 hidden: {  }

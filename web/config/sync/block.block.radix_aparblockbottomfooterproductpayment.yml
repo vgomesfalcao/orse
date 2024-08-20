@@ -17,8 +17,8 @@ plugin: 'block_content:034ac64e-2449-4271-96e7-d7b24da5fc4c'
 settings:
   id: 'block_content:034ac64e-2449-4271-96e7-d7b24da5fc4c'
   label: '[Apar]Block Bottom Footer Product - Payment'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

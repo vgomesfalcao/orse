@@ -17,26 +17,26 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 3
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   field_cover:
     type: inline_entity_form_simple
     weight: 2
+    region: content
     settings:
       form_mode: default
-      revision: false
       override_labels: false
       label_singular: ''
       label_plural: ''
       collapsible: false
       collapsed: false
+      revision: false
     third_party_settings: {  }
-    region: content
   info:
     type: string_textfield
     weight: 0
