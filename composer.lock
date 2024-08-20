@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78b44632eccee217fe05349109f4e881",
+    "content-hash": "c0f520758562fc378b5420cbb4250d17",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2317,21 +2317,21 @@
         },
         {
             "name": "drupal/clientside_validation",
-            "version": "1.2.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/clientside_validation.git",
-                "reference": "8.x-1.2"
+                "reference": "3.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/clientside_validation-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "533b0cc78b5f9cbaf75ddc37b94b808ef42bb04a"
+                "url": "https://ftp.drupal.org/files/projects/clientside_validation-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "a5064ff992f8924d83edfdb5b1cab2464b629c5a"
             },
             "require": {
-                "drupal/core": "~8.0",
-                "php": ">=7.0.0"
+                "drupal/core": "^8.7.7 || ^9",
+                "php": ">=7.2.0"
             },
             "require-dev": {
                 "drupal/clientside_validation_demo": "*",
@@ -2340,8 +2340,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1558864688",
+                    "version": "3.0.1",
+                    "datestamp": "1660914342",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2373,7 +2373,7 @@
             "description": "This module adds clientside validation",
             "homepage": "https://www.drupal.org/project/clientside_validation",
             "support": {
-                "source": "https://cgit.drupalcode.org/clientside_validation",
+                "source": "https://git.drupalcode.org/project/clientside_validation",
                 "issues": "https://drupal.org/project/issues/clientside_validation"
             }
         },
@@ -4105,62 +4105,6 @@
             }
         },
         {
-            "name": "drupal/menu_attributes",
-            "version": "1.0.0-beta1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/menu_attributes.git",
-                "reference": "8.x-1.0-beta1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/menu_attributes-8.x-1.0-beta1.zip",
-                "reference": "8.x-1.0-beta1",
-                "shasum": "614d25e6f74528171c363ccdc44689496c1cd97f"
-            },
-            "require": {
-                "drupal/core": "^8"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-beta1",
-                    "datestamp": "1584488346",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "amateescu",
-                    "homepage": "https://www.drupal.org/user/729614"
-                },
-                {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "joelpittet",
-                    "homepage": "https://www.drupal.org/user/160302"
-                },
-                {
-                    "name": "Schoonzie",
-                    "homepage": "https://www.drupal.org/user/52659"
-                }
-            ],
-            "description": "Allows administrators to specify custom attributes for menu items.",
-            "homepage": "https://www.drupal.org/project/menu_attributes",
-            "support": {
-                "source": "https://git.drupalcode.org/project/menu_attributes"
-            }
-        },
-        {
             "name": "drupal/node_view_permissions",
             "version": "1.6.0",
             "source": {
@@ -4582,29 +4526,29 @@
         },
         {
             "name": "drupal/select_registration_roles",
-            "version": "1.2.0",
+            "version": "2.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/select_registration_roles.git",
-                "reference": "8.x-1.2"
+                "reference": "2.0.0-beta2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/select_registration_roles-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "a2d0e5f9dd61a197f2a89b61ea1f42543825de07"
+                "url": "https://ftp.drupal.org/files/projects/select_registration_roles-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "a420936fdb27345bfa2a8543664ea42eafea8acc"
             },
             "require": {
-                "drupal/core": "^8"
+                "drupal/core": "^8.8 || ^9.0 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1464878339",
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1672923636",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -4693,72 +4637,6 @@
             "homepage": "https://www.drupal.org/project/simplenews",
             "support": {
                 "source": "https://git.drupalcode.org/project/simplenews"
-            }
-        },
-        {
-            "name": "drupal/sitemap",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/sitemap.git",
-                "reference": "8.x-1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sitemap-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "aa6f0189eba189c9f6c1a1e24505f1ce802eeea1"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1541693881",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Nik Alexandrov",
-                    "homepage": "https://www.drupal.org/u/nafes",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Anna Kalata",
-                    "homepage": "https://www.drupal.org/u/akalata",
-                    "role": "Co-maintainer"
-                },
-                {
-                    "name": "killes@www.drop.org",
-                    "homepage": "https://www.drupal.org/u/killeswww.drop.org",
-                    "role": "Co-maintainer"
-                },
-                {
-                    "name": "See other contributors",
-                    "homepage": "https://www.drupal.org/node/3295/committers",
-                    "role": "contributor"
-                },
-                {
-                    "name": "Nafes",
-                    "homepage": "https://www.drupal.org/user/2489926"
-                }
-            ],
-            "description": "Display a sitemap.",
-            "homepage": "http://drupal.org/project/sitemap",
-            "support": {
-                "source": "http://cgit.drupalcode.org/sitemap",
-                "issues": "http://drupal.org/project/issues/sitemap",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -5230,26 +5108,26 @@
         },
         {
             "name": "drupal/webform",
-            "version": "5.31.0",
+            "version": "6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "8.x-5.31"
+                "reference": "6.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.31.zip",
-                "reference": "8.x-5.31",
-                "shasum": "4141fa84299d0514b111bebd06c76e5842e0bdec"
+                "url": "https://ftp.drupal.org/files/projects/webform-6.0.0.zip",
+                "reference": "6.0.0",
+                "shasum": "2528636c9e90fe1623544eee433f102faa0f1b57"
             },
             "require": {
-                "drupal/core": "^8.8"
+                "drupal/core": "^8.8 || ^9"
             },
             "require-dev": {
                 "drupal/address": "~1.0",
                 "drupal/bootstrap": "~3.0",
                 "drupal/captcha": "~1.0",
-                "drupal/chosen": "~2.0",
+                "drupal/chosen": "~3.0",
                 "drupal/clientside_validation": "~3.0",
                 "drupal/clientside_validation_jquery": "*",
                 "drupal/devel": "~3.0",
@@ -5257,6 +5135,9 @@
                 "drupal/entity_print": "~2.0",
                 "drupal/gnode": "*",
                 "drupal/group": "1.0",
+                "drupal/jquery_ui": "~1.0",
+                "drupal/jquery_ui_checkboxradio": "~1.0",
+                "drupal/jquery_ui_datepicker": "~1.0",
                 "drupal/lingotek": "~3.0",
                 "drupal/mailsystem": "~4.0",
                 "drupal/paragraphs": "~1.0",
@@ -5278,11 +5159,15 @@
                 "drupal/webform_share": "*",
                 "drupal/webform_ui": "*"
             },
+            "suggest": {
+                "drupal/jquery_ui_checkboxradio": "Provides jQuery UI Checkboxradio library. Required by the Webform jQueryUI Buttons module. The Webform jQueryUI Buttons module is deprecated because jQueryUI is no longer maintained.",
+                "drupal/jquery_ui_datepicker": "Provides jQuery UI Datepicker library. Required to support datepickers. The Webform jQueryUI Datepicker module is deprecated because jQueryUI is no longer maintained."
+            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.31",
-                    "datestamp": "1638988667",
+                    "version": "6.0.0",
+                    "datestamp": "1614791851",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5290,7 +5175,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "drush.services.yml": "^9"
                     }
                 }
             },
@@ -10339,7 +10224,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/menu_attributes": 10,
+        "drupal/select_registration_roles": 10,
         "drupal/simplenews": 10,
         "drupal/views_aggregator": 10
     },
