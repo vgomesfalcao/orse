@@ -1,7 +1,0 @@
-block.block.*.third_party.nvt_block_settings:
-  type: mapping
-  label: Block settings third party settings
-  mapping:
-    color:
-      type: string
-      label: Additional settings advanced for the block
