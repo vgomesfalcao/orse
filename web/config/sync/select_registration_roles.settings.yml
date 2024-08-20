@@ -1,4 +1,3 @@
-langcode: pt-br
 select_registration_roles_setby_admin:
   cliente: cliente
   fotografo: fotografo

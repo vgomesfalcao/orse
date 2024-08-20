@@ -152,7 +152,7 @@ display:
           entity_type: commerce_store
           entity_field: type
           plugin_id: commerce_entity_bundle
-          label: Type
+          label: Tipo
           exclude: false
           alter:
             alter_text: false
@@ -280,6 +280,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -307,7 +308,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No stores available.'
+          content: 'Nenhuma loja disponível.'
           tokenize: false
       sorts: {  }
       arguments: {  }
@@ -328,7 +329,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Type
+            label: Tipo
             description: ''
             use_operator: false
             operator: type_op

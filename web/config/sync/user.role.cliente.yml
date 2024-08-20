@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.formulario_cliente
   module:
+    - file
     - node
     - node_view_permissions
 id: cliente
@@ -13,6 +14,7 @@ weight: 3
 is_admin: null
 permissions:
   - 'create formulario_cliente content'
+  - 'delete own files'
   - 'edit own formulario_cliente content'
   - 'view any about_page content'
   - 'view any article content'

@@ -43,7 +43,7 @@ tips:
     weight: -7
     position: top
     selector: '#edit-element-name'
-    body: 'Os bots de spam normalmente preenchem qualquer campo que eles acreditam que ajudarão a obter links de volta para seu site, então tentá-los com um campo chamado ''url'', ''homepage'' ou ''link'' torna difícil para eles resistirem em preencher o campo — e fácil pegá-los na armadilha e rejeitar suas submissões!'
+    body: "Os bots de spam normalmente preenchem qualquer campo que eles acreditam que ajudarão a obter links de volta para seu site, então tentá-los com um campo chamado 'url', 'homepage' ou 'link' torna difícil para eles resistirem em preencher o campo — e fácil pegá-los na armadilha e rejeitar suas submissões!"
   honeypot-time-limit:
     id: honeypot-time-limit
     plugin: text

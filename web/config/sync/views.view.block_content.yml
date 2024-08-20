@@ -8,9 +8,9 @@ dependencies:
 _core:
   default_config_hash: msYnighLW1IbiBfyQbwbQwb2cU-5LECiFryt60k0Nfk
 id: block_content
-label: 'Custom block library'
+label: 'Content blocks'
 module: views
-description: 'Find and manage custom blocks.'
+description: 'Encontre e gerencie blocos customizados.'
 tag: default
 base_table: block_content_field_data
 base_field: id
@@ -21,7 +21,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Custom block library'
+      title: 'Biblioteca de blocos personalizados'
       fields:
         info:
           id: info
@@ -33,7 +33,7 @@ display:
           entity_type: null
           entity_field: info
           plugin_id: field
-          label: 'Block description'
+          label: 'Descrição do bloco'
           exclude: false
           alter:
             alter_text: false
@@ -98,7 +98,7 @@ display:
           entity_type: block_content
           entity_field: type
           plugin_id: field
-          label: 'Block type'
+          label: 'Tipo de bloco'
           exclude: false
           alter:
             alter_text: false
@@ -209,6 +209,15 @@ display:
             date_format: short
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
         operations:
           id: operations
           table: block_content
@@ -264,6 +273,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
@@ -291,7 +301,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'administer blocks'
+          perm: 'access block library'
       cache:
         type: tag
         options: {  }
@@ -337,7 +347,7 @@ display:
           exposed: true
           expose:
             operator_id: info_op
-            label: 'Block description'
+            label: 'Descrição do bloco'
             description: ''
             use_operator: false
             operator: info_op
@@ -380,7 +390,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Block type'
+            label: 'Tipo de bloco'
             description: ''
             use_operator: false
             operator: type_op
@@ -522,14 +532,15 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/structure/block/block-content
+      path: admin/content/block
       menu:
         type: tab
-        title: 'Custom block library'
-        description: ''
+        title: Blocks
+        description: 'Create and edit block content.'
         weight: 0
+        expanded: false
         menu_name: admin
-        parent: block.admin_display
+        parent: system.admin_content
         context: '0'
     cache_metadata:
       max-age: -1

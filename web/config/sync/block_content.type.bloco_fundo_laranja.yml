@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: bloco_fundo_laranja
 label: 'Bloco Fundo Laranja'
-revision: 1
+revision: true
 description: ''

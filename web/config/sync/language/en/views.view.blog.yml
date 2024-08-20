@@ -41,7 +41,7 @@ display:
         uid:
           exception:
             title: All
-          title: '{{ arguments.uid }}''s blog'
+          title: "{{ arguments.uid }}'s blog"
   feed_1:
     display_title: 'All blog posts feed'
     display_options:
@@ -53,4 +53,4 @@ display:
         uid:
           exception:
             title: All
-          title: '{{ arguments.uid }}''s blog'
+          title: "{{ arguments.uid }}'s blog"

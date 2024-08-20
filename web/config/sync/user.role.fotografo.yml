@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.formulario_fotografo
   module:
+    - file
     - node
     - node_view_permissions
 id: fotografo
@@ -13,6 +14,7 @@ weight: 4
 is_admin: null
 permissions:
   - 'create formulario_fotografo content'
+  - 'delete own files'
   - 'delete own formulario_fotografo content'
   - 'edit own formulario_fotografo content'
   - 'view any about_page content'

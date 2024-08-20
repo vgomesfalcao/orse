@@ -10,7 +10,7 @@ _core:
 id: content
 label: Conteúdo
 module: node
-description: 'Find and manage content.'
+description: 'Encontrar e gerenciar conteúdo.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -69,7 +69,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
-          label: 'Content type'
+          label: 'Tipo de conteúdo'
           exclude: false
           alter:
             alter_text: false
@@ -163,7 +163,7 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_false: Unpublished
+            format_custom_false: 'Não publicado'
             format_custom_true: Publicado
         changed:
           id: changed
@@ -187,6 +187,15 @@ display:
             date_format: short
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
         operations:
           id: operations
           table: node
@@ -246,10 +255,11 @@ display:
             previous: '‹ Voltar'
             first: '« Primeiro'
             last: 'Último »'
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Filtrar
           reset_button: true
           reset_button_label: Reiniciar
           exposed_sorts_label: 'Ordenar por'
@@ -269,7 +279,7 @@ display:
           field: area_text_custom
           plugin_id: text_custom
           empty: true
-          content: 'No content available.'
+          content: 'Sem conteúdo disponivel.'
       sorts: {  }
       arguments: {  }
       filters:
@@ -332,7 +342,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Content type'
+            label: 'Tipo de conteúdo'
             description: ''
             use_operator: false
             operator: type_op
@@ -389,7 +399,7 @@ display:
               authenticated: authenticated
           is_grouped: true
           group_info:
-            label: 'Published status'
+            label: 'Status publicado'
             description: ''
             identifier: status
             optional: true
@@ -404,7 +414,7 @@ display:
                 operator: '='
                 value: '1'
               2:
-                title: Unpublished
+                title: 'Não publicado'
                 operator: '='
                 value: '0'
         langcode:
@@ -423,7 +433,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Idioma
             description: ''
             use_operator: false
             operator: langcode_op
@@ -602,7 +612,7 @@ display:
       tab_options:
         type: normal
         title: Conteúdo
-        description: 'Find and manage content'
+        description: 'Buscar e gerenciar conteúdo'
         weight: -10
         menu_name: admin
     cache_metadata:
