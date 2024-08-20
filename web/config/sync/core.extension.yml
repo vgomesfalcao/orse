@@ -69,7 +69,6 @@ module:
   link: 0
   locale: 0
   mautic: 0
-  menu_attributes: 0
   menu_ui: 0
   node: 0
   node_view_permissions: 0
@@ -86,7 +85,6 @@ module:
   responsive_image: 0
   search: 0
   shortcut: 0
-  sitemap: 0
   smtp: 0
   state_machine: 0
   statistics: 0
