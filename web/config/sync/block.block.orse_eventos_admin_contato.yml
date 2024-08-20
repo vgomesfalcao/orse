@@ -17,8 +17,8 @@ plugin: 'block_content:c55f666f-4671-429c-9cf1-22f0b0584f05'
 settings:
   id: 'block_content:c55f666f-4671-429c-9cf1-22f0b0584f05'
   label: Contato
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

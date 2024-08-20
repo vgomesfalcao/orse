@@ -17,8 +17,8 @@ plugin: 'block_content:b1331e27-f9a6-4b76-9cc0-3f16558ebe17'
 settings:
   id: 'block_content:b1331e27-f9a6-4b76-9cc0-3f16558ebe17'
   label: '[Apar]Block Section Content - Easy To Build Your Website'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

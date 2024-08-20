@@ -17,8 +17,8 @@ plugin: 'block_content:e5748fea-cc77-4232-bf37-a161b2e15c10'
 settings:
   id: 'block_content:e5748fea-cc77-4232-bf37-a161b2e15c10'
   label: '[Apar]Block Section Content - About Me'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

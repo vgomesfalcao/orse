@@ -15,19 +15,19 @@ bundle: links_midias_sociais
 mode: default
 content:
   field_icone:
+    type: fontawesome_icon_widget
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: fontawesome_icon_widget
-    region: content
   field_url:
+    type: link_default
     weight: 1
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
 hidden:
   created: true
   status: true

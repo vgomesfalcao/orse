@@ -17,8 +17,8 @@ plugin: 'block_content:c6e3fe51-97d1-44a9-a87a-821684305069'
 settings:
   id: 'block_content:c6e3fe51-97d1-44a9-a87a-821684305069'
   label: '[Apar]Block Section Content - Who We Are'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

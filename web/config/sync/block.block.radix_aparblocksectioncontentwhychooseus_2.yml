@@ -17,8 +17,8 @@ plugin: 'block_content:521d903c-3bbb-46b9-8766-0f3753214eea'
 settings:
   id: 'block_content:521d903c-3bbb-46b9-8766-0f3753214eea'
   label: '[Apar]Block Section Content - Why Choose Us'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

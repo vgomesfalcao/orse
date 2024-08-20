@@ -17,8 +17,8 @@ plugin: 'block_content:895976d3-cc26-4872-bf13-d03728a0d320'
 settings:
   id: 'block_content:895976d3-cc26-4872-bf13-d03728a0d320'
   label: '[Apar]Block section content - Introduce'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

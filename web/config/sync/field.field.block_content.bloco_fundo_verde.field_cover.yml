@@ -21,16 +21,16 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       img_link: img_link
+    negate: 0
     target_bundles_drag_drop:
       element_text:
         weight: 6
         enabled: false
       img_link:
-        enabled: true
         weight: 7
+        enabled: true
       layout_image:
         weight: 8
         enabled: false

@@ -17,8 +17,8 @@ plugin: 'views_block:_apar_portfolio-block_section_content_portfolio_full_width'
 settings:
   id: 'views_block:_apar_portfolio-block_section_content_portfolio_full_width'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
   items_per_page: none
 visibility: {  }

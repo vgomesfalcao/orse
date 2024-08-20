@@ -17,8 +17,8 @@ plugin: 'block_content:c9760027-c53c-4637-9c81-b163f71c899f'
 settings:
   id: 'block_content:c9760027-c53c-4637-9c81-b163f71c899f'
   label: '[Apar]Block Bottom Menu Side - Contact'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

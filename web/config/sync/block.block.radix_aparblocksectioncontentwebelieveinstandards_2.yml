@@ -17,8 +17,8 @@ plugin: 'block_content:74bdd008-886b-4a53-982e-956a1c05f7b4'
 settings:
   id: 'block_content:74bdd008-886b-4a53-982e-956a1c05f7b4'
   label: '[Apar]Block Section Content - We Believe in Standards'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

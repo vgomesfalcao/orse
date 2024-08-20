@@ -1,10 +1,10 @@
+_core:
+  default_config_hash: 57YHD-gK9YrCd4mfkPt3DuRirKm_ZMRh2ILuF6JpC44
+langcode: pt-br
 visibility:
   request_path_mode: 0
   request_path_pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*"
 header: false
-_core:
-  default_config_hash: 57YHD-gK9YrCd4mfkPt3DuRirKm_ZMRh2ILuF6JpC44
+lift_enable: null
 mautic_enable: true
 mautic_base_url: 'https://orsefotografia.com.br/mkt'
-lift_enable: null
-langcode: pt-br

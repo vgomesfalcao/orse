@@ -1,3 +1,4 @@
+langcode: pt-br
 select_registration_roles_setby_admin:
   cliente: cliente
   fotografo: fotografo
@@ -6,4 +7,3 @@ select_registration_roles_admin_approval:
   administrator: '0'
   cliente: '0'
   fotografo: '0'
-langcode: pt-br

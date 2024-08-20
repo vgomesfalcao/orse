@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: xVFzaZr6iMWsqxy9-QqAX3lyUKCyJr16dAXXjhgb3Kk
 id: language-add
-label: 'Adding languages'
+label: 'Adicionando idiomas'
 module: language
 routes:
   -
@@ -16,20 +16,19 @@ tips:
   language-add-overview:
     id: language-add-overview
     plugin: text
-    label: 'Adding languages'
-    body: '<p>This page provides the ability to add common languages to your site.</p><p>If the desired language is not available, you can add a custom language.</p>'
+    label: 'Adicionando idiomas'
     weight: 1
+    body: '<p>Esta página fornece a habilidade para adicionar idiomas a seu site.</p><p>Se o idioma desejado não estiver disponível, você pode adicionar um idioma personalizado.</p>'
   language-add-choose:
     id: language-add-choose
     plugin: text
-    label: 'Select language'
-    body: '<p>Choose a language from the list, or choose "Custom language..." at the end of the list.</p><p>Click the "Add language" button when you are done choosing your language.</p><p>When adding a custom language, you will get an additional form where you can provide the name, code, and direction of the language.</p>'
+    label: 'Escolha uma língua'
     weight: 2
-    attributes:
-      data-id: edit-predefined-langcode
+    selector: '#edit-predefined-langcode'
+    body: '<p>Escolha um idioma da lista ou escolha um "Idioma personalizado..." ao fim da lista.</p><p>Clique no botão "Adicionar idioma" quando concluir a escolha do seu idioma.</p><p>Ao adicionar um idioma personalizado, você verá um formulário adicional onde poderá indicar o nome, código e direção do texto do idioma.</p>'
   language-add-continue:
     id: language-add-continue
     plugin: text
-    label: 'Continuing on'
-    body: '<p>Agora que você tem uma visão geral sobre a funcionalidade "Adicionar idiomas", você pode:<ul><li>Adicionar um idioma</li><li>Adicionar um idioma personalizado</li><li><a href="[site:url]admin/config/regional/language">Ver idiomas configurados</a></li></ul></p>'
+    label: Continuando
     weight: 3
+    body: '<p>Agora que você tem uma visão geral sobre a funcionalidade "Adicionar idiomas", você pode:<ul><li>Adicionar um idioma</li><li>Adicionar um idioma personalizado</li><li><a href="[site:url]admin/config/regional/language">Ver idiomas configurados</a></li></ul></p>'

@@ -16,13 +16,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_phone:
+    type: string_textfield
     weight: 2
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -38,10 +38,10 @@ content:
   message:
     type: string_textarea
     weight: 4
+    region: content
     settings:
       rows: 12
       placeholder: ''
-    region: content
     third_party_settings: {  }
   name:
     weight: 0

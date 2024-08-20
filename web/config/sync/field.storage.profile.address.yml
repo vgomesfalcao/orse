@@ -2,12 +2,12 @@ uuid: 638ae470-485f-41ac-a99e-da856680043f
 langcode: pt-br
 status: true
 dependencies:
-  enforced:
-    module:
-      - commerce_order
   module:
     - address
     - profile
+  enforced:
+    module:
+      - commerce_order
 _core:
   default_config_hash: Epax3eTdFPMQ3dTymm1zHnwqZ9DmyyHA0F18AMuUKtE
 id: profile.address

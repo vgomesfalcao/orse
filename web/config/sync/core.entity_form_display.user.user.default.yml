@@ -30,17 +30,17 @@ content:
     third_party_settings: {  }
   translation:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   user_picture:
     type: image_image
+    weight: 1
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: 1
-    region: content
 hidden:
   commerce_remote_id: true
   contact: true

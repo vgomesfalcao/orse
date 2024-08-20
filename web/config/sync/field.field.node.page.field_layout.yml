@@ -21,9 +21,9 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 1
     target_bundles:
       links_midias_sociais: links_midias_sociais
+    negate: 1
     target_bundles_drag_drop:
       element_text:
         weight: 4
@@ -32,8 +32,8 @@ settings:
         weight: 6
         enabled: false
       links_midias_sociais:
-        enabled: true
         weight: 2
+        enabled: true
       section:
         weight: 4
         enabled: false

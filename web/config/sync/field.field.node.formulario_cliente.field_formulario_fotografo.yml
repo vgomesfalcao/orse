@@ -18,12 +18,12 @@ required: false
 translatable: true
 default_value:
   -
-    webform_access_group: {  }
+    target_uuid: 6b7bc36c-8ce2-40a5-9b20-876daa354fe4
     default_data: ''
     status: open
     open: ''
     close: ''
-    target_uuid: 6b7bc36c-8ce2-40a5-9b20-876daa354fe4
+    webform_access_group: {  }
 default_value_callback: ''
 settings:
   handler: 'default:webform'

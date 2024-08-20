@@ -1,7 +1,19 @@
 uuid: 439baec3-0238-4d9a-b371-c3512ccc6e00
 langcode: pt-br
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - comment
+    - commerce_checkout
+    - commerce_product
+    - contact
+    - filter
+    - node_view_permissions
+    - paragraphs_type_permissions
+    - search
+    - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
@@ -9,15 +21,12 @@ label: 'Usuário anônimo'
 weight: 0
 is_admin: false
 permissions:
-  - 'access cart'
   - 'access checkout'
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
   - 'search content'
-  - 'subscribe to newsletters'
   - 'use text format restricted_html'
-  - 'view any 404 content'
   - 'view any about_page content'
   - 'view any article content'
   - 'view any blog_post content'
@@ -30,12 +39,10 @@ permissions:
   - 'view any partners content'
   - 'view any portfolio content'
   - 'view any services content'
-  - 'view any simplenews_issue content'
   - 'view any team content'
   - 'view any testimonials content'
   - 'view any webform content'
   - 'view commerce_product'
-  - 'view own 404 content'
   - 'view own about_page content'
   - 'view own article content'
   - 'view own blog_post content'
@@ -48,7 +55,6 @@ permissions:
   - 'view own partners content'
   - 'view own portfolio content'
   - 'view own services content'
-  - 'view own simplenews_issue content'
   - 'view own team content'
   - 'view own testimonials content'
   - 'view own webform content'

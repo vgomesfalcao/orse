@@ -17,8 +17,8 @@ plugin: 'block_content:a4cc4d4c-861a-4b78-a27b-2de455d2a8e0'
 settings:
   id: 'block_content:a4cc4d4c-861a-4b78-a27b-2de455d2a8e0'
   label: '[Apar]Block Section Content - Introduce Style 11'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

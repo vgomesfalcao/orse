@@ -17,8 +17,8 @@ plugin: 'views_block:_apar_taxanomy_term-block_sidebar_tags_product'
 settings:
   id: 'views_block:_apar_taxanomy_term-block_sidebar_tags_product'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: none
 visibility: {  }

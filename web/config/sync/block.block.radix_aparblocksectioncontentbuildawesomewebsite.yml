@@ -17,8 +17,8 @@ plugin: 'block_content:137e5c8d-138e-49db-8cf3-802c0c75222f'
 settings:
   id: 'block_content:137e5c8d-138e-49db-8cf3-802c0c75222f'
   label: '[Apar]Block Section Content - Build Awesome Website!'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

@@ -5,12 +5,12 @@ dependencies: {  }
 id: formulario_fotografo
 title: 'Formulário Fotografo'
 webform: formulario_fotografo
+content_type: null
 field_title: null
 use_encrypt: null
 encryption_profile: null
 sync_content: false
 sync_content_delete: false
-sync_content_node_field: null
 sync_content_field: ''
 elements:
   body:
@@ -198,6 +198,6 @@ elements:
     webform_field: ''
     custom_check: true
     custom_value: '[webform_submission:user:account-name] - [webform_submission:completed:html_date] - [webform_submission:completed:html_time]'
-content_type: null
+sync_content_node_field: null
 target_entity_type: node
 target_bundle: formulario_fotografo

@@ -15,15 +15,15 @@ bundle: links_midias_sociais
 mode: default
 content:
   field_icone:
-    weight: 0
+    type: fontawesome_icon_formatter
     label: hidden
     settings:
       layers: false
     third_party_settings: {  }
-    type: fontawesome_icon_formatter
+    weight: 0
     region: content
   field_url:
-    weight: 1
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -32,6 +32,6 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 1
     region: content
 hidden: {  }

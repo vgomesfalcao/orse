@@ -9,10 +9,10 @@ label: Other
 weight: null
 plugin: example_onsite
 configuration:
-  api_key: '123456789'
   display_label: Example
   mode: test
   payment_method_types:
     - credit_card
+  api_key: '123456789'
 conditions: {  }
 conditionOperator: AND

@@ -17,8 +17,8 @@ plugin: 'block_content:474f0a86-1c93-4d46-a0cd-a0184aecd47c'
 settings:
   id: 'block_content:474f0a86-1c93-4d46-a0cd-a0184aecd47c'
   label: 'Quick Links'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

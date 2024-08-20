@@ -17,8 +17,8 @@ plugin: 'views_block:_apar_features-block_section_content_features_dark'
 settings:
   id: 'views_block:_apar_features-block_section_content_features_dark'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
   items_per_page: none
 visibility: {  }

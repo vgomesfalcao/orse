@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_blog_image
-    - image.style.image_250x250
     - node.type.blog_post
   module:
     - image
@@ -20,45 +19,12 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: some
-        options:
-          items_per_page: 3
-          offset: 0
-      style:
-        type: default
-      row:
-        type: fields
+      title: 'Latest posts'
       fields:
         title:
           id: title
@@ -67,6 +33,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -122,7 +89,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         path:
           id: path
           table: node
@@ -130,6 +96,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
           label: ''
           exclude: true
           alter:
@@ -171,10 +139,8 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          absolute: false
-          entity_type: node
-          plugin_id: entity_link
           output_url_as_text: true
+          absolute: false
         field_blog_image:
           id: field_blog_image
           table: node__field_blog_image
@@ -182,6 +148,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -237,7 +204,6 @@ display:
           multi_type: separator
           separator: ''
           field_api_classes: false
-          plugin_id: field
         uid:
           id: uid
           table: node_field_data
@@ -245,6 +211,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: uid
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -300,9 +269,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: uid
-          plugin_id: field
         comment_count:
           id: comment_count
           table: comment_entity_statistics
@@ -310,6 +276,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           label: ''
           exclude: true
           alter:
@@ -359,7 +326,6 @@ display:
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
-          plugin_id: numeric
         nothing:
           id: nothing
           table: views
@@ -367,11 +333,20 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-12 col-sm-12 col-xs-12 nopadding\">\n    <div class=\"imgbox-small left\"> <img src=\"{{ field_blog_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/></div>\n    <div class=\"text-box-right\">\n        <h6 class=\"uppercase nopadding dosis\"><a href=\"{{ path }}\" class=\"text-hover-gyellow\">{{ title }}</a></h6>\n        <div class=\"blog-post-info padding-top-1\"> <span> By {{ uid }}</span> <span> {{ comment_count }} Comments</span> </div>\n    </div>\n</div>\n<div class=\"divider-line solid light margin\"></div>"
+            text: |-
+              <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+                  <div class="imgbox-small left"> <img src="{{ field_blog_image }}" alt="{{ title }}" class="img-responsive"/></div>
+                  <div class="text-box-right">
+                      <h6 class="uppercase nopadding dosis"><a href="{{ path }}" class="text-hover-gyellow">{{ title }}</a></h6>
+                      <div class="blog-post-info padding-top-1"> <span> By {{ uid }}</span> <span> {{ comment_count }} Comments</span> </div>
+                  </div>
+              </div>
+              <div class="divider-line solid light margin"></div>
             make_link: false
             path: ''
             absolute: false
@@ -408,55 +383,88 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            blog_post: blog_post
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
       sorts:
         created:
           id: created
           table: node_field_data
           field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          exposed: false
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
           expose:
             label: ''
+            field_identifier: created
+          exposed: false
           granularity: second
-      title: 'Latest posts'
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            blog_post: blog_post
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      style:
+        type: default
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
       header: {  }
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -468,33 +476,12 @@ display:
       tags:
         - 'config:field.storage.node.field_blog_image'
   block_sidebar_latest_posts:
-    display_plugin: block
     id: block_sidebar_latest_posts
     display_title: '[Apar]Block Sidebar - Latest Posts'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Sidebar - Latest Posts'
       title: 'Latest posts'
-      defaults:
-        title: false
-        style: false
-        row: false
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        header: false
-        footer: false
-        empty: false
-        pager: false
-      style:
-        type: default
-        options: {  }
-      row:
-        type: fields
-        options: {  }
       fields:
         title:
           id: title
@@ -503,6 +490,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -558,7 +546,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         path:
           id: path
           table: node
@@ -566,6 +553,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
           label: ''
           exclude: true
           alter:
@@ -607,10 +596,8 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          absolute: false
-          entity_type: node
-          plugin_id: entity_link
           output_url_as_text: true
+          absolute: false
         field_blog_image:
           id: field_blog_image
           table: node__field_blog_image
@@ -618,6 +605,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -673,7 +661,6 @@ display:
           multi_type: separator
           separator: ''
           field_api_classes: false
-          plugin_id: field
         uid:
           id: uid
           table: node_field_data
@@ -681,6 +668,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: uid
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -736,9 +726,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: uid
-          plugin_id: field
         comment_count:
           id: comment_count
           table: comment_entity_statistics
@@ -746,6 +733,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           label: ''
           exclude: true
           alter:
@@ -795,7 +783,6 @@ display:
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
-          plugin_id: numeric
         nothing:
           id: nothing
           table: views
@@ -803,11 +790,20 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-md-12 col-sm-12 col-xs-12 nopadding\">\n    <div class=\"imgbox-small left\"> <img src=\"{{ field_blog_image }}\" alt=\"{{ title }}\" class=\"img-responsive\"/></div>\n    <div class=\"text-box-right\">\n        <h6 class=\"uppercase nopadding dosis\"><a href=\"{{ path }}\" class=\"text-hover-gyellow\">{{ title }}</a></h6>\n        <div class=\"blog-post-info padding-top-1\"> <span> By {{ uid }}</span> <span> {{ comment_count }} Comments</span> </div>\n    </div>\n</div>\n<div class=\"divider-line solid light margin\"></div>"
+            text: |-
+              <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+                  <div class="imgbox-small left"> <img src="{{ field_blog_image }}" alt="{{ title }}" class="img-responsive"/></div>
+                  <div class="text-box-right">
+                      <h6 class="uppercase nopadding dosis"><a href="{{ path }}" class="text-hover-gyellow">{{ title }}</a></h6>
+                      <div class="blog-post-info padding-top-1"> <span> By {{ uid }}</span> <span> {{ comment_count }} Comments</span> </div>
+                  </div>
+              </div>
+              <div class="divider-line solid light margin"></div>
             make_link: false
             path: ''
             absolute: false
@@ -844,151 +840,52 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            blog_post: blog_post
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      header: {  }
-      footer: {  }
-      empty: {  }
       pager:
         type: some
         options:
+          offset: 0
           items_per_page: 3
-          offset: 0
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_blog_image'
-  block_sidebar_popular_posts:
-    display_plugin: block
-    id: block_sidebar_popular_posts
-    display_title: '[Apar]Block Sidebar - Popular Posts'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Sidebar - Popular Posts'
-      title: 'Popular Posts'
-      defaults:
-        title: false
-        pager: false
-        header: false
-        footer: false
-        empty: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        style: false
-        row: false
-        fields: false
-      pager:
-        type: some
-        options:
-          items_per_page: 6
-          offset: 0
-      header: {  }
-      footer: {  }
       empty: {  }
       sorts:
-        totalcount:
-          id: totalcount
-          table: node_counter
-          field: totalcount
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
         created:
           id: created
           table: node_field_data
           field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          exposed: false
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
           expose:
             label: ''
+            field_identifier: created
+          exposed: false
           granularity: second
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            blog_post: blog_post
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            blog_post: blog_post
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -1002,6 +899,39 @@ display:
       row:
         type: fields
         options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Sidebar - Latest Posts'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_blog_image'
+  block_sidebar_popular_posts:
+    id: block_sidebar_popular_posts
+    display_title: '[Apar]Block Sidebar - Popular Posts'
+    display_plugin: block
+    position: 1
+    display_options:
+      title: 'Popular Posts'
       fields:
         title:
           id: title
@@ -1010,6 +940,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1065,7 +996,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         path:
           id: path
           table: node
@@ -1073,6 +1003,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
           label: ''
           exclude: true
           alter:
@@ -1114,10 +1046,8 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          absolute: false
-          entity_type: node
-          plugin_id: entity_link
           output_url_as_text: true
+          absolute: false
         nothing:
           id: nothing
           table: views
@@ -1125,6 +1055,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -1166,7 +1097,95 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 6
+      empty: {  }
+      sorts:
+        totalcount:
+          id: totalcount
+          table: node_counter
+          field: totalcount
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: totalcount
+          exposed: false
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            blog_post: blog_post
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Sidebar - Popular Posts'
     cache_metadata:
       max-age: -1
       contexts:

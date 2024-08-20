@@ -13,6 +13,6 @@ plugin: 'md_slider_block:slider_9'
 settings:
   id: 'md_slider_block:slider_9'
   label: 'Slider 9'
-  provider: md_slider
   label_display: '0'
+  provider: md_slider
 visibility: {  }

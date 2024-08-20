@@ -53,13 +53,13 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 121
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
@@ -67,258 +67,258 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_album_max_fotos:
+    type: number
     weight: 158
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_album_paginas:
+    type: number
     weight: 157
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_album_valor:
+    type: number
     weight: 156
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_cerimonia_fotografos:
+    type: number
     weight: 160
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_cerimonia_horas:
+    type: number
     weight: 133
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_cerimonia_valor:
+    type: number
     weight: 134
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_cobertura_fotografos:
+    type: number
     weight: 161
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_cobertura_horas:
+    type: number
     weight: 124
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_cobertura_valor:
+    type: number
     weight: 125
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_combocr_fotografos:
+    type: number
     weight: 138
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_combocr_horas:
+    type: number
     weight: 139
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_combocr_valor:
+    type: number
     weight: 140
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_formulario_cliente:
+    type: entity_reference_autocomplete
     weight: 166
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_makingof_fotografos:
+    type: number
     weight: 163
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_makingof_horas:
+    type: number
     weight: 127
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_makingof_valor:
+    type: number
     weight: 128
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_makingofnoiva_fotografos:
+    type: number
     weight: 141
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_makingofnoiva_horas:
+    type: number
     weight: 142
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_makingofnoiva_valor:
+    type: number
     weight: 144
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_makingofnoivo_fotografos:
+    type: number
     weight: 145
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_makingofnoivo_horas:
+    type: number
     weight: 146
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_makingofnoivo_valor:
+    type: number
     weight: 147
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_previa_fotografos:
+    type: number
     weight: 164
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_previa_horas:
+    type: number
     weight: 130
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_previa_valor:
+    type: number
     weight: 131
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_previacasal_fotografos:
+    type: number
     weight: 148
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_previacasal_horas:
+    type: number
     weight: 150
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_previacasal_valor:
+    type: number
     weight: 152
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_previanoiva_fotografos:
+    type: number
     weight: 153
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_previanoiva_horas:
+    type: number
     weight: 154
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_previanoiva_valor:
+    type: number
     weight: 155
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_recepcao_fotografos:
+    type: number
     weight: 165
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_recepcao_horas:
+    type: number
     weight: 136
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_recepcao_valor:
+    type: number
     weight: 137
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_soma_valor:
-    weight: 167
-    settings: {  }
-    third_party_settings: {  }
     type: computed_number_widget
+    weight: 167
     region: content
-  field_tipo_de_evento:
-    weight: 122
     settings: {  }
     third_party_settings: {  }
+  field_tipo_de_evento:
     type: options_select
+    weight: 122
     region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
@@ -334,24 +334,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 15
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 120
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 16
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -363,17 +363,17 @@ content:
     third_party_settings: {  }
   translation:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden: {  }

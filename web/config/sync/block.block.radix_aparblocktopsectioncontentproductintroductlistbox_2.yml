@@ -17,8 +17,8 @@ plugin: 'block_content:e438a381-e3f8-446e-870c-606cbf9f6fd9'
 settings:
   id: 'block_content:e438a381-e3f8-446e-870c-606cbf9f6fd9'
   label: '[Apar]Block Top Section Content Product - Introduct List Box'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

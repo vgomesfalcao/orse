@@ -17,8 +17,8 @@ plugin: 'block_content:3278465a-c52f-42a9-8193-77de80c98d55'
 settings:
   id: 'block_content:3278465a-c52f-42a9-8193-77de80c98d55'
   label: '[Apar]Block Section Content - Why Choose Us Style 2'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

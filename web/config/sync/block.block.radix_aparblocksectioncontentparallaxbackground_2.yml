@@ -17,8 +17,8 @@ plugin: 'block_content:0d839ceb-9be7-46fc-94dc-b3e4742f6c41'
 settings:
   id: 'block_content:0d839ceb-9be7-46fc-94dc-b3e4742f6c41'
   label: '[Apar]Block Section Content - Parallax Background'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

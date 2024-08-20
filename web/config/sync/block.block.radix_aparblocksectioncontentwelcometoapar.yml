@@ -17,8 +17,8 @@ plugin: 'block_content:4ad0644b-4d78-4dc6-a944-b5c206365651'
 settings:
   id: 'block_content:4ad0644b-4d78-4dc6-a944-b5c206365651'
   label: '[Apar]Block Section Content - Welcome to Apar'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

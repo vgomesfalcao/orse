@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+langcode: pt-br
 uuid: 62db3980-80ac-4b6e-9b23-d19d435691a5
 name: 'Orse Eventos'
 mail: contato@orsefotografia.com.br
@@ -8,8 +11,5 @@ page:
   front: /node/133
 admin_compact_mode: false
 weight_select_max: 100
-langcode: pt-br
 default_langcode: pt-br
-_core:
-  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
 mail_notification: ''

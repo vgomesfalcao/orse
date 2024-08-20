@@ -17,8 +17,8 @@ plugin: 'views_block:_apar_product-block_footer_product_column_4_on_sale_product
 settings:
   id: 'views_block:_apar_product-block_footer_product_column_4_on_sale_product'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: none
 visibility: {  }

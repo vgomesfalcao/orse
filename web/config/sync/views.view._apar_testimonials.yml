@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_image
     - field.storage.node.field_job
     - field.storage.node.field_quote_review
-    - image.style.image_60x60
     - node.type.testimonials
   module:
     - image
@@ -21,45 +20,12 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: some
-        options:
-          items_per_page: 3
-          offset: 0
-      style:
-        type: default
-      row:
-        type: fields
+      title: '<none>'
       fields:
         title:
           id: title
@@ -68,6 +34,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -123,9 +92,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_quote_review:
           id: field_quote_review
           table: node__field_quote_review
@@ -133,6 +99,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -187,7 +154,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -195,6 +161,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -250,7 +217,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -258,11 +224,17 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"item\">\n    <h4 class=\"text-white font-weight-5 line-height-3 margin-bottom-4\">{{ field_quote_review }}</h4>\n    <h5 class=\" text-primary font-weight-7 less-mar-1\">{{ title }}</h5>\n    {{ field_job }}\n</div>"
+            text: |-
+              <div class="item">
+                  <h4 class="text-white font-weight-5 line-height-3 margin-bottom-4">{{ field_quote_review }}</h4>
+                  <h5 class=" text-primary font-weight-7 less-mar-1">{{ title }}</h5>
+                  {{ field_job }}
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -299,50 +271,86 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            testimonials: testimonials
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
       sorts:
         created:
           id: created
           table: node_field_data
           field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          exposed: false
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
           expose:
             label: ''
+            field_identifier: created
+          exposed: false
           granularity: second
-      title: '<none>'
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            testimonials: testimonials
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      style:
+        type: default
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
       header:
         area:
           id: area
@@ -351,16 +359,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: text
           empty: false
-          tokenize: false
           content:
             value: '<h2 class="text-white font-weight-7 less-mar-3">People Says</h2>'
             format: php_code
-          plugin_id: text
+          tokenize: false
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -373,93 +378,12 @@ display:
         - 'config:field.storage.node.field_job'
         - 'config:field.storage.node.field_quote_review'
   block_section_content_people_says:
-    display_plugin: block
     id: block_section_content_people_says
     display_title: '[Apar]Block Section Content - People Says'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - People Says'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: '<h2 class="text-white font-weight-7 less-mar-3">People Says</h2>'
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        empty: false
-        pager: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        fields: false
-        style: false
-        row: false
-        title: false
-      footer: {  }
-      empty: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 3
-          offset: 0
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            testimonials: testimonials
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      title: '<none>'
       fields:
         title:
           id: title
@@ -468,6 +392,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -523,9 +450,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_quote_review:
           id: field_quote_review
           table: node__field_quote_review
@@ -533,6 +457,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -587,7 +512,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -595,6 +519,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -650,7 +575,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -658,11 +582,17 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"item\">\n    <h4 class=\"text-white font-weight-5 line-height-3 margin-bottom-4\">{{ field_quote_review }}</h4>\n    <h5 class=\" text-primary font-weight-7 less-mar-1\">{{ title }}</h5>\n    {{ field_job }}\n</div>"
+            text: |-
+              <div class="item">
+                  <h4 class="text-white font-weight-5 line-height-3 margin-bottom-4">{{ field_quote_review }}</h4>
+                  <h5 class=" text-primary font-weight-7 less-mar-1">{{ title }}</h5>
+                  {{ field_job }}
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -699,14 +629,95 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            testimonials: testimonials
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
         options: {  }
       row:
         type: fields
         options: {  }
-      title: '<none>'
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2 class="text-white font-weight-7 less-mar-3">People Says</h2>'
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - People Says'
     cache_metadata:
       max-age: -1
       contexts:
@@ -718,93 +729,12 @@ display:
         - 'config:field.storage.node.field_job'
         - 'config:field.storage.node.field_quote_review'
   block_section_content_people_says_style_2:
-    display_plugin: block
     id: block_section_content_people_says_style_2
     display_title: '[Apar]Block Section Content - People Says Style 2'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - People Says Style 2'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<h6 class=\" text-white text-primary font-weight-5\">Our Clients</h6>\n<h1 class=\"  font-weight-7 text-white \">People Says</h1>"
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        empty: false
-        pager: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        fields: false
-        style: false
-        row: false
-        title: false
-      footer: {  }
-      empty: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 2
-          offset: 0
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            testimonials: testimonials
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      title: '<none>'
       fields:
         title:
           id: title
@@ -813,6 +743,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -868,9 +801,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_quote_review:
           id: field_quote_review
           table: node__field_quote_review
@@ -878,11 +808,14 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
             alter_text: true
-            text: "<p class=\"text-white\">{{ field_quote_review }}</p>\n<br/>"
+            text: |-
+              <p class="text-white">{{ field_quote_review }}</p>
+              <br/>
             make_link: false
             path: ''
             absolute: false
@@ -932,7 +865,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -940,6 +872,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -995,7 +928,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -1003,11 +935,17 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"item\">\n    {{ field_quote_review }}\n    <h5 class=\"text-white less-mar1 font-weight-7 nomargin\">{{ title }}</h5>\n    {{ field_job }}\n</div>"
+            text: |-
+              <div class="item">
+                  {{ field_quote_review }}
+                  <h5 class="text-white less-mar1 font-weight-7 nomargin">{{ title }}</h5>
+                  {{ field_job }}
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -1044,14 +982,97 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 2
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            testimonials: testimonials
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
         options: {  }
       row:
         type: fields
         options: {  }
-      title: '<none>'
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: |-
+              <h6 class=" text-white text-primary font-weight-5">Our Clients</h6>
+              <h1 class="  font-weight-7 text-white ">People Says</h1>
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - People Says Style 2'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1063,93 +1084,12 @@ display:
         - 'config:field.storage.node.field_job'
         - 'config:field.storage.node.field_quote_review'
   block_section_content_what_people_says:
-    display_plugin: block
     id: block_section_content_what_people_says
     display_title: '[Apar]Block Section Content - What people says'
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_description: '[Apar]Block Section Content - What people says'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: '<h2 class="text-white font-weight-7 less-mar-3 ">What people says</h2>'
-            format: php_code
-          plugin_id: text
-      defaults:
-        header: false
-        footer: false
-        empty: false
-        pager: false
-        sorts: false
-        filters: false
-        filter_groups: false
-        fields: false
-        style: false
-        row: false
-        title: false
-      footer: {  }
-      empty: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 3
-          offset: 0
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            testimonials: testimonials
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      title: '<none>'
       fields:
         title:
           id: title
@@ -1158,6 +1098,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1213,9 +1156,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_quote_review:
           id: field_quote_review
           table: node__field_quote_review
@@ -1223,11 +1163,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
             alter_text: true
-            text: "<p  class=\"text-light padding-top-2\">{{ field_quote_review }}</p>\n"
+            text: |
+              <p  class="text-light padding-top-2">{{ field_quote_review }}</p>
             make_link: false
             path: ''
             absolute: false
@@ -1277,7 +1219,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_job:
           id: field_job
           table: node__field_job
@@ -1285,6 +1226,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1340,7 +1282,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_image:
           id: field_image
           table: node__field_image
@@ -1348,6 +1289,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1403,7 +1345,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -1411,11 +1352,18 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"item\">\n    {{ field_quote_review }}\n    <br />\n    <div class=\"cimag\"><img src=\"{{ field_image }}\" alt=\"{{ title }}\" /></div>\n    <h6 class=\"text-white font-weight-7\">{{ title }} {{ field_job }}</h6>\n</div>"
+            text: |-
+              <div class="item">
+                  {{ field_quote_review }}
+                  <br />
+                  <div class="cimag"><img src="{{ field_image }}" alt="{{ title }}" /></div>
+                  <h6 class="text-white font-weight-7">{{ title }} {{ field_job }}</h6>
+              </div>
             make_link: false
             path: ''
             absolute: false
@@ -1452,14 +1400,95 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            testimonials: testimonials
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
         options: {  }
       row:
         type: fields
         options: {  }
-      title: '<none>'
+      defaults:
+        empty: false
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2 class="text-white font-weight-7 less-mar-3 ">What people says</h2>'
+            format: php_code
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+      block_description: '[Apar]Block Section Content - What people says'
     cache_metadata:
       max-age: -1
       contexts:

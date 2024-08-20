@@ -17,8 +17,8 @@ plugin: 'block_content:0801cbf1-8392-485b-b63a-fa837828a02f'
 settings:
   id: 'block_content:0801cbf1-8392-485b-b63a-fa837828a02f'
   label: '[Apar]Block Section Content - Introduce Style 10'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

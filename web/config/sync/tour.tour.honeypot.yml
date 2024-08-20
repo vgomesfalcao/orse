@@ -18,50 +18,45 @@ tips:
     plugin: text
     label: Honeypot
     weight: -10
+    position: top
     body: "Parabéns pela instalação do Honeypot em seu site! Com apenas alguns cliques, você pode ter seu site bem protegido contra bots de spam automatizados.\r\n\r\nClique em Próximo para ser guiado através desta página de configuração."
-    location: top
   protect-all-forms:
     id: protect-all-forms
     plugin: text
     label: 'Proteger todos os formulários'
     weight: -9
-    attributes:
-      data-id: edit-protect-all-forms
+    position: bottom
+    selector: '#edit-protect-all-forms'
     body: "Proteger todos os formulários é a maneira mais fácil de reduzir rapidamente o spam em seu site, mas fazer isso desativa o cache do Drupal para cada página onde um formulário é exibido.\r\n\r\nNota: Se você tiver o limite de tempo habilitado para o Honeypot, essa opção pode causar problemas com formulários de produtos do Drupal Commerce ou formulários similarmente esparsos que podem ser concluídos em um tempo muito curto."
-    location: bottom
   log-blocked-form-submissions:
     id: log-blocked-form-submissions
     plugin: text
     label: 'Registro de submissões de formulário bloqueadas'
     weight: -8
-    attributes:
-      data-id: edit-log
+    position: bottom
+    selector: '#edit-log'
     body: 'Marque esta caixa para registrar cada submissão de formulário usando o watchdog. Se você tiver o Database Logging habilitado, você poderá ver essas entradas de registro na página de Mensagens recentes do registro em Relatórios.'
-    location: bottom
   honeypot-element-name:
     id: honeypot-element-name
     plugin: text
     label: 'Nome do Elemento Honeypot'
     weight: -7
-    attributes:
-      data-id: edit-element-name
+    position: top
+    selector: '#edit-element-name'
     body: 'Os bots de spam normalmente preenchem qualquer campo que eles acreditam que ajudarão a obter links de volta para seu site, então tentá-los com um campo chamado ''url'', ''homepage'' ou ''link'' torna difícil para eles resistirem em preencher o campo — e fácil pegá-los na armadilha e rejeitar suas submissões!'
-    location: top
   honeypot-time-limit:
     id: honeypot-time-limit
     plugin: text
     label: 'Limite de Tempo do Honeypot'
     weight: -6
-    attributes:
-      data-id: edit-time-limit
+    position: top
+    selector: '#edit-time-limit'
     body: 'Se você digitou um valor positivo, o Honeypot exigirá que todos os formulários protegidos levem pelo menos muitos segundos para serem preenchidos. A maioria dos formulários leva pelo menos 5-10 segundos para ser concluído (se você é um humano), então definir isso para um valor < 5 ajudará a proteger contra bots de spam. Definido para 0 para desativar.'
-    location: top
   honeypot-form-specific-settings:
     id: honeypot-form-specific-settings
     plugin: text
     label: 'Configurações Específicas de Formulário Honeypot'
     weight: -5
-    attributes:
-      data-id: edit-form-settings
+    position: top
+    selector: '#edit-form-settings'
     body: 'Se você quiser escolher formulários específicos para serem protegidos pelo Honeypot, marque os formulários que deseja proteger nesta seção. Os tipos mais comuns de formulários estão disponíveis para proteção.'
-    location: top
