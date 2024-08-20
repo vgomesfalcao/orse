@@ -28,9 +28,14 @@ libraries-override:
 ckeditor_stylesheets:
   - assets/css/orse_eventos.style.css
 
-component-libraries:
-  orse_eventos:
-    paths:
+# component-libraries:
+#   orse_eventos:
+#     paths:
+#       - ./src/components
+
+components:
+  namespaces:
+    orse_eventos:
       - ./src/components
 
 # Information added by Drupal.org packaging script on 2020-09-30

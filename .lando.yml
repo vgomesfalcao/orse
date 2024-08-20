@@ -1,5 +1,5 @@
 name: orsed
-recipe: drupal9
+recipe: drupal8
 
 config:
   php: 7.4

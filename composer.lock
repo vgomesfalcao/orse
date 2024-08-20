@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8f22dcc8c2f3f932b15b26e02a5cb09",
+    "content-hash": "31f4fced6620e8a1632724229e84d660",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2210,17 +2210,17 @@
         },
         {
             "name": "drupal/blog",
-            "version": "3.1.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/blog.git",
-                "reference": "3.1.0"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/blog-3.1.0.zip",
-                "reference": "3.1.0",
-                "shasum": "9bc566f5d91d57a33ddba8119ba2712e1b9b6005"
+                "url": "https://ftp.drupal.org/files/projects/blog-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "4736ef9a5a25fc400a70517c179bea4d7fe0624b"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2228,8 +2228,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.0",
-                    "datestamp": "1657578235",
+                    "version": "3.0.0",
+                    "datestamp": "1592384089",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2309,6 +2309,10 @@
                     "homepage": "https://www.drupal.org/user/2138470"
                 },
                 {
+                    "name": "danrod",
+                    "homepage": "https://www.drupal.org/user/19150"
+                },
+                {
                     "name": "darol100",
                     "homepage": "https://www.drupal.org/user/2667123"
                 },
@@ -2317,8 +2321,20 @@
                     "homepage": "https://www.drupal.org/user/909522"
                 },
                 {
+                    "name": "galactus86",
+                    "homepage": "https://www.drupal.org/user/1203916"
+                },
+                {
                     "name": "kevinquillen",
                     "homepage": "https://www.drupal.org/user/317279"
+                },
+                {
+                    "name": "steyep",
+                    "homepage": "https://www.drupal.org/user/3289085"
+                },
+                {
+                    "name": "web247",
+                    "homepage": "https://www.drupal.org/user/176346"
                 },
                 {
                     "name": "Webbeh",
