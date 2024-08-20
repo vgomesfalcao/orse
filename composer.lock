@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ba367e60180eb6543a4157b6a797266",
+    "content-hash": "2acbe9985bacc5c1126e23a5a5e44d4a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3850,52 +3850,6 @@
             }
         },
         {
-            "name": "drupal/image_raw_formatter",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/image_raw_formatter.git",
-                "reference": "ed14225ce7f633fef2707b3f3021c030abb34b0f"
-            },
-            "require": {
-                "drupal/core": "^8"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.x-dev",
-                    "datestamp": "1647022088",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "enzo - Eduardo Garcia",
-                    "homepage": "https://www.drupal.org/user/294937",
-                    "email": "enzo@enzolutions.com"
-                },
-                {
-                    "name": "geoanders",
-                    "homepage": "https://www.drupal.org/user/1270728"
-                }
-            ],
-            "description": "Provides image raw formatter for image fields.",
-            "homepage": "https://www.drupal.org/project/image_raw_formatter",
-            "support": {
-                "source": "https://git.drupalcode.org/project/image_raw_formatter"
-            }
-        },
-        {
             "name": "drupal/imce",
             "version": "2.5.0",
             "source": {
@@ -4885,54 +4839,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/smtp",
                 "issues": "https://www.drupal.org/project/issues/smtp"
-            }
-        },
-        {
-            "name": "drupal/soundcloudfield",
-            "version": "1.0.0-alpha2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/soundcloudfield.git",
-                "reference": "8.x-1.0-alpha2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/soundcloudfield-8.x-1.0-alpha2.zip",
-                "reference": "8.x-1.0-alpha2",
-                "shasum": "27f7cd32be5770c0b8d8ec9a5c2275d252707e45"
-            },
-            "require": {
-                "drupal/core": "^8"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-alpha2",
-                    "datestamp": "1614206888",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "akoepke",
-                    "homepage": "https://www.drupal.org/user/1108078"
-                },
-                {
-                    "name": "attila.fekete",
-                    "homepage": "https://www.drupal.org/user/762986"
-                }
-            ],
-            "description": "Field for SoundCloud tracks and sets.",
-            "homepage": "https://www.drupal.org/project/soundcloudfield",
-            "support": {
-                "source": "https://git.drupalcode.org/project/soundcloudfield"
             }
         },
         {
@@ -10433,10 +10339,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/image_raw_formatter": 20,
         "drupal/menu_attributes": 10,
         "drupal/simplenews": 10,
-        "drupal/soundcloudfield": 15,
         "drupal/views_aggregator": 10
     },
     "prefer-stable": true,
