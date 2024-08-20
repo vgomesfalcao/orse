@@ -15,8 +15,8 @@ _core:
   default_config_hash: rtGCaVUR8ec0Z0JeVyzHXxvbGhbuXh0wHHqh-NXtDG4
 name: 'Blog post'
 type: blog_post
-description: 'Use for multi-user blogs. Every user gets a personal blog.'
-help: ''
+description: 'Use para blogs multi-usuários. Cada usuário tem um blog pessoal.'
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: true

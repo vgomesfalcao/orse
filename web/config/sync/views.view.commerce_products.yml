@@ -152,7 +152,7 @@ display:
           entity_type: commerce_product
           entity_field: type
           plugin_id: commerce_entity_bundle
-          label: Type
+          label: Tipo
           exclude: false
           alter:
             alter_text: false
@@ -263,7 +263,7 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_false: Unpublished
+            format_custom_false: 'Não publicado'
             format_custom_true: Publicado
           group_column: value
           group_columns: {  }
@@ -332,6 +332,15 @@ display:
             date_format: short
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -414,10 +423,11 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Filtrar
           reset_button: true
           reset_button_label: Reiniciar
           exposed_sorts_label: 'Ordenar por'
@@ -441,7 +451,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No products available.'
+          content: 'Nenhum produto disponível.'
           tokenize: false
       sorts: {  }
       arguments: {  }
@@ -462,7 +472,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Type
+            label: Tipo
             description: ''
             use_operator: false
             operator: type_op

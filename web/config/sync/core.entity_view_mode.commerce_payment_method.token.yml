@@ -6,5 +6,6 @@ dependencies:
     - commerce_payment
 id: commerce_payment_method.token
 label: Token
+description: ''
 targetEntityType: commerce_payment_method
 cache: true

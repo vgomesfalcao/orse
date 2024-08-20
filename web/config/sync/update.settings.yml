@@ -1,4 +1,3 @@
-langcode: pt-br
 check:
   disabled_extensions: false
   interval_days: 7

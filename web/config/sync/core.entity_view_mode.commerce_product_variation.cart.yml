@@ -11,6 +11,7 @@ dependencies:
 _core:
   default_config_hash: SjZo-csuMc7wQHh55OpVRuTrQTp8zy3k6cR9RykDWIg
 id: commerce_product_variation.cart
-label: Cart
+label: Carrinho
+description: ''
 targetEntityType: commerce_product_variation
 cache: true
