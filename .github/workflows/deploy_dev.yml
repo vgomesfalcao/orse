@@ -26,7 +26,7 @@ jobs:
       with:
         switches: -avzr --delete --exclude 'web/sites/default/files' --exclude 'web/sites/default/settings.local.php' --exclude 'web/mkt'
         path: ./
-        remote_path: '/home4/renata/dev.orsefotografia.com.br/'
+        remote_path: '/home2/renata/dev.orsefotografia.com.br/'
         remote_host: 64.20.40.138
         remote_port: 1140
         remote_user: 'renata'
@@ -42,5 +42,5 @@ jobs:
         passphrase: ${{ secrets.DEPLOY_KEY_PASS }}
         port: 1140
         script: |
-          cd /home4/renata/dev.orsefotografia.com.br/
+          cd /home2/renata/dev.orsefotografia.com.br/
           ./vendor/bin/drush deploy
