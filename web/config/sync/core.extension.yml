@@ -94,6 +94,7 @@ module:
   rdf: 0
   responsive_image: 0
   search: 0
+  serialization: 0
   shortcut: 0
   smtp: 0
   state_machine: 0
