@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: QPuFH9E4612ox18hXdUXL8FhU021rCvOtYISSmvMQzc
 id: default
-label: Default
+label: Principal
 traits: {  }
 locked: false
 orderItemType: default

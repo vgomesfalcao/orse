@@ -17,7 +17,7 @@ id: example_options_custom
 title: 'Example: Custom Options'
 description: 'Example of a custom options element.'
 categories:
-  - Example
+  - Exemplo
 elements: |
   states:
     '#type': 'webform_options_custom:us_states'

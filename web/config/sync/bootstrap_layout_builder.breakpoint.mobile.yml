@@ -1,0 +1,10 @@
+uuid: bcca275b-979b-4f3e-8238-804505148af1
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: I6QslJrnaSjT6Wg4T1KRmtebhDJribTPkBE2bb9hS58
+id: mobile
+label: Mobile
+base_class: col
+weight: -8

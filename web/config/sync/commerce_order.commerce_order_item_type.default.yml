@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: jNPt_s6r5tiynMJ5tvaDZjlOtQ4ply0Ii-GBJ7lMZ7Y
 id: default
-label: Default
+label: Principal
 traits: {  }
 locked: false
 purchasableEntityType: commerce_product_variation

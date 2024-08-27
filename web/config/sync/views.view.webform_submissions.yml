@@ -11,7 +11,7 @@ dependencies:
 _core:
   default_config_hash: YPgxGC8TmLtfCOLGCCHJcdH2llA7QksUkdi1abhB7Ro
 id: webform_submissions
-label: 'Webform submissions'
+label: 'Submissões do webform'
 module: views
 description: 'Default webform submissions views.'
 tag: ''
@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Webform submissions'
+      title: 'Submissões do webform'
       fields:
         sid:
           id: sid
@@ -102,7 +102,7 @@ display:
           entity_type: webform_submission
           entity_field: in_draft
           plugin_id: field
-          label: Draft
+          label: Rascunho
           exclude: false
           alter:
             alter_text: false
@@ -357,6 +357,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 25
           total_pages: null
           id: 0
@@ -374,7 +375,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -401,7 +401,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No submissions available.'
+          content: 'Nenhuma submissão disponível.'
           tokenize: false
       sorts: {  }
       arguments:
@@ -741,7 +741,7 @@ display:
           entity_type: webform_submission
           entity_field: in_draft
           plugin_id: field
-          label: Draft
+          label: Rascunho
           exclude: false
           alter:
             alter_text: false
@@ -1681,7 +1681,7 @@ display:
           entity_type: webform_submission
           entity_field: in_draft
           plugin_id: field
-          label: Draft
+          label: Rascunho
           exclude: false
           alter:
             alter_text: false
@@ -2533,7 +2533,7 @@ display:
           entity_type: webform_submission
           entity_field: in_draft
           plugin_id: field
-          label: Draft
+          label: Rascunho
           exclude: false
           alter:
             alter_text: false

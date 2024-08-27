@@ -12,6 +12,7 @@ dependencies:
     - contact
     - file
     - filter
+    - media
     - node
     - node_view_permissions
     - paragraphs_type_permissions
@@ -51,6 +52,7 @@ permissions:
   - 'view any testimonials content'
   - 'view any webform content'
   - 'view commerce_product'
+  - 'view media'
   - 'view own about_page content'
   - 'view own article content'
   - 'view own blog_post content'

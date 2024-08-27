@@ -9,7 +9,7 @@ dependencies:
 _core:
   default_config_hash: lTfF_aenIIJ8YnvaratQgGpNEkFtA7tSDiElcgecVQo
 id: commerce_products
-label: Products
+label: Produtos
 module: views
 description: ''
 tag: Commerce
@@ -22,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Products
+      title: Produtos
       fields:
         commerce_product_bulk_form:
           id: commerce_product_bulk_form
@@ -406,6 +406,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
@@ -423,7 +424,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
