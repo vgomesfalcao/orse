@@ -1,0 +1,20 @@
+uuid: 568fa8de-39f4-432a-9d1a-d8cf1c75af40
+langcode: pt-br
+status: true
+dependencies:
+  theme:
+    - orse
+id: orse_abas
+theme: orse
+region: header
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Abas
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

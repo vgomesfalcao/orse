@@ -1,0 +1,31 @@
+uuid: d1e1be17-7fa1-47fa-b428-925071330f46
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:bloco_fundo_verde:a1379f01-133d-4bb0-8b81-df426ad9ef08'
+  module:
+    - block_content
+    - system
+  theme:
+    - orse
+id: orse_conteudohome
+theme: orse
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:a1379f01-133d-4bb0-8b81-df426ad9ef08'
+settings:
+  id: 'block_content:a1379f01-133d-4bb0-8b81-df426ad9ef08'
+  label: 'Conteúdo Home'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

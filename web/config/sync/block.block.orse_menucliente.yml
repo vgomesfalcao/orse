@@ -1,0 +1,39 @@
+uuid: 72c32d17-4b67-439f-ac42-1c2077e519ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-cliente
+  module:
+    - system
+    - user
+  theme:
+    - orse
+id: orse_menucliente
+theme: orse
+region: content
+weight: -7
+provider: null
+plugin: 'system_menu_block:menu-cliente'
+settings:
+  id: 'system_menu_block:menu-cliente'
+  label: 'Área do Cliente'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/user/*\r\n!/user/*/edit"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      cliente: cliente

@@ -1,0 +1,25 @@
+uuid: a299a8f3-5bb4-4d38-8d5f-c3111aa45974
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - orse
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: orse_branding
+theme: orse
+region: navbar_branding
+weight: -22
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: true
+visibility: {  }

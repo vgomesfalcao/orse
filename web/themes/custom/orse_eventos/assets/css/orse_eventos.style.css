@@ -2882,7 +2882,7 @@ input[type=button].btn-block {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1000;
+  z-index: 100;
   display: none;
   float: left;
   min-width: 10rem;
@@ -5160,7 +5160,7 @@ a.close.disabled {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 150;
   display: none;
   width: 100%;
   height: 100%;
@@ -5242,7 +5242,7 @@ a.close.disabled {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1040;
+  z-index: 140;
   width: 100vw;
   height: 100vh;
   background-color: #000;
@@ -5340,7 +5340,7 @@ a.close.disabled {
 }
 .tooltip {
   position: absolute;
-  z-index: 1070;
+  z-index: 170;
   display: block;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -5442,7 +5442,7 @@ a.close.disabled {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1060;
+  z-index: 160;
   display: block;
   max-width: 276px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -7044,7 +7044,7 @@ button.bg-dark:focus {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 130;
 }
 
 .fixed-bottom {
@@ -7052,7 +7052,7 @@ button.bg-dark:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 130;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -7060,7 +7060,7 @@ button.bg-dark:focus {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1020;
+    z-index: 120;
   }
 }
 

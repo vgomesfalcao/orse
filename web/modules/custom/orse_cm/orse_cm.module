@@ -1,4 +1,24 @@
 <?php
+/**
+ * Calcula a soma dos valores de vários campos.
+ *
+ * Esta função calcula a soma dos valores de vários campos na entidade.
+ * Ela recebe o gerenciador de tipos de entidade, a entidade, os campos e o delta como parâmetros.
+ * A função recupera os valores de cada campo e os adiciona à soma total.
+ * Se um valor de campo for nulo, ele é tratado como 0.
+ *
+ * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+ *   O gerenciador de tipos de entidade.
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   O objeto de entidade.
+ * @param array $fields
+ *   Um array de campos.
+ * @param int $delta
+ *   O valor delta.
+ *
+ * @return int
+ *   A soma dos valores dos campos.
+ */
 
 function computed_field_field_soma_valor_compute($entity_type_manager, $entity, $fields, $delta) {
   $value = 0;

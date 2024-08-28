@@ -1,0 +1,21 @@
+uuid: 2dc49bfa-623a-4650-8579-83594f7bc1c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - orse
+id: orse_searchform
+theme: orse
+region: navbar_right
+weight: 2
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

@@ -1,0 +1,33 @@
+uuid: 49d6efa5-8cc4-4c86-8975-f8c2ba7b2d21
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.respostas_fotografos
+  module:
+    - node
+    - views
+  theme:
+    - orse
+id: orse_views_block__respostas_fotografos_block_1
+theme: orse
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:respostas_fotografos-block_1'
+settings:
+  id: 'views_block:respostas_fotografos-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      formulario_cliente: formulario_cliente

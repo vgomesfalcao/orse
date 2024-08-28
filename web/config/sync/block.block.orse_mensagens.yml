@@ -1,0 +1,20 @@
+uuid: 5a1c287e-f680-4eef-b718-1351e5d8bbcc
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - orse
+id: orse_mensagens
+theme: orse
+region: header
+weight: -8
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Mensagens
+  label_display: '0'
+  provider: system
+visibility: {  }
