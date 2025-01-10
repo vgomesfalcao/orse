@@ -9,82 +9,86 @@ content_type: null
 field_title: null
 use_encrypt: null
 encryption_profile: null
+redirect_to_entity: null
+redirect_to_entity_message: null
+redirect_to_entity_message_on_update: null
+sync_unique: null
 sync_content: false
 sync_content_delete: false
 sync_content_field: ''
+sync_content_node_field: null
+target_bundle: formulario_cliente
+target_entity_type: node
 elements:
   field_data_do_evento:
     type: false
+    mapping: datetime_mapping
     webform_field: data_evento
-    custom_check: false
+    custom_check: 0
     custom_value: ''
-    mapping: default_mapping
   field_idade_da_crianca:
     type: false
-    webform_field: idade_crianca
-    custom_check: false
-    custom_value: ''
     mapping: default_mapping
+    webform_field: idade_crianca
+    custom_check: 0
+    custom_value: ''
   field_local:
     type: false
-    webform_field: local
-    custom_check: false
-    custom_value: ''
     mapping: default_mapping
+    webform_field: local
+    custom_check: 0
+    custom_value: ''
   field_nome_completo:
     type: false
-    webform_field: nome_completo
-    custom_check: false
-    custom_value: ''
     mapping: default_mapping
+    webform_field: nome_completo
+    custom_check: 0
+    custom_value: ''
   field_numero_de_convidados:
     type: false
-    webform_field: numero_convidados
-    custom_check: false
-    custom_value: ''
     mapping: default_mapping
+    webform_field: numero_convidados
+    custom_check: 0
+    custom_value: ''
   field_observacoes:
     type: false
-    webform_field: observacoes
-    custom_check: false
-    custom_value: ''
     mapping: default_mapping
+    webform_field: observacoes
+    custom_check: 0
+    custom_value: ''
   field_tipo_de_bodas:
     type: false
-    webform_field: tipo_bodas
-    custom_check: false
-    custom_value: ''
     mapping: default_mapping
+    webform_field: tipo_bodas
+    custom_check: 0
+    custom_value: ''
   field_tipo_de_casamento:
     type: false
-    webform_field: tipo_casamento
-    custom_check: false
-    custom_value: ''
     mapping: default_mapping
+    webform_field: tipo_casamento
+    custom_check: 0
+    custom_value: ''
   field_tipo_de_comemoracao:
     type: false
-    webform_field: tipo_comemoracao
-    custom_check: false
-    custom_value: ''
     mapping: default_mapping
+    webform_field: tipo_comemoracao
+    custom_check: 0
+    custom_value: ''
   field_tipo_de_evento:
     type: false
-    webform_field: tipo_evento
-    custom_check: false
-    custom_value: ''
     mapping: default_mapping
+    webform_field: tipo_evento
+    custom_check: 0
+    custom_value: ''
   field_valor_maximo_fotografia:
     type: false
-    webform_field: valor_max_fotografia
-    custom_check: false
-    custom_value: ''
     mapping: default_mapping
+    webform_field: valor_max_fotografia
+    custom_check: 0
+    custom_value: ''
   title:
     type: false
-    webform_field: ''
-    custom_check: true
-    custom_value: '[webform_submission:values:tipo_evento] - [webform_submission:values:data_evento]'
     mapping: default_mapping
-sync_content_node_field: null
-target_entity_type: node
-target_bundle: formulario_cliente
+    webform_field: ''
+    custom_check: '1'
+    custom_value: '[webform_submission:values:tipo_evento] - [webform_submission:values:data_evento]'
