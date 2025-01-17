@@ -13,7 +13,7 @@ _core:
 id: webform_submissions
 label: 'Submissões do webform'
 module: views
-description: 'Default webform submissions views.'
+description: 'Views padrão de submissões de webform.'
 tag: ''
 base_table: webform_submission
 base_field: sid
@@ -607,7 +607,7 @@ display:
       tags: {  }
   embed_administer:
     id: embed_administer
-    display_title: 'Embed: Administer'
+    display_title: 'Embutir: Administrar'
     display_plugin: embed
     position: 2
     display_options:
@@ -621,7 +621,7 @@ display:
           admin_label: ''
           entity_type: webform_submission
           plugin_id: webform_submission_bulk_form
-          label: 'Webform submission operations bulk form'
+          label: 'Formulário de operações em massa de submissões de webform'
           exclude: false
           alter:
             alter_text: false
@@ -1222,7 +1222,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Is draft'
+            label: 'É rascunho'
             description: ''
             use_operator: false
             operator: in_draft_op
@@ -1444,7 +1444,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
-      display_description: 'Administer submissions.'
+      display_description: 'Administrar submissões.'
       display_extenders: {  }
     cache_metadata:
       max-age: 0
@@ -1458,7 +1458,7 @@ display:
       tags: {  }
   embed_default:
     id: embed_default
-    display_title: 'Embed: Default'
+    display_title: 'Embutir: Padrão'
     display_plugin: embed
     position: 1
     display_options:
@@ -1530,7 +1530,7 @@ display:
         fields: true
         filters: true
         filter_groups: true
-      display_description: 'Display submissions.'
+      display_description: 'Exibir submissões.'
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -1543,7 +1543,7 @@ display:
       tags: {  }
   embed_manage:
     id: embed_manage
-    display_title: 'Embed: Manage'
+    display_title: 'Embutir: Gerenciar'
     display_plugin: embed
     position: 3
     display_options:
@@ -1557,7 +1557,7 @@ display:
           admin_label: ''
           entity_type: webform_submission
           plugin_id: webform_submission_bulk_form
-          label: 'Webform submission operations bulk form'
+          label: 'Formulário de operações em massa de submissões de webform'
           exclude: false
           alter:
             alter_text: false
@@ -2216,7 +2216,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Is draft'
+            label: 'É rascunho'
             description: ''
             use_operator: false
             operator: in_draft_op
@@ -2438,7 +2438,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
-      display_description: 'Manage submissions.'
+      display_description: 'Gerenciar submissões.'
       display_extenders: {  }
     cache_metadata:
       max-age: 0
@@ -2452,7 +2452,7 @@ display:
       tags: {  }
   embed_review:
     id: embed_review
-    display_title: 'Embed: Review'
+    display_title: 'Embutir: Revisão'
     display_plugin: embed
     position: 4
     display_options:
@@ -3015,7 +3015,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Is draft'
+            label: 'É rascunho'
             description: ''
             use_operator: false
             operator: in_draft_op
@@ -3237,7 +3237,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
-      display_description: 'Review submissions.'
+      display_description: 'Rever submissões.'
       display_extenders: {  }
     cache_metadata:
       max-age: -1

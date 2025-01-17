@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: aaEeYBWoWETLKX2ivmZBpUAd3uPe2iPNydaxBuLPXKc
 id: province_names
-label: 'Province names'
+label: 'Nomes das províncias'
 category: Geográfico
 likert: false
 options: |

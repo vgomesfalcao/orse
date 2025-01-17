@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: gZCLESMdXmEZxHqnQFx7a0rUefrkVuFzHSMnWe0qioM
 id: likert_comparison
-label: 'Likert: Comparison'
+label: 'Likert: Comparações'
 category: Likert
 likert: true
 options: |

@@ -13,7 +13,7 @@ third_party_settings:
     parent: 'main:'
 _core:
   default_config_hash: rtGCaVUR8ec0Z0JeVyzHXxvbGhbuXh0wHHqh-NXtDG4
-name: 'Blog post'
+name: 'Post de blog'
 type: blog_post
 description: 'Use para blogs multi-usuários. Cada usuário tem um blog pessoal.'
 help: null

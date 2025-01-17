@@ -9,7 +9,7 @@ _core:
   default_config_hash: cjVDbAE5BlopGrY-tfxsxMoyEibwBBNgdQwDdxOSkow
 id: marital_status
 label: 'Estado civil'
-category: Demographic
+category: Demográfico
 likert: false
 options: |
   Single: Single

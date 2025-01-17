@@ -11,7 +11,7 @@ _core:
 id: orse_branding
 theme: orse
 region: navbar_branding
-weight: -22
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:

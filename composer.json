@@ -62,6 +62,8 @@
         "drupal/layout_builder_admin_theme": "^2.0",
         "drupal/layout_paragraphs": "^2.0",
         "drupal/mautic": "^1.11",
+        "drupal/menu_item_role_access": "^2.4",
+        "drupal/menu_link_attributes": "^1.5",
         "drupal/node_view_permissions": "^1.4",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",

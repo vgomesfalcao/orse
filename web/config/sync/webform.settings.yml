@@ -14,16 +14,16 @@ settings:
   default_reset_button_label: Reiniciar
   default_delete_button_label: Delete
   default_form_submit_once: false
-  default_form_open_message: 'This form has not yet been opened to submissions.'
-  default_form_close_message: 'Sorry… This form is closed to new submissions.'
-  default_form_exception_message: 'Unable to display this webform. Please contact the site administrator.'
-  default_form_confidential_message: 'This form is confidential. You must <a href="[site:login-url]/logout?destination=[current-page:url:relative]">Log out</a> to submit it.'
+  default_form_open_message: 'Este formulário ainda não está aberto a submissões.'
+  default_form_close_message: 'Desculpe… Este formulário está fechado para novas submissões.'
+  default_form_exception_message: 'Não foi possível exibir este webform. Por favor entre em contato com o administrador do site.'
+  default_form_confidential_message: 'Este formulário é confidencial. Você deve<a href="[site:login-url]/logout?destination=[current-page:url:relative]">Fazer log out</a> para poder enviar.'
   default_form_access_denied_message: 'Please login to access this form.'
   default_form_disable_remote_addr: false
   default_form_novalidate: false
   default_form_disable_inline_errors: false
   default_form_required: false
-  default_form_required_label: 'Indicates required field'
+  default_form_required_label: 'Indica campo requerido'
   default_form_unsaved: false
   default_form_disable_back: false
   default_form_submit_back: false
@@ -38,19 +38,19 @@ settings:
   default_preview_next_button_label: Preview
   default_preview_prev_button_label: '< Anterior'
   default_preview_label: Preview
-  default_preview_title: '[webform:title]: Preview'
-  default_preview_message: 'Please review your submission. Your submission is not complete until you press the "Submit" button!'
+  default_preview_title: '[webform:title]: Pré-visualização'
+  default_preview_message: 'Por favor, revise a sua submissão. Sua submissão não estará completa até você pressionar o botão "Enviar"!'
   default_draft_button_label: 'Salvar rascunho'
   default_draft_saved_message: 'Submissão salva. Você pode retornar a esse formulário posteriormente e ele irá restaurar os valores atuais.'
   default_draft_loaded_message: 'Um formulário parcialmente completo foi encontrado. Por favor, complete as partes restantes.'
-  default_draft_pending_single_message: 'You have a pending draft for this webform. <a href="#">Load your pending draft</a>.'
-  default_draft_pending_multiple_message: 'You have pending drafts for this webform. <a href="#">View your pending drafts</a>.'
+  default_draft_pending_single_message: 'Você tem um rascunho pendente para este webform. <a href="#">Carregar seu rascunho</a>.'
+  default_draft_pending_multiple_message: 'Você tem rascunhos pendentes para este formulário. <a href="#">Veja seus rascunhos pendentes</a>.'
   default_confirmation_message: 'Envio adicionado ao formulário [webform:title].'
   default_confirmation_back_label: 'Voltar ao formulário.'
   default_confirmation_noindex: true
-  default_limit_total_message: 'No more submissions are permitted.'
-  default_limit_user_message: 'No more submissions are permitted.'
-  default_submission_label: '[webform_submission:submitted-to]: Submission #[webform_submission:serial]'
+  default_limit_total_message: 'Não são permitidas novas submissões.'
+  default_limit_user_message: 'Não são permitidas novas submissões.'
+  default_submission_label: '[webform_submission:submitted-to]: Submissão #[webform_submission:serial]'
   default_submission_log: false
   default_submission_views: {  }
   default_submission_views_replace:
@@ -68,10 +68,10 @@ settings:
   default_results_customize: false
   default_submission_access_denied_message: 'Please login to access this submission.'
   default_submission_exception_message: 'Unable to process this submission. Please contact the site administrator.'
-  default_submission_locked_message: 'This submission has been locked.'
-  default_previous_submission_message: 'You have already submitted this webform. <a href="#">View your previous submission</a>.'
-  default_previous_submissions_message: 'You have already submitted this webform. <a href="#">View your previous submissions</a>.'
-  default_autofill_message: 'This submission has been autofilled with your previous submission.'
+  default_submission_locked_message: 'Esta submissão pode ter sido travada.'
+  default_previous_submission_message: 'Você já submeteu este webform. <a href="#">Veja suas submissões anteriores</a>.'
+  default_previous_submissions_message: 'Você já submeteu este webform. <a href="#">Veja suas submissões anteriores</a>.'
+  default_autofill_message: 'Esta submissão foi preenchida automaticamente com sua submissão anterior.'
   form_classes: |
     container-inline clearfix
     form--inline clearfix
@@ -186,7 +186,7 @@ mail:
   default_return_path: ''
   default_sender_mail: ''
   default_sender_name: ''
-  default_subject: 'Webform submission from: [webform_submission:source-title]'
+  default_subject: 'Submissão de webform de: [webform_submission:source-title]'
   default_body_text: "Submitted on [webform_submission:created]\r\nSubmitted by: [webform_submission:user]\r\n\r\nSubmitted values are:\r\n[webform_submission:values]\r\n"
   default_body_html: "<p>Submitted on [webform_submission:created]</p>\r\n<p>Submitted by: [webform_submission:user]</p>\r\n<p>Submitted values are:</p>\r\n[webform_submission:values]\r\n"
   roles:

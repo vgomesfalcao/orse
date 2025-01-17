@@ -9,7 +9,7 @@ _core:
   default_config_hash: yxhG0JmQs2HT-Ro6ZeDQboDc9ZWR4GglflTtyoqxK4A
 id: gender
 label: Gênero
-category: Demographic
+category: Demográfico
 likert: false
 options: |
   Man: Man

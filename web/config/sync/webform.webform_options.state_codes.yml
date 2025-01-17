@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: 8mYO8ewsZX3LVfNga69jXa0RNO0LNN8-EGkXLhSAMBU
 id: state_codes
-label: 'State codes'
+label: 'Códigos de estado'
 category: Geográfico
 likert: false
 options: |

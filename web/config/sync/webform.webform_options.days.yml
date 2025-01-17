@@ -12,10 +12,10 @@ label: Days
 category: 'Date and time'
 likert: false
 options: |
-  Sunday: Sunday
-  Monday: Monday
-  Tuesday: Tuesday
-  Wednesday: Wednesday
-  Thursday: Thursday
-  Friday: Friday
-  Saturday: Saturday
+  Domingo: Domingo
+  Segunda: Segunda
+  Terça: Terça
+  Quarta: Quarta
+  Quinta: Quinta
+  Sexta: Sexta
+  Sábado: Sábado
