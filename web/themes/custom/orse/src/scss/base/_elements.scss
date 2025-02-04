@@ -1,2 +1,20 @@
 // Global elements styling, e.g. for headings, buttons, links, etc.
 // -----------------------------------------------------------------------------
+.btn-menu-primary {
+  @extend .btn;
+  @extend .btn-primary;
+  color: var(--bs-btn-color);
+
+  line-height: 19px;
+  max-width: 140px;
+  background-color: var(--bs-btn-bg);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    color: var(--bs-btn-hover-color);
+  }
+}
+
+.nav{
+  align-items: center;
+}

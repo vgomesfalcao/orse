@@ -1,0 +1,10 @@
+uuid: d4adbd48-1cb4-419d-a54b-e5c52cf22469
+langcode: pt-br
+status: true
+dependencies: {  }
+id: static_banner
+label: 'Banner Estático'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
