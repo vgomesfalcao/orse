@@ -1,17 +1,15 @@
-uuid: 82922039-b308-4a1b-936f-b02a1cd38cbd
-langcode: en
+uuid: 9737588c-4dd2-4a3f-bbcb-1861803b2494
+langcode: pt-br
 status: true
 dependencies:
   module:
     - system
   theme:
     - orse
-_core:
-  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
-id: orse_content
+id: orse_mainpagecontent
 theme: orse
 region: content
-weight: -8
+weight: 0
 provider: null
 plugin: system_main_block
 settings:

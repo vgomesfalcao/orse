@@ -9,7 +9,32 @@ dependencies:
     - field.field.paragraph.static_banner.field_title
     - paragraphs.paragraphs_type.static_banner
   module:
+    - field_group
     - link
+third_party_settings:
+  field_group:
+    group_text:
+      children:
+        - field_title
+        - field_subtitle
+        - field_button
+      label: Text
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: group-text
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
 id: paragraph.static_banner.default
 targetEntityType: paragraph
 bundle: static_banner
@@ -34,7 +59,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_subtitle:
     type: string
@@ -42,7 +67,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_title:
     type: string
@@ -50,6 +75,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden: {  }

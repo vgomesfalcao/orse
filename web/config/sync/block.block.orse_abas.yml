@@ -2,6 +2,8 @@ uuid: 568fa8de-39f4-432a-9d1a-d8cf1c75af40
 langcode: pt-br
 status: true
 dependencies:
+  module:
+    - user
   theme:
     - orse
 id: orse_abas
@@ -17,4 +19,11 @@ settings:
   provider: core
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

@@ -74,3 +74,4 @@ permissions:
   - 'view paragraph content layout_image'
   - 'view paragraph content links_midias_sociais'
   - 'view paragraph content section'
+  - 'view paragraph content static_banner'

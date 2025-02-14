@@ -1,4 +1,4 @@
-uuid: 7eb9986e-478c-4416-8dd1-496ef4a5e18f
+uuid: fe3c4dec-2036-44e0-9ba8-c81d71c43448
 langcode: pt-br
 status: true
 dependencies:
@@ -6,17 +6,10 @@ dependencies:
     - field.storage.media.field_media_image
     - media.type.image
   module:
-    - content_translation
     - image
   enforced:
     module:
       - media
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
 _core:
   default_config_hash: P7CkVOgjDXiN26Fm2hniNei-XPK3iuZTlcBGqreTbJ0
 id: media.image.field_media_image
@@ -33,7 +26,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg webp svg'
+  file_extensions: 'png gif jpg jpeg webp'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
@@ -42,7 +35,7 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ''
+    uuid: null
     alt: ''
     title: ''
     width: null
