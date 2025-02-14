@@ -1,0 +1,73 @@
+@import "../../scss/init";
+
+.paragraph--type--static-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .field--name-field-background {
+    width: 100%;
+    overflow: hidden;
+    max-height: calc(100vh - 70px);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .group-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    .field--name-field-title {
+      color: $primary;
+      text-align: center;
+      font-family: Karla, sans-serif;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 100%;
+      margin-bottom: 5px;
+    }
+
+    .field--name-field-subtitle {
+      color: #000;
+      text-align: center;
+      font-family: Karla, sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 24px */
+      margin-bottom: 40px;
+    }
+
+    .field--name-field-button {
+      a {
+        @extend .btn;
+        @extend .btn-primary;
+
+        color: $white;
+        font-family: $font-family-base;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        max-width: 417.589px;
+        // height: 78.389px;
+
+        padding: 15px 57px;
+        justify-content: center;
+        align-items: center;
+        gap: var(--sds-size-space-200);
+        flex-shrink: 0;
+        border-radius: $btn-border-radius;
+        background: $primary;
+      }
+    }
+  }
+}
