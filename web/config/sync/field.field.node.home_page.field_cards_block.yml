@@ -1,0 +1,52 @@
+uuid: 8a6d3a27-0483-4fda-b54d-9123a14fc063
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cards_block
+    - node.type.home_page
+    - paragraphs.paragraphs_type.cards_block
+  module:
+    - entity_reference_revisions
+id: node.home_page.field_cards_block
+field_name: field_cards_block
+entity_type: node
+bundle: home_page
+label: 'Bloco de cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cards_block: cards_block
+    negate: 0
+    target_bundles_drag_drop:
+      cards_block:
+        weight: 9
+        enabled: true
+      element_text:
+        weight: 10
+        enabled: false
+      img_link:
+        weight: 11
+        enabled: false
+      layout_image:
+        weight: 12
+        enabled: false
+      links_midias_sociais:
+        weight: 13
+        enabled: false
+      orange_card:
+        weight: 14
+        enabled: false
+      section:
+        weight: 15
+        enabled: false
+      static_banner:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

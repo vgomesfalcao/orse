@@ -10,12 +10,23 @@
   .field--name-field-background {
     width: 100%;
     overflow: hidden;
-    max-height: calc(100vh - 70px);
+    max-height: calc(100vh - 125px);
 
-    img {
-      width: 100%;
-      height: auto;
+    .media--type-image {
+      .field__item {
+        img {
+          height: calc(100vh - 56px);
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          @include media-breakpoint-up(md) {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
     }
+
   }
 
   .group-text {
@@ -29,11 +40,17 @@
       color: $primary;
       text-align: center;
       font-family: Karla, sans-serif;
-      font-size: 4rem;
+      font-size: 47px;
       font-style: normal;
       font-weight: 800;
       line-height: 100%;
-      margin-bottom: 5px;
+      margin-bottom: 20px;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 5px;
+
+        font-size: 4rem;
+      }
     }
 
     .field--name-field-subtitle {
@@ -43,11 +60,16 @@
       font-size: 24px;
       font-style: normal;
       font-weight: 400;
-      line-height: 100%; /* 24px */
+      line-height: 100%;
+      /* 24px */
       margin-bottom: 40px;
     }
 
     .field--name-field-button {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 0 10px;
       a {
         @extend .btn;
         @extend .btn-primary;
@@ -57,16 +79,19 @@
         font-size: 28px;
         font-style: normal;
         font-weight: 500;
+        width: 100%;
         max-width: 417.589px;
         // height: 78.389px;
 
-        padding: 15px 57px;
+        padding: 15px 0;
         justify-content: center;
         align-items: center;
         gap: var(--sds-size-space-200);
         flex-shrink: 0;
         border-radius: $btn-border-radius;
         background: $primary;
+
+        @include media-breakpoint-up(md) {}
       }
     }
   }

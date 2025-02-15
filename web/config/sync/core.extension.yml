@@ -14,7 +14,6 @@ module:
   automated_cron: 0
   block: 0
   block_content: 0
-  block_form_alter: 0
   blog: 0
   bootstrap_layout_builder: 0
   bootstrap_styles: 0
@@ -79,8 +78,6 @@ module:
   media: 0
   media_library: 0
   media_library_form_element: 0
-  menu_item_role_access: 0
-  menu_link_attributes: 0
   menu_ui: 0
   mysql: 0
   node: 0
@@ -103,6 +100,7 @@ module:
   smtp: 0
   state_machine: 0
   statistics: 0
+  svg_image: 0
   system: 0
   taxonomy: 0
   text: 0

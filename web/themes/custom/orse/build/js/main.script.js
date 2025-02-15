@@ -8217,6 +8217,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/nav/nav.scss":
+/*!*************************************!*\
+  !*** ./src/components/nav/nav.scss ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/components/offcanvas/_offcanvas.scss":
 /*!**************************************************!*\
   !*** ./src/components/offcanvas/_offcanvas.scss ***!
@@ -8345,6 +8358,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			"/js/main.script": 0,
 /******/ 			"css/main.style": 0,
 /******/ 			"components/offcanvas/offcanvas": 0,
+/******/ 			"components/nav/nav": 0,
 /******/ 			"components/block/block": 0
 /******/ 		};
 /******/ 		
@@ -8397,10 +8411,11 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/offcanvas/offcanvas","components/block/block"], function() { return __webpack_require__("./src/js/main.script.js"); })
-/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/offcanvas/offcanvas","components/block/block"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/offcanvas/offcanvas","components/block/block"], function() { return __webpack_require__("./src/components/block/block.scss"); })
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main.style","components/offcanvas/offcanvas","components/block/block"], function() { return __webpack_require__("./src/components/offcanvas/_offcanvas.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/js/main.script.js"); })
+/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/components/block/block.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/components/nav/nav.scss"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main.style","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/components/offcanvas/_offcanvas.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

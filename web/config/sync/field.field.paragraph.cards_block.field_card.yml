@@ -1,0 +1,52 @@
+uuid: 41483ab8-2018-48af-87cd-e42b5781118d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card
+    - paragraphs.paragraphs_type.cards_block
+    - paragraphs.paragraphs_type.orange_card
+  module:
+    - entity_reference_revisions
+id: paragraph.cards_block.field_card
+field_name: field_card
+entity_type: paragraph
+bundle: cards_block
+label: Card
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      orange_card: orange_card
+    negate: 0
+    target_bundles_drag_drop:
+      cards_block:
+        weight: 9
+        enabled: false
+      element_text:
+        weight: 10
+        enabled: false
+      img_link:
+        weight: 11
+        enabled: false
+      layout_image:
+        weight: 12
+        enabled: false
+      links_midias_sociais:
+        weight: 13
+        enabled: false
+      orange_card:
+        weight: 14
+        enabled: true
+      section:
+        weight: 15
+        enabled: false
+      static_banner:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

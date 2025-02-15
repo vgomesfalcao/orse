@@ -1,0 +1,19 @@
+uuid: a27e3224-dd78-4027-be82-f4c89abbc1a0
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.orange_card
+id: paragraph.orange_card.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: orange_card
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

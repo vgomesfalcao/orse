@@ -1,0 +1,31 @@
+uuid: 1feff025-b826-4e7a-a2a3-b6a51ceaba4d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.orange_card.field_icon
+    - field.field.paragraph.orange_card.field_text
+    - paragraphs.paragraphs_type.orange_card
+id: paragraph.orange_card.default
+targetEntityType: paragraph
+bundle: orange_card
+mode: default
+content:
+  field_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }
