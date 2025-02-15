@@ -1,0 +1,1 @@
+{"version":3,"file":"components/block/block.css","mappings":"AAGE;EACE;AAFJ,C","sources":["webpack://radix_subtheme/./src/components/block/block.scss"],"sourcesContent":["@import \"../../scss/init\";\n\n.block--orse-branding {\n  .navbar-brand img {\n    width: 250px;\n    // max-width: 300px;\n  }\n}\n"],"names":[],"sourceRoot":""}

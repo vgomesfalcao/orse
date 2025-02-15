@@ -1,1 +1,8 @@
 @import "../../scss/init";
+
+.block--orse-branding {
+  .navbar-brand img {
+    width: 250px;
+    // max-width: 300px;
+  }
+}

@@ -11,6 +11,6 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://Logo Orse.png'
+  path: 'public://download.png'
   url: null
   use_default: false

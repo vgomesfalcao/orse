@@ -19,6 +19,7 @@
           object-fit: cover;
           object-position: center;
           width: 100%;
+
           @include media-breakpoint-up(md) {
             width: 100%;
             height: auto;
@@ -26,7 +27,6 @@
         }
       }
     }
-
   }
 
   .group-text {
@@ -61,6 +61,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: 100%;
+
       /* 24px */
       margin-bottom: 40px;
     }
@@ -70,6 +71,7 @@
       justify-content: center;
       width: 100%;
       padding: 0 10px;
+
       a {
         @extend .btn;
         @extend .btn-primary;
@@ -90,8 +92,6 @@
         flex-shrink: 0;
         border-radius: $btn-border-radius;
         background: $primary;
-
-        @include media-breakpoint-up(md) {}
       }
     }
   }

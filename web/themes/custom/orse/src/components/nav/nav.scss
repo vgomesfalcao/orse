@@ -1,8 +1,23 @@
 @import "../../scss/init";
 
+// Adicionar os keyframes da animação:
+@keyframes nav-slide-down {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+
 .block--system-menu {
   .nav {
     @include media-breakpoint-down(md) {
+      // Adicionar a animação e manter as regras existentes
+      animation: nav-slide-down 0.3s ease forwards;
       flex-direction: column;
       align-items: start;
       position: absolute;
@@ -17,12 +32,13 @@
         align-content: center;
         background: $gray-100;
         padding: 0 16px;
+
         .btn-menu-primary {
           max-width: unset;
           padding: 16px 0;
         }
+
         &:not(:last-child) {
-          // semitransparent border
           border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         }
       }
