@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9c6ef05843b011340120a5500283c7b",
+    "content-hash": "f843b508661b6d8bdfdb40e7252f94ed",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3800,27 +3800,27 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0"
+                "reference": "4.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0.zip",
-                "reference": "8.x-3.0",
-                "shasum": "bb1c660e85577d49db1deedfefe1ed3a91370aeb"
+                "url": "https://ftp.drupal.org/files/projects/gin-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "8607d9f225b550c9c2f0a84d0371adabc0ac42c1"
             },
             "require": {
-                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/core": "^10 || ^11",
                 "drupal/gin_toolbar": "^1.0@beta"
             },
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0",
-                    "datestamp": "1734771812",
+                    "version": "4.0.0",
+                    "datestamp": "1734696940",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3866,31 +3866,27 @@
         },
         {
             "name": "drupal/gin_lb",
-            "version": "1.0.0-rc8",
+            "version": "1.0.0-rc5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_lb.git",
-                "reference": "1.0.0-rc8"
+                "reference": "1.0.0-rc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin_lb-1.0.0-rc8.zip",
-                "reference": "1.0.0-rc8",
-                "shasum": "426a45cf2929eb21af33430176ae9b70b0ab5aea"
+                "url": "https://ftp.drupal.org/files/projects/gin_lb-1.0.0-rc5.zip",
+                "reference": "1.0.0-rc5",
+                "shasum": "e8ae8fbe0b7642645dd173b72cd19da86e6e7f15"
             },
             "require": {
-                "drupal/core": "^10.1 || ^11",
-                "drupal/gin": "^3.0-rc11",
-                "drupal/gin_toolbar": "^1.0"
-            },
-            "conflict": {
-                "drupal/lb_claro": "*"
+                "drupal/core": "^9.3 || ^10",
+                "drupal/gin_toolbar": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-rc8",
-                    "datestamp": "1722577167",
+                    "version": "1.0.0-rc5",
+                    "datestamp": "1696943060",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -3903,15 +3899,15 @@
             ],
             "authors": [
                 {
-                    "name": "Christian.wiedemann",
+                    "name": "christian.wiedemann",
                     "homepage": "https://www.drupal.org/user/861002"
                 },
                 {
-                    "name": "Duwid",
+                    "name": "duwid",
                     "homepage": "https://www.drupal.org/user/2693877"
                 },
                 {
-                    "name": "Grimreaper",
+                    "name": "grimreaper",
                     "homepage": "https://www.drupal.org/user/2388214"
                 },
                 {
@@ -3919,7 +3915,7 @@
                     "homepage": "https://www.drupal.org/user/856550"
                 }
             ],
-            "description": "Layout Builder in Gin style.",
+            "description": "Layout Builder in Gin style",
             "homepage": "https://www.drupal.org/project/gin_lb",
             "support": {
                 "source": "https://git.drupalcode.org/project/gin_lb"
@@ -4742,6 +4738,57 @@
             "homepage": "https://www.drupal.org/project/paragraphs",
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs"
+            }
+        },
+        {
+            "name": "drupal/paragraphs_role_visibility",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/paragraphs_role_visibility.git",
+                "reference": "2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs_role_visibility-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "e2bf879b62caffa1e76f3bdc824c96b47bc2153c"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/paragraphs": "^1.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.3",
+                    "datestamp": "1719312202",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Shabanov",
+                    "homepage": "https://www.drupal.org/u/fromme",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Allow to make a single paragraph item visible for selected roles.",
+            "homepage": "https://www.drupal.org/project/paragraphs_role_visibility",
+            "keywords": [
+                "Drupal",
+                "paragraphs"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/paragraphs_role_visibility",
+                "issues": "https://www.drupal.org/project/issues/paragraphs_role_visibility"
             }
         },
         {
@@ -11732,13 +11779,12 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/components": 10,
-        "drupal/gin": 5,
         "drupal/gin_lb": 5,
         "drupal/select_registration_roles": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
