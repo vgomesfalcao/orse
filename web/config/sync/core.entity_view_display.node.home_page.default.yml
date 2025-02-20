@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.home_page.field_banner_home
     - field.field.node.home_page.field_cards_block
+    - field.field.node.home_page.field_faq_block
+    - field.field.node.home_page.field_green_block
     - node.type.home_page
   module:
     - entity_reference_revisions
@@ -36,6 +38,24 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_faq_block:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_green_block:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   langcode: true

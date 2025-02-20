@@ -4,5 +4,6 @@
     "/css/main.style.css": "/css/main.style.css",
     "/components/offcanvas/offcanvas.css": "/components/offcanvas/offcanvas.css",
     "/components/nav/nav.css": "/components/nav/nav.css",
-    "/components/block/block.css": "/components/block/block.css"
+    "/components/block/block.css": "/components/block/block.css",
+    "/components/section/footer.css": "/components/section/footer.css"
 }

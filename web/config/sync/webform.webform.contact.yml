@@ -14,7 +14,7 @@ uid: null
 template: false
 archive: false
 id: contact
-title: Contact
+title: Contato
 description: 'Webform básico de contato por e-mail.'
 categories: {  }
 elements: |

@@ -1,0 +1,8 @@
+uuid: b605752d-b02c-41bd-a9b3-88c9abc3f0ef
+langcode: pt-br
+status: true
+dependencies: {  }
+id: brand_footer
+label: 'Brand Footer'
+revision: false
+description: null

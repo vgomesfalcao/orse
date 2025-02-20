@@ -1,0 +1,14 @@
+uuid: 823bd0ee-b736-4061-88bc-dafef059c5b1
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - paragraphs_role_visibility
+id: green_cards_block
+label: 'Bloco Cards Verdes'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  paragraphs_role_visibility:
+    enabled: true

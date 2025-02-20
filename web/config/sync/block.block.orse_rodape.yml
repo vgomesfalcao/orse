@@ -1,0 +1,25 @@
+uuid: a994d7b5-2897-4613-b611-1f27dc2350b3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - orse
+id: orse_rodape
+theme: orse
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Rodapé
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

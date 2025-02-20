@@ -1,0 +1,36 @@
+uuid: 9f2e3578-b967-43af-8045-d088cd7fc1f6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.brand_footer
+    - field.field.block_content.brand_footer.field_brand_text
+id: block_content.brand_footer.default
+targetEntityType: block_content
+bundle: brand_footer
+mode: default
+content:
+  field_brand_text:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

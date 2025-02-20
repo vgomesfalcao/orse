@@ -1,3 +1,5 @@
+@import "../../scss/init";
+
 .paragraph--type--cards-block .field--name-field-card {
   display: flex;
   padding: 42px 23px;
@@ -18,10 +20,10 @@
     width: 100%;
 
     &:not(:last-of-type) {
-      border-bottom: 2px dashed #fff;
+      border-bottom: 2px dashed $white;
       @include media-breakpoint-up(md) {
         border-bottom: none;
-        border-right: 2px dashed #fff;
+        border-right: 2px dashed $white;
       }
     }
     height: 250px;

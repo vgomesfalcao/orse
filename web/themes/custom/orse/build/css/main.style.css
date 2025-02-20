@@ -12393,9 +12393,9 @@ textarea.form-control-lg {
   color: #000;
   text-align: center;
   font-family: Karla, sans-serif;
-  font-size: 24px;
+  font-size: 32px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 100%;
   /* 24px */
   margin-bottom: 40px;
@@ -12484,6 +12484,121 @@ textarea.form-control-lg {
   height: 75px;
   line-height: 100%; /* 25px */
   align-content: center;
+}
+
+.paragraph--type--green-cards-block .field--name-field-green-card {
+  display: flex;
+  padding: 42px 23px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  background: rgb(77.9, 135.3, 108);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  gap: 10px;
+}
+@media (max-width: 767.98px) {
+  .paragraph--type--green-cards-block .field--name-field-green-card {
+    flex-direction: column;
+  }
+}
+.paragraph--type--green-cards-block .field--name-field-green-card > .field__item {
+  width: 100%;
+  max-width: 500px;
+  min-height: 100px;
+}
+.paragraph--type--green-cards-block .field--name-field-green-card > .field__item .paragraph--type--green-card .field--name-field-card-title {
+  display: flex;
+  height: 45px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  background: #bd6717;
+  color: #fff;
+  text-align: center;
+  font-family: "inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 20px */
+}
+.paragraph--type--green-cards-block .field--name-field-green-card > .field__item .paragraph--type--green-card .green-part {
+  background-color: #02542d;
+  padding: 30px 25px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.paragraph--type--green-cards-block .field--name-field-green-card > .field__item .paragraph--type--green-card .green-part .field--name-field-card-icon {
+  display: flex;
+  min-width: 294px;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.paragraph--type--green-cards-block .field--name-field-green-card > .field__item .paragraph--type--green-card .green-part .field--name-field-card-text {
+  color: #fff;
+  font-family: "inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 20px */
+  min-height: 40px;
+  text-align: center;
+  align-content: center;
+}
+
+.paragraph--type--faq {
+  background-color: #02542d;
+  padding: 30px;
+}
+.paragraph--type--faq .field--name-field-faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.paragraph--type--faq .field--name-field-faq-item > .field__item {
+  width: 100%;
+  display: flex;
+}
+.paragraph--type--faq .field--name-field-faq-item > .field__item .paragraph--type--faq-item {
+  width: 100%;
+}
+.paragraph--type--faq .field--name-field-faq-item > .field__item .paragraph--type--faq-item .field--name-field-faq-title {
+  display: flex;
+  padding: 10px 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  color: #fff;
+  font-family: "inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 20px */
+  background: #bd6717;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.paragraph--type--faq .field--name-field-faq-item > .field__item .paragraph--type--faq-item .field--name-field-faq-text {
+  display: flex;
+  padding: 23px 15px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: #304224;
+  font-family: "inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 20px */
+  background: #f2bf90;
 }
 
 /*# sourceMappingURL=main.style.css.map*/

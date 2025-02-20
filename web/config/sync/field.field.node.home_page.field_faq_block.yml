@@ -1,0 +1,64 @@
+uuid: e3da5abc-377d-48f7-84a7-d07b3ece15b9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq_block
+    - node.type.home_page
+    - paragraphs.paragraphs_type.faq
+  module:
+    - entity_reference_revisions
+id: node.home_page.field_faq_block
+field_name: field_faq_block
+entity_type: node
+bundle: home_page
+label: 'Faq Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      faq: faq
+    negate: 0
+    target_bundles_drag_drop:
+      cards_block:
+        weight: 13
+        enabled: false
+      element_text:
+        weight: 14
+        enabled: false
+      faq:
+        weight: 15
+        enabled: true
+      faq_item:
+        weight: 16
+        enabled: false
+      green_card:
+        weight: 17
+        enabled: false
+      green_cards_block:
+        weight: 18
+        enabled: false
+      img_link:
+        weight: 19
+        enabled: false
+      layout_image:
+        weight: 20
+        enabled: false
+      links_midias_sociais:
+        weight: 21
+        enabled: false
+      orange_card:
+        weight: 22
+        enabled: false
+      section:
+        weight: 23
+        enabled: false
+      static_banner:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

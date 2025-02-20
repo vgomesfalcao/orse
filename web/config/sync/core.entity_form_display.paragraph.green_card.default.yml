@@ -1,0 +1,42 @@
+uuid: 66e1aa96-be71-4c8d-857d-8ecb3e9110b3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.green_card.field_card_icon
+    - field.field.paragraph.green_card.field_card_text
+    - field.field.paragraph.green_card.field_card_title
+    - paragraphs.paragraphs_type.green_card
+  module:
+    - media_library
+id: paragraph.green_card.default
+targetEntityType: paragraph
+bundle: green_card
+mode: default
+content:
+  field_card_icon:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_card_text:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_card_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,54 @@
+@import "../../scss/init";
+
+.paragraph--type--faq {
+  background-color: $green;
+  padding: 30px;
+
+  .field--name-field-faq-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    > .field__item {
+      width: 100%;
+      display: flex;
+
+      .paragraph--type--faq-item {
+        width: 100%;
+
+        .field--name-field-faq-title {
+          display: flex;
+          padding: 10px 15px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 10px;
+          align-self: stretch;
+          color: $white;
+          font-family: $font-family-sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 100%; /* 20px */
+          background: $secondary;
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .field--name-field-faq-text {
+          display: flex;
+          padding: 23px 15px;
+          align-items: center;
+          gap: 10px;
+          align-self: stretch;
+          color: #304224;
+          font-family: $font-family-sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 100%; /* 20px */
+          background: #f2bf90;
+        }
+      }
+    }
+  }
+}

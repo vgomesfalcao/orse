@@ -1,0 +1,25 @@
+uuid: 9f781b97-86d1-4b6d-8b67-60ab2b8e8e56
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:brand_footer:f29f791e-8ba3-42af-b026-6ea81b4e9ab8'
+  module:
+    - block_content
+  theme:
+    - orse
+id: orse_marca
+theme: orse
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:f29f791e-8ba3-42af-b026-6ea81b4e9ab8'
+settings:
+  id: 'block_content:f29f791e-8ba3-42af-b026-6ea81b4e9ab8'
+  label: Marca
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
