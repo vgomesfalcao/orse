@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:brand_footer:f29f791e-8ba3-42af-b026-6ea81b4e9ab8'
   module:
     - block_content
+    - system
   theme:
     - orse
 id: orse_marca
@@ -22,4 +23,8 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /user/register

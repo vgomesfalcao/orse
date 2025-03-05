@@ -1,0 +1,86 @@
+.page--user-register {
+  nav {
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: none;
+      width: 0;
+    }
+
+    .navbar-toggler {
+      display: none;
+    }
+  }
+
+  .user-register-form {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      justify-content: start;
+    }
+
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+
+    .form__inner {
+      max-width: 650px;
+      padding: 15px;
+      border-radius: 4px;
+
+      @include media-breakpoint-up(md) {
+        border: 1px solid $gray-400;
+      }
+
+      .frame {
+        padding: 8px 24px;
+        @include media-breakpoint-up(md) {
+          padding: 24px;
+        }
+        border-radius: 16px;
+
+        .select-registration-roles.fieldgroup {
+          padding: 10px 15px 0;
+          border: 1px solid $gray-500;
+
+          legend {
+            padding-bottom: 10px;
+          }
+
+          .fieldset-wrapper {
+            padding-left: 10px;
+          }
+        }
+
+        .form-item {
+          margin-bottom: 20px;
+
+          small {
+            display: none;
+          }
+        }
+
+        label.form-label {
+          font-size: 20px;
+          font-weight: 600;
+          color: $black;
+          margin: 0 10px 0 0;
+        }
+
+        input.form-control {
+          border-radius: 3px;
+          height: 45px;
+          border: 1px solid $gray-500;
+        }
+
+        .btn {
+          width: 100%;
+          height: 50px;
+        }
+      }
+    }
+  }
+}

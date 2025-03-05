@@ -94,6 +94,7 @@ module:
   profile: 0
   quickedit: 0
   rdf: 0
+  redirect_after_registration: 0
   responsive_image: 0
   search: 0
   serialization: 0
@@ -122,7 +123,6 @@ module:
   webform_content_creator: 0
   webform_devel: 0
   webform_image_select: 0
-  webform_mautic: 0
   webform_node: 0
   webform_options_custom: 0
   webform_scheduled_email: 0

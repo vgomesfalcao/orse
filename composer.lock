@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f843b508661b6d8bdfdb40e7252f94ed",
+    "content-hash": "f09b5ede112d66a1199b8651d00a3396",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5261,6 +5261,62 @@
             "homepage": "https://www.drupal.org/project/rdf",
             "support": {
                 "source": "https://git.drupalcode.org/project/rdf"
+            }
+        },
+        {
+            "name": "drupal/redirect_after_registration",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/redirect_after_registration.git",
+                "reference": "1.4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/redirect_after_registration-1.4.1.zip",
+                "reference": "1.4.1",
+                "shasum": "77a9ae28d19d5f23e805d77a5ad89bac001ea1b6"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.1",
+                    "datestamp": "1731332801",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "gupta324",
+                    "homepage": "https://www.drupal.org/user/2631215"
+                },
+                {
+                    "name": "lrwebks",
+                    "homepage": "https://www.drupal.org/user/3771806"
+                }
+            ],
+            "description": "Module to help you configure redirect to be redirected after registration.",
+            "homepage": "http://drupal.org/project/redirect_after_registration",
+            "support": {
+                "source": "https://git.drupalcode.org/project/redirect_after_registration"
             }
         },
         {

@@ -731,7 +731,7 @@ progress {
   color: var(--bs-secondary-color);
 }
 
-.container,
+.container, form, div.field.field--label-inline,
 .container-fluid,
 .container-xxl,
 .container-xl,
@@ -748,27 +748,27 @@ progress {
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container {
+  .container-sm, .container, form, div.field.field--label-inline {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container {
+  .container-md, .container-sm, .container, form, div.field.field--label-inline {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container {
+  .container-lg, .container-md, .container-sm, .container, form, div.field.field--label-inline {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xl, .container-lg, .container-md, .container-sm, .container, form, div.field.field--label-inline {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, form, div.field.field--label-inline {
     max-width: 1320px;
   }
 }
@@ -4039,7 +4039,7 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-.navbar > .container,
+.navbar > .container, .navbar > form, .navbar > div.field.field--label-inline,
 .navbar > .container-fluid,
 .navbar > .container-sm,
 .navbar > .container-md,
@@ -12173,6 +12173,111 @@ textarea.form-control-lg {
   align-items: center;
 }
 
+.form-check-input[type=radio] {
+  border-radius: 15%;
+}
+
+.webform-flexbox {
+  width: 100%;
+}
+
+.form-item {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+fieldset.form-item {
+  padding: 15px;
+}
+fieldset.form-item .fieldset-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.form-actions {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.form-actions .btn, .form-actions .paragraph--type--static-banner .group-text .field--name-field-button a, .paragraph--type--static-banner .group-text .field--name-field-button .form-actions a, .form-actions .btn-menu-primary {
+  width: 100%;
+}
+
+div.field.field--label-inline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+div.field.field--label-inline .field__label {
+  font-weight: 600;
+  font-size: 18px;
+}
+div.field.field--label-inline .field__item {
+  font-size: 18px;
+}
+
+form {
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  form {
+    justify-content: start;
+  }
+}
+form .form__inner {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 100px;
+}
+@media (min-width: 768px) {
+  form .form__inner {
+    border: 1px solid #ced4da;
+    width: 100%;
+  }
+}
+form .form__inner .frame {
+  padding: 8px 5px;
+  border-radius: 16px;
+}
+@media (min-width: 768px) {
+  form .form__inner .frame {
+    padding: 15px;
+  }
+}
+form .form__inner .frame .fieldgroup {
+  padding: 10px 15px 15px;
+  border: 1px solid #adb5bd;
+}
+form .form__inner .frame .fieldgroup legend {
+  padding-bottom: 10px;
+}
+form .form__inner .frame .fieldgroup .fieldset-wrapper {
+  padding-left: 10px;
+}
+form .form__inner .frame .form-item small, form .form__inner .frame .form-item .small {
+  display: none;
+}
+form .form__inner .frame label.form-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  display: flex;
+  min-height: 60px;
+  align-items: center;
+  margin: 0 10px 0 0;
+  width: 100%;
+}
+form .form__inner .frame input.form-control {
+  border-radius: 3px;
+  height: 45px;
+  border: 1px solid #adb5bd;
+}
+form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static-banner .group-text .field--name-field-button a, .paragraph--type--static-banner .group-text .field--name-field-button form .form__inner .frame a, form .form__inner .frame .btn-menu-primary {
+  width: 100%;
+  height: 50px;
+}
+
 #drupal-off-canvas,
 #drupal-off-canvas-wrapper,
 #drupal-off-canvas:not(.drupal-off-canvas-reset) {
@@ -12425,7 +12530,7 @@ textarea.form-control-lg {
 
 .paragraph--type--cards-block .field--name-field-card {
   display: flex;
-  padding: 42px 23px;
+  padding: 20px 23px;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -12460,11 +12565,11 @@ textarea.form-control-lg {
   display: flex;
   width: 100%;
   height: 100%;
-  padding: 25px 0;
+  padding: 33px 0;
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  gap: 33px;
+  gap: 42px;
 }
 @media (min-width: 768px) {
   .paragraph--type--cards-block .field--name-field-card > .field__item .paragraph--type--orange-card {
@@ -12478,12 +12583,13 @@ textarea.form-control-lg {
   color: #fff;
   text-align: center;
   font-family: "inter", sans-serif;
-  font-size: 25px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
   height: 75px;
   line-height: 100%; /* 25px */
   align-content: center;
+  padding: 0 5px;
 }
 
 .paragraph--type--green-cards-block .field--name-field-green-card {
@@ -12522,11 +12628,12 @@ textarea.form-control-lg {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 100%; /* 20px */
+  line-height: 100%;
+  /* 20px */
 }
 .paragraph--type--green-cards-block .field--name-field-green-card > .field__item .paragraph--type--green-card .green-part {
   background-color: #02542d;
-  padding: 30px 25px;
+  padding: 35px 25px;
   min-height: 200px;
   display: flex;
   flex-direction: column;
@@ -12547,7 +12654,8 @@ textarea.form-control-lg {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 100%; /* 20px */
+  line-height: 100%;
+  /* 20px */
   min-height: 40px;
   text-align: center;
   align-content: center;
@@ -12579,7 +12687,7 @@ textarea.form-control-lg {
   align-self: stretch;
   color: #fff;
   font-family: "inter", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
   line-height: 100%; /* 20px */
@@ -12598,7 +12706,81 @@ textarea.form-control-lg {
   font-style: normal;
   font-weight: 600;
   line-height: 100%; /* 20px */
-  background: #f2bf90;
+  background: #deb38b;
+}
+
+.page--user-register nav .container, .page--user-register nav div.field.field--label-inline, .page--user-register nav form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: none;
+  width: 0;
+}
+.page--user-register nav .navbar-toggler {
+  display: none;
+}
+.page--user-register .user-register-form {
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 94vh;
+}
+@media (max-width: 767.98px) {
+  .page--user-register .user-register-form {
+    justify-content: start;
+  }
+}
+.page--user-register .user-register-form .form__inner {
+  max-width: 650px;
+  padding: 15px;
+  border-radius: 4px;
+}
+@media (min-width: 768px) {
+  .page--user-register .user-register-form .form__inner {
+    border: 1px solid #ced4da;
+  }
+}
+.page--user-register .user-register-form .form__inner .frame {
+  padding: 8px 24px;
+  border-radius: 16px;
+}
+@media (min-width: 768px) {
+  .page--user-register .user-register-form .form__inner .frame {
+    padding: 24px;
+  }
+}
+.page--user-register .user-register-form .form__inner .frame .select-registration-roles.fieldgroup {
+  padding: 10px 15px 0;
+  border: 1px solid #adb5bd;
+}
+.page--user-register .user-register-form .form__inner .frame .select-registration-roles.fieldgroup legend {
+  padding-bottom: 10px;
+}
+.page--user-register .user-register-form .form__inner .frame .select-registration-roles.fieldgroup .fieldset-wrapper {
+  padding-left: 10px;
+}
+.page--user-register .user-register-form .form__inner .frame .form-item {
+  margin-bottom: 20px;
+}
+.page--user-register .user-register-form .form__inner .frame .form-item small, .page--user-register .user-register-form .form__inner .frame .form-item .small {
+  display: none;
+}
+.page--user-register .user-register-form .form__inner .frame label.form-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 10px 0 0;
+}
+.page--user-register .user-register-form .form__inner .frame input.form-control {
+  border-radius: 3px;
+  height: 45px;
+  border: 1px solid #adb5bd;
+}
+.page--user-register .user-register-form .form__inner .frame .btn, .page--user-register .user-register-form .form__inner .frame .btn-menu-primary, .page--user-register .user-register-form .form__inner .frame .paragraph--type--static-banner .group-text .field--name-field-button a, .paragraph--type--static-banner .group-text .field--name-field-button .page--user-register .user-register-form .form__inner .frame a {
+  width: 100%;
+  height: 50px;
 }
 
 /*# sourceMappingURL=main.style.css.map*/
