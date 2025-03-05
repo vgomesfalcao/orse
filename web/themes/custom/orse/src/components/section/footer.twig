@@ -1,0 +1,13 @@
+{{ attach_library('orse/footer') }}
+
+{% if page.footer %}
+  <footer class="page__footer">
+    <div class="container-xl">
+      <div class="d-flex flex-wrap justify-content-md-between align-items-md-center">
+        {% block page_inner_footer %}
+          {{ page.footer }}
+        {% endblock %}
+      </div>
+    </div>
+  </footer>
+{% endif %}

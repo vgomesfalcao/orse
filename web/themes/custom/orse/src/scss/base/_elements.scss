@@ -1,0 +1,141 @@
+// Global elements styling, e.g. for headings, buttons, links, etc.
+// -----------------------------------------------------------------------------
+.btn-menu-primary {
+  @extend .btn;
+  @extend .btn-primary;
+  color: var(--bs-btn-color);
+
+  line-height: 19px;
+  max-width: 140px;
+  background-color: var(--bs-btn-bg);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    color: var(--bs-btn-hover-color);
+  }
+}
+
+.nav {
+  align-items: center;
+}
+
+.form-check-input[type="radio"] {
+  border-radius: 15%;
+}
+
+.webform-flexbox {
+  width: 100%;
+}
+
+.form-item {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+fieldset.form-item {
+  padding: 15px;
+
+  .fieldset-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.form-actions {
+  width: 100%;
+  margin-bottom: 50px;
+
+  .btn {
+    width: 100%;
+  }
+}
+
+div.field.field--label-inline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  @extend .container;
+
+  .field__label {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .field__item {
+    font-size: 18px;
+  }
+}
+
+form {
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  @extend .container;
+
+  @include media-breakpoint-down(md) {
+    justify-content: start;
+  }
+
+  .form__inner {
+    // max-width: 650px;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 100px;
+
+    @include media-breakpoint-up(md) {
+      border: 1px solid $gray-400;
+      width: 100%;
+    }
+
+    .frame {
+      padding: 8px 5px;
+
+      @include media-breakpoint-up(md) {
+        padding: 15px;
+      }
+
+      border-radius: 16px;
+
+      .fieldgroup {
+        padding: 10px 15px 15px;
+        border: 1px solid $gray-500;
+
+        legend {
+          padding-bottom: 10px;
+        }
+
+        .fieldset-wrapper {
+          padding-left: 10px;
+        }
+      }
+
+      .form-item {
+        small {
+          display: none;
+        }
+      }
+
+      label.form-label {
+        font-size: 18px;
+        font-weight: 600;
+        color: $black;
+        display: flex;
+        min-height: 60px;
+        align-items: center;
+        margin: 0 10px 0 0;
+        width: 100%;
+      }
+
+      input.form-control {
+        border-radius: 3px;
+        height: 45px;
+        border: 1px solid $gray-500;
+      }
+
+      .btn {
+        width: 100%;
+        height: 50px;
+      }
+    }
+  }
+}

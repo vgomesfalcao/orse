@@ -30,7 +30,7 @@ mode: default
 content:
   field_data_do_evento:
     type: datetime_default
-    label: hidden
+    label: inline
     settings:
       timezone_override: ''
       format_type: date_time_single
@@ -42,12 +42,13 @@ content:
     label: hidden
     settings:
       source_entity: true
+      lazy: false
     third_party_settings: {  }
     weight: 11
     region: content
   field_idade_da_crianca:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -55,14 +56,14 @@ content:
     region: content
   field_local:
     type: text_default
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 5
     region: content
   field_nome_completo:
     type: string
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -70,7 +71,7 @@ content:
     region: content
   field_numero_de_convidados:
     type: number_integer
-    label: hidden
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -79,42 +80,42 @@ content:
     region: content
   field_observacoes:
     type: text_default
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 10
     region: content
   field_tipo_de_bodas:
     type: text_default
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 6
     region: content
   field_tipo_de_casamento:
     type: list_default
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 7
     region: content
   field_tipo_de_comemoracao:
     type: text_default
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 8
     region: content
   field_tipo_de_evento:
     type: list_default
-    label: hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 3
     region: content
   field_valor_maximo_fotografia:
     type: number_decimal
-    label: hidden
+    label: inline
     settings:
       thousand_separator: .
       decimal_separator: ','

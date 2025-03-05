@@ -16,7 +16,7 @@ _core:
   default_config_hash: BuY_3PjmYtRTSuvyFORJZUe0-TQiNXEE6yYQ_dkjxW8
 name: Webform
 type: webform
-description: 'A basic page with a webform attached.'
+description: 'Uma página básica com um webform anexado.'
 help: null
 new_revision: false
 preview_mode: 1

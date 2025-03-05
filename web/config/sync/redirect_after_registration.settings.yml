@@ -1,0 +1,4 @@
+_core:
+  default_config_hash: fT4WZxmKRGOz0lq8g3DcUBY9Xlv9jbDnnLXBa1JXxi4
+redirect: /novo-evento
+redirect_admin_user_create: false

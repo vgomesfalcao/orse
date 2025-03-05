@@ -6,5 +6,5 @@ visibility:
   request_path_pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*"
 header: false
 lift_enable: null
-mautic_enable: true
+mautic_enable: false
 mautic_base_url: 'https://orsefotografia.com.br/mkt'

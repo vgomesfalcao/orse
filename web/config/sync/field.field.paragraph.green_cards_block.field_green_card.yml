@@ -1,0 +1,58 @@
+uuid: c70999aa-7ebb-4b17-a334-430ff8fb22af
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_green_card
+    - paragraphs.paragraphs_type.green_card
+    - paragraphs.paragraphs_type.green_cards_block
+  module:
+    - entity_reference_revisions
+id: paragraph.green_cards_block.field_green_card
+field_name: field_green_card
+entity_type: paragraph
+bundle: green_cards_block
+label: 'Green Card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      green_card: green_card
+    negate: 0
+    target_bundles_drag_drop:
+      cards_block:
+        weight: 11
+        enabled: false
+      element_text:
+        weight: 12
+        enabled: false
+      green_card:
+        weight: 13
+        enabled: true
+      green_cards_block:
+        weight: 14
+        enabled: false
+      img_link:
+        weight: 15
+        enabled: false
+      layout_image:
+        weight: 16
+        enabled: false
+      links_midias_sociais:
+        weight: 17
+        enabled: false
+      orange_card:
+        weight: 18
+        enabled: false
+      section:
+        weight: 19
+        enabled: false
+      static_banner:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

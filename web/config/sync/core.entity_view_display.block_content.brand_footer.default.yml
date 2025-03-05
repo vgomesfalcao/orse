@@ -1,0 +1,22 @@
+uuid: e2d0f55d-4662-40f2-9747-49d538523edc
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.brand_footer
+    - field.field.block_content.brand_footer.field_brand_text
+id: block_content.brand_footer.default
+targetEntityType: block_content
+bundle: brand_footer
+mode: default
+content:
+  field_brand_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

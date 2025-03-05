@@ -14,34 +14,34 @@ uid: null
 template: false
 archive: false
 id: contact
-title: Contact
-description: 'Basic email contact webform.'
+title: Contato
+description: 'Webform básico de contato por e-mail.'
 categories: {  }
 elements: |
   name:
-    '#title': 'Your Name'
+    '#title': 'Seu Nome'
     '#type': textfield
     '#required': true
     '#default_value': '[current-user:display-name]'
   email:
-    '#title': 'Your Email'
+    '#title': 'Seu email'
     '#type': email
     '#required': true
     '#default_value': '[current-user:mail]'
   subject:
-    '#title': Subject
+    '#title': Assunto
     '#type': textfield
     '#required': true
-    '#test': 'Testing contact webform from [site:name]'
+    '#test': 'Testando formulário de contato de [site:name]'
   message:
-    '#title': Message
+    '#title': Mensagem
     '#type': textarea
     '#required': true
-    '#test': 'Please ignore this email.'
+    '#test': 'Por favor, ignore este email.'
   actions:
     '#type': webform_actions
-    '#title': 'Submit button(s)'
-    '#submit__label': 'Send message'
+    '#title': 'Botões de envio'
+    '#submit__label': 'Enviar mensagem'
 css: ''
 javascript: ''
 settings:
@@ -229,7 +229,7 @@ handlers:
   email_confirmation:
     id: email
     handler_id: email_confirmation
-    label: 'Email confirmation'
+    label: 'E-mail de confirmação'
     notes: ''
     status: true
     conditions: {  }
@@ -266,7 +266,7 @@ handlers:
   email_notification:
     id: email
     handler_id: email_notification
-    label: 'Email notification'
+    label: 'Notificação de email'
     notes: ''
     status: true
     conditions: {  }

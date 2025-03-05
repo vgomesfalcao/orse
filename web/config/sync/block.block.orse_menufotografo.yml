@@ -1,0 +1,39 @@
+uuid: b3a55faf-b420-4dc3-9403-b58329941269
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - system.menu.menu-fotografo
+  module:
+    - system
+    - user
+  theme:
+    - orse
+id: orse_menufotografo
+theme: orse
+region: content
+weight: -1
+provider: null
+plugin: 'system_menu_block:menu-fotografo'
+settings:
+  id: 'system_menu_block:menu-fotografo'
+  label: 'Área do Fotógrafo'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/user\r\n/user/*"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      fotografo: fotografo

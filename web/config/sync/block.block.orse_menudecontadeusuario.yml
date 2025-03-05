@@ -1,0 +1,36 @@
+uuid: 498f4d28-8fab-43b9-a946-173914faa0f8
+langcode: pt-br
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+    - user
+  theme:
+    - orse
+id: orse_menudecontadeusuario
+theme: orse
+region: navbar_left
+weight: -5
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Menu de conta de usuário'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      cliente: cliente
+      fotografo: fotografo

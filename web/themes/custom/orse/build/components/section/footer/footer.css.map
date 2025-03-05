@@ -1,0 +1,1 @@
+{"version":3,"file":"components/section/footer/footer.css","mappings":"AAAA;EACE;AACF,C","sources":["webpack://radix_subtheme/./src/components/section/footer/footer.scss"],"sourcesContent":[".page__footer {\n  display: none;\n}\n"],"names":[],"sourceRoot":""}

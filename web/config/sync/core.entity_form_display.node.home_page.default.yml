@@ -3,45 +3,96 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.home_page.body
-    - field.field.node.home_page.field_footer_style
-    - field.field.node.home_page.field_header_style
+    - field.field.node.home_page.field_banner_home
+    - field.field.node.home_page.field_cards_block
+    - field.field.node.home_page.field_faq_block
+    - field.field.node.home_page.field_green_block
     - node.type.home_page
   module:
+    - paragraphs
     - path
-    - text
 id: node.home_page.default
 targetEntityType: node
 bundle: home_page
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_banner_home:
+    type: paragraphs
     weight: 8
     region: content
     settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
+      title: Parágrafo
+      title_plural: Parágrafos
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
-  created:
-    type: datetime_timestamp
-    weight: 2
+  field_cards_block:
+    type: paragraphs
+    weight: 26
     region: content
-    settings: {  }
+    settings:
+      title: Parágrafo
+      title_plural: Parágrafos
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
-  field_footer_style:
-    type: options_select
-    weight: 9
+  field_faq_block:
+    type: paragraphs
+    weight: 28
     region: content
-    settings: {  }
+    settings:
+      title: Parágrafo
+      title_plural: Parágrafos
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
-  field_header_style:
-    type: options_select
-    weight: 7
+  field_green_block:
+    type: paragraphs
+    weight: 27
     region: content
-    settings: {  }
+    settings:
+      title: Parágrafo
+      title_plural: Parágrafos
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -52,27 +103,27 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 3
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 4
+    weight: 5
     region: content
     settings:
       display_label: true
@@ -84,6 +135,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

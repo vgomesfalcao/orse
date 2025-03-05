@@ -1,0 +1,20 @@
+uuid: 9737588c-4dd2-4a3f-bbcb-1861803b2494
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - orse
+id: orse_mainpagecontent
+theme: orse
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

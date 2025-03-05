@@ -1,0 +1,64 @@
+uuid: 93fe65cc-34db-4477-b97f-243f3136f33a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faq_item
+    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.faq_item
+  module:
+    - entity_reference_revisions
+id: paragraph.faq.field_faq_item
+field_name: field_faq_item
+entity_type: paragraph
+bundle: faq
+label: 'Faq Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      faq_item: faq_item
+    negate: 0
+    target_bundles_drag_drop:
+      cards_block:
+        weight: 13
+        enabled: false
+      element_text:
+        weight: 14
+        enabled: false
+      faq:
+        weight: 15
+        enabled: false
+      faq_item:
+        weight: 16
+        enabled: true
+      green_card:
+        weight: 17
+        enabled: false
+      green_cards_block:
+        weight: 18
+        enabled: false
+      img_link:
+        weight: 19
+        enabled: false
+      layout_image:
+        weight: 20
+        enabled: false
+      links_midias_sociais:
+        weight: 21
+        enabled: false
+      orange_card:
+        weight: 22
+        enabled: false
+      section:
+        weight: 23
+        enabled: false
+      static_banner:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

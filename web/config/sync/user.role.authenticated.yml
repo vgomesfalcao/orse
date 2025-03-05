@@ -12,6 +12,7 @@ dependencies:
     - contact
     - file
     - filter
+    - media
     - node
     - node_view_permissions
     - paragraphs_type_permissions
@@ -51,6 +52,7 @@ permissions:
   - 'view any testimonials content'
   - 'view any webform content'
   - 'view commerce_product'
+  - 'view media'
   - 'view own about_page content'
   - 'view own article content'
   - 'view own blog_post content'
@@ -67,8 +69,15 @@ permissions:
   - 'view own testimonials content'
   - 'view own unpublished content'
   - 'view own webform content'
+  - 'view paragraph content cards_block'
   - 'view paragraph content element_text'
+  - 'view paragraph content faq'
+  - 'view paragraph content faq_item'
+  - 'view paragraph content green_card'
+  - 'view paragraph content green_cards_block'
   - 'view paragraph content img_link'
   - 'view paragraph content layout_image'
   - 'view paragraph content links_midias_sociais'
+  - 'view paragraph content orange_card'
   - 'view paragraph content section'
+  - 'view paragraph content static_banner'

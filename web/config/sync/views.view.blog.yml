@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Blog posts'
+      title: 'Posts de blog'
       fields:
         title:
           id: title
@@ -77,6 +77,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 6
           total_pages: null
           id: 0
@@ -94,7 +95,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -198,7 +198,7 @@ display:
       tags: {  }
   blog_all:
     id: blog_all
-    display_title: 'All blog posts'
+    display_title: 'Todos os post de blog'
     display_plugin: page
     position: 1
     display_options:
@@ -247,7 +247,7 @@ display:
       tags: {  }
   blog_user_all:
     id: blog_user_all
-    display_title: 'All user blog posts'
+    display_title: 'Todos os post de blog do usuário'
     display_plugin: page
     position: 1
     display_options:
@@ -322,7 +322,7 @@ display:
     display_plugin: feed
     position: 2
     display_options:
-      title: 'Drupal blog posts'
+      title: 'Posts de blog drupal'
       pager:
         type: some
       style:

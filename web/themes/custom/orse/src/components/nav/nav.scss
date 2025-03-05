@@ -1,0 +1,47 @@
+@import "../../scss/init";
+
+// Adicionar os keyframes da animação:
+@keyframes nav-slide-down {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+
+.block--orse-mainmenu {
+  .nav {
+    @include media-breakpoint-down(md) {
+      // Adicionar a animação e manter as regras existentes
+      animation: nav-slide-down 0.3s ease forwards;
+      flex-direction: column;
+      align-items: start;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      z-index: 1;
+      transform: translateY(4px);
+
+      .nav-item {
+        width: 100%;
+        height: 70px;
+        align-content: center;
+        background: $gray-100;
+        padding: 0 16px;
+
+        .btn-menu-primary {
+          max-width: unset;
+          padding: 16px 0;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}

@@ -8,12 +8,12 @@ dependencies:
 _core:
   default_config_hash: '-NQROvgYPm-rqn_e6mytSaxmdhSViUinffVfQhp7APs'
 id: likert_agreement
-label: 'Likert: Agreement'
+label: 'Likert: Acordo'
 category: Likert
 likert: true
 options: |
-  1: 'Much Worse'
-  2: 'Somewhat Worse'
-  3: 'About the Same'
-  4: 'Somewhat Better'
-  5: 'Much Better'
+  1: Discordo fortemente
+  2: Discordo
+  3: Nem concordo nem discordo
+  4: Concordo
+  5: Concordo fortemente

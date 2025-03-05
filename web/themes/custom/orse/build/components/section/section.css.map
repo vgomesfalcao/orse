@@ -1,0 +1,1 @@
+{"version":3,"file":"components/section/section.css","mappings":"AAAA;EACE;AACF,C","sources":["webpack://radix_subtheme/./src/components/section/section.scss"],"sourcesContent":["div {\n  display: none;\n}\n"],"names":[],"sourceRoot":""}

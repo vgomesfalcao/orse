@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_formulario_fotografo
     - node.type.formulario_cliente
-    - webform.webform.formulario_fotografo
   module:
     - webform
 id: node.formulario_cliente.field_formulario_fotografo
@@ -16,14 +15,7 @@ label: 'Formulário Fotógrafo'
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    target_uuid: 6b7bc36c-8ce2-40a5-9b20-876daa354fe4
-    default_data: ''
-    status: open
-    open: ''
-    close: ''
-    webform_access_group: {  }
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:webform'

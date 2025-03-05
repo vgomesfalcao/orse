@@ -1,0 +1,58 @@
+uuid: 53f3fe4a-dd7b-4c08-a6f3-024bb8f8bda6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_green_block
+    - node.type.home_page
+    - paragraphs.paragraphs_type.green_cards_block
+  module:
+    - entity_reference_revisions
+id: node.home_page.field_green_block
+field_name: field_green_block
+entity_type: node
+bundle: home_page
+label: 'Green block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      green_cards_block: green_cards_block
+    negate: 0
+    target_bundles_drag_drop:
+      cards_block:
+        weight: 11
+        enabled: false
+      element_text:
+        weight: 12
+        enabled: false
+      green_card:
+        weight: 13
+        enabled: false
+      green_cards_block:
+        weight: 14
+        enabled: true
+      img_link:
+        weight: 15
+        enabled: false
+      layout_image:
+        weight: 16
+        enabled: false
+      links_midias_sociais:
+        weight: 17
+        enabled: false
+      orange_card:
+        weight: 18
+        enabled: false
+      section:
+        weight: 19
+        enabled: false
+      static_banner:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions
