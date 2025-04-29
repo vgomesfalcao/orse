@@ -20,6 +20,8 @@ services:
       environment:
         DRUSH_OPTIONS_URI: "https://orsed.lndo.site"
         SSH_AUTH_SOCK: /run/host-services/ssh-auth.sock
+        SIMPLETEST_BASE_URL: "https://orsed.lndo.site"
+        SIMPLETEST_DB: "mysql://drupal9:drupal9@database/drupal9"
   node:
     type: node
     build:
@@ -29,3 +31,7 @@ tooling:
     service: appserver
   npm:
     service: appserver
+  phpunit:
+    service: appserver
+    cmd:
+      - /app/lando/scripts/phpunit.sh

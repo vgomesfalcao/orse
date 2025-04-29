@@ -1,0 +1,7 @@
+name: 'Redirect After Registration'
+type: module
+description: 'Configure redirect to be redirected after registration.'
+core_version_requirement: ^10.3 || ^11
+
+# Information added by Drupal.org packaging script on 2024-11-11
+version: '1.0.0'

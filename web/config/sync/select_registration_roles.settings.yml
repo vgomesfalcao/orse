@@ -6,3 +6,6 @@ select_registration_roles_admin_approval:
   administrator: '0'
   cliente: '0'
   fotografo: '0'
+select_registration_roles_auth_role: false
+select_registration_roles_required: true
+select_registration_roles_multiple: false

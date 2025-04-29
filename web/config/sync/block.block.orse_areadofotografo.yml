@@ -1,23 +1,23 @@
-uuid: 498f4d28-8fab-43b9-a946-173914faa0f8
+uuid: c729981f-228f-45d8-be47-b76eb082c235
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - system.menu.account
+    - system.menu.menu-fotografo
   module:
     - system
     - user
   theme:
     - orse
-id: orse_menudecontadeusuario
+id: orse_areadofotografo
 theme: orse
 region: navbar_right
-weight: -3
+weight: -4
 provider: null
-plugin: 'system_menu_block:account'
+plugin: 'system_menu_block:menu-fotografo'
 settings:
-  id: 'system_menu_block:account'
-  label: 'Menu de conta de usuário'
+  id: 'system_menu_block:menu-fotografo'
+  label: 'Área do Fotógrafo'
   label_display: '0'
   provider: system
   level: 1
@@ -30,7 +30,4 @@ visibility:
     context_mapping:
       user: '@user.current_user_context:current_user'
     roles:
-      authenticated: authenticated
-      administrator: administrator
-      cliente: cliente
       fotografo: fotografo
