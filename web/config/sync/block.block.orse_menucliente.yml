@@ -28,12 +28,11 @@ visibility:
     id: request_path
     negate: false
     context_mapping: {  }
-    pages: "/user/*\r\n!/user/*/edit"
+    pages: "/user/*\r\n/!/user/*/edit"
   user_role:
     id: user_role
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
     roles:
-      administrator: administrator
       cliente: cliente

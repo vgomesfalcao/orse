@@ -177,6 +177,10 @@
         }
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "^3.6"
+        "behat/mink": "^1.12",
+        "behat/mink-browserkit-driver": "^2.2",
+        "phpunit/phpunit": "^9.6",
+        "squizlabs/php_codesniffer": "^3.6",
+        "symfony/phpunit-bridge": "^7.2"
     }
 }

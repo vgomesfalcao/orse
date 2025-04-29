@@ -6,12 +6,13 @@ dependencies:
     - system.menu.main-menu
   module:
     - system
+    - user
   theme:
     - orse
 id: orse_mainmenu
 theme: orse
 region: navbar_right
-weight: -5
+weight: -6
 provider: null
 plugin: 'system_menu_block:main-menu'
 settings:
@@ -27,3 +28,10 @@ visibility:
     id: request_path
     negate: true
     pages: /user/register
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

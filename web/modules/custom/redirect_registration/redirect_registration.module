@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Contains redirect_after_registration.module.
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function redirect_registration_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  // Adiciona um manipulador de envio personalizado ao formulário de registro de usuário.
+  switch ($form_id) {
+    case 'user_register_form':
+      Drupal::logger('redirect_registration')->notice('Hook alter chamado para o formulário: ' . $form_id);
+      $form['actions']['submit']['#submit'][] = '_redirect_registration_user_register_submit';
+      break;
+  }
+}
+
+/**
+ * Manipulador de envio personalizado para redirecionar após o registro.
+ */
+function _redirect_registration_user_register_submit($form, \Drupal\Core\Form\FormStateInterface $form_state)
+{
+  $clientePath = '/novo-evento';
+  $fotografoPath = '/';
+  \Drupal::logger('redirect_registration')->notice('Entrou no hook de redirecionamento.');
+
+  if (!\Drupal::currentUser()->hasRole('administrator')) {
+    if ($form_state->getValue('select_roles') == 'cliente') {
+      \Drupal::logger('redirect_registration')->notice('Redirecionando para: ' . $clientePath);
+      $url = Drupal\Core\Url::fromUri('internal:' . $clientePath);
+      $form_state->setRedirectUrl($url);
+    } elseif ($form_state->getValue('select_roles') == 'fotografo') {
+      \Drupal::logger('redirect_registration')->notice('Redirecionando para: ' . $fotografoPath);
+      $url = Drupal\Core\Url::fromUri('internal:' . $fotografoPath);
+      $form_state->setRedirectUrl($url);
+    }
+  }
+}
