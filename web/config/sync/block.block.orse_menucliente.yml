@@ -12,7 +12,7 @@ dependencies:
 id: orse_menucliente
 theme: orse
 region: content
-weight: -3
+weight: -7
 provider: null
 plugin: 'system_menu_block:menu-cliente'
 settings:

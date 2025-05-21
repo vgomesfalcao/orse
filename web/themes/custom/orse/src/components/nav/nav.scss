@@ -51,7 +51,23 @@
       height: 70px;
       align-content: center;
       background: $gray-100;
-      padding: 0 16px;
+      // padding: 0 16px;
+      display: flex;
+      align-items: center;
+
+      &:active {
+        background-color: darken($gray-100, 10%);
+        transition: background-color 0.2s ease;
+      }
+      a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        color: $green;
+        text-decoration: none;
+      }
 
       .btn-menu-primary {
         max-width: unset;
@@ -70,7 +86,10 @@
   }
 }
 }
-
+.block--orse-breadcrumbs{
+  margin-top: 8px;
+  margin-left: 16px;
+}
 .block--orse-menudecontadeusuario,.block--orse-areadofotografo {
   @include media-breakpoint-down(lg) {
     .nav-item:first-child {

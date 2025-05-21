@@ -6,13 +6,14 @@ dependencies:
     - views.view.respostas_fotografos
   module:
     - node
+    - user
     - views
   theme:
     - orse
 id: orse_views_block__respostas_fotografos_block_1
 theme: orse
 region: content
-weight: -2
+weight: -4
 provider: null
 plugin: 'views_block:respostas_fotografos-block_1'
 settings:
@@ -31,3 +32,10 @@ visibility:
       node: '@node.node_route_context:node'
     bundles:
       formulario_cliente: formulario_cliente
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      cliente: cliente

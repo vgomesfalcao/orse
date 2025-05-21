@@ -12173,6 +12173,13 @@ textarea.form-control-lg {
   align-items: center;
 }
 
+.btn-secondary {
+  color: white;
+}
+.btn-secondary a {
+  color: white;
+}
+
 .form-check-input[type=radio] {
   border-radius: 15%;
 }

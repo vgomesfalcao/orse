@@ -26,6 +26,12 @@ elements:
     webform_field: data_evento
     custom_check: 0
     custom_value: ''
+  field_formulario_fotografo:
+    type: false
+    mapping: default_mapping
+    webform_field: ''
+    custom_check: '1'
+    custom_value: formulario_fotografo
   field_idade_da_crianca:
     type: false
     mapping: default_mapping

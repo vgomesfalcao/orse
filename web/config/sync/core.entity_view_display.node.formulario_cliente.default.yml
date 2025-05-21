@@ -19,10 +19,38 @@ dependencies:
     - node.type.formulario_cliente
   module:
     - datetime
+    - field_group
     - options
     - text
     - user
     - webform
+third_party_settings:
+  field_group:
+    group_detalhes_orcamento:
+      children:
+        - field_nome_completo
+        - field_data_do_evento
+        - field_numero_de_convidados
+        - field_tipo_de_evento
+        - field_valor_maximo_fotografia
+        - field_local
+        - field_tipo_de_bodas
+        - field_tipo_de_casamento
+        - field_tipo_de_comemoracao
+        - field_idade_da_crianca
+        - field_observacoes
+      label: 'Detalhes Pedido'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
 id: node.formulario_cliente.default
 targetEntityType: node
 bundle: formulario_cliente
@@ -35,7 +63,7 @@ content:
       timezone_override: ''
       format_type: date_time_single
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_formulario_fotografo:
     type: webform_entity_reference_entity_view
@@ -44,7 +72,7 @@ content:
       source_entity: true
       lazy: false
     third_party_settings: {  }
-    weight: 11
+    weight: 1
     region: content
   field_idade_da_crianca:
     type: string
@@ -52,14 +80,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_local:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_nome_completo:
     type: string
@@ -67,7 +95,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_numero_de_convidados:
     type: number_integer
@@ -76,42 +104,42 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_observacoes:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   field_tipo_de_bodas:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_tipo_de_casamento:
     type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_tipo_de_comemoracao:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_tipo_de_evento:
     type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_valor_maximo_fotografia:
     type: number_decimal
@@ -122,7 +150,7 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
 hidden:
   body: true

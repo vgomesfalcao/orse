@@ -9,7 +9,7 @@ dependencies:
 id: orse_mensagens
 theme: orse
 region: header
-weight: -5
+weight: -8
 provider: null
 plugin: system_messages_block
 settings:
