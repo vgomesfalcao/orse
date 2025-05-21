@@ -31,7 +31,8 @@
 
 .block--orse-mainmenu,
 .block--orse-menucliente-2,
-.block--orse-menudecontadeusuario,
+.block--orse-areadofotografo,
+.block--orse-menudecontadeusuario
 {
 .nav {
   .nav-link {
@@ -70,7 +71,7 @@
 }
 }
 
-.block--orse-menudecontadeusuario {
+.block--orse-menudecontadeusuario,.block--orse-areadofotografo {
   @include media-breakpoint-down(lg) {
     .nav-item:first-child {
       border-top: 1px solid rgba(0, 0, 0, 0.2);
