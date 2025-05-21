@@ -260,7 +260,7 @@ content:
     region: content
   field_album_max_fotos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -269,7 +269,7 @@ content:
     region: content
   field_album_paginas:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -278,7 +278,7 @@ content:
     region: content
   field_album_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -289,7 +289,7 @@ content:
     region: content
   field_cerimonia_fotografos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -298,7 +298,7 @@ content:
     region: content
   field_cerimonia_horas:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -309,7 +309,7 @@ content:
     region: content
   field_cerimonia_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -320,7 +320,7 @@ content:
     region: content
   field_cobertura_fotografos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -329,7 +329,7 @@ content:
     region: content
   field_cobertura_horas:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -340,7 +340,7 @@ content:
     region: content
   field_cobertura_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -351,7 +351,7 @@ content:
     region: content
   field_combocr_fotografos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -360,7 +360,7 @@ content:
     region: content
   field_combocr_horas:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -371,7 +371,7 @@ content:
     region: content
   field_combocr_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -390,7 +390,7 @@ content:
     region: content
   field_makingof_fotografos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -399,7 +399,7 @@ content:
     region: content
   field_makingof_horas:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -410,7 +410,7 @@ content:
     region: content
   field_makingof_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -421,7 +421,7 @@ content:
     region: content
   field_makingofnoiva_fotografos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -430,7 +430,7 @@ content:
     region: content
   field_makingofnoiva_horas:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -441,7 +441,7 @@ content:
     region: content
   field_makingofnoiva_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -452,7 +452,7 @@ content:
     region: content
   field_makingofnoivo_fotografos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -461,7 +461,7 @@ content:
     region: content
   field_makingofnoivo_horas:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -472,7 +472,7 @@ content:
     region: content
   field_makingofnoivo_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -483,7 +483,7 @@ content:
     region: content
   field_previa_fotografos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -492,7 +492,7 @@ content:
     region: content
   field_previa_horas:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -503,7 +503,7 @@ content:
     region: content
   field_previa_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -514,7 +514,7 @@ content:
     region: content
   field_previacasal_fotografos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -523,7 +523,7 @@ content:
     region: content
   field_previacasal_horas:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -534,7 +534,7 @@ content:
     region: content
   field_previacasal_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -545,7 +545,7 @@ content:
     region: content
   field_previanoiva_fotografos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -554,7 +554,7 @@ content:
     region: content
   field_previanoiva_horas:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -565,7 +565,7 @@ content:
     region: content
   field_previanoiva_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -576,7 +576,7 @@ content:
     region: content
   field_recepcao_fotografos:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -585,7 +585,7 @@ content:
     region: content
   field_recepcao_horas:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -596,7 +596,7 @@ content:
     region: content
   field_recepcao_valor:
     type: number_decimal
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       decimal_separator: .

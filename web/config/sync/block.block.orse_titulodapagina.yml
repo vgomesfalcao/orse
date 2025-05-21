@@ -1,0 +1,28 @@
+uuid: 4dd98491-191b-4a60-9ec4-4afa249a6756
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - orse
+id: orse_titulodapagina
+theme: orse
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título da página'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      formulario_cliente: formulario_cliente
+      formulario_fotografo: formulario_fotografo

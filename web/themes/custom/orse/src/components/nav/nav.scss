@@ -86,7 +86,10 @@
   }
 }
 }
-
+.block--orse-breadcrumbs{
+  margin-top: 8px;
+  margin-left: 16px;
+}
 .block--orse-menudecontadeusuario,.block--orse-areadofotografo {
   @include media-breakpoint-down(lg) {
     .nav-item:first-child {

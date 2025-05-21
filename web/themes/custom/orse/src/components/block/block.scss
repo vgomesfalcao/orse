@@ -30,3 +30,62 @@
     letter-spacing: 2.8px;
   }
 }
+
+.block--orse-menucliente, .block--orse-menufotografo {
+  .nav {
+    .primary {
+      color: $white;
+      text-align: center;
+      line-height: 19px;
+      background-color: $primary;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+      &:active {
+        background-color: darken($primary, 10%);
+        transition: background-color 0.2s ease;
+      }
+
+      &:hover {
+        color: var(--bs-btn-hover-color);
+      }
+
+      a {
+        color: $white;
+      }
+
+      border-radius: $border-radius;
+    }
+
+    .secondary {
+      color: $white;
+      text-align: center;
+      line-height: 19px;
+      background-color: $secondary;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+      &:active {
+        background-color: darken($primary, 10%);
+        transition: background-color 0.2s ease;
+      }
+
+      &:hover {
+        color: var(--bs-btn-hover-color);
+      }
+
+      a {
+        color: $white;
+      }
+
+      border-radius: $border-radius;
+    }
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+    margin-bottom: 12px;
+
+    li {
+      padding: 0 12px;
+    }
+  }
+}
