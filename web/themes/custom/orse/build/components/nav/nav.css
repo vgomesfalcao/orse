@@ -63,7 +63,26 @@
     height: 70px;
     align-content: center;
     background: #f8f9fa;
-    padding: 0 16px;
+    display: flex;
+    align-items: center;
+  }
+  .block--orse-mainmenu .nav .nav-item:active,
+  .block--orse-menucliente-2 .nav .nav-item:active,
+  .block--orse-areadofotografo .nav .nav-item:active,
+  .block--orse-menudecontadeusuario .nav .nav-item:active {
+    background-color: rgb(218.25, 223.5, 228.75);
+    transition: background-color 0.2s ease;
+  }
+  .block--orse-mainmenu .nav .nav-item a,
+  .block--orse-menucliente-2 .nav .nav-item a,
+  .block--orse-areadofotografo .nav .nav-item a,
+  .block--orse-menudecontadeusuario .nav .nav-item a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #02542d;
+    text-decoration: none;
   }
   .block--orse-mainmenu .nav .nav-item .btn-menu-primary,
   .block--orse-menucliente-2 .nav .nav-item .btn-menu-primary,
