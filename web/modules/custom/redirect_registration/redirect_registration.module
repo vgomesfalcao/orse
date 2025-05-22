@@ -27,7 +27,7 @@ function redirect_registration_form_alter(&$form, \Drupal\Core\Form\FormStateInt
 function _redirect_registration_user_register_submit($form, \Drupal\Core\Form\FormStateInterface $form_state)
 {
   $clientePath = '/novo-evento';
-  $fotografoPath = '/';
+  $fotografoPath = '/user/eventos';
   \Drupal::logger('redirect_registration')->notice('Entrou no hook de redirecionamento.');
 
   if (!\Drupal::currentUser()->hasRole('administrator')) {
