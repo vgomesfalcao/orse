@@ -13,7 +13,7 @@ dependencies:
 id: orse_views_block__respostas_fotografos_block_1
 theme: orse
 region: content
-weight: -4
+weight: -3
 provider: null
 plugin: 'views_block:respostas_fotografos-block_1'
 settings:
