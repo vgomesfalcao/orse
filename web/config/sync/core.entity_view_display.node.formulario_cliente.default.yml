@@ -49,7 +49,7 @@ third_party_settings:
         show_empty_fields: false
         id: ''
         label_as_html: false
-        formatter: closed
+        formatter: open
         description: ''
 id: node.formulario_cliente.default
 targetEntityType: node
