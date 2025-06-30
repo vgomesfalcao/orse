@@ -1,0 +1,22 @@
+uuid: 9e0236a7-d736-4cd9-a214-40b1d8b9829a
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: solicitacoes
+label: Solicitações
+type: 'canonical_entities:node'
+pattern: '[current-page:title]'
+selection_criteria:
+  67283f0a-8aa4-4f79-8cef-7842ead50e2b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 67283f0a-8aa4-4f79-8cef-7842ead50e2b
+    context_mapping:
+      node: node
+    bundles:
+      formulario_cliente: formulario_cliente
+selection_logic: and
+weight: -5
+relationships: {  }
