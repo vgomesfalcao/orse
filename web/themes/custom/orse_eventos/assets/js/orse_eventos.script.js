@@ -18146,8 +18146,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/vgomesfalcao/Documents/agattitech/orse_d/web/themes/custom/orse_eventos/src/js/orse_eventos.script.js */"./src/js/orse_eventos.script.js");
-module.exports = __webpack_require__(/*! /home/vgomesfalcao/Documents/agattitech/orse_d/web/themes/custom/orse_eventos/src/sass/orse_eventos.style.scss */"./src/sass/orse_eventos.style.scss");
+__webpack_require__(/*! /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse_eventos/src/js/orse_eventos.script.js */"./src/js/orse_eventos.script.js");
+module.exports = __webpack_require__(/*! /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse_eventos/src/sass/orse_eventos.style.scss */"./src/sass/orse_eventos.style.scss");
 
 
 /***/ })

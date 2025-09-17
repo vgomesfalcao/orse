@@ -27,12 +27,12 @@ elements: |-
     '#markup': |
       <h3>Favor preencher detalhes do evento</h3>
       <hr>
-      
   nome_completo:
     '#type': textfield
-    '#title': 'Nome Completo'
+    '#title': Nome
     '#title_display': before
     '#description_display': invisible
+    '#placeholder': 'Nome Completo'
     '#required': true
   data_evento:
     '#type': date
@@ -52,6 +52,7 @@ elements: |-
     '#title': 'Número de Convidados'
     '#title_display': before
     '#size': '60'
+    '#placeholder': '0'
     '#required': true
   local:
     '#type': textarea
@@ -60,7 +61,6 @@ elements: |-
       <blockquote>
       <p><em>Caso n&atilde;o tenha definido, informar regi&atilde;o pretendida para realiza&ccedil;&atilde;o do evento</em></p>
       </blockquote>
-      
     '#title_display': before
     '#description_display': before
     '#required': true
@@ -115,13 +115,6 @@ elements: |-
       visible:
         ':input[name="tipo_evento"]':
           value: festa_infantil
-  valor_max_fotografia:
-    '#type': number
-    '#title': 'Valor que deseja investir em Fotografia'
-    '#description': '<em>Esse campo &eacute; opcional, o objetivo &eacute; que apenas os fot&oacute;grafos que se encontram dentro da margem de valor estipulada enviem propostas</em>'
-    '#title_display': before
-    '#description_display': before
-    '#placeholder': '00,00'
   observacoes:
     '#type': textarea
     '#title': Observações

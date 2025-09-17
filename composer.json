@@ -79,6 +79,7 @@
         "drupal/radix": "^5.0",
         "drupal/rdf": "^2.1",
         "drupal/redirect": "^1.11",
+        "drupal/redirect_after_login": "^3.0",
         "drupal/redirect_after_registration": "^1.4",
         "drupal/select_registration_roles": "^2.0@beta",
         "drupal/simplenews": "^4.0",

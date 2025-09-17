@@ -59,9 +59,10 @@ elements: |-
               value: festa_infantil
       cobertura_fotografos:
         '#type': number
-        '#title': 'Número de Fotografos'
+        '#title': 'Número de Fotógrafos'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
             - ':input[name="tipo_de_evento"]':
@@ -79,7 +80,9 @@ elements: |-
         '#type': number
         '#title': Duração
         '#title_display': inline
+        '#field_suffix': Horas
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
             - ':input[name="tipo_de_evento"]':
@@ -97,7 +100,10 @@ elements: |-
         '#type': number
         '#title': Valor
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
+        '#autocomplete': 'off'
         '#states':
           visible:
             - ':input[name="tipo_de_evento"]':
@@ -133,9 +139,10 @@ elements: |-
       '#align_items': center
       makingof_fotografos:
         '#type': number
-        '#title': 'Número de Fotografos'
+        '#title': 'Número de Fotógrafos'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
             - ':input[name="tipo_de_evento"]':
@@ -147,7 +154,9 @@ elements: |-
         '#type': number
         '#title': Duração
         '#title_display': inline
+        '#field_suffix': Horas
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
             - ':input[name="tipo_de_evento"]':
@@ -159,7 +168,10 @@ elements: |-
         '#type': number
         '#title': Valor
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
+        '#autocomplete': 'off'
         '#states':
           visible:
             - ':input[name="tipo_de_evento"]':
@@ -189,8 +201,9 @@ elements: |-
               value: debutante
       previa_fotografos:
         '#type': number
-        '#title': 'Número de Fotografos'
+        '#title': 'Número de Fotógrafos'
         '#title_display': inline
+        '#placeholder': '0'
         '#size': '5'
         '#states':
           visible:
@@ -203,7 +216,9 @@ elements: |-
         '#type': number
         '#title': Duração
         '#title_display': inline
+        '#field_suffix': Horas
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
             - ':input[name="tipo_de_evento"]':
@@ -215,7 +230,9 @@ elements: |-
         '#type': number
         '#title': Valor
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
         '#states':
           visible:
             - ':input[name="tipo_de_evento"]':
@@ -239,31 +256,36 @@ elements: |-
               value: casamento
       cerimonia_fotografos:
         '#type': number
-        '#title': 'Número de Fotografos'
+        '#title': 'Número de Fotógrafos'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       cerimonia_horas:
         '#type': number
         '#title': Duração
         '#title_display': inline
+        '#field_suffix': Horas
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       cerimonia_valor:
         '#type': number
         '#title': Valor
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
   fieldset_recepcao:
     '#type': fieldset
     '#title': Recepção
@@ -280,31 +302,36 @@ elements: |-
               value: casamento
       recepcao_fotografos:
         '#type': number
-        '#title': 'Número de Fotografos'
+        '#title': 'Número de Fotógrafos'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       recepcao_horas:
         '#type': number
         '#title': Duração
         '#title_display': inline
+        '#field_suffix': Horas
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       recepcao_valor:
         '#type': number
         '#title': Valor
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
   fieldset_combocr:
     '#type': fieldset
     '#title': 'Combo Cerimônia e Recepção'
@@ -321,31 +348,36 @@ elements: |-
               value: casamento
       combocr_fotografos:
         '#type': number
-        '#title': 'Número de Fotografos'
+        '#title': 'Número de Fotógrafos'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       combocr_horas:
         '#type': number
         '#title': Duração
         '#title_display': inline
+        '#field_suffix': Horas
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       combocr_valor:
         '#type': number
         '#title': Valor
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
   fieldset_makingofnoiva:
     '#type': fieldset
     '#title': 'Making of Noiva'
@@ -365,6 +397,7 @@ elements: |-
         '#title': 'Número de Fotografos'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
             - ':input[name="tipo_de_evento"]':
@@ -373,20 +406,24 @@ elements: |-
         '#type': number
         '#title': Duração
         '#title_display': inline
+        '#field_suffix': Horas
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       makingofnoiva_valor:
         '#type': number
         '#title': Valor
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
   fieldset_makingofnoivo:
     '#type': fieldset
     '#title': 'Making of Noivo'
@@ -403,38 +440,43 @@ elements: |-
               value: casamento
       makingofnoivo_fotografos:
         '#type': number
-        '#title': 'Número de Fotografos'
+        '#title': 'Número de Fotógrafos'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       makingofnoivo_horas:
         '#type': number
         '#title': Duração
         '#title_display': inline
+        '#field_suffix': Horas
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       makingofnoivo_valor:
         '#type': number
         '#title': Valor
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
   fieldset_previacasal:
     '#type': fieldset
-    '#title': 'Previa Casal'
+    '#title': 'Prévia Casal'
     '#states':
       visible:
-        - ':input[name="tipo_de_evento"]':
-            value: casamento
+        ':input[name="tipo_de_evento"]':
+          value: casamento
     flexbox_previacasal:
       '#type': webform_flexbox
       '#align_items': center
@@ -444,38 +486,43 @@ elements: |-
               value: casamento
       previacasal_fotografos:
         '#type': number
-        '#title': 'Número de Fotografos'
+        '#title': 'Número de Fotógrafos'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       previacasal_horas:
         '#type': number
         '#title': Duração
         '#title_display': inline
+        '#field_suffix': Horas
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       previacasal_valor:
         '#type': number
         '#title': Valor
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
   fieldset_previanoiva:
     '#type': fieldset
-    '#title': 'Previa Noiva'
+    '#title': 'Prévia Noiva'
     '#states':
       visible:
-        - ':input[name="tipo_de_evento"]':
-            value: casamento
+        ':input[name="tipo_de_evento"]':
+          value: casamento
     flexbox_previanoiva:
       '#type': webform_flexbox
       '#align_items': center
@@ -485,34 +532,38 @@ elements: |-
               value: casamento
       previanoiva_fotografos:
         '#type': number
-        '#title': 'Número de Fotografos'
+        '#title': 'Número de Fotógrafos'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       previanoiva_horas:
         '#type': number
         '#title': Duração
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
       previanoiva_valor:
         '#type': number
         '#title': Valor
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
         '#states':
           visible:
-            - ':input[name="tipo_de_evento"]':
-                value: casamento
+            ':input[name="tipo_de_evento"]':
+              value: casamento
   fieldset_album:
     '#type': fieldset
-    '#title': Album
+    '#title': Álbum
     flexbox_album:
       '#type': webform_flexbox
       '#align_items': center
@@ -521,16 +572,20 @@ elements: |-
         '#title': 'Quantidade de páginas'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
       album_max_fotos:
         '#type': number
         '#title': 'Máximo de fotos'
         '#title_display': inline
         '#size': '5'
+        '#placeholder': '0'
       album_valor:
         '#type': number
         '#title': 'Álbum à partir de'
         '#title_display': inline
+        '#field_prefix': R$
         '#size': '10'
+        '#placeholder': '0,00'
   observacoes:
     '#type': textarea
     '#title': Observações
@@ -647,10 +702,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: inline
-  confirmation_url: ''
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_type: url_message
+  confirmation_url: /user/eventos
+  confirmation_title: 'Orçamento Enviado '
+  confirmation_message: 'Orçamento enviado com sucesso'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''

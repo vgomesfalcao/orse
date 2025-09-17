@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.formulario_cliente.field_tipo_de_casamento
     - field.field.node.formulario_cliente.field_tipo_de_comemoracao
     - field.field.node.formulario_cliente.field_tipo_de_evento
-    - field.field.node.formulario_cliente.field_valor_maximo_fotografia
     - node.type.formulario_cliente
   module:
     - datetime
@@ -108,13 +107,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_valor_maximo_fotografia:
-    type: number
-    weight: 12
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 17
@@ -150,6 +142,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 16
@@ -159,6 +156,11 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
