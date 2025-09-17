@@ -646,54 +646,6 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_soma_valor_value:
-          id: field_soma_valor_value
-          table: node__field_soma_valor
-          field: field_soma_valor_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: numeric
-          operator: between
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_soma_valor_value_op
-            label: 'Valor Total Entre'
-            description: ''
-            use_operator: false
-            operator: field_soma_valor_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_soma_valor_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              cliente: '0'
-              fotografo: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       filter_groups:
         operator: AND
         groups:
