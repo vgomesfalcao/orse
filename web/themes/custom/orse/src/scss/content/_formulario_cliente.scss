@@ -7,6 +7,42 @@
 .formulario-cliente--full {
   @extend %orcamento-document;
 
+  // Visual de documento formal
+  position: relative;
+  background: #fffdf8; // off-white sutil
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(0, 0, 0, 0.04) inset;
+
+  // Faixa lateral discreta
+  &:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: -18px;
+    width: 12px;
+    background: linear-gradient(180deg, #e9ecef, #f1f3f5);
+    border-radius: 6px 0 0 6px;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.06);
+  }
+
+  // Linha perfurada superior discreta
+  &:after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: -6px;
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent 0 14px,
+      rgba(0, 0, 0, 0.1) 14px 15px
+    );
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
   // Cabeçalho do orçamento (título / meta)
   .node__meta {
     margin-bottom: 8px;
@@ -35,6 +71,17 @@
   // Corpo em grid responsivo
   fieldset.card .fieldset-wrapper,
   details.card > .card-body {
+    // Fundo pautado sutil
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.025),
+      rgba(0, 0, 0, 0.025) 1px,
+      transparent 1px,
+      transparent 32px
+    );
+    background-clip: padding-box;
+    border-radius: 8px;
+    padding-top: 8px;
     @include orcamento-grid-body();
   }
 
@@ -88,5 +135,22 @@
   .evento-info span {
     font-weight: 700;
     color: #111;
+  }
+
+  // Impressão mais limpa
+  @media print {
+    background: #fff;
+    box-shadow: none;
+    border: 1px solid #ccc;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    fieldset.card .fieldset-wrapper,
+    details.card > .card-body {
+      background: none;
+    }
   }
 }

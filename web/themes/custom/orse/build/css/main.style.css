@@ -12809,7 +12809,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-cliente > details.card > summary.card-header,
 .formulario-cliente--full > fieldset.card > legend.fieldset-legend,
 .formulario-cliente--full > details.card > summary.card-header, .formulario-fotografo fieldset.card > legend.fieldset-legend,
-.formulario-fotografo--full fieldset.card > legend.fieldset-legend {
+.formulario-fotografo--full fieldset.card > legend.fieldset-legend, .webform-submission-form fieldset.card > legend.fieldset-legend {
   display: block;
   width: 100%;
   padding: 8px 0;
@@ -12836,6 +12836,268 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
   margin: 0;
 }
 
+.webform-submission-form .form__inner {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 0 8px;
+}
+.webform-submission-form .form__inner .frame {
+  background: #fffdf8;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(0, 0, 0, 0.04) inset;
+  padding: 16px;
+  position: relative;
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .webform-submission-form .form__inner .frame {
+    padding: 24px;
+  }
+}
+.webform-submission-form .form__inner .frame:after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: -8px;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, transparent 0 12px, rgba(0, 0, 0, 0.12) 12px 14px);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.webform-submission-form .form__inner .frame:before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: -26px;
+  width: 18px;
+  background: radial-gradient(circle 6px at 10px 12px, rgba(0, 0, 0, 0.12) 98%, transparent 100%) 0 0/18px 36px repeat-y, radial-gradient(circle 6px at 9px 12px, #fff 98%, transparent 100%) 0 0/18px 36px repeat-y, linear-gradient(90deg, #e9ecef, #e9ecef) left/100% 100% no-repeat;
+  border-radius: 8px 0 0 8px;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.06);
+}
+.webform-submission-form fieldset.card {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 12px;
+  padding: 0;
+  overflow: visible;
+}
+.webform-submission-form fieldset.card .fieldset-wrapper {
+  background-image: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 32px);
+  background-clip: padding-box;
+  border-radius: 8px;
+  padding-top: 8px;
+}
+.webform-submission-form fieldset.card .fieldset-wrapper .webform-flexbox {
+  padding: 4px 0 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 24px;
+}
+.webform-submission-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+}
+.webform-submission-form .form-group label.form-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 10px 0 0;
+}
+.webform-submission-form .form-group input.form-control,
+.webform-submission-form .form-group select.form-select,
+.webform-submission-form .form-group textarea.form-control {
+  border-radius: 3px;
+  border: 1px solid #adb5bd;
+  height: 45px;
+}
+.webform-submission-form .form-group textarea.form-control {
+  height: auto;
+  min-height: 110px;
+  resize: vertical;
+}
+.webform-submission-form .form-group .input-group .input-group-text {
+  background: #f8f9fa;
+  color: #495057;
+  border-color: #adb5bd;
+}
+.webform-submission-form .form-group .input-group .form-control {
+  border-color: #adb5bd;
+}
+.webform-submission-form .form-number.form-control {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-feature-settings: "tnum" 1;
+          font-feature-settings: "tnum" 1;
+}
+.webform-submission-form details.card > summary.card-header {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.7);
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+.webform-submission-form details.card > summary.card-header::-webkit-details-marker {
+  display: none;
+}
+.webform-submission-form details.card > summary.card-header:after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  opacity: 0.8;
+}
+.webform-submission-form details.card[open] > summary.card-header:after {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+.webform-submission-form details.card > .card-body {
+  padding: 4px 0 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 24px;
+}
+.webform-submission-form .form-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.webform-submission-form .form-actions .btn, .webform-submission-form .form-actions .btn-menu-primary, .webform-submission-form .form-actions .paragraph--type--static-banner .group-text .field--name-field-button a, .paragraph--type--static-banner .group-text .field--name-field-button .webform-submission-form .form-actions a {
+  min-width: 160px;
+  height: 48px;
+}
+.webform-submission-form fieldset.card > legend.fieldset-legend:empty {
+  display: none;
+}
+.webform-submission-form .js-form-required .form-label:after {
+  content: " *";
+  color: #dc3545;
+  font-weight: 700;
+}
+.webform-submission-form .form-item--error-message,
+.webform-submission-form .invalid-feedback {
+  display: block;
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+.webform-submission-form .is-invalid,
+.webform-submission-form .error {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.1rem rgba(220, 53, 69, 0.1);
+}
+@media print {
+  .webform-submission-form .form__inner .frame {
+    background: #fff;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  .webform-submission-form .form__inner .frame:before,
+  .webform-submission-form .form__inner .frame:after {
+    display: none;
+  }
+  .webform-submission-form fieldset.card .fieldset-wrapper {
+    background: none;
+  }
+}
+
+.node--type-formulario-cliente,
+.formulario-cliente,
+.formulario-cliente--full, .formulario-fotografo,
+.formulario-fotografo--full {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 28px 24px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.node--type-formulario-cliente > fieldset.card > legend.fieldset-legend,
+.node--type-formulario-cliente > details.card > summary.card-header,
+.formulario-cliente > fieldset.card > legend.fieldset-legend,
+.formulario-cliente > details.card > summary.card-header,
+.formulario-cliente--full > fieldset.card > legend.fieldset-legend,
+.formulario-cliente--full > details.card > summary.card-header, .formulario-fotografo fieldset.card > legend.fieldset-legend,
+.formulario-fotografo--full fieldset.card > legend.fieldset-legend, .webform-submission-form fieldset.card > legend.fieldset-legend {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.7);
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.node--type-formulario-cliente .field,
+.formulario-cliente .field,
+.formulario-cliente--full .field, .formulario-fotografo .fieldset-wrapper .field,
+.formulario-fotografo details.card .card-body .field,
+.formulario-fotografo--full .fieldset-wrapper .field,
+.formulario-fotografo--full details.card .card-body .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  margin: 0;
+}
+
+.formulario-fotografo,
+.formulario-fotografo--full {
+  position: relative;
+  background: #fffdf8;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(0, 0, 0, 0.04) inset;
+}
+.formulario-fotografo:before,
+.formulario-fotografo--full:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: -18px;
+  width: 12px;
+  background: linear-gradient(180deg, #e9ecef, #f1f3f5);
+  border-radius: 6px 0 0 6px;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.06);
+}
+.formulario-fotografo:after,
+.formulario-fotografo--full:after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: -6px;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, transparent 0 14px, rgba(0, 0, 0, 0.1) 14px 15px);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 .formulario-fotografo .field,
 .formulario-fotografo--full .field {
   display: flex;
@@ -12923,6 +13185,10 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 }
 .formulario-fotografo fieldset.card .fieldset-wrapper,
 .formulario-fotografo--full fieldset.card .fieldset-wrapper {
+  background-image: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0.025) 1px, transparent 1px, transparent 32px);
+  background-clip: padding-box;
+  border-radius: 8px;
+  padding-top: 8px;
   padding: 4px 0 12px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -12970,6 +13236,23 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-fotografo--full fieldset.card > legend.fieldset-legend:empty {
   display: none;
 }
+@media print {
+  .formulario-fotografo,
+  .formulario-fotografo--full {
+    background: #fff;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  .formulario-fotografo:before, .formulario-fotografo:after,
+  .formulario-fotografo--full:before,
+  .formulario-fotografo--full:after {
+    display: none;
+  }
+  .formulario-fotografo fieldset.card .fieldset-wrapper,
+  .formulario-fotografo--full fieldset.card .fieldset-wrapper {
+    background: none;
+  }
+}
 
 .node--type-formulario-cliente,
 .formulario-cliente,
@@ -12989,7 +13272,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-cliente > fieldset.card > legend.fieldset-legend,
 .formulario-cliente > details.card > summary.card-header,
 .formulario-cliente--full > fieldset.card > legend.fieldset-legend,
-.formulario-cliente--full > details.card > summary.card-header, .formulario-fotografo fieldset.card > legend.fieldset-legend,
+.formulario-cliente--full > details.card > summary.card-header, .webform-submission-form fieldset.card > legend.fieldset-legend, .formulario-fotografo fieldset.card > legend.fieldset-legend,
 .formulario-fotografo--full fieldset.card > legend.fieldset-legend {
   display: block;
   width: 100%;
@@ -13017,6 +13300,40 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
   margin: 0;
 }
 
+.node--type-formulario-cliente,
+.formulario-cliente,
+.formulario-cliente--full {
+  position: relative;
+  background: #fffdf8;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(0, 0, 0, 0.04) inset;
+}
+.node--type-formulario-cliente:before,
+.formulario-cliente:before,
+.formulario-cliente--full:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: -18px;
+  width: 12px;
+  background: linear-gradient(180deg, #e9ecef, #f1f3f5);
+  border-radius: 6px 0 0 6px;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.06);
+}
+.node--type-formulario-cliente:after,
+.formulario-cliente:after,
+.formulario-cliente--full:after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: -6px;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, transparent 0 14px, rgba(0, 0, 0, 0.1) 14px 15px);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 .node--type-formulario-cliente .node__meta,
 .formulario-cliente .node__meta,
 .formulario-cliente--full .node__meta {
@@ -13058,6 +13375,10 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-cliente details.card > .card-body,
 .formulario-cliente--full fieldset.card .fieldset-wrapper,
 .formulario-cliente--full details.card > .card-body {
+  background-image: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0.025) 1px, transparent 1px, transparent 32px);
+  background-clip: padding-box;
+  border-radius: 8px;
+  padding-top: 8px;
   padding: 4px 0 12px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -13136,6 +13457,30 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-cliente--full .evento-info span {
   font-weight: 700;
   color: #111;
+}
+@media print {
+  .node--type-formulario-cliente,
+  .formulario-cliente,
+  .formulario-cliente--full {
+    background: #fff;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  .node--type-formulario-cliente:before, .node--type-formulario-cliente:after,
+  .formulario-cliente:before,
+  .formulario-cliente:after,
+  .formulario-cliente--full:before,
+  .formulario-cliente--full:after {
+    display: none;
+  }
+  .node--type-formulario-cliente fieldset.card .fieldset-wrapper,
+  .node--type-formulario-cliente details.card > .card-body,
+  .formulario-cliente fieldset.card .fieldset-wrapper,
+  .formulario-cliente details.card > .card-body,
+  .formulario-cliente--full fieldset.card .fieldset-wrapper,
+  .formulario-cliente--full details.card > .card-body {
+    background: none;
+  }
 }
 
 /*# sourceMappingURL=main.style.css.map*/

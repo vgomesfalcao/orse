@@ -1,0 +1,239 @@
+@import "../content/orcamento";
+
+// Estilo geral para Webform no tema Orse
+.webform-submission-form {
+  // Wrapper padrão usado pelo template webform.html.twig do tema
+  .form__inner {
+    max-width: 980px;
+    margin: 24px auto;
+    padding: 0 8px;
+
+    .frame {
+      // Papel: fundo levemente off-white com sombra suave
+      background: #fffdf8;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(0, 0, 0, 0.04) inset;
+      padding: 16px;
+      position: relative;
+      overflow: visible;
+
+      @include media-breakpoint-up(md) {
+        padding: 24px;
+      }
+
+      // Tira destacável superior (perfurado)
+      &:after {
+        content: "";
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        top: -8px;
+        height: 8px;
+        background: repeating-linear-gradient(
+          90deg,
+          transparent 0 12px,
+          rgba(0, 0, 0, 0.12) 12px 14px
+        );
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      // Margem com furos de fichário (decorativo, à esquerda)
+      &:before {
+        content: "";
+        position: absolute;
+        top: 16px;
+        bottom: 16px;
+        left: -26px;
+        width: 18px;
+        background:
+          /* sombra dos furos */
+          radial-gradient(circle 6px at 10px 12px, rgba(0, 0, 0, 0.12) 98%, transparent 100%) 0 0/18px 36px repeat-y,
+          /* furo claro */
+          radial-gradient(circle 6px at 9px 12px, #fff 98%, transparent 100%) 0 0/18px 36px repeat-y,
+          /* lombada */
+          linear-gradient(90deg, #e9ecef, #e9ecef) left/100% 100% no-repeat;
+        border-radius: 8px 0 0 8px;
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.06);
+      }
+    }
+  }
+
+  // Cards de fieldset (estrutura padrão do Webform no HTML fornecido)
+  fieldset.card {
+    @include orcamento-section-reset();
+
+    > legend.fieldset-legend {
+      @extend %orcamento-section-title;
+    }
+
+    .fieldset-wrapper {
+      // Fundo com linhas discretas (folha pautada)
+      background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.03),
+        rgba(0, 0, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 32px
+      );
+      background-clip: padding-box;
+      border-radius: 8px;
+      padding-top: 8px;
+
+      // O Webform envolve campos com .webform-flexbox e .webform-flex
+      // Tornamos o container responsável pelo grid responsivo.
+      .webform-flexbox {
+        @include orcamento-grid-body();
+      }
+    }
+  }
+
+  // Campos
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+
+    label.form-label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.7);
+      margin: 0 10px 0 0;
+    }
+
+    input.form-control,
+    select.form-select,
+    textarea.form-control {
+      border-radius: 3px;
+      border: 1px solid $gray-500;
+      height: 45px;
+    }
+
+    textarea.form-control {
+      height: auto;
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    // Grupos com prefixo/sufixo (ex.: R$ | Horas)
+    .input-group {
+      .input-group-text {
+        background: $gray-100;
+        color: $gray-700;
+        border-color: $gray-500;
+      }
+
+      .form-control {
+        border-color: $gray-500;
+      }
+    }
+  }
+
+  // Números alinhados à direita para valores/quantidades
+  .form-number.form-control {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+  }
+
+  // Detalhes em formato de card (quando o Webform usa <details>)
+  details.card {
+    > summary.card-header {
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: rgba(0, 0, 0, 0.7);
+      border-top: 1px dashed rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+    }
+
+    > summary.card-header::-webkit-details-marker {
+      display: none;
+    }
+
+    > summary.card-header:after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid currentcolor;
+      border-bottom: 2px solid currentcolor;
+      transform: translateY(-50%) rotate(-45deg);
+      transition: transform 0.2s ease;
+      opacity: 0.8;
+    }
+
+    &[open] > summary.card-header:after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    > .card-body {
+      @include orcamento-grid-body();
+    }
+  }
+
+  // Ações do formulário (botões)
+  .form-actions {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    .btn {
+      min-width: 160px;
+      height: 48px;
+    }
+  }
+
+  // Oculta legendas vazias que o Webform pode emitir
+  fieldset.card > legend.fieldset-legend:empty {
+    display: none;
+  }
+
+  // Indicação de obrigatório
+  .js-form-required .form-label:after {
+    content: " *";
+    color: $danger;
+    font-weight: 700;
+  }
+
+  // Mensagens de erro/validação
+  .form-item--error-message,
+  .invalid-feedback {
+    display: block;
+    color: $danger;
+    font-size: 0.85rem;
+    margin-top: 4px;
+  }
+
+  .is-invalid,
+  .error {
+    border-color: $danger !important;
+    box-shadow: 0 0 0 0.1rem rgba($danger, 0.1);
+  }
+
+  // Impressão: remove sombras e elementos decorativos
+  @media print {
+    .form__inner .frame {
+      background: #fff;
+      box-shadow: none;
+      border: 1px solid #ccc;
+    }
+
+    .form__inner .frame:before,
+    .form__inner .frame:after {
+      display: none;
+    }
+
+    fieldset.card .fieldset-wrapper {
+      background: none;
+    }
+  }
+}
