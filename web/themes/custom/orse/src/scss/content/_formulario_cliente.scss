@@ -1,0 +1,92 @@
+// Formulário Cliente (node formulario_cliente)
+// -----------------------------------------------------------------------------
+@import "./orcamento";
+
+.node--type-formulario-cliente,
+.formulario-cliente,
+.formulario-cliente--full {
+  @extend %orcamento-document;
+
+  // Cabeçalho do orçamento (título / meta)
+  .node__meta {
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.95rem;
+  }
+
+  // Seções (fieldset ou details) como linhas do documento
+  fieldset.card,
+  details.card {
+    @include orcamento-section-reset();
+  }
+
+  // Títulos das seções
+  > fieldset.card > legend.fieldset-legend,
+  > details.card > summary.card-header {
+    @extend %orcamento-section-title;
+    list-style: none;
+    cursor: default;
+  }
+
+  > details.card > summary.card-header::-webkit-details-marker {
+    display: none;
+  }
+
+  // Corpo em grid responsivo
+  fieldset.card .fieldset-wrapper,
+  details.card > .card-body {
+    @include orcamento-grid-body();
+  }
+
+  // Campos
+  .field { @extend %orcamento-field; }
+  .field:last-child { border-bottom: 0; }
+
+  .field__label {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .field__item {
+    color: #111;
+    font-size: 1rem;
+  }
+
+  // Inline (label | valor)
+  .field--label-inline {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px 16px;
+  }
+  .field--label-inline .field__item { justify-self: end; }
+
+  // Números à direita
+  .field--type-decimal .field__item,
+  .field--type-integer .field__item,
+  .field--type-float .field__item,
+  .field--type-computed-float {
+    @include orcamento-numeric();
+  }
+
+  // Lista de info do evento (markup antigo)
+  .evento-info {
+    width: 100%;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    list-style: none;
+  }
+
+  .evento-info li {
+    padding: 0 0 10px;
+    margin: 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  }
+  .evento-info li:last-child { border-bottom: 0; }
+
+  .evento-info span {
+    font-weight: 700;
+    color: #111;
+  }
+}

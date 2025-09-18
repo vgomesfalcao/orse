@@ -12790,4 +12790,352 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
   height: 50px;
 }
 
+.node--type-formulario-cliente,
+.formulario-cliente,
+.formulario-cliente--full, .formulario-fotografo,
+.formulario-fotografo--full {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 28px 24px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.node--type-formulario-cliente > fieldset.card > legend.fieldset-legend,
+.node--type-formulario-cliente > details.card > summary.card-header,
+.formulario-cliente > fieldset.card > legend.fieldset-legend,
+.formulario-cliente > details.card > summary.card-header,
+.formulario-cliente--full > fieldset.card > legend.fieldset-legend,
+.formulario-cliente--full > details.card > summary.card-header, .formulario-fotografo fieldset.card > legend.fieldset-legend,
+.formulario-fotografo--full fieldset.card > legend.fieldset-legend {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.7);
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.node--type-formulario-cliente .field,
+.formulario-cliente .field,
+.formulario-cliente--full .field, .formulario-fotografo .fieldset-wrapper .field,
+.formulario-fotografo details.card .card-body .field,
+.formulario-fotografo--full .fieldset-wrapper .field,
+.formulario-fotografo--full details.card .card-body .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  margin: 0;
+}
+
+.formulario-fotografo .field,
+.formulario-fotografo--full .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.formulario-fotografo .field__label,
+.formulario-fotografo--full .field__label {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.65);
+}
+.formulario-fotografo .field__item,
+.formulario-fotografo--full .field__item {
+  color: #111;
+  font-size: 1rem;
+}
+.formulario-fotografo .field--label-inline,
+.formulario-fotografo--full .field--label-inline {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px 16px;
+}
+.formulario-fotografo .field--label-inline .field__item,
+.formulario-fotografo--full .field--label-inline .field__item {
+  justify-self: end;
+}
+.formulario-fotografo details.card > summary.card-header,
+.formulario-fotografo--full details.card > summary.card-header {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.7);
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+.formulario-fotografo details.card > summary.card-header::-webkit-details-marker,
+.formulario-fotografo--full details.card > summary.card-header::-webkit-details-marker {
+  display: none;
+}
+.formulario-fotografo details.card > summary.card-header:after,
+.formulario-fotografo--full details.card > summary.card-header:after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  opacity: 0.8;
+}
+.formulario-fotografo details.card[open] > summary.card-header:after,
+.formulario-fotografo--full details.card[open] > summary.card-header:after {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+.formulario-fotografo details.card > .card-body,
+.formulario-fotografo--full details.card > .card-body {
+  padding: 4px 0 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 24px;
+}
+.formulario-fotografo fieldset.card,
+.formulario-fotografo--full fieldset.card {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 12px;
+  padding: 0;
+  overflow: visible;
+}
+.formulario-fotografo fieldset.card .fieldset-wrapper,
+.formulario-fotografo--full fieldset.card .fieldset-wrapper {
+  padding: 4px 0 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 24px;
+}
+.formulario-fotografo .field--type-decimal .field__item,
+.formulario-fotografo .field--type-integer .field__item,
+.formulario-fotografo .field--type-float .field__item,
+.formulario-fotografo .field--type-computed-float,
+.formulario-fotografo--full .field--type-decimal .field__item,
+.formulario-fotografo--full .field--type-integer .field__item,
+.formulario-fotografo--full .field--type-float .field__item,
+.formulario-fotografo--full .field--type-computed-float {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-feature-settings: "tnum" 1;
+          font-feature-settings: "tnum" 1;
+}
+.formulario-fotografo .fieldset-wrapper .field:last-child,
+.formulario-fotografo details.card .card-body .field:last-child,
+.formulario-fotografo--full .fieldset-wrapper .field:last-child,
+.formulario-fotografo--full details.card .card-body .field:last-child {
+  border-bottom: 0;
+}
+.formulario-fotografo fieldset.card:last-of-type,
+.formulario-fotografo--full fieldset.card:last-of-type {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
+.formulario-fotografo fieldset.card:last-of-type .fieldset-wrapper,
+.formulario-fotografo--full fieldset.card:last-of-type .fieldset-wrapper {
+  grid-template-columns: 1fr;
+}
+.formulario-fotografo fieldset.card:last-of-type .field__item,
+.formulario-fotografo fieldset.card:last-of-type .field--type-computed-float,
+.formulario-fotografo--full fieldset.card:last-of-type .field__item,
+.formulario-fotografo--full fieldset.card:last-of-type .field--type-computed-float {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: right;
+  color: #02542d;
+}
+.formulario-fotografo fieldset.card > legend.fieldset-legend:empty,
+.formulario-fotografo--full fieldset.card > legend.fieldset-legend:empty {
+  display: none;
+}
+
+.node--type-formulario-cliente,
+.formulario-cliente,
+.formulario-cliente--full, .formulario-fotografo,
+.formulario-fotografo--full {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 28px 24px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.node--type-formulario-cliente > fieldset.card > legend.fieldset-legend,
+.node--type-formulario-cliente > details.card > summary.card-header,
+.formulario-cliente > fieldset.card > legend.fieldset-legend,
+.formulario-cliente > details.card > summary.card-header,
+.formulario-cliente--full > fieldset.card > legend.fieldset-legend,
+.formulario-cliente--full > details.card > summary.card-header, .formulario-fotografo fieldset.card > legend.fieldset-legend,
+.formulario-fotografo--full fieldset.card > legend.fieldset-legend {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.7);
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.node--type-formulario-cliente .field,
+.formulario-cliente .field,
+.formulario-cliente--full .field, .formulario-fotografo .fieldset-wrapper .field,
+.formulario-fotografo details.card .card-body .field,
+.formulario-fotografo--full .fieldset-wrapper .field,
+.formulario-fotografo--full details.card .card-body .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  margin: 0;
+}
+
+.node--type-formulario-cliente .node__meta,
+.formulario-cliente .node__meta,
+.formulario-cliente--full .node__meta {
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.95rem;
+}
+.node--type-formulario-cliente fieldset.card,
+.node--type-formulario-cliente details.card,
+.formulario-cliente fieldset.card,
+.formulario-cliente details.card,
+.formulario-cliente--full fieldset.card,
+.formulario-cliente--full details.card {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 12px;
+  padding: 0;
+  overflow: visible;
+}
+.node--type-formulario-cliente > fieldset.card > legend.fieldset-legend,
+.node--type-formulario-cliente > details.card > summary.card-header,
+.formulario-cliente > fieldset.card > legend.fieldset-legend,
+.formulario-cliente > details.card > summary.card-header,
+.formulario-cliente--full > fieldset.card > legend.fieldset-legend,
+.formulario-cliente--full > details.card > summary.card-header {
+  list-style: none;
+  cursor: default;
+}
+.node--type-formulario-cliente > details.card > summary.card-header::-webkit-details-marker,
+.formulario-cliente > details.card > summary.card-header::-webkit-details-marker,
+.formulario-cliente--full > details.card > summary.card-header::-webkit-details-marker {
+  display: none;
+}
+.node--type-formulario-cliente fieldset.card .fieldset-wrapper,
+.node--type-formulario-cliente details.card > .card-body,
+.formulario-cliente fieldset.card .fieldset-wrapper,
+.formulario-cliente details.card > .card-body,
+.formulario-cliente--full fieldset.card .fieldset-wrapper,
+.formulario-cliente--full details.card > .card-body {
+  padding: 4px 0 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 24px;
+}
+.node--type-formulario-cliente .field:last-child,
+.formulario-cliente .field:last-child,
+.formulario-cliente--full .field:last-child {
+  border-bottom: 0;
+}
+.node--type-formulario-cliente .field__label,
+.formulario-cliente .field__label,
+.formulario-cliente--full .field__label {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.65);
+}
+.node--type-formulario-cliente .field__item,
+.formulario-cliente .field__item,
+.formulario-cliente--full .field__item {
+  color: #111;
+  font-size: 1rem;
+}
+.node--type-formulario-cliente .field--label-inline,
+.formulario-cliente .field--label-inline,
+.formulario-cliente--full .field--label-inline {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px 16px;
+}
+.node--type-formulario-cliente .field--label-inline .field__item,
+.formulario-cliente .field--label-inline .field__item,
+.formulario-cliente--full .field--label-inline .field__item {
+  justify-self: end;
+}
+.node--type-formulario-cliente .field--type-decimal .field__item,
+.node--type-formulario-cliente .field--type-integer .field__item,
+.node--type-formulario-cliente .field--type-float .field__item,
+.node--type-formulario-cliente .field--type-computed-float,
+.formulario-cliente .field--type-decimal .field__item,
+.formulario-cliente .field--type-integer .field__item,
+.formulario-cliente .field--type-float .field__item,
+.formulario-cliente .field--type-computed-float,
+.formulario-cliente--full .field--type-decimal .field__item,
+.formulario-cliente--full .field--type-integer .field__item,
+.formulario-cliente--full .field--type-float .field__item,
+.formulario-cliente--full .field--type-computed-float {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-feature-settings: "tnum" 1;
+          font-feature-settings: "tnum" 1;
+}
+.node--type-formulario-cliente .evento-info,
+.formulario-cliente .evento-info,
+.formulario-cliente--full .evento-info {
+  width: 100%;
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  list-style: none;
+}
+.node--type-formulario-cliente .evento-info li,
+.formulario-cliente .evento-info li,
+.formulario-cliente--full .evento-info li {
+  padding: 0 0 10px;
+  margin: 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+}
+.node--type-formulario-cliente .evento-info li:last-child,
+.formulario-cliente .evento-info li:last-child,
+.formulario-cliente--full .evento-info li:last-child {
+  border-bottom: 0;
+}
+.node--type-formulario-cliente .evento-info span,
+.formulario-cliente .evento-info span,
+.formulario-cliente--full .evento-info span {
+  font-weight: 700;
+  color: #111;
+}
+
 /*# sourceMappingURL=main.style.css.map*/

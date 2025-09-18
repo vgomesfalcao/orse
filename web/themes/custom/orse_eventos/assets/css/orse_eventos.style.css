@@ -9923,7 +9923,6 @@ article.page--full.node .paragraph--type--section {
   flex-direction: row;
   justify-content: space-around;
   padding: 40px 0 20px;
-  background-color: #d0cdcd;
 }
 .formulario-fotografo .card .card-body [class^=formulario-fotografo__field-] {
   flex-direction: column;

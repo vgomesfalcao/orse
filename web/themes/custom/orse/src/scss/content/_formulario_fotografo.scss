@@ -1,0 +1,113 @@
+// Formulário Fotógrafo (node formulario_fotografo)
+// -----------------------------------------------------------------------------
+@import "./orcamento";
+
+.formulario-fotografo,
+.formulario-fotografo--full {
+  @extend %orcamento-document;
+
+  // Base dos campos
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .field__label {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .field__item {
+    color: #111;
+    font-size: 1rem;
+  }
+
+  // Labels inline em duas colunas (label | valor)
+  .field--label-inline {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px 16px;
+    .field__item { justify-self: end; }
+  }
+
+  // Card em <details> (Detalhes Pedido)
+  details.card {
+    > summary.card-header {
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: rgba(0, 0, 0, 0.7);
+      border-top: 1px dashed rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+    }
+    > summary.card-header::-webkit-details-marker { display: none; }
+
+    > summary.card-header:after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid currentcolor;
+      border-bottom: 2px solid currentcolor;
+      transform: translateY(-50%) rotate(-45deg);
+      transition: transform 0.2s ease;
+      opacity: 0.8;
+    }
+
+    &[open] > summary.card-header:after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    > .card-body {
+      @include orcamento-grid-body();
+    }
+  }
+
+  // Fieldset cards
+  fieldset.card {
+    @include orcamento-section-reset();
+
+    > legend.fieldset-legend {
+      @extend %orcamento-section-title;
+    }
+
+    .fieldset-wrapper {
+      @include orcamento-grid-body();
+    }
+  }
+
+  // Números alinhados à direita (inclui computed-float sem wrapper de item)
+  .field--type-decimal .field__item,
+  .field--type-integer .field__item,
+  .field--type-float .field__item,
+  .field--type-computed-float {
+    @include orcamento-numeric();
+  }
+
+  // Separadores entre campos
+  .fieldset-wrapper .field,
+  details.card .card-body .field { @extend %orcamento-field; }
+
+  .fieldset-wrapper .field:last-child,
+  details.card .card-body .field:last-child {
+    border-bottom: 0;
+  }
+
+  // Destaque do TOTAL (último fieldset)
+  fieldset.card:last-of-type {
+    @include orcamento-total-strong();
+  }
+
+  // Ocultar legend vazio
+  fieldset.card > legend.fieldset-legend:empty { display: none; }
+}
