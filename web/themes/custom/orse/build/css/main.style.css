@@ -12795,7 +12795,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-cliente--full, .formulario-fotografo,
 .formulario-fotografo--full {
   max-width: 980px;
-  margin: 24px auto;
+  margin: 48px auto 150px;
   padding: 28px 24px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -13026,7 +13026,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-cliente--full, .formulario-fotografo,
 .formulario-fotografo--full {
   max-width: 980px;
-  margin: 24px auto;
+  margin: 48px auto 150px;
   padding: 28px 24px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -13189,10 +13189,56 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
   background-clip: padding-box;
   border-radius: 8px;
   padding-top: 8px;
+  --grid-sep-color: rgba(0, 0, 0, 0.12);
+  --grid-cell-padding: 10px 12px;
+  position: relative;
+  gap: 0;
   padding: 4px 0 12px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px 24px;
+}
+.formulario-fotografo fieldset.card .fieldset-wrapper > .field,
+.formulario-fotografo--full fieldset.card .fieldset-wrapper > .field {
+  padding: var(--grid-cell-padding);
+  margin: 0;
+  border: 0;
+  border-bottom: 0;
+}
+.formulario-fotografo fieldset.card .fieldset-wrapper > .field:first-child,
+.formulario-fotografo--full fieldset.card .fieldset-wrapper > .field:first-child {
+  border-top: 0;
+  border-left: 0;
+}
+@media (min-width: 640px) {
+  .formulario-fotografo fieldset.card .fieldset-wrapper > .field,
+  .formulario-fotografo--full fieldset.card .fieldset-wrapper > .field {
+    border-top: 1px solid var(--grid-sep-color);
+    border-left: 1px solid var(--grid-sep-color);
+    border-bottom: 0;
+  }
+  .formulario-fotografo fieldset.card .fieldset-wrapper > .field:nth-child(odd),
+  .formulario-fotografo--full fieldset.card .fieldset-wrapper > .field:nth-child(odd) {
+    border-left: 0;
+  }
+  .formulario-fotografo fieldset.card .fieldset-wrapper > .field:nth-child(-n+2),
+  .formulario-fotografo--full fieldset.card .fieldset-wrapper > .field:nth-child(-n+2) {
+    border-top: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .formulario-fotografo fieldset.card .fieldset-wrapper > .field:nth-child(odd),
+  .formulario-fotografo--full fieldset.card .fieldset-wrapper > .field:nth-child(odd) {
+    border-left: 1px solid var(--grid-sep-color);
+  }
+  .formulario-fotografo fieldset.card .fieldset-wrapper > .field:nth-child(3n+1),
+  .formulario-fotografo--full fieldset.card .fieldset-wrapper > .field:nth-child(3n+1) {
+    border-left: 0;
+  }
+  .formulario-fotografo fieldset.card .fieldset-wrapper > .field:nth-child(-n+3),
+  .formulario-fotografo--full fieldset.card .fieldset-wrapper > .field:nth-child(-n+3) {
+    border-top: 0;
+  }
 }
 .formulario-fotografo .field--type-decimal .field__item,
 .formulario-fotografo .field--type-integer .field__item,
@@ -13211,6 +13257,10 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-fotografo details.card .card-body .field:last-child,
 .formulario-fotografo--full .fieldset-wrapper .field:last-child,
 .formulario-fotografo--full details.card .card-body .field:last-child {
+  border-bottom: 0;
+}
+.formulario-fotografo .fieldset-wrapper .field,
+.formulario-fotografo--full .fieldset-wrapper .field {
   border-bottom: 0;
 }
 .formulario-fotografo fieldset.card:last-of-type,
@@ -13259,7 +13309,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-cliente--full, .formulario-fotografo,
 .formulario-fotografo--full {
   max-width: 980px;
-  margin: 24px auto;
+  margin: 48px auto 150px;
   padding: 28px 24px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);

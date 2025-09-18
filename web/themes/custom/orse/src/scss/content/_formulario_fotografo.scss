@@ -129,7 +129,47 @@
       background-clip: padding-box;
       border-radius: 8px;
       padding-top: 8px;
+      // Bordas internas para simular tabela no grid
+      // Mantém o mixin de grid existente e zera gaps para linhas contínuas
+      --grid-sep-color: rgba(0, 0, 0, 0.12);
+      --grid-cell-padding: 10px 12px;
+      position: relative;
+      gap: 0;
       @include orcamento-grid-body();
+
+      // Células (campos) com bordas internas
+      > .field {
+        padding: var(--grid-cell-padding);
+        margin: 0;
+        // Mobile: sem bordas
+        border: 0;
+        border-bottom: 0; // evita linha dupla com separadores padrão
+      }
+
+      // Primeira célula (caso 1 coluna) não precisa bordas superiores/esquerda
+      > .field:first-child {
+        border-top: 0;
+        border-left: 0;
+      }
+
+      // Layout de 2 colunas (tablet): aplica bordas internas e remove da 1ª coluna/linha
+      @media (min-width: 640px) {
+        > .field {
+          border-top: 1px solid var(--grid-sep-color);
+          border-left: 1px solid var(--grid-sep-color);
+          border-bottom: 0;
+        }
+        > .field:nth-child(odd) { border-left: 0; }
+        > .field:nth-child(-n + 2) { border-top: 0; }
+      }
+
+      // Layout de 3 colunas (desktop): ajusta para 3 colunas
+      @media (min-width: 1024px) {
+        // garante reset do seletor anterior de 2 colunas
+        > .field:nth-child(odd) { border-left: 1px solid var(--grid-sep-color); }
+        > .field:nth-child(3n + 1) { border-left: 0; }
+        > .field:nth-child(-n + 3) { border-top: 0; }
+      }
     }
   }
 
@@ -149,6 +189,9 @@
   details.card .card-body .field:last-child {
     border-bottom: 0;
   }
+
+  // Tabela dentro do fieldset-wrapper: não usar border-bottom padrão
+  .fieldset-wrapper .field { border-bottom: 0; }
 
   // Destaque do TOTAL (último fieldset)
   fieldset.card:last-of-type {
