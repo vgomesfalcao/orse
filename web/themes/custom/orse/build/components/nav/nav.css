@@ -42,7 +42,7 @@
 .block--orse-menucliente-2 .nav .nav-link,
 .block--orse-areadofotografo .nav .nav-link,
 .block--orse-menudecontadeusuario .nav .nav-link {
-  color: #02542d;
+  color: #024d54;
   padding: 0.5rem 1rem;
 }
 @media (max-width: 991.98px) {
@@ -81,7 +81,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    color: #02542d;
+    color: #024d54;
     text-decoration: none;
   }
   .block--orse-mainmenu .nav .nav-item .btn-menu-primary,
@@ -101,7 +101,7 @@
   .block--orse-menucliente-2 .nav .nav-item .nav-link,
   .block--orse-areadofotografo .nav .nav-item .nav-link,
   .block--orse-menudecontadeusuario .nav .nav-item .nav-link {
-    color: #02542d;
+    color: #024d54;
     padding: 0.5rem 1rem;
   }
 }
