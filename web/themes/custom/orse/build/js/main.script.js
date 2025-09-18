@@ -8195,12 +8195,9 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************************!*\
   !*** ./src/scss/main.style.scss ***!
   \**********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function() {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\n$color2: var(--orse-orange, #bd6717) is not a color.\n    ╷\n207 │   @return mix(white, $color, $weight);\n    │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ╵\n  node_modules/bootstrap/scss/_functions.scss 207:11  tint-color()\n  node_modules/bootstrap/scss/_variables.scss 129:14  @import\n  src/scss/_init.scss 7:9                             @import\n  src/scss/_bootstrap.scss 21:9                       @import\n  src/scss/main.style.scss 3:9                        root stylesheet\n    at processResult (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/webpack/lib/NormalModule.js:891:19)\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/webpack/lib/NormalModule.js:1037:5\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:400:11\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:252:18\n    at context.callback (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at Object.loader (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/sass-loader/dist/index.js:63:5)");
 
 /***/ }),
 
@@ -8208,12 +8205,9 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************!*\
   !*** ./src/components/block/block.scss ***!
   \*****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function() {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\n$color2: var(--orse-orange, #bd6717) is not a color.\n    ╷\n207 │   @return mix(white, $color, $weight);\n    │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ╵\n  node_modules/bootstrap/scss/_functions.scss 207:11  tint-color()\n  node_modules/bootstrap/scss/_variables.scss 129:14  @import\n  src/scss/_init.scss 7:9                             @import\n  src/components/block/block.scss 1:9                 root stylesheet\n    at processResult (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/webpack/lib/NormalModule.js:891:19)\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/webpack/lib/NormalModule.js:1037:5\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:400:11\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:252:18\n    at context.callback (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at Object.loader (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/sass-loader/dist/index.js:63:5)");
 
 /***/ }),
 
@@ -8221,12 +8215,9 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************************!*\
   !*** ./src/components/nav/nav.scss ***!
   \*************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function() {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\n$color2: var(--orse-orange, #bd6717) is not a color.\n    ╷\n207 │   @return mix(white, $color, $weight);\n    │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ╵\n  node_modules/bootstrap/scss/_functions.scss 207:11  tint-color()\n  node_modules/bootstrap/scss/_variables.scss 129:14  @import\n  src/scss/_init.scss 7:9                             @import\n  src/components/nav/nav.scss 1:9                     root stylesheet\n    at processResult (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/webpack/lib/NormalModule.js:891:19)\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/webpack/lib/NormalModule.js:1037:5\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:400:11\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:252:18\n    at context.callback (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at Object.loader (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/sass-loader/dist/index.js:63:5)");
 
 /***/ }),
 
@@ -8247,12 +8238,9 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************!*\
   !*** ./src/components/section/footer.scss ***!
   \********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function() {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\n$color2: var(--orse-orange, #bd6717) is not a color.\n    ╷\n207 │   @return mix(white, $color, $weight);\n    │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ╵\n  node_modules/bootstrap/scss/_functions.scss 207:11  tint-color()\n  node_modules/bootstrap/scss/_variables.scss 129:14  @import\n  src/scss/_init.scss 7:9                             @import\n  src/components/section/footer.scss 1:9              root stylesheet\n    at processResult (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/webpack/lib/NormalModule.js:891:19)\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/webpack/lib/NormalModule.js:1037:5\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:400:11\n    at /Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:252:18\n    at context.callback (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at Object.loader (/Users/vinicius/Documents/orse/orseeventos/web/themes/custom/orse/node_modules/sass-loader/dist/index.js:63:5)");
 
 /***/ })
 
@@ -8369,11 +8357,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/main.script": 0,
-/******/ 			"css/main.style": 0,
-/******/ 			"components/section/footer": 0,
-/******/ 			"components/offcanvas/offcanvas": 0,
-/******/ 			"components/nav/nav": 0,
-/******/ 			"components/block/block": 0
+/******/ 			"components/offcanvas/offcanvas": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -8425,12 +8409,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/section/footer","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/js/main.script.js"); })
-/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/section/footer","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/section/footer","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/components/block/block.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/section/footer","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/components/nav/nav.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["css/main.style","components/section/footer","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/components/offcanvas/_offcanvas.scss"); })
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main.style","components/section/footer","components/offcanvas/offcanvas","components/nav/nav","components/block/block"], function() { return __webpack_require__("./src/components/section/footer.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas"], function() { return __webpack_require__("./src/js/main.script.js"); })
+/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas"], function() { return __webpack_require__("./src/components/block/block.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas"], function() { return __webpack_require__("./src/components/nav/nav.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas"], function() { return __webpack_require__("./src/components/offcanvas/_offcanvas.scss"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/offcanvas/offcanvas"], function() { return __webpack_require__("./src/components/section/footer.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
