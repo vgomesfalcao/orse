@@ -279,8 +279,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -301,7 +301,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 9
@@ -310,8 +310,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -331,8 +331,8 @@ content:
     label: above
     settings:
       thousand_separator: ''
-      decimal_separator: .
-      scale: 2
+      decimal_separator: ','
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 5
@@ -341,8 +341,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -363,7 +363,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 12
@@ -372,8 +372,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -402,7 +402,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 7
@@ -411,8 +411,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -433,7 +433,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 11
@@ -442,8 +442,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -464,7 +464,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 15
@@ -473,8 +473,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -495,7 +495,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 7
@@ -504,8 +504,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -526,7 +526,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 20
@@ -535,8 +535,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -557,7 +557,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 23
@@ -566,8 +566,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -587,8 +587,8 @@ content:
     label: above
     settings:
       thousand_separator: ''
-      decimal_separator: .
-      scale: 2
+      decimal_separator: ','
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 9
@@ -597,8 +597,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -608,12 +608,12 @@ content:
     type: computed_decimal
     label: hidden
     settings:
+      thousand_separator: .
+      decimal_separator: ','
+      scale: '2'
+      prefix_suffix: '1'
       cache_unit: '0'
       cache_duration: '1'
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
     third_party_settings: {  }
     weight: 14
     region: content
