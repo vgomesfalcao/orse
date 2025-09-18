@@ -68,7 +68,7 @@ third_party_settings:
         - field_makingof_fotografos
         - field_makingof_valor
         - field_makingof_horas
-      label: ''
+      label: 'Making Off'
       parent_name: ''
       region: content
       weight: 2

@@ -28,7 +28,7 @@ visibility:
     id: request_path
     negate: false
     context_mapping: {  }
-    pages: "/user\r\n/user/*"
+    pages: "/user/meus-orcamentos\r\n/user/eventos"
   user_role:
     id: user_role
     negate: false

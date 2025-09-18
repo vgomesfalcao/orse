@@ -9,7 +9,7 @@ id: node.formulario_fotografo.field_cerimonia_fotografos
 field_name: field_cerimonia_fotografos
 entity_type: node
 bundle: formulario_fotografo
-label: 'Cerimônia Fotógrafos'
+label: 'Número de Fotógrafos'
 description: ''
 required: false
 translatable: true

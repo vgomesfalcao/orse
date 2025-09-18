@@ -4,7 +4,7 @@
 // Wrapper tipo documento
 %orcamento-document {
   max-width: 980px;
-  margin: 48px auto 150px;
+  margin: 24px auto;
   padding: 28px 24px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -51,8 +51,40 @@
   flex-direction: column;
   gap: 6px;
   padding: 8px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   margin: 0;
+}
+
+// Label e valor com maior contraste
+%orcamento-label {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+%orcamento-value {
+  color: #0b1320;
+  font-weight: 500;
+}
+
+// Linhas estilo tabela (key | value)
+@mixin orcamento-table-rows($min-label: 220px) {
+  .field {
+    display: grid;
+    grid-template-columns: minmax($min-label, 1fr) 1fr;
+    align-items: center;
+    gap: 8px 16px;
+  }
+
+  .field__item {
+    justify-self: end;
+  }
+}
+
+// Zebra para facilitar leitura
+@mixin orcamento-zebra() {
+  .field:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
 }
 
 // Alinhamento numérico

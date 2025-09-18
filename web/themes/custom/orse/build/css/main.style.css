@@ -12285,6 +12285,14 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
   height: 50px;
 }
 
+.page__footer {
+  margin-top: 150px;
+}
+
+.block--orse-menucliente {
+  margin: 30px 0;
+}
+
 #drupal-off-canvas,
 #drupal-off-canvas-wrapper,
 #drupal-off-canvas:not(.drupal-off-canvas-reset) {
@@ -12795,7 +12803,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-cliente--full, .formulario-fotografo,
 .formulario-fotografo--full {
   max-width: 980px;
-  margin: 48px auto 150px;
+  margin: 24px auto;
   padding: 28px 24px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -12832,7 +12840,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
   flex-direction: column;
   gap: 6px;
   padding: 8px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   margin: 0;
 }
 
@@ -13026,7 +13034,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-cliente--full, .formulario-fotografo,
 .formulario-fotografo--full {
   max-width: 980px;
-  margin: 48px auto 150px;
+  margin: 24px auto;
   padding: 28px 24px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -13063,7 +13071,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
   flex-direction: column;
   gap: 6px;
   padding: 8px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   margin: 0;
 }
 
@@ -13309,7 +13317,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
 .formulario-cliente--full, .formulario-fotografo,
 .formulario-fotografo--full {
   max-width: 980px;
-  margin: 48px auto 150px;
+  margin: 24px auto;
   padding: 28px 24px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -13346,7 +13354,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
   flex-direction: column;
   gap: 6px;
   padding: 8px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   margin: 0;
 }
 
