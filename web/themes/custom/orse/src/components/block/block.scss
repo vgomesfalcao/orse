@@ -14,24 +14,26 @@
   align-items: center;
   gap: 41px;
   align-self: stretch;
-  border: 1px solid #9f9f9f;
+  border: 1px solid $on-footer-background;
   width: 100%;
   margin: 0 15px 25px;
 
   .field--name-field-brand-text {
-    color: $white;
+    color: $on-footer-background;
     text-align: center;
     font-family: $font-family-sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 50%;
+
     /* 7px */
     letter-spacing: 2.8px;
   }
 }
 
-.block--orse-menucliente, .block--orse-menufotografo {
+.block--orse-menucliente,
+.block--orse-menufotografo {
   .nav {
     .primary {
       color: $white;

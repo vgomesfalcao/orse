@@ -10,8 +10,26 @@
 // e.g.
 // $body-bg: #000;
 // $body-color: $gray-100;
-$green: #024d54;
-$orange: #bd6717;
+$green: #27c840;
+$black_1: #141414;
+$orange: #f2a32e;
+$white: #fff;
+$black: #000000d6;
 $primary: $green;
+$primary-background: #2aef48;
 $font-family-sans-serif: "inter", sans-serif;
-$secondary: $orange ;
+$secondary: $black_1;
+$first-foreground: $white;
+$second-foreground: $black;
+$footer-background: $primary-background;
+$on-footer-background: $black;
+$on-white: $black;
+
+$font-family-display: "Karla", sans-serif;
+$surface-paper-background: #fffdf8;
+$surface-paper-shadow: 0 6px 24px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(0, 0, 0, 0.04) inset;
+$card-elevated-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+$on-primary: $black;
+$on-primary-tint: #0b1320;
+$on-secondary: $white;
+$lead-font-size: 22px;

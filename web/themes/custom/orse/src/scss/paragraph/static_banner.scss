@@ -7,6 +7,10 @@
   align-items: center;
   width: 100%;
 
+  @include media-breakpoint-up(md) {
+    align-items: start;
+  }
+
   .field--name-field-background {
     width: 100%;
     overflow: hidden;
@@ -15,12 +19,14 @@
     .media--type-image {
       .field__item {
         img {
+          filter: brightness(50%);
           height: calc(100vh - 56px);
           object-fit: cover;
-          object-position: center;
+          object-position: right;
           width: 100%;
 
           @include media-breakpoint-up(md) {
+            filter: brightness(90%);
             width: 100%;
             height: auto;
           }
@@ -36,11 +42,15 @@
     align-items: center;
     position: absolute;
 
+    @include media-breakpoint-up(md) {
+      margin: 20px;
+    }
+
     .field--name-field-title {
-      color: $primary;
+      color: $white;
       text-align: center;
-      font-family: Karla, sans-serif;
-      font-size: 47px;
+      font-family: $font-family-display;
+      font-size: 3.5rem;
       font-style: normal;
       font-weight: 800;
       line-height: 100%;
@@ -54,9 +64,9 @@
     }
 
     .field--name-field-subtitle {
-      color: $black;
+      color: $white;
       text-align: center;
-      font-family: Karla, sans-serif;
+      font-family: $font-family-display;
       font-size: 32px;
       font-style: normal;
       font-weight: 600;
@@ -76,7 +86,7 @@
         @extend .btn;
         @extend .btn-primary;
 
-        color: $white;
+        color: $on-primary;
         font-family: $font-family-base;
         font-size: 28px;
         font-style: normal;
@@ -91,7 +101,7 @@
         gap: var(--sds-size-space-200);
         flex-shrink: 0;
         border-radius: $btn-border-radius;
-        background: $primary;
+        background: $primary-background;
       }
     }
   }

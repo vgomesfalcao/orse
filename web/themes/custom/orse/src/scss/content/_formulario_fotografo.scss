@@ -8,9 +8,9 @@
 
   // Visual de documento formal
   position: relative;
-  background: #fffdf8; // off-white sutil
+  background: $surface-paper-background; // off-white sutil
   border-color: rgba(0, 0, 0, 0.08);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(0, 0, 0, 0.04) inset;
+  box-shadow: $surface-paper-shadow;
 
   // Faixa lateral discreta (sem furos para um aspecto mais formal)
   &:before {

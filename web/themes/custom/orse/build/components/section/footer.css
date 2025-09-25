@@ -1,5 +1,5 @@
 .page__footer div {
-  background-color: rgb(1, 38.5, 42);
+  background-color: #2aef48;
 }
 .page__footer div .block--orse-rodape {
   display: flex;
@@ -8,7 +8,7 @@
   align-items: flex-start;
   gap: 41px;
   align-self: stretch;
-  border: 1px solid #9f9f9f;
+  border: 1px solid rgba(0, 0, 0, 0.8392156863);
   width: 100%;
   margin: 20px 15px 25px;
 }
@@ -16,7 +16,7 @@
   flex-direction: column;
   width: 100%;
   align-items: start;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.8392156863);
 }
 @media (min-width: 768px) {
   .page__footer div .block--orse-rodape .nav {
@@ -25,7 +25,7 @@
 }
 .page__footer div .block--orse-rodape .nav .nav-item {
   padding: 20px 0;
-  border-bottom: 1px solid #9f9f9f;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8392156863);
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -40,17 +40,16 @@
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 15px */
-  color: #fff;
+  color: rgba(0, 0, 0, 0.8392156863);
 }
 @media (min-width: 768px) {
   .page__footer div .block--orse-rodape .nav .nav-item.navbar-text {
-    border-bottom: 1px solid #9f9f9f;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8392156863);
     margin: 15px 0;
   }
 }
 .page__footer div .block--orse-rodape .nav .nav-item.navbar-text span {
-  color: #fff;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.8392156863);
   font-family: "inter", sans-serif;
   font-size: 20px;
   font-style: normal;

@@ -9,12 +9,12 @@
   align-items: center;
   gap: 41px;
   align-self: stretch;
-  border: 1px solid #9f9f9f;
+  border: 1px solid rgba(0, 0, 0, 0.8392156863);
   width: 100%;
   margin: 0 15px 25px;
 }
 .block--type-brand-footer .field--name-field-brand-text {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.8392156863);
   text-align: center;
   font-family: "inter", sans-serif;
   font-size: 14px;
@@ -25,49 +25,59 @@
   letter-spacing: 2.8px;
 }
 
-.block--orse-menucliente .nav, .block--orse-menufotografo .nav {
+.block--orse-menucliente .nav,
+.block--orse-menufotografo .nav {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 5px;
   margin-bottom: 12px;
 }
-.block--orse-menucliente .nav .primary, .block--orse-menufotografo .nav .primary {
+.block--orse-menucliente .nav .primary,
+.block--orse-menufotografo .nav .primary {
   color: #fff;
   text-align: center;
   line-height: 19px;
-  background-color: #024d54;
+  background-color: #27c840;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-radius: 0.375rem;
 }
-.block--orse-menucliente .nav .primary:active, .block--orse-menufotografo .nav .primary:active {
-  background-color: rgb(0.8139534884, 31.3372093023, 34.1860465116);
+.block--orse-menucliente .nav .primary:active,
+.block--orse-menufotografo .nav .primary:active {
+  background-color: rgb(30.6778242678, 157.3221757322, 50.3430962343);
   transition: background-color 0.2s ease;
 }
-.block--orse-menucliente .nav .primary:hover, .block--orse-menufotografo .nav .primary:hover {
+.block--orse-menucliente .nav .primary:hover,
+.block--orse-menufotografo .nav .primary:hover {
   color: var(--bs-btn-hover-color);
 }
-.block--orse-menucliente .nav .primary a, .block--orse-menufotografo .nav .primary a {
+.block--orse-menucliente .nav .primary a,
+.block--orse-menufotografo .nav .primary a {
   color: #fff;
 }
-.block--orse-menucliente .nav .secondary, .block--orse-menufotografo .nav .secondary {
+.block--orse-menucliente .nav .secondary,
+.block--orse-menufotografo .nav .secondary {
   color: #fff;
   text-align: center;
   line-height: 19px;
-  background-color: #bd6717;
+  background-color: #141414;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-radius: 0.375rem;
 }
-.block--orse-menucliente .nav .secondary:active, .block--orse-menufotografo .nav .secondary:active {
-  background-color: rgb(0.8139534884, 31.3372093023, 34.1860465116);
+.block--orse-menucliente .nav .secondary:active,
+.block--orse-menufotografo .nav .secondary:active {
+  background-color: rgb(30.6778242678, 157.3221757322, 50.3430962343);
   transition: background-color 0.2s ease;
 }
-.block--orse-menucliente .nav .secondary:hover, .block--orse-menufotografo .nav .secondary:hover {
+.block--orse-menucliente .nav .secondary:hover,
+.block--orse-menufotografo .nav .secondary:hover {
   color: var(--bs-btn-hover-color);
 }
-.block--orse-menucliente .nav .secondary a, .block--orse-menufotografo .nav .secondary a {
+.block--orse-menucliente .nav .secondary a,
+.block--orse-menufotografo .nav .secondary a {
   color: #fff;
 }
-.block--orse-menucliente .nav li, .block--orse-menufotografo .nav li {
+.block--orse-menucliente .nav li,
+.block--orse-menufotografo .nav li {
   padding: 0 12px;
 }
 

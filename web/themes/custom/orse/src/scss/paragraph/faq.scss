@@ -1,7 +1,7 @@
 @import "../../scss/init";
 
 .paragraph--type--faq {
-  background-color: $green;
+  background-color: $second-foreground;
   padding: 30px;
 
   .field--name-field-faq-item {
@@ -31,7 +31,8 @@
           font-weight: 600;
           line-height: 100%; /* 20px */
           background: $secondary;
-          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: $card-elevated-shadow;
+          border-bottom: solid 6px $primary;
         }
 
         .field--name-field-faq-text {
@@ -46,7 +47,7 @@
           font-style: normal;
           font-weight: 600;
           line-height: 100%; /* 20px */
-          background: tint-color($secondary, 50%);
+          background: $first-foreground;
         }
       }
     }
