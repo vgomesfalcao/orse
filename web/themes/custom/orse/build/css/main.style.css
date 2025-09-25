@@ -12729,7 +12729,7 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  background: #2aef48;
+  background: linear-gradient(180deg, rgb(174, 255, 185) 3.21%, #2fbe45 66.95%);
   color: rgba(0, 0, 0, 0.8392156863);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
