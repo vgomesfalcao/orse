@@ -12555,9 +12555,173 @@ form .form__inner .frame .btn, form .form__inner .frame .paragraph--type--static
   gap: var(--sds-size-space-200);
   flex-shrink: 0;
   border-radius: var(--bs-border-radius);
-  background: #2aef48;
+  background-image: linear-gradient(135deg, rgb(80.34, 241.88, 104.94), rgb(38.64, 219.88, 66.24));
+  background-size: 220% 220%;
+  box-shadow: 0 14px 28px rgba(39, 200, 64, 0.22);
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation: static-banner-btn-flow 6.5s ease-in-out infinite;
+          animation: static-banner-btn-flow 6.5s ease-in-out infinite;
+  transition: background-position 0.45s ease, box-shadow 0.35s ease, -webkit-transform 0.3s ease, -webkit-animation-duration 0.3s ease;
+  transition: background-position 0.45s ease, box-shadow 0.35s ease, transform 0.3s ease, animation-duration 0.3s ease;
+  transition: background-position 0.45s ease, box-shadow 0.35s ease, transform 0.3s ease, animation-duration 0.3s ease, -webkit-transform 0.3s ease, -webkit-animation-duration 0.3s ease;
+  will-change: background-position, box-shadow, transform;
+}
+.paragraph--type--static-banner .group-text .field--name-field-button a:before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -70%;
+  width: 45%;
+  height: 220%;
+  background: linear-gradient(120deg, transparent 0, rgba(0, 0, 0, 0.28) 55%, transparent 100%);
+  opacity: 0;
+  -webkit-transform: translateX(-140%) skewX(-18deg);
+          transform: translateX(-140%) skewX(-18deg);
+  pointer-events: none;
+  -webkit-animation: static-banner-btn-shine 7.5s linear infinite;
+          animation: static-banner-btn-shine 7.5s linear infinite;
+}
+.paragraph--type--static-banner .group-text .field--name-field-button a:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  -webkit-animation: static-banner-btn-outline 7s ease-in-out infinite;
+          animation: static-banner-btn-outline 7s ease-in-out infinite;
+}
+.paragraph--type--static-banner .group-text .field--name-field-button a:hover, .paragraph--type--static-banner .group-text .field--name-field-button a:focus-visible {
+  background-position: 100% 50%;
+  box-shadow: 0 22px 40px rgba(39, 200, 64, 0.28);
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  -webkit-animation-duration: 3.2s;
+          animation-duration: 3.2s;
+}
+.paragraph--type--static-banner .group-text .field--name-field-button a:hover:before, .paragraph--type--static-banner .group-text .field--name-field-button a:focus-visible:before {
+  -webkit-animation-duration: 4.2s;
+          animation-duration: 4.2s;
+  opacity: 1;
+}
+.paragraph--type--static-banner .group-text .field--name-field-button a:hover:after, .paragraph--type--static-banner .group-text .field--name-field-button a:focus-visible:after {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  opacity: 0.75;
+}
+.paragraph--type--static-banner .group-text .field--name-field-button a:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.4);
+  outline-offset: 3px;
 }
 
+@-webkit-keyframes static-banner-btn-flow {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0 12px 24px rgba(39, 200, 64, 0.18);
+  }
+  45% {
+    background-position: 100% 50%;
+    box-shadow: 0 18px 36px rgba(39, 200, 64, 0.28);
+  }
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0 12px 24px rgba(39, 200, 64, 0.18);
+  }
+}
+
+@keyframes static-banner-btn-flow {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0 12px 24px rgba(39, 200, 64, 0.18);
+  }
+  45% {
+    background-position: 100% 50%;
+    box-shadow: 0 18px 36px rgba(39, 200, 64, 0.28);
+  }
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0 12px 24px rgba(39, 200, 64, 0.18);
+  }
+}
+@-webkit-keyframes static-banner-btn-shine {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-160%) skewX(-18deg);
+            transform: translateX(-160%) skewX(-18deg);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  55% {
+    opacity: 0;
+    -webkit-transform: translateX(260%) skewX(-18deg);
+            transform: translateX(260%) skewX(-18deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(320%) skewX(-18deg);
+            transform: translateX(320%) skewX(-18deg);
+  }
+}
+@keyframes static-banner-btn-shine {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-160%) skewX(-18deg);
+            transform: translateX(-160%) skewX(-18deg);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  55% {
+    opacity: 0;
+    -webkit-transform: translateX(260%) skewX(-18deg);
+            transform: translateX(260%) skewX(-18deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(320%) skewX(-18deg);
+            transform: translateX(320%) skewX(-18deg);
+  }
+}
+@-webkit-keyframes static-banner-btn-outline {
+  0% {
+    opacity: 0.35;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    -webkit-transform: scale(1.015);
+            transform: scale(1.015);
+  }
+  100% {
+    opacity: 0.35;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes static-banner-btn-outline {
+  0% {
+    opacity: 0.35;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    -webkit-transform: scale(1.015);
+            transform: scale(1.015);
+  }
+  100% {
+    opacity: 0.35;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 .paragraph--type--cards-block .field--name-field-card {
   display: flex;
   padding: 20px 23px;
