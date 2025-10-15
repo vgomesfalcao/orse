@@ -46,4 +46,10 @@ jobs:
       env:
         ANSIBLE_HOST_KEY_CHECKING: "False"
         ANSIBLE_CONFIG: ansible.cfg
-      run: ansible-playbook -i ansible/inventory/production.yml ansible/playbooks/post_deploy.yml --private-key ~/.ssh/deploy_key
+        DEPLOY_SUDO_PASSWORD: ${{ secrets.DEPLOY_SUDO_PASSWORD }}
+      run: |
+        if [ -z "$DEPLOY_SUDO_PASSWORD" ]; then
+          echo "Missing secret DEPLOY_SUDO_PASSWORD" >&2
+          exit 1
+        fi
+        ansible-playbook -i ansible/inventory/production.yml ansible/playbooks/post_deploy.yml --private-key ~/.ssh/deploy_key
