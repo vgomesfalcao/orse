@@ -26,9 +26,6 @@ jobs:
         mkdir -p ~/.ssh
         printf '%s' "${{ secrets.DEPLOY_KEY }}" | tr -d '\r' > ~/.ssh/deploy_key
         chmod 600 ~/.ssh/deploy_key
-        if [ -n "${{ secrets.DEPLOY_KEY_PASS }}" ]; then
-          ssh-keygen -p -P "${{ secrets.DEPLOY_KEY_PASS }}" -N "" -f ~/.ssh/deploy_key
-        fi
 
     - name: Add remote host to known_hosts
       run: ssh-keyscan -p 22 204.216.172.21 >> ~/.ssh/known_hosts
@@ -37,10 +34,9 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y ansible
 
     - name: rsync deployments
-      env:
-        RSYNC_RSH: "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no"
       run: |
         rsync -avzr --delete \
+          -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
           --exclude 'web/sites/default/files' \
           --exclude 'web/sites/default/settings.local.php' \
           --exclude 'web/mkt' \
