@@ -1,0 +1,30 @@
+---
+- name: Ensure deploy user exists
+  ansible.builtin.user:
+    name: "{{ drupal_app_user }}"
+    shell: /bin/bash
+    create_home: true
+    groups: "{{ drupal_app_group }}"
+    append: true
+
+- name: Ensure Drupal directories exist
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ drupal_app_user }}"
+    group: "{{ drupal_app_group }}"
+    mode: "{{ drupal_app_mode }}"
+  loop: "{{ drupal_shared_dirs }}"
+
+- name: Check for Drupal settings.php
+  ansible.builtin.stat:
+    path: "{{ deployment_root }}/web/sites/default/settings.php"
+  register: drupal_settings_stat
+
+- name: Ensure sites/default/settings.php permissions
+  ansible.builtin.file:
+    path: "{{ deployment_root }}/web/sites/default/settings.php"
+    owner: "{{ drupal_app_user }}"
+    group: "{{ drupal_app_group }}"
+    mode: '0664'
+  when: drupal_settings_stat.stat.exists

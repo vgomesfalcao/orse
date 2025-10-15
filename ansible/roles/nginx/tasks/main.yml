@@ -1,0 +1,47 @@
+---
+- name: Install Nginx
+  ansible.builtin.apt:
+    name: nginx
+    state: present
+    update_cache: true
+
+- name: Ensure Nginx log directory exists
+  ansible.builtin.file:
+    path: /var/log/nginx
+    state: directory
+    owner: root
+    group: adm
+    mode: '0755'
+
+- name: Remove default Nginx site
+  ansible.builtin.file:
+    path: "{{ nginx_remove_default }}"
+    state: absent
+  notify: reload nginx
+
+- name: Deploy Drupal Nginx configuration
+  ansible.builtin.template:
+    src: drupal.conf.j2
+    dest: "{{ nginx_config_path }}"
+    owner: root
+    group: root
+    mode: '0644'
+  notify: reload nginx
+
+- name: Enable Drupal Nginx site
+  ansible.builtin.file:
+    src: "{{ nginx_config_path }}"
+    dest: "{{ nginx_config_link }}"
+    state: link
+  notify: reload nginx
+
+- name: Test Nginx configuration
+  ansible.builtin.command: nginx -t
+  register: nginx_test
+  changed_when: false
+
+- name: Ensure Nginx is running
+  ansible.builtin.systemd:
+    name: nginx
+    state: started
+    enabled: true

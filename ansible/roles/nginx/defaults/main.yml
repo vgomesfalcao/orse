@@ -1,0 +1,8 @@
+---
+nginx_server_name: _
+nginx_listen_port: 80
+nginx_root: "{{ deployment_root }}/web"
+nginx_config_path: /etc/nginx/sites-available/drupal.conf
+nginx_config_link: /etc/nginx/sites-enabled/drupal.conf
+nginx_remove_default: /etc/nginx/sites-enabled/default
+nginx_fastcgi_socket: "unix:/run/php/php{{ php_version }}-fpm.sock"

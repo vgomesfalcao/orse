@@ -1,0 +1,9 @@
+---
+- name: Post deployment tasks for Drupal
+  hosts: drupal_prod
+  become: true
+  vars:
+    deployment_root: "{{ hostvars[inventory_hostname].deployment_root | default('/var/www/orse/orse_d') }}"
+    drupal_console: "{{ hostvars[inventory_hostname].drupal_console | default('./vendor/bin/drush') }}"
+  roles:
+    - drupal_postdeploy

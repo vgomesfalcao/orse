@@ -1,0 +1,8 @@
+---
+drupal_app_user: deploy
+drupal_app_group: www-data
+drupal_app_mode: '0775'
+drupal_shared_dirs:
+  - "{{ deployment_root }}"
+  - "{{ deployment_root }}/web/sites/default/files"
+  - "{{ deployment_root }}/config/sync"

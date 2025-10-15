@@ -1,0 +1,26 @@
+---
+- name: Ensure deployment root ownership
+  ansible.builtin.file:
+    path: "{{ deployment_root }}"
+    owner: "{{ drupal_deploy_user }}"
+    group: "{{ drupal_deploy_group }}"
+    recurse: true
+
+- name: Fix writable directories permissions
+  ansible.builtin.file:
+    path: "{{ drupal_files_dir }}"
+    owner: "{{ drupal_deploy_user }}"
+    group: "{{ drupal_deploy_group }}"
+    mode: "{{ drupal_permissions_mode }}"
+    recurse: true
+
+- name: Run Drupal deploy command
+  become_user: "{{ drupal_deploy_user }}"
+  ansible.builtin.command: "{{ drupal_console }} deploy"
+  args:
+    chdir: "{{ deployment_root }}"
+  register: drush_output
+
+- name: Show Drush deploy output
+  ansible.builtin.debug:
+    var: drush_output.stdout_lines

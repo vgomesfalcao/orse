@@ -1,0 +1,5 @@
+---
+drupal_deploy_user: www-data
+drupal_deploy_group: www-data
+drupal_permissions_mode: "0775"
+drupal_files_dir: "{{ deployment_root }}/web/sites/default/files"

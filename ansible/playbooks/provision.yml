@@ -1,0 +1,12 @@
+---
+- name: Provision Drupal server
+  hosts: drupal_prod
+  become: true
+  vars:
+    deployment_root: "{{ hostvars[inventory_hostname].deployment_root | default('/var/www/orse/orse_d') }}"
+    php_version: "{{ hostvars[inventory_hostname].php_version | default('8.1') }}"
+  roles:
+    - role: php
+    - role: mariadb
+    - role: nginx
+    - role: drupal_system

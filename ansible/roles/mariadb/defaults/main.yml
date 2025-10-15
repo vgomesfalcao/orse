@@ -1,0 +1,9 @@
+---
+mariadb_packages:
+  - mariadb-server
+  - python3-pymysql
+mariadb_service: mariadb
+mariadb_bind_address: 127.0.0.1
+drupal_db_name: orse
+drupal_db_user: orse
+drupal_db_password: change_me

@@ -1,0 +1,46 @@
+---
+- name: Install MariaDB packages
+  ansible.builtin.apt:
+    name: "{{ mariadb_packages }}"
+    state: present
+    update_cache: true
+
+- name: Configure MariaDB bind address
+  ansible.builtin.copy:
+    dest: /etc/mysql/mariadb.conf.d/99-ansible.cnf
+    content: |
+      [mysqld]
+      bind-address = {{ mariadb_bind_address }}
+      character-set-server = utf8mb4
+      collation-server = utf8mb4_general_ci
+    owner: root
+    group: root
+    mode: '0644'
+  notify: restart mariadb
+
+- name: Ensure MariaDB is running
+  ansible.builtin.systemd:
+    name: "{{ mariadb_service }}"
+    state: started
+    enabled: true
+
+- name: Create Drupal database
+  ansible.builtin.shell: >-
+    mysql -NBe "CREATE DATABASE IF NOT EXISTS \`{{ drupal_db_name }}\` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;"
+  args:
+    creates: "/var/lib/mysql/{{ drupal_db_name }}"
+  changed_when: false
+
+- name: Create Drupal database user
+  ansible.builtin.shell: >-
+    mysql -NBe "CREATE USER IF NOT EXISTS '{{ drupal_db_user }}'@'localhost' IDENTIFIED BY '{{ drupal_db_password }}';"
+  changed_when: false
+
+- name: Grant database privileges to Drupal user
+  ansible.builtin.shell: >-
+    mysql -NBe "GRANT ALL PRIVILEGES ON \`{{ drupal_db_name }}\`.* TO '{{ drupal_db_user }}'@'localhost';"
+  changed_when: false
+
+- name: Flush MariaDB privileges
+  ansible.builtin.shell: "mysql -NBe 'FLUSH PRIVILEGES;'"
+  changed_when: false
