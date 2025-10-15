@@ -24,23 +24,25 @@ jobs:
     - name: Prepare SSH key for deployment
       run: |
         mkdir -p ~/.ssh
-        printf '%s' "${{ secrets.DEPLOY_KEY }}" | tr -d '\r' > ~/.ssh/deploy_key
+        cat <<'EOF' > ~/.ssh/deploy_key
+        ${{ secrets.DEPLOY_KEY }}
+        EOF
+        sed -i 's/\r$//' ~/.ssh/deploy_key
         chmod 600 ~/.ssh/deploy_key
-
-    - name: Add remote host to known_hosts
-      run: ssh-keyscan -p 22 204.216.172.21 >> ~/.ssh/known_hosts
 
     - name: Install Ansible
       run: sudo apt-get update && sudo apt-get install -y ansible
 
     - name: rsync deployments
-      run: |
-        rsync -avzr --delete \
-          -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
-          --exclude 'web/sites/default/files' \
-          --exclude 'web/sites/default/settings.local.php' \
-          --exclude 'web/mkt' \
-          ./ deploy@204.216.172.21:/var/www/orse/orse_d/
+      uses: burnett01/rsync-deployments@5.2.1
+      with:
+        switches: -avzr --delete --exclude 'web/sites/default/files' --exclude 'web/sites/default/settings.local.php' --exclude 'web/mkt'
+        path: ./
+        remote_path: '/var/www/orse/orse_d/'
+        remote_host: 204.216.172.21
+        remote_port: 22
+        remote_user: 'deploy'
+        remote_key: ${{ secrets.DEPLOY_KEY }}
 
     - name: Run Ansible post-deploy tasks
       env:
