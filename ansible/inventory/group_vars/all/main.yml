@@ -1,0 +1,1 @@
+ansible_become_password: "{{ lookup('env', 'DEPLOY_SUDO_PASSWORD') or ansible_become_password_vault }}"

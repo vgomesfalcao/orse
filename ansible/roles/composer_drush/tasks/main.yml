@@ -1,0 +1,13 @@
+---
+- name: Ensure Composer is installed
+  ansible.builtin.apt:
+    name: "{{ composer_package }}"
+    state: present
+    update_cache: true
+
+- name: Download Drush launcher
+  ansible.builtin.get_url:
+    url: "{{ drush_launcher_url }}"
+    dest: /usr/local/bin/drush
+    mode: '0755'
+    force: true

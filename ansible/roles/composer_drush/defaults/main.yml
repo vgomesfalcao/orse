@@ -1,0 +1,3 @@
+---
+drush_launcher_url: https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar
+composer_package: composer

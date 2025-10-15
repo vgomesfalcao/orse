@@ -7,6 +7,7 @@
     php_version: "{{ hostvars[inventory_hostname].php_version | default('8.1') }}"
   roles:
     - role: php
+    - role: composer_drush
     - role: mariadb
     - role: nginx
     - role: drupal_system

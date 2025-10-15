@@ -1,1 +1,1 @@
-ansible_become_password: "{{ lookup('ansible.builtin.env', 'DEPLOY_SUDO_PASSWORD') }}"
+ansible_become_password: "{{ lookup('ansible.builtin.env', 'DEPLOY_SUDO_PASSWORD') | default(ansible_become_password_vault, true) }}"
