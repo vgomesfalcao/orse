@@ -45,4 +45,5 @@ jobs:
     - name: Run Ansible post-deploy tasks
       env:
         ANSIBLE_HOST_KEY_CHECKING: "False"
+        ANSIBLE_CONFIG: ansible.cfg
       run: ansible-playbook -i ansible/inventory/production.yml ansible/playbooks/post_deploy.yml --private-key ~/.ssh/deploy_key

@@ -12,5 +12,6 @@ all:
       drupal_db_name: orse
       drupal_db_user: orse
       drupal_db_password: Jj^^CL1Q@maG
-  drupal_deploy_user: deploy
-  drupal_deploy_group: www-data
+  vars:
+    drupal_deploy_user: deploy
+    drupal_deploy_group: www-data

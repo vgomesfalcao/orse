@@ -1,4 +1,23 @@
----
+- name: Install PHP dependencies
+  ansible.builtin.apt:
+    name:
+      - software-properties-common
+      - ca-certificates
+      - apt-transport-https
+    state: present
+    update_cache: true
+
+- name: Add Ondrej PHP repository
+  ansible.builtin.apt_repository:
+    repo: ppa:ondrej/php
+    state: present
+  register: php_repo
+
+- name: Update apt cache after adding PHP repo
+  ansible.builtin.apt:
+    update_cache: true
+  when: php_repo is changed
+
 - name: Install PHP packages
   ansible.builtin.apt:
     name: "{{ php_packages }}"
