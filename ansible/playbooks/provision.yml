@@ -10,4 +10,5 @@
     - role: composer_drush
     - role: mariadb
     - role: nginx
+    - role: firewall
     - role: drupal_system

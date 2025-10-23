@@ -5,9 +5,9 @@
     state: present
     update_cache: true
 
-- name: Download Drush launcher
-  ansible.builtin.get_url:
-    url: "{{ drush_launcher_url }}"
+- name: Create symbolic link for Drush
+  ansible.builtin.file:
+    src: "{{ deployment_root }}/vendor/bin/drush"
     dest: /usr/local/bin/drush
-    mode: '0755'
+    state: link
     force: true

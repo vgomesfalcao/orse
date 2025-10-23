@@ -28,3 +28,19 @@
     group: "{{ drupal_app_group }}"
     mode: '0664'
   when: drupal_settings_stat.stat.exists
+
+- name: Deploy settings.local.php with database configuration
+  ansible.builtin.template:
+    src: settings.local.php.j2
+    dest: "{{ deployment_root }}/web/sites/default/settings.local.php"
+    owner: "{{ drupal_app_user }}"
+    group: "{{ drupal_app_group }}"
+    mode: '0644'
+
+- name: Ensure settings.php includes settings.local.php
+  ansible.builtin.lineinfile:
+    path: "{{ deployment_root }}/web/sites/default/settings.php"
+    line: "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) { include $app_root . '/' . $site_path . '/settings.local.php'; }"
+    create: false
+    insertafter: EOF
+  when: drupal_settings_stat.stat.exists

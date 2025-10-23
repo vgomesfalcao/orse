@@ -1,13 +1,13 @@
 all:
   hosts:
     drupal_prod:
-      ansible_host: 204.216.172.21
-      ansible_user: deploy
+      ansible_host: 164.152.196.4
+      ansible_user: ubuntu
       ansible_port: 22
       ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
       deployment_root: /var/www/orse/orse_d
       drupal_console: ./vendor/bin/drush
-      nginx_server_name: orse.example
+      nginx_server_name: 164.152.196.4
       php_version: '8.1'
       drupal_db_name: orse
       drupal_db_user: orse

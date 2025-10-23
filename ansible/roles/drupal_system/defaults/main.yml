@@ -6,3 +6,4 @@ drupal_shared_dirs:
   - "{{ deployment_root }}"
   - "{{ deployment_root }}/web/sites/default/files"
   - "{{ deployment_root }}/config/sync"
+drupal_hash_salt: "{{ lookup('password', '/dev/null chars=ascii_letters,digits length=64') }}"
