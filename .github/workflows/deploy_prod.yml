@@ -38,7 +38,7 @@ jobs:
           remote_path: /var/www/orse/orse_d/
           remote_host: 164.152.196.4
           remote_port: 22
-          remote_user: deploy
+          remote_user: ${{ secrets.USERNAME }}
           remote_key: ${{ secrets.DEPLOY_KEY }}
 
       - name: Install Ansible
