@@ -3,20 +3,33 @@
   hosts: drupal_prod
   become: true
   vars:
+    # Variáveis padrão do inventário
     deployment_root: "{{ hostvars[inventory_hostname].deployment_root | default('/var/www/orse/orse_d') }}"
+    # Variáveis que podem ser sobrescritas pelo GitHub Actions via -e
+    deploy_user: "{{ deploy_user | default('deploy') }}"
+    deploy_host: "{{ deploy_host | default('164.152.196.4') }}"
+    deploy_path: "{{ deploy_path | default(deployment_root) }}"
   tasks:
+    - name: Debug - Show variables from GitHub Actions
+      debug:
+        msg: |
+          Deploy User: {{ deploy_user }}
+          Deploy Host: {{ deploy_host }}
+          Deploy Path: {{ deploy_path }}
+        verbosity: 1
+
     - name: Ensure deployment directory exists
       ansible.builtin.file:
-        path: "{{ deployment_root }}"
+        path: "{{ deploy_path }}"
         state: directory
-        owner: deploy
-        group: deploy
+        owner: "{{ deploy_user }}"
+        group: "{{ deploy_user }}"
         mode: '0755'
 
     - name: Fix ownership of deployment directory recursively
       ansible.builtin.file:
-        path: "{{ deployment_root }}"
-        owner: deploy
-        group: deploy
+        path: "{{ deploy_path }}"
+        owner: "{{ deploy_user }}"
+        group: "{{ deploy_user }}"
         recurse: yes
         state: directory

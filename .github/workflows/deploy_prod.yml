@@ -44,22 +44,26 @@ jobs:
           ANSIBLE_HOST_KEY_CHECKING: "False"
           ANSIBLE_CONFIG: ansible.cfg
           DEPLOY_SUDO_PASSWORD: ${{ secrets.DEPLOY_SUDO_PASSWORD }}
+          DEPLOY_USER: ${{ vars.USERNAME }}
+          DEPLOY_HOST: 164.152.196.4
+          DEPLOY_PATH: /var/www/orse/orse_d
         run: |
           if [ -z "$DEPLOY_SUDO_PASSWORD" ]; then
             echo "Missing secret DEPLOY_SUDO_PASSWORD" >&2
             exit 1
           fi
-          ansible-playbook -i ansible/inventory/production.yml ansible/playbooks/pre_deploy.yml --private-key ~/.ssh/deploy_key
+          ansible-playbook -i ansible/inventory/production.yml ansible/playbooks/pre_deploy.yml --private-key ~/.ssh/deploy_key \
+            -e "deploy_user=$DEPLOY_USER deploy_host=$DEPLOY_HOST deploy_path=$DEPLOY_PATH"
 
       - name: rsync deployments
         uses: burnett01/rsync-deployments@5.2.1
         with:
           switches: -avzr --delete --exclude 'web/sites/default/files' --exclude 'web/sites/default/settings.local.php' --exclude 'web/mkt'
           path: ./
-          remote_path: /var/www/orse/orse_d/
-          remote_host: 164.152.196.4
+          remote_path: ${{ env.DEPLOY_PATH }}/
+          remote_host: ${{ env.DEPLOY_HOST }}
           remote_port: 22
-          remote_user: ${{ vars.USERNAME }}
+          remote_user: ${{ env.DEPLOY_USER }}
           remote_key: ${{ secrets.DEPLOY_KEY }}
 
       - name: Run Ansible post-deploy tasks
@@ -67,9 +71,13 @@ jobs:
           ANSIBLE_HOST_KEY_CHECKING: "False"
           ANSIBLE_CONFIG: ansible.cfg
           DEPLOY_SUDO_PASSWORD: ${{ secrets.DEPLOY_SUDO_PASSWORD }}
+          DEPLOY_USER: ${{ vars.USERNAME }}
+          DEPLOY_HOST: 164.152.196.4
+          DEPLOY_PATH: /var/www/orse/orse_d
         run: |
           if [ -z "$DEPLOY_SUDO_PASSWORD" ]; then
             echo "Missing secret DEPLOY_SUDO_PASSWORD" >&2
             exit 1
           fi
-          ansible-playbook -i ansible/inventory/production.yml ansible/playbooks/post_deploy.yml --private-key ~/.ssh/deploy_key
+          ansible-playbook -i ansible/inventory/production.yml ansible/playbooks/post_deploy.yml --private-key ~/.ssh/deploy_key \
+            -e "deploy_user=$DEPLOY_USER deploy_host=$DEPLOY_HOST deploy_path=$DEPLOY_PATH"
