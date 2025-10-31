@@ -30,29 +30,19 @@ jobs:
         sed -i 's/\r$//' ~/.ssh/deploy_key
         chmod 600 ~/.ssh/deploy_key
 
-    - name: Install Ansible
-      run: sudo apt-get update && sudo apt-get install -y ansible
-
-    - name: Get deployment configuration from inventory
-      id: deploy_config
-      run: |
-        REMOTE_HOST=$(ansible-inventory -i ansible/inventory/production.yml --host drupal_prod | jq -r '.ansible_host')
-        REMOTE_USER=$(ansible-inventory -i ansible/inventory/production.yml --host drupal_prod | jq -r '.ansible_user')
-        REMOTE_PATH=$(ansible-inventory -i ansible/inventory/production.yml --host drupal_prod | jq -r '.deployment_root')
-        echo "remote_host=${REMOTE_HOST}" >> $GITHUB_OUTPUT
-        echo "remote_user=${REMOTE_USER}" >> $GITHUB_OUTPUT
-        echo "remote_path=${REMOTE_PATH}" >> $GITHUB_OUTPUT
-
     - name: rsync deployments
       uses: burnett01/rsync-deployments@5.2.1
       with:
         switches: -avzr --delete --exclude 'web/sites/default/files' --exclude 'web/sites/default/settings.local.php' --exclude 'web/mkt'
         path: ./
-        remote_path: ${{ steps.deploy_config.outputs.remote_path }}/
-        remote_host: ${{ steps.deploy_config.outputs.remote_host }}
+        remote_path: /var/www/orse/orse_d/
+        remote_host: 164.152.196.4
         remote_port: 22
-        remote_user: ${{ steps.deploy_config.outputs.remote_user }}
+        remote_user: deploy
         remote_key: ${{ secrets.DEPLOY_KEY }}
+
+    - name: Install Ansible
+      run: sudo apt-get update && sudo apt-get install -y ansible
 
     - name: Run Ansible post-deploy tasks
       env:
