@@ -1,0 +1,78 @@
+---
+- name: Import database and files for Drupal
+  hosts: drupal_prod
+  become: true
+  vars:
+    deployment_root: "{{ hostvars[inventory_hostname].deployment_root | default('/var/www/orse/orse_d') }}"
+    drupal_db_name: "{{ hostvars[inventory_hostname].drupal_db_name | default('orse') }}"
+    drupal_db_user: "{{ hostvars[inventory_hostname].drupal_db_user | default('orse') }}"
+    drupal_db_password: "{{ hostvars[inventory_hostname].drupal_db_password | default('Jj^^CL1Q@maG') }}"
+  tasks:
+    - name: Create temporary directory for uploads
+      ansible.builtin.file:
+        path: /tmp/drupal_import
+        state: directory
+        mode: '0755'
+
+    - name: Copy database backup to server
+      ansible.builtin.copy:
+        src: ../../orse_backup_novo_tema.gz
+        dest: /tmp/drupal_import/orse_backup_novo_tema.gz
+        mode: '0644'
+
+    - name: Copy files archive to server
+      ansible.builtin.copy:
+        src: ../../files.tar
+        dest: /tmp/drupal_import/files.tar
+        mode: '0644'
+
+    - name: Install bzip2
+      ansible.builtin.package:
+        name: bzip2
+        state: present
+
+    - name: Extract database backup (gzip)
+      ansible.builtin.shell: |
+        cd /tmp/drupal_import
+        gunzip -c orse_backup_novo_tema.gz > orse_backup.sql
+      args:
+        creates: /tmp/drupal_import/orse_backup.sql
+
+    - name: Import database
+      ansible.builtin.shell: |
+        mysql -u {{ drupal_db_user }} -p{{ drupal_db_password }} {{ drupal_db_name }} < /tmp/drupal_import/orse_backup.sql
+
+    - name: Create files directory if it doesn't exist
+      ansible.builtin.file:
+        path: "{{ deployment_root }}/web/sites/default/files"
+        state: directory
+        owner: "{{ drupal_deploy_user | default('deploy') }}"
+        group: "{{ drupal_deploy_group | default('www-data') }}"
+        mode: '0755'
+        recurse: yes
+
+    - name: Extract files to Drupal directory
+      ansible.builtin.unarchive:
+        src: /tmp/drupal_import/files.tar
+        dest: "{{ deployment_root }}/web/sites/default/files/"
+        remote_src: yes
+        extra_opts: [--strip-components=1]
+
+    - name: Fix permissions on files directory
+      ansible.builtin.file:
+        path: "{{ deployment_root }}/web/sites/default/files"
+        owner: "{{ drupal_deploy_user | default('deploy') }}"
+        group: "{{ drupal_deploy_group | default('www-data') }}"
+        recurse: yes
+
+    - name: Clean up temporary files
+      ansible.builtin.file:
+        path: /tmp/drupal_import
+        state: absent
+
+    - name: Run Drupal cache rebuild
+      ansible.builtin.command:
+        cmd: "{{ deployment_root }}/vendor/bin/drush cr"
+        chdir: "{{ deployment_root }}"
+      become_user: "{{ drupal_deploy_user | default('deploy') }}"
+      ignore_errors: true
