@@ -1,0 +1,156 @@
+// Formulário Cliente (node formulario_cliente)
+// -----------------------------------------------------------------------------
+@import "./orcamento";
+
+.node--type-formulario-cliente,
+.formulario-cliente,
+.formulario-cliente--full {
+  @extend %orcamento-document;
+
+  // Visual de documento formal
+  position: relative;
+  background: $surface-paper-background; // off-white sutil
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: $surface-paper-shadow;
+
+  // Faixa lateral discreta
+  &:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: -18px;
+    width: 12px;
+    background: linear-gradient(180deg, #e9ecef, #f1f3f5);
+    border-radius: 6px 0 0 6px;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.06);
+  }
+
+  // Linha perfurada superior discreta
+  &:after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: -6px;
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent 0 14px,
+      rgba(0, 0, 0, 0.1) 14px 15px
+    );
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  // Cabeçalho do orçamento (título / meta)
+  .node__meta {
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.95rem;
+  }
+
+  // Seções (fieldset ou details) como linhas do documento
+  fieldset.card,
+  details.card {
+    @include orcamento-section-reset();
+  }
+
+  // Títulos das seções
+  > fieldset.card > legend.fieldset-legend,
+  > details.card > summary.card-header {
+    @extend %orcamento-section-title;
+    list-style: none;
+    cursor: default;
+  }
+
+  > details.card > summary.card-header::-webkit-details-marker {
+    display: none;
+  }
+
+  // Corpo em grid responsivo
+  fieldset.card .fieldset-wrapper,
+  details.card > .card-body {
+    // Fundo pautado sutil
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.025),
+      rgba(0, 0, 0, 0.025) 1px,
+      transparent 1px,
+      transparent 32px
+    );
+    background-clip: padding-box;
+    border-radius: 8px;
+    padding-top: 8px;
+    @include orcamento-grid-body();
+  }
+
+  // Campos
+  .field { @extend %orcamento-field; }
+  .field:last-child { border-bottom: 0; }
+
+  .field__label {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .field__item {
+    color: #111;
+    font-size: 1rem;
+  }
+
+  // Inline (label | valor)
+  .field--label-inline {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px 16px;
+  }
+  .field--label-inline .field__item { justify-self: end; }
+
+  // Números à direita
+  .field--type-decimal .field__item,
+  .field--type-integer .field__item,
+  .field--type-float .field__item,
+  .field--type-computed-float {
+    @include orcamento-numeric();
+  }
+
+  // Lista de info do evento (markup antigo)
+  .evento-info {
+    width: 100%;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    list-style: none;
+  }
+
+  .evento-info li {
+    padding: 0 0 10px;
+    margin: 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  }
+  .evento-info li:last-child { border-bottom: 0; }
+
+  .evento-info span {
+    font-weight: 700;
+    color: #111;
+  }
+
+  // Impressão mais limpa
+  @media print {
+    background: #fff;
+    box-shadow: none;
+    border: 1px solid #ccc;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    fieldset.card .fieldset-wrapper,
+    details.card > .card-body {
+      background: none;
+    }
+  }
+}

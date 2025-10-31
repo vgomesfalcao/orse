@@ -68,14 +68,16 @@ third_party_settings:
         - field_makingof_fotografos
         - field_makingof_valor
         - field_makingof_horas
-      label: 'Making Of'
+      label: 'Making Off'
       parent_name: ''
       region: content
       weight: 2
       format_type: fieldset
       format_settings:
         classes: ''
+        show_empty_fields: false
         id: ''
+        label_as_html: false
         description: ''
     group_previa:
       children:
@@ -203,25 +205,6 @@ third_party_settings:
         classes: ''
         id: ''
         description: ''
-    group_detalhes:
-      children:
-        - field_tipo_de_evento
-        - field_formulario_cliente
-      label: Detalhes
-      parent_name: ''
-      region: content
-      weight: 0
-      format_type: html_element
-      format_settings:
-        classes: header-orcamento
-        id: ''
-        element: div
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
     group_ob:
       children:
         - body
@@ -245,6 +228,22 @@ third_party_settings:
       format_settings:
         classes: ''
         id: ''
+        description: ''
+    group_detalhes_pedido:
+      children:
+        - field_tipo_de_evento
+        - field_formulario_cliente
+      label: 'Detalhes Pedido'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
         description: ''
 id: node.formulario_fotografo.default
 targetEntityType: node
@@ -280,8 +279,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -294,7 +293,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_cerimonia_horas:
     type: number_decimal
@@ -302,21 +301,21 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_cerimonia_valor:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_cobertura_fotografos:
     type: number_integer
@@ -332,8 +331,8 @@ content:
     label: above
     settings:
       thousand_separator: ''
-      decimal_separator: .
-      scale: 2
+      decimal_separator: ','
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 5
@@ -342,8 +341,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -364,7 +363,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 12
@@ -373,8 +372,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -386,7 +385,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_makingof_fotografos:
     type: number_integer
@@ -403,7 +402,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 7
@@ -412,8 +411,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -434,7 +433,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 11
@@ -443,8 +442,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -465,7 +464,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 15
@@ -474,8 +473,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -496,7 +495,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 7
@@ -505,8 +504,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -527,21 +526,21 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 19
+    weight: 20
     region: content
   field_previacasal_valor:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 20
+    weight: 21
     region: content
   field_previanoiva_fotografos:
     type: number_integer
@@ -558,7 +557,7 @@ content:
     settings:
       thousand_separator: ''
       decimal_separator: .
-      scale: 2
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 23
@@ -567,12 +566,12 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 24
+    weight: 25
     region: content
   field_recepcao_fotografos:
     type: number_integer
@@ -588,8 +587,8 @@ content:
     label: above
     settings:
       thousand_separator: ''
-      decimal_separator: .
-      scale: 2
+      decimal_separator: ','
+      scale: 0
       prefix_suffix: true
     third_party_settings: {  }
     weight: 9
@@ -598,8 +597,8 @@ content:
     type: number_decimal
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
+      thousand_separator: .
+      decimal_separator: ','
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
@@ -609,12 +608,12 @@ content:
     type: computed_decimal
     label: hidden
     settings:
+      thousand_separator: .
+      decimal_separator: ','
+      scale: '2'
+      prefix_suffix: '1'
       cache_unit: '0'
       cache_duration: '1'
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
     third_party_settings: {  }
     weight: 14
     region: content
@@ -623,7 +622,7 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
 hidden:
   langcode: true

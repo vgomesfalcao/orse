@@ -12,8 +12,9 @@
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  background: tint-color($primary, 30%);
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: $first-foreground;
+  color: $on-primary-tint;
+  box-shadow: $card-elevated-shadow;
   gap: 10px;
 
   >.field__item {
@@ -31,24 +32,26 @@
         flex-shrink: 0;
         align-self: stretch;
         background: $secondary;
-        color: $white;
+        color: $on-secondary;
         text-align: center;
         font-family: $font-family-sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
         line-height: 100%;
+        border-bottom: solid 6px $primary;
 
         /* 20px */
       }
 
       .green-part {
-        background-color: $green;
+        background-color: #000000ba;
         padding: 35px 25px;
         min-height: 200px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        color: $on-secondary;
 
         .field--name-field-card-icon {
           display: flex;
@@ -61,7 +64,7 @@
         }
 
         .field--name-field-card-text {
-          color: $white;
+          color: $on-secondary;
           font-family: $font-family-sans-serif;
           font-size: 20px;
           font-style: normal;

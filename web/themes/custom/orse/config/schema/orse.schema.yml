@@ -3,3 +3,23 @@
 orse.settings:
   type: theme_settings
   label: 'orse settings'
+  mapping:
+    orse_branding:
+      type: mapping
+      label: 'Orse branding'
+      mapping:
+        color_green:
+          type: string
+          label: 'Green color'
+        color_orange:
+          type: string
+          label: 'Orange color'
+        color_primary:
+          type: string
+          label: 'Primary color'
+        color_secondary:
+          type: string
+          label: 'Secondary color'
+        font_sans:
+          type: string
+          label: 'Sans-serif font stack'

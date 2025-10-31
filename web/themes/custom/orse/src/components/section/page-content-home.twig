@@ -4,7 +4,7 @@
 <main{{ content_attributes.addClass(page_main_classes) }}>
   {% if page.header %}
     <header class="page__header">
-      <div class="container-xl p-0">
+      <div class="container-fluid p-0">
         {% block page_header %}
           {{ page.header }}
         {% endblock %}
@@ -14,7 +14,7 @@
 
   {% if page.content %}
     <div class="page__content" id="main-content">
-      <div class="container-xl p-0">
+      <div class="container-fluid p-0">
         {% block page_inner_content %}
           {{ page.content }}
         {% endblock %}

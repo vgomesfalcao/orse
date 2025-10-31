@@ -1,0 +1,219 @@
+// Formulário Fotógrafo (node formulario_fotografo)
+// -----------------------------------------------------------------------------
+@import "./orcamento";
+
+.formulario-fotografo,
+.formulario-fotografo--full {
+  @extend %orcamento-document;
+
+  // Visual de documento formal
+  position: relative;
+  background: $surface-paper-background; // off-white sutil
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: $surface-paper-shadow;
+
+  // Faixa lateral discreta (sem furos para um aspecto mais formal)
+  &:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: -18px;
+    width: 12px;
+    background: linear-gradient(180deg, #e9ecef, #f1f3f5);
+    border-radius: 6px 0 0 6px;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.06);
+  }
+
+  // Linha perfurada superior, discreta
+  &:after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: -6px;
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent 0 14px,
+      rgba(0, 0, 0, 0.1) 14px 15px
+    );
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  // Base dos campos
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .field__label {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .field__item {
+    color: #111;
+    font-size: 1rem;
+  }
+
+  // Labels inline em duas colunas (label | valor)
+  .field--label-inline {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px 16px;
+    .field__item { justify-self: end; }
+  }
+
+  // Card em <details> (Detalhes Pedido)
+  details.card {
+    > summary.card-header {
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: rgba(0, 0, 0, 0.7);
+      border-top: 1px dashed rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+    }
+    > summary.card-header::-webkit-details-marker { display: none; }
+
+    > summary.card-header:after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid currentcolor;
+      border-bottom: 2px solid currentcolor;
+      transform: translateY(-50%) rotate(-45deg);
+      transition: transform 0.2s ease;
+      opacity: 0.8;
+    }
+
+    &[open] > summary.card-header:after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    > .card-body {
+      @include orcamento-grid-body();
+    }
+  }
+
+  // Fieldset cards
+  fieldset.card {
+    @include orcamento-section-reset();
+
+    > legend.fieldset-legend {
+      @extend %orcamento-section-title;
+    }
+
+    .fieldset-wrapper {
+      // Fundo pautado sutil
+      background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.025),
+        rgba(0, 0, 0, 0.025) 1px,
+        transparent 1px,
+        transparent 32px
+      );
+      background-clip: padding-box;
+      border-radius: 8px;
+      padding-top: 8px;
+      // Bordas internas para simular tabela no grid
+      // Mantém o mixin de grid existente e zera gaps para linhas contínuas
+      --grid-sep-color: rgba(0, 0, 0, 0.12);
+      --grid-cell-padding: 10px 12px;
+      position: relative;
+      gap: 0;
+      @include orcamento-grid-body();
+
+      // Células (campos) com bordas internas
+      > .field {
+        padding: var(--grid-cell-padding);
+        margin: 0;
+        // Mobile: sem bordas
+        border: 0;
+        border-bottom: 0; // evita linha dupla com separadores padrão
+      }
+
+      // Primeira célula (caso 1 coluna) não precisa bordas superiores/esquerda
+      > .field:first-child {
+        border-top: 0;
+        border-left: 0;
+      }
+
+      // Layout de 2 colunas (tablet): aplica bordas internas e remove da 1ª coluna/linha
+      @media (min-width: 640px) {
+        > .field {
+          border-top: 1px solid var(--grid-sep-color);
+          border-left: 1px solid var(--grid-sep-color);
+          border-bottom: 0;
+        }
+        > .field:nth-child(odd) { border-left: 0; }
+        > .field:nth-child(-n + 2) { border-top: 0; }
+      }
+
+      // Layout de 3 colunas (desktop): ajusta para 3 colunas
+      @media (min-width: 1024px) {
+        // garante reset do seletor anterior de 2 colunas
+        > .field:nth-child(odd) { border-left: 1px solid var(--grid-sep-color); }
+        > .field:nth-child(3n + 1) { border-left: 0; }
+        > .field:nth-child(-n + 3) { border-top: 0; }
+      }
+    }
+  }
+
+  // Números alinhados à direita (inclui computed-float sem wrapper de item)
+  .field--type-decimal .field__item,
+  .field--type-integer .field__item,
+  .field--type-float .field__item,
+  .field--type-computed-float {
+    @include orcamento-numeric();
+  }
+
+  // Separadores entre campos
+  .fieldset-wrapper .field,
+  details.card .card-body .field { @extend %orcamento-field; }
+
+  .fieldset-wrapper .field:last-child,
+  details.card .card-body .field:last-child {
+    border-bottom: 0;
+  }
+
+  // Tabela dentro do fieldset-wrapper: não usar border-bottom padrão
+  .fieldset-wrapper .field { border-bottom: 0; }
+
+  // Destaque do TOTAL (último fieldset)
+  fieldset.card:last-of-type {
+    @include orcamento-total-strong();
+  }
+
+  // Ocultar legend vazio
+  fieldset.card > legend.fieldset-legend:empty { display: none; }
+
+  // Impressão mais limpa
+  @media print {
+    background: #fff;
+    box-shadow: none;
+    border: 1px solid #ccc;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    fieldset.card .fieldset-wrapper {
+      background: none;
+    }
+  }
+}

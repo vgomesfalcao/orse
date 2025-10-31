@@ -86,12 +86,6 @@ elements:
     webform_field: tipo_evento
     custom_check: 0
     custom_value: ''
-  field_valor_maximo_fotografia:
-    type: false
-    mapping: default_mapping
-    webform_field: valor_max_fotografia
-    custom_check: 0
-    custom_value: ''
   title:
     type: false
     mapping: default_mapping

@@ -16,7 +16,6 @@ dependencies:
     - field.field.node.formulario_cliente.field_tipo_de_casamento
     - field.field.node.formulario_cliente.field_tipo_de_comemoracao
     - field.field.node.formulario_cliente.field_tipo_de_evento
-    - field.field.node.formulario_cliente.field_valor_maximo_fotografia
     - node.type.formulario_cliente
   module:
     - text
@@ -51,5 +50,4 @@ hidden:
   field_tipo_de_casamento: true
   field_tipo_de_comemoracao: true
   field_tipo_de_evento: true
-  field_valor_maximo_fotografia: true
   langcode: true

@@ -43,3 +43,33 @@ function orse_library_info_build() {
   }
   return $libraries;
 }
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function orse_preprocess_html(array &$variables) {
+  $config = \Drupal::config('system.theme');
+  $active_theme_name = $config->get('default');
+  // Apenas se o tema ativo for este tema.
+  if ($active_theme_name !== 'orse') {
+    return;
+  }
+
+  $settings = \Drupal::config('orse.settings');
+  // Buscar valores com fallback aos padrões do SCSS.
+  $primary = $settings->get('orse_branding.color_primary') ;
+  $secondary = $settings->get('orse_branding.color_secondary') ;
+  $font_sans = $settings->get('orse_branding.font_sans') ?? 'inter, sans-serif';
+
+  $css = ":root{ --orse-primary: {$primary}; --orse-secondary: {$secondary}; --orse-font-sans: {$font_sans};}";
+
+  $element = [
+    '#type' => 'html_tag',
+    '#tag' => 'style',
+    '#value' => $css,
+    '#attributes' => [
+      'data-origin' => 'orse-theme-settings',
+    ],
+  ];
+  $variables['#attached']['html_head'][] = [$element, 'orse_theme_settings_css_variables'];
+}

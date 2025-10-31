@@ -10,8 +10,9 @@
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  background: $secondary;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: linear-gradient(180deg, rgb(174, 255, 185) 3.21%, #2fbe45 66.95%);
+  color: $on-primary;
+  box-shadow: $card-elevated-shadow;
 
   & > .field__item {
     @include media-breakpoint-up(md) {
@@ -20,10 +21,10 @@
     width: 100%;
 
     &:not(:last-of-type) {
-      border-bottom: 2px dashed $white;
+      border-bottom: 2px dashed $on-primary;
       @include media-breakpoint-up(md) {
         border-bottom: none;
-        border-right: 2px dashed $white;
+        border-right: 2px dashed $on-primary;
       }
     }
     height: 250px;
@@ -55,7 +56,7 @@
       }
 
       .field--name-field-text {
-        color: $white;
+        color: $on-primary;
         text-align: center;
         font-family: $font-family-sans-serif;
         font-size: $lead-font-size;

@@ -1,0 +1,114 @@
+// Componentes reutilizáveis para páginas de orçamento
+// -----------------------------------------------------------------------------
+
+// Wrapper tipo documento
+%orcamento-document {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 28px 24px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+// Reset para seções (fieldset/details como linhas do documento)
+@mixin orcamento-section-reset {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 12px;
+  padding: 0;
+  overflow: visible;
+}
+
+// Título de seção
+%orcamento-section-title {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.7);
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+// Grid do corpo da seção
+@mixin orcamento-grid-body {
+  padding: 4px 0 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 24px;
+}
+
+// Campo base
+%orcamento-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin: 0;
+}
+
+// Label e valor com maior contraste
+%orcamento-label {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+%orcamento-value {
+  color: #0b1320;
+  font-weight: 500;
+}
+
+// Linhas estilo tabela (key | value)
+@mixin orcamento-table-rows($min-label: 220px) {
+  .field {
+    display: grid;
+    grid-template-columns: minmax($min-label, 1fr) 1fr;
+    align-items: center;
+    gap: 8px 16px;
+  }
+
+  .field__item {
+    justify-self: end;
+  }
+}
+
+// Zebra para facilitar leitura
+@mixin orcamento-zebra() {
+  .field:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+}
+
+// Alinhamento numérico
+@mixin orcamento-numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+// Destaque da seção de total
+@mixin orcamento-total-strong {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+
+  .fieldset-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .field__item,
+  .field--type-computed-float {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: right;
+    color: $primary;
+  }
+}

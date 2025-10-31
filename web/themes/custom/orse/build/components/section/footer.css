@@ -1,56 +1,55 @@
-.page__footer .container-xl {
-  background-color: rgb(1, 42, 22.5);
+.page__footer div {
+  background-color: #2aef48;
 }
-.page__footer .container-xl .block--orse-rodape {
+.page__footer div .block--orse-rodape {
   display: flex;
   padding: 28px 26px;
   flex-direction: column;
   align-items: flex-start;
   gap: 41px;
   align-self: stretch;
-  border: 1px solid #9f9f9f;
+  border: 1px solid rgba(0, 0, 0, 0.8392156863);
   width: 100%;
   margin: 20px 15px 25px;
 }
-.page__footer .container-xl .block--orse-rodape .nav {
+.page__footer div .block--orse-rodape .nav {
   flex-direction: column;
   width: 100%;
   align-items: start;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.8392156863);
 }
 @media (min-width: 768px) {
-  .page__footer .container-xl .block--orse-rodape .nav {
+  .page__footer div .block--orse-rodape .nav {
     align-items: center;
   }
 }
-.page__footer .container-xl .block--orse-rodape .nav .nav-item {
+.page__footer div .block--orse-rodape .nav .nav-item {
   padding: 20px 0;
-  border-bottom: 1px solid #9f9f9f;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8392156863);
   width: 100%;
 }
 @media (min-width: 768px) {
-  .page__footer .container-xl .block--orse-rodape .nav .nav-item {
+  .page__footer div .block--orse-rodape .nav .nav-item {
     padding: 0;
     border: none;
   }
 }
-.page__footer .container-xl .block--orse-rodape .nav .nav-item a {
+.page__footer div .block--orse-rodape .nav .nav-item a {
   font-family: "inter", sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 15px */
-  color: #fff;
+  color: rgba(0, 0, 0, 0.8392156863);
 }
 @media (min-width: 768px) {
-  .page__footer .container-xl .block--orse-rodape .nav .nav-item.navbar-text {
-    border-bottom: 1px solid #9f9f9f;
+  .page__footer div .block--orse-rodape .nav .nav-item.navbar-text {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8392156863);
     margin: 15px 0;
   }
 }
-.page__footer .container-xl .block--orse-rodape .nav .nav-item.navbar-text span {
-  color: #fff;
-  color: #fff;
+.page__footer div .block--orse-rodape .nav .nav-item.navbar-text span {
+  color: rgba(0, 0, 0, 0.8392156863);
   font-family: "inter", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -58,7 +57,7 @@
   line-height: 100%; /* 20px */
 }
 @media (min-width: 768px) {
-  .page__footer .container-xl .block--orse-rodape .nav .nav-item.navbar-text span {
+  .page__footer div .block--orse-rodape .nav .nav-item.navbar-text span {
     padding-bottom: 25px;
   }
 }
