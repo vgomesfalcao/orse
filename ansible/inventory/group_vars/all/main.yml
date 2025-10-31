@@ -1,1 +1,5 @@
-ansible_become_password: "{{ lookup('env', 'DEPLOY_SUDO_PASSWORD') or ansible_become_password_vault }}"
+---
+# Usa a variável de ambiente DEPLOY_SUDO_PASSWORD se disponível
+# Caso contrário, usa ansible_become_password_vault do vault
+ansible_become_password: "{{ lookup('env', 'DEPLOY_SUDO_PASSWORD') | default(ansible_become_password_vault, true) }}"
+

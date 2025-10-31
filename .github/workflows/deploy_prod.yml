@@ -33,6 +33,12 @@ jobs:
       - name: Install Ansible
         run: sudo apt-get update && sudo apt-get install -y ansible
 
+      - name: Create dummy vault file for CI/CD
+        run: |
+          mkdir -p ansible/inventory/group_vars/all
+          echo "---" > ansible/inventory/group_vars/all/vault.yml
+          echo "ansible_become_password_vault: ''" >> ansible/inventory/group_vars/all/vault.yml
+
       - name: Run Ansible pre-deploy tasks (fix permissions)
         env:
           ANSIBLE_HOST_KEY_CHECKING: "False"
