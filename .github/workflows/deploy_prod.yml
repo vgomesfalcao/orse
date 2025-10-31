@@ -30,6 +30,21 @@ jobs:
           sed -i 's/\r$//' ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
+      - name: Install Ansible
+        run: sudo apt-get update && sudo apt-get install -y ansible
+
+      - name: Run Ansible pre-deploy tasks (fix permissions)
+        env:
+          ANSIBLE_HOST_KEY_CHECKING: "False"
+          ANSIBLE_CONFIG: ansible.cfg
+          DEPLOY_SUDO_PASSWORD: ${{ secrets.DEPLOY_SUDO_PASSWORD }}
+        run: |
+          if [ -z "$DEPLOY_SUDO_PASSWORD" ]; then
+            echo "Missing secret DEPLOY_SUDO_PASSWORD" >&2
+            exit 1
+          fi
+          ansible-playbook -i ansible/inventory/production.yml ansible/playbooks/pre_deploy.yml --private-key ~/.ssh/deploy_key
+
       - name: rsync deployments
         uses: burnett01/rsync-deployments@5.2.1
         with:
@@ -40,9 +55,6 @@ jobs:
           remote_port: 22
           remote_user: ${{ vars.USERNAME }}
           remote_key: ${{ secrets.DEPLOY_KEY }}
-
-      - name: Install Ansible
-        run: sudo apt-get update && sudo apt-get install -y ansible
 
       - name: Run Ansible post-deploy tasks
         env:

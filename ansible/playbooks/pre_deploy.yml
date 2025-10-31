@@ -1,0 +1,22 @@
+---
+- name: Pre deployment tasks - Fix permissions
+  hosts: drupal_prod
+  become: true
+  vars:
+    deployment_root: "{{ hostvars[inventory_hostname].deployment_root | default('/var/www/orse/orse_d') }}"
+  tasks:
+    - name: Ensure deployment directory exists
+      ansible.builtin.file:
+        path: "{{ deployment_root }}"
+        state: directory
+        owner: deploy
+        group: deploy
+        mode: '0755'
+
+    - name: Fix ownership of deployment directory recursively
+      ansible.builtin.file:
+        path: "{{ deployment_root }}"
+        owner: deploy
+        group: deploy
+        recurse: yes
+        state: directory
