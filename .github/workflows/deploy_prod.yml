@@ -45,8 +45,8 @@ jobs:
           ANSIBLE_CONFIG: ansible.cfg
           DEPLOY_SUDO_PASSWORD: ${{ secrets.DEPLOY_SUDO_PASSWORD }}
           DEPLOY_USER: ${{ vars.USERNAME }}
-          DEPLOY_HOST: 164.152.196.4
-          DEPLOY_PATH: /var/www/orse/orse_d
+          DEPLOY_HOST: ${{ vars.HOSTNAME }}
+          DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
         run: |
           if [ -z "$DEPLOY_SUDO_PASSWORD" ]; then
             echo "Missing secret DEPLOY_SUDO_PASSWORD" >&2
