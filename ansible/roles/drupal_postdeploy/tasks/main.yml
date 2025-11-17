@@ -15,8 +15,9 @@
     recurse: true
 
 - name: Run Drupal deploy command
-  become_user: "{{ drupal_deploy_user }}"
-  ansible.builtin.command: "{{ drupal_console }} deploy"
+  become: true
+  ansible.builtin.shell: |
+    runuser -u {{ drupal_deploy_user }} -- {{ drupal_console }} deploy
   args:
     chdir: "{{ deployment_root }}"
   register: drush_output
